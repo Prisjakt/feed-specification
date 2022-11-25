@@ -1,0 +1,8 @@
+{
+  "label": "Fields",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Detailed descriptions and error codes per field"
+  }
+}

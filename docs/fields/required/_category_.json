@@ -1,0 +1,8 @@
+{
+  "label": "Required",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Minimum required fields for an offer to show on Prisjakt"
+  }
+}

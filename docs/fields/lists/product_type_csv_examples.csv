@@ -1,0 +1,2 @@
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
+SE:Skåne:DHL:5.00 SEK:1:5:1:3

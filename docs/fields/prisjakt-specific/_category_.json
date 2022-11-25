@@ -1,0 +1,8 @@
+{
+  "label": "Prisjakt Specific",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Prisjakt specific fields for extra functionality"
+  }
+}
