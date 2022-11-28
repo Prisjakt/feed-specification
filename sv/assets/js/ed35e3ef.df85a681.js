@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfeed_specification=self.webpackChunkfeed_specification||[]).push([[2023],{2202:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/sv/blog/tags/facebook","allTagsPath":"/sv/blog/tags","count":1}')}}]);
