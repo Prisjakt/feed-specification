@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Prisjakt Feed Specification',
   tagline: 'The devil is in the details',
-  url: 'https://prisjakt.nu',
+  url: 'https://schema.prisjakt.nu',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
