@@ -10,8 +10,9 @@ documentation is published at https://schema.prisjakt.nu
 
 Feel free to contribute if you find anything that can be improved, open a pull request against this repository with you changes.
 
-> **Note**
-> Please not that the following content is auto generated from our internal systems in order to keep in sync with models and a fixed structure, hence it´s not advicable to make changes to these files. If you find something that needs to be corrected in these areas, please open an issue and describe the changes you would like to see.
+### Auto Generated Content
+
+The following content is auto generated from our internal systems in order to keep in sync with models and a fixed structure, hence it´s not advicable to make changes to these files. If you find something that needs to be corrected in these areas, please open an issue and describe the changes you would like to see.
 
 - [Field articles](https://github.com/Prisjakt/feed-specification/tree/master/docs/fields) in `docs/fields/*`
 - [Example files](https://github.com/Prisjakt/feed-specification/tree/master/static/examples) in
