@@ -88,110 +88,61 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Konsument',
+            title: 'Information',
             items: [
               {
-                label: 'Kom igång med Prisjakt',
-                to: 'https://www.prisjakt.nu/info/kom-igang-med-prisjakt--ipYmjxdxAAAJ-41end',
+                label: 'About PriceSpy',
+                href: 'https://pricespy.co.uk/info/about-pricespy-pricespy-uk--i9',
               },
               {
-                label: 'Hur Prisjakt fungerar',
-                to: 'https://www.prisjakt.nu/info/transparenslofte-hur-prisjakt-fungerar--ipYmegTRAAACIAz9Bd',
+                label: 'Register and feature your shop',
+                href: 'https://pricespy.co.uk/info/register-and-feature-your-shop--i10',
               },
               {
-                label: 'Artiklar',
-                to: 'https://www.prisjakt.nu/artiklar',
+                label: 'Contact – PriceSpy UK',
+                href: 'https://pricespy.co.uk/info/contact-pricespy-uk--i8',
               },
               {
-                label: 'Prisjakts experter',
-                to: 'https://www.prisjakt.nu/experter',
+                label: 'Help Center',
+                href: 'https://support.prisjakt.nu/en/',
               },
               {
-                label: 'Teman & kampanjer',
-                to: 'https://www.prisjakt.nu/tema',
-              },
-              {
-                label: 'Black Friday 2022',
-                to: 'https://www.prisjakt.nu/tema/black-friday',
-              },
-              {
-                label: 'Årets butik',
-                to: 'https://www.prisjakt.nu/arets-butik',
-              },
-              {
-                label: 'Kategorier A-Ö',
-                to: 'https://www.prisjakt.nu/kategorier',
-              }
-            ],
-          },
-          {
-            title: 'Butik',
-            items: [
-              {
-                label: 'Varför Prisjakt?',
-                href: 'https://www.prisjakt.nu/info/prisjakt-for-butiker--ipYmeZLhAAACIAz67W',
-              },
-              {
-                label: 'Lägg till och profilera din butik',
-                href: 'https://www.prisjakt.nu/info/lagg-till-och-profilera-din-butik--ipYmeecBAAAJ-4z8d-',
-              },
-              {
-                label: 'Annonsera på Prisjakt',
-                href: 'https://se-prisjakt.ocast.com/se/',
-              },
-              {
-                label: 'Årets butik – för butiker',
-                href: 'https://www.prisjakt.nu/info/arets-butik-for-butiker--ipYme75hAAACIA0FT7',
-              },
-              {
-                label: 'Login för butiker',
+                label: 'Login For Shops',
                 href: 'https://business.prisjakt.nu/',
               },
-            ],
-          },
-          {
-            title: 'Om oss',
-            items: [
               {
-                label: 'Om Prisjakt',
-                to: 'https://www.prisjakt.nu/info/om-prisjakt--i9',
-              },
-              {
-                label: 'Hjälpcenter',
-                href: 'https://support.prisjakt.nu/sv/',
-              },
-              {
-                label: 'Kontakt',
-                href: 'https://www.prisjakt.nu/info/kontakta-oss--ipYmes2hAAACEA0Axz',
-              },
-              {
-                label: 'Jobba hos oss',
-                href: 'https://prisjakt.teamtailor.com/',
-              },
-              {
-                label: 'Nyhetsrum',
-                href: 'https://nyhetsrum.prisjakt.nu/',
-              },
-              {
-                label: 'Friskrivning och ansvarsbegränsning',
-                href: 'https://www.prisjakt.nu/info/friskrivning-och-ansvarsbegransning--ipYmj2kRAAACEA1gH9',
-              },
-              {
-                label: 'Personuppgiftspolicy',
-                href: 'https://www.prisjakt.nu/info/personuppgiftspolicy--ipYmj1sRAAACEA1f2w',
-              },
-              {
-                label: 'Cookiepolicy',
-                href: 'https://www.prisjakt.nu/info/cookiepolicy--ipYmj0eBAAACIA1fgC',
-              },
-              {
-                label: 'Login för experter',
+                label: 'Login For Experts',
                 href: 'http://expert.prisjakt.nu/login',
               },
             ],
           },
+          {
+            title: 'Rules & Guidelines',
+            items: [
+              {
+                label: 'Rules and guidelines for users',
+                to: 'https://pricespy.co.uk/info/rules-and-guidelines-for-users--i4',
+              },
+              {
+                label: 'Disclaimer',
+                href: 'https://pricespy.co.uk/info/disclaimer--i14',
+              },
+              {
+                label: 'Privacy policy',
+                href: 'https://pricespy.co.uk/info/privacy-policy--i6',
+              },
+              {
+                label: 'Cookie policy',
+                href: 'https://pricespy.co.uk/info/cookie-policy--i7',
+              },
+              {
+                label: 'Privacy settings',
+                href: 'https://pricespy.co.uk/privacy-settings',
+              },
+            ],
+          },
         ],
-        copyright: `Prisjakt Sverige AB är en del av Schibsted. Schibsted är ansvarig för din data på denna webbsajt. Built with Docusaurus.`,
+        copyright: `© 2000-2022 PriceSpy UK. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
