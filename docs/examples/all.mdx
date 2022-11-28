@@ -1,10 +1,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import SampleXmlFull from "./sample_xml_full.md"
-import SampleXmlMinimal from "./sample_xml_minimal.md"
-import SampleCsvFull from "./sample_csv_full.md"
-import SampleCsvMinimal from "./sample_csv_minimal.md"
-import SampleCsvMinimalGoogle from "./sample_csv_minimal_google.md"
+import SampleXmlFull from './_xml_sample.mdx';
+import SampleCsvFull from './_csv_sample.mdx';
+import SampleXmlMinimal from './_xml_min-sample.mdx';
+import SampleCsvMinimal from './_csv_min-sample.mdx';
 
 # All supported fields
 
@@ -12,13 +11,15 @@ import SampleCsvMinimalGoogle from "./sample_csv_minimal_google.md"
 
 <Tabs>
   <TabItem value="xml" label="Minimal Example" default>
-
+  
+  <a href="/examples/min-sample.xml">Download XML File</a> 
   <SampleXmlMinimal/>
 
  </TabItem>
   <TabItem value="csv" label="Full Example">
 
-  <SampleXmlFull/>
+  <a href="/examples/sample.xml">Download XML File</a>
+  <SampleXmlFull />
 
   </TabItem>
 </Tabs>
@@ -29,13 +30,15 @@ import SampleCsvMinimalGoogle from "./sample_csv_minimal_google.md"
 
   <TabItem value="xml" label="Minimal Example" default>
 
-  <SampleCsvMinimalGoogle/>
+  [Download CSV File](pathname:///examples/min-sample.csv)  
+  <SampleCsvMinimal />
 
  
  </TabItem>
   <TabItem value="csv" label="Full Example">
 
-  <SampleCsvFull/>
+  [Download CSV File](pathname:///examples/sample.csv)  
+  <SampleCsvFull />
 
   </TabItem>
 </Tabs>

@@ -1,8 +1,0 @@
-{
-  "label": "Nested",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Fields which contains nested sub fields"
-  }
-}
