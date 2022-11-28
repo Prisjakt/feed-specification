@@ -1,6 +1,10 @@
-# Website
+# Prisjakt Feed Specification
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+> **Warning**
+> This is currently work in progress and should not be considered official until this warning have been removed.
+
+This repository contains specifications and instructions of how to format feeds with price offerigns for ingestion into [Prisjakt](https://prisjakt.nu). The
+documentation is published at https://schema.prisjakt.nu
 
 ### Installation
 
