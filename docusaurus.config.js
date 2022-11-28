@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'sv'],
+    locales: ['en'],
   },
 
   plugins: [require.resolve('docusaurus-lunr-search')],
@@ -74,13 +74,9 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Docs',
+            label: 'Introduction',
           },
-          { to: '/', label: 'Changelog', position: 'left' },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
+          { to: 'https://github.com/Prisjakt/feed-specification/releases', label: 'Changelog', position: 'left' },
           {
             href: 'https://github.com/prisjakt/feed-specification',
             label: 'GitHub',
