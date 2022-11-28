@@ -13,6 +13,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  # Must be set for docusaurus yarn deploy to work
+  GIT_USER: andrejohansson
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -25,14 +29,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Docusaurus BuildDeploy Action
-        uses: redkubes/docusaurus-deploy-action@v1.2
-        with:
-          # source folder
-          source-folder: .
-          # git user name
-          git-user: andrejohansson
-          # git password (defaults to secrets.GITHUB_TOKEN, which should work if it has default rights)
-          git-password: ${{ secrets.GITHUB_TOKEN }}
-          # git branch to publish to (defaults to gh-pages)
-          deployment-branch: gh-pages
+      # Install packages
+      - run: yarn
+
+      # Build output
+      - run: yarn build
+
+      # Deploy to gh-pages branch, GIT_USER must be set
+      - run: yarn deploy
