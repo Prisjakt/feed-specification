@@ -137,7 +137,7 @@ Using this attribute is strongly recommended if [`size`](size.md) for product is
 
 ```csv
 size_system
-au                
+au 
 ```
 
 </td></tr>
@@ -145,7 +145,7 @@ au
 
 ```csv
 size_system
-br                
+br 
 ```
 
 </td></tr>
@@ -153,7 +153,7 @@ br
 
 ```csv
 size_system
-cn                
+cn 
 ```
 
 </td></tr>
@@ -161,7 +161,7 @@ cn
 
 ```csv
 size_system
-de                
+de 
 ```
 
 </td></tr>
@@ -169,7 +169,7 @@ de
 
 ```csv
 size_system
-eu                
+eu 
 ```
 
 </td></tr>
@@ -177,7 +177,7 @@ eu
 
 ```csv
 size_system
-fr                
+fr 
 ```
 
 </td></tr>
@@ -185,7 +185,7 @@ fr
 
 ```csv
 size_system
-it                
+it 
 ```
 
 </td></tr>
@@ -193,7 +193,7 @@ it
 
 ```csv
 size_system
-jp                
+jp 
 ```
 
 </td></tr>
@@ -201,7 +201,7 @@ jp
 
 ```csv
 size_system
-mex                
+mex
 ```
 
 </td></tr>
@@ -209,7 +209,7 @@ mex
 
 ```csv
 size_system
-uk                
+uk 
 ```
 
 </td></tr>
@@ -217,7 +217,7 @@ uk
 
 ```csv
 size_system
-us                
+us 
 ```
 
 </td></tr>
@@ -251,14 +251,14 @@ validation_invalid_enum
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
+<tr><th>Invalid example    </th><th>Resulting error code   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 size_system
-unknown                  
+unknown
 ```
 
 </td><td>

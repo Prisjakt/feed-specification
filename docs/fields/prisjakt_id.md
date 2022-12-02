@@ -65,7 +65,7 @@ Add this information if you know to which Prisjakt product we should match your 
 
 ```csv
 prisjakt_id
-1                
+1  
 ```
 
 </td></tr>
@@ -73,7 +73,7 @@ prisjakt_id
 
 ```csv
 prisjakt_id
-123                
+123
 ```
 
 </td></tr>
@@ -120,14 +120,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 prisjakt_id
-foo                  
+foo                                                                                
 ```
 
 </td><td>
@@ -141,7 +141,7 @@ validation_not_integer
 
 ```csv
 prisjakt_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
 ```
 
 </td><td>

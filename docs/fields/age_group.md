@@ -70,7 +70,7 @@ It is recommended to add this attribute for fashion products to improve results 
 <tr><td>
 
 ```xml
-                                  
+<channel/>                        
 ```
 
 </td></tr>
@@ -88,14 +88,14 @@ It is recommended to add this attribute for fashion products to improve results 
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example    </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 age_group
-adult                
+adult  
 ```
 
 </td></tr>
@@ -103,7 +103,7 @@ adult
 
 ```csv
 age_group
-infant                
+infant 
 ```
 
 </td></tr>
@@ -111,7 +111,7 @@ infant
 
 ```csv
 age_group
-kids                
+kids   
 ```
 
 </td></tr>
@@ -119,7 +119,7 @@ kids
 
 ```csv
 age_group
-newborn                
+newborn
 ```
 
 </td></tr>
@@ -127,7 +127,7 @@ newborn
 
 ```csv
 age_group
-""                
+""     
 ```
 
 </td></tr>
@@ -135,7 +135,7 @@ age_group
 
 ```csv
 age_group
-toddler                
+toddler
 ```
 
 </td></tr>
@@ -176,7 +176,7 @@ validation_invalid_enum
 
 ```csv
 age_group
-unknown                  
+unknown
 ```
 
 </td><td>

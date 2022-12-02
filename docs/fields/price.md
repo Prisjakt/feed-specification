@@ -109,14 +109,14 @@ It should be the same as the price value on your product page. It should contain
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example        </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 price
-100 SEK                
+100 SEK        
 ```
 
 </td></tr>
@@ -124,7 +124,7 @@ price
 
 ```csv
 price
-SEK 100                
+SEK 100        
 ```
 
 </td></tr>
@@ -132,7 +132,7 @@ SEK 100
 
 ```csv
 price
-99.99 SEK                
+99.99 SEK      
 ```
 
 </td></tr>
@@ -140,7 +140,7 @@ price
 
 ```csv
 price
-"99,99 SEK"                
+"99,99 SEK"    
 ```
 
 </td></tr>
@@ -148,7 +148,7 @@ price
 
 ```csv
 price
-"10,000.00 SEK"                
+"10,000.00 SEK"
 ```
 
 </td></tr>
@@ -156,7 +156,7 @@ price
 
 ```csv
 price
-10 000.00 SEK                
+10 000.00 SEK  
 ```
 
 </td></tr>
@@ -164,7 +164,7 @@ price
 
 ```csv
 price
-10.000 SEK                
+10.000 SEK     
 ```
 
 </td></tr>
@@ -172,7 +172,7 @@ price
 
 ```csv
 price
-1.144.000 SEK                
+1.144.000 SEK  
 ```
 
 </td></tr>
@@ -332,7 +332,7 @@ validation_missing_currency
 <tr><td>
 
 ```xml
-                                 
+<channel/>                       
 ```
 
 </td><td>
@@ -349,14 +349,14 @@ validation_missing_value
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
+<tr><th>Invalid example     </th><th>Resulting error code          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 price
-$100                  
+$100          
 ```
 
 </td><td>
@@ -370,7 +370,7 @@ validation_unknown_currency
 
 ```csv
 price
-100$                  
+100$          
 ```
 
 </td><td>
@@ -384,7 +384,7 @@ validation_unknown_currency
 
 ```csv
 price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
 </td><td>
@@ -398,7 +398,7 @@ validation_not_number
 
 ```csv
 price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
 </td><td>
@@ -412,7 +412,7 @@ validation_not_number
 
 ```csv
 price
-foo SEK                  
+foo SEK       
 ```
 
 </td><td>
@@ -426,7 +426,7 @@ validation_missing_price_value
 
 ```csv
 price
-1000                  
+1000          
 ```
 
 </td><td>
@@ -440,7 +440,7 @@ validation_missing_currency
 
 ```csv
 price
--10 SEK                  
+-10 SEK       
 ```
 
 </td><td>
@@ -454,7 +454,7 @@ validation_not_positive_number
 
 ```csv
 price
-0 SEK                  
+0 SEK         
 ```
 
 </td><td>
@@ -468,7 +468,7 @@ validation_not_positive_number
 
 ```csv
 price
-5.00 dollars                  
+5.00 dollars  
 ```
 
 </td><td>
@@ -482,7 +482,7 @@ validation_missing_currency
 
 ```csv
 price
-SEK                  
+SEK           
 ```
 
 </td><td>
@@ -496,7 +496,7 @@ validation_missing_price_value
 
 ```csv
 price
-5.00                  
+5.00          
 ```
 
 </td><td>
@@ -510,7 +510,7 @@ validation_missing_currency
 
 ```csv
 price
-""                  
+""            
 ```
 
 </td><td>

@@ -73,7 +73,7 @@ It is recommended to use this attribute in Fashion categories. Add it to improve
 
 ```csv
 gender
-female                
+female  
 ```
 
 </td></tr>
@@ -81,7 +81,7 @@ female
 
 ```csv
 gender
-male                
+male    
 ```
 
 </td></tr>
@@ -89,7 +89,7 @@ male
 
 ```csv
 gender
-unisex                
+unisex  
 ```
 
 </td></tr>
@@ -130,7 +130,7 @@ validation_invalid_enum
 
 ```csv
 gender
-unknown                  
+unknown   
 ```
 
 </td><td>

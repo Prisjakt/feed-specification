@@ -42,7 +42,7 @@ Please note, that `shipping` is **required** for all products sold on French mar
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </th></tr>
 </thead>
 <tbody>
 <tr><td>
@@ -53,7 +53,7 @@ Please note, that `shipping` is **required** for all products sold on French mar
   <g:region>New York</g:region>
   <g:service>DHL</g:service>
   <g:price>5 SEK</g:price>
-</g:shipping>                
+</g:shipping>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ```
 
 </td></tr>
@@ -65,7 +65,7 @@ Please note, that `shipping` is **required** for all products sold on French mar
   <g:region>London</g:region>
   <g:service>DHL</g:service>
   <g:price>0 GBP</g:price>
-</g:shipping>                
+</g:shipping>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 ```
 
 </td></tr>
@@ -74,7 +74,7 @@ Please note, that `shipping` is **required** for all products sold on French mar
 ```xml
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>DHL</g:service>
   <g:price>25.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
@@ -84,7 +84,7 @@ Please note, that `shipping` is **required** for all products sold on French mar
 </g:shipping>
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>POST</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
@@ -94,14 +94,14 @@ Please note, that `shipping` is **required** for all products sold on French mar
 </g:shipping>
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>UPC</g:service>
   <g:price>45.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>8</g:max_handling_time>
   <g:min_transit_time>3</g:min_transit_time>
   <g:max_transit_time>10</g:max_transit_time>
-</g:shipping>                
+</g:shipping>
 ```
 
 </td></tr>
@@ -112,14 +112,14 @@ Please note, that `shipping` is **required** for all products sold on French mar
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example                                                                                                                                                                                               </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping(country:region:service:price)
-SE:New York:DHL:5 SEK                
+SE:New York:DHL:5 SEK                                                                                                                                                
 ```
 
 </td></tr>
@@ -127,7 +127,7 @@ SE:New York:DHL:5 SEK
 
 ```csv
 shipping(country:region:service:price)
-SE:London:DHL:0 GBP                
+SE:London:DHL:0 GBP                                                                                                                                                  
 ```
 
 </td></tr>
@@ -135,7 +135,7 @@ SE:London:DHL:0 GBP
 
 ```csv
 shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
-"SE:Skåne:DHL:25.00 SEK:1:2:1:3,SE:Skåne:POST:5.00 SEK:1:5:1:3,SE:Skåne:UPC:45.00 SEK:1:8:3:10"                
+"SE:SkÃ¥ne:DHL:25.00 SEK:1:2:1:3,SE:SkÃ¥ne:POST:5.00 SEK:1:5:1:3,SE:SkÃ¥ne:UPC:45.00 SEK:1:8:3:10"
 ```
 
 </td></tr>
@@ -146,7 +146,7 @@ shipping(country:region:service:price:min_handling_time:max_handling_time:min_tr
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code                   </th></tr>
+<tr><th>Invalid example                                                                                                                                                                                                                                                                          </th><th>Resulting error code                   </th></tr>
 </thead>
 <tbody>
 <tr><td>
@@ -157,7 +157,7 @@ shipping(country:region:service:price:min_handling_time:max_handling_time:min_tr
   <g:service>DHL</g:service>
   <g:price>5 SEK</g:price>
   <g:min_handling_time>-1</g:min_handling_time>
-</g:shipping>                  
+</g:shipping>                                                                                                                       
 ```
 
 </td><td>
@@ -175,7 +175,7 @@ validation_missing_value
   <g:region>New York</g:region>
   <g:service>DHL</g:service>
   <g:min_handling_time>-1</g:min_handling_time>
-</g:shipping>                  
+</g:shipping>                                                                                                                      
 ```
 
 </td><td>
@@ -190,11 +190,11 @@ validation_missing_value
 ```xml
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>DHL</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
-</g:shipping>                  
+</g:shipping>                                                                                            
 ```
 
 </td><td>
@@ -209,12 +209,12 @@ validation_shipping_time_missing_values
 ```xml
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>DHL</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>2</g:max_handling_time>
-</g:shipping>                  
+</g:shipping>                                             
 ```
 
 </td><td>
@@ -229,13 +229,13 @@ validation_shipping_time_missing_values
 ```xml
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>Skåne</g:region>
+  <g:region>SkÃ¥ne</g:region>
   <g:service>DHL</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>2</g:max_handling_time>
   <g:min_transit_time>1</g:min_transit_time>
-</g:shipping>                  
+</g:shipping>
 ```
 
 </td><td>
@@ -252,14 +252,14 @@ validation_shipping_time_missing_values
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code                   </th></tr>
+<tr><th>Invalid example                                                                                                        </th><th>Resulting error code                   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
-:New York:DHL:5 SEK:-1                  
+:New York:DHL:5 SEK:-1                                        
 ```
 
 </td><td>
@@ -273,7 +273,7 @@ validation_missing_value
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
-SE:New York:DHL::-1                  
+SE:New York:DHL::-1                                           
 ```
 
 </td><td>
@@ -287,7 +287,7 @@ validation_missing_value
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
-SE:Skåne:DHL:5.00 SEK:1                  
+SE:SkÃ¥ne:DHL:5.00 SEK:1                                       
 ```
 
 </td><td>
@@ -301,7 +301,7 @@ validation_shipping_time_missing_values
 
 ```csv
 shipping(country:region:service:price:min_handling_time:max_handling_time)
-SE:Skåne:DHL:5.00 SEK:1:2                  
+SE:SkÃ¥ne:DHL:5.00 SEK:1:2                   
 ```
 
 </td><td>
@@ -315,7 +315,7 @@ validation_shipping_time_missing_values
 
 ```csv
 shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time)
-SE:Skåne:DHL:5.00 SEK:1:2:1                  
+SE:SkÃ¥ne:DHL:5.00 SEK:1:2:1
 ```
 
 </td><td>

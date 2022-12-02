@@ -41,7 +41,7 @@ Should be used for tagging products for an adult audience. Not used to describe 
 <tr><td>
 
 ```xml
-                        
+<channel/>              
 ```
 
 </td></tr>
@@ -115,7 +115,7 @@ Should be used for tagging products for an adult audience. Not used to describe 
 
 ```csv
 adult
-""                
+""       
 ```
 
 </td></tr>
@@ -123,7 +123,7 @@ adult
 
 ```csv
 adult
-true                
+true     
 ```
 
 </td></tr>
@@ -131,7 +131,7 @@ true
 
 ```csv
 adult
-false                
+false    
 ```
 
 </td></tr>
@@ -139,7 +139,7 @@ false
 
 ```csv
 adult
-yes                
+yes      
 ```
 
 </td></tr>
@@ -147,7 +147,7 @@ yes
 
 ```csv
 adult
-no                
+no       
 ```
 
 </td></tr>
@@ -155,7 +155,7 @@ no
 
 ```csv
 adult
-YES                
+YES      
 ```
 
 </td></tr>
@@ -163,7 +163,7 @@ YES
 
 ```csv
 adult
-NO                
+NO       
 ```
 
 </td></tr>
@@ -171,7 +171,7 @@ NO
 
 ```csv
 adult
-tRuE                
+tRuE     
 ```
 
 </td></tr>
@@ -179,7 +179,7 @@ tRuE
 
 ```csv
 adult
-fAlSE                
+fAlSE    
 ```
 
 </td></tr>
@@ -220,7 +220,7 @@ validation_invalid_value
 
 ```csv
 adult
-unknown                  
+unknown    
 ```
 
 </td><td>

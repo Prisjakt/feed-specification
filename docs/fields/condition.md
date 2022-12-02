@@ -44,20 +44,6 @@ It allows us to properly display condition of a product in our product listing.
 <tr><td>
 
 ```xml
-<g:condition>damaged packaging</g:condition>
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:condition>demo</g:condition>             
-```
-
-</td></tr>
-<tr><td>
-
-```xml
 <g:condition>new</g:condition>              
 ```
 
@@ -76,6 +62,20 @@ It allows us to properly display condition of a product in our product listing.
 ```
 
 </td></tr>
+<tr><td>
+
+```xml
+<g:condition>damaged packaging</g:condition>
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:condition>demo</g:condition>             
+```
+
+</td></tr>
 </tbody>
 </table>
 
@@ -83,14 +83,14 @@ It allows us to properly display condition of a product in our product listing.
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example              </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 condition
-damaged packaging                
+new              
 ```
 
 </td></tr>
@@ -98,7 +98,7 @@ damaged packaging
 
 ```csv
 condition
-demo                
+refurbished      
 ```
 
 </td></tr>
@@ -106,7 +106,7 @@ demo
 
 ```csv
 condition
-new                
+used             
 ```
 
 </td></tr>
@@ -114,7 +114,7 @@ new
 
 ```csv
 condition
-refurbished                
+damaged packaging
 ```
 
 </td></tr>
@@ -122,7 +122,7 @@ refurbished
 
 ```csv
 condition
-used                
+demo             
 ```
 
 </td></tr>
@@ -139,7 +139,7 @@ used
 <tr><td>
 
 ```xml
-                                  
+<channel/>                        
 ```
 
 </td><td>
@@ -176,7 +176,7 @@ validation_invalid_enum
 
 ```csv
 condition
-""                  
+""     
 ```
 
 </td><td>
@@ -190,7 +190,7 @@ validation_missing_value
 
 ```csv
 condition
-unknown                  
+unknown
 ```
 
 </td><td>

@@ -37,13 +37,13 @@ Datetime range indicating when `sale_price` is active. If you don't submit this 
 
 <table>
 <thead>
-<tr><th>Valid example                         </th></tr>
+<tr><th>Valid example                                                                                                                                                      </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:sale_price>11.50 SEK</g:sale_price>
+<g:sale_price>11.50 SEK</g:sale_price>                                                                                                                             
 ```
 
 </td></tr>
@@ -51,7 +51,7 @@ Datetime range indicating when `sale_price` is active. If you don't submit this 
 
 ```xml
 <g:sale_price_effective_date>2016-02-24/2016-02-26</g:sale_price_effective_date>
-<g:sale_price>11.50 SEK</g:sale_price>                                       
+<g:sale_price>11.50 SEK</g:sale_price>                                            
 ```
 
 </td></tr>
@@ -59,7 +59,7 @@ Datetime range indicating when `sale_price` is active. If you don't submit this 
 
 ```xml
 <g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
-<g:sale_price>11.50 SEK</g:sale_price>                                       
+<g:sale_price>11.50 SEK</g:sale_price>
 ```
 
 </td></tr>
@@ -70,14 +70,14 @@ Datetime range indicating when `sale_price` is active. If you don't submit this 
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example                                                                                                   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 sale_price_effective_date,sale_price
-,11.50 SEK                
+,11.50 SEK                                                                 
 ```
 
 </td></tr>
@@ -85,7 +85,7 @@ sale_price_effective_date,sale_price
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24/2016-02-26,11.50 SEK                
+2016-02-24/2016-02-26,11.50 SEK                                            
 ```
 
 </td></tr>
@@ -93,7 +93,7 @@ sale_price_effective_date,sale_price
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK                
+2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
 ```
 
 </td></tr>
@@ -104,13 +104,13 @@ sale_price_effective_date,sale_price
 
 <table>
 <thead>
-<tr><th>Invalid example                                                           </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                                        </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>
+<g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>                                             
 ```
 
 </td><td>
@@ -124,7 +124,7 @@ validation_invalid_format
 
 ```xml
 <g:sale_price_effective_date>2016-02-29T15:30-0800</g:sale_price_effective_date>
-<g:sale_price>11.50 GBP</g:sale_price>                                                                           
+<g:sale_price>11.50 GBP</g:sale_price>
 ```
 
 </td><td>
@@ -141,14 +141,14 @@ validation_missing_value
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                     </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 sale_price_effective_date,sale_price
-2018/2016-02-29,                  
+2018/2016-02-29,               
 ```
 
 </td><td>
@@ -162,7 +162,7 @@ validation_invalid_format
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-29T15:30-0800,11.50 GBP                  
+2016-02-29T15:30-0800,11.50 GBP
 ```
 
 </td><td>

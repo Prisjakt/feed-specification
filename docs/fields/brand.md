@@ -40,7 +40,7 @@ The brand attribute is used to indicate a product's brand/manufacturer name. Pri
 <tr><td>
 
 ```xml
-                           
+<channel/>                 
 ```
 
 </td></tr>
@@ -72,7 +72,7 @@ The brand attribute is used to indicate a product's brand/manufacturer name. Pri
 
 ```csv
 brand
-""                
+""       
 ```
 
 </td></tr>
@@ -80,7 +80,7 @@ brand
 
 ```csv
 brand
-Prisjakt                
+Prisjakt 
 ```
 
 </td></tr>
@@ -88,7 +88,7 @@ Prisjakt
 
 ```csv
 brand
-Sony                
+Sony     
 ```
 
 </td></tr>
@@ -122,14 +122,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                              </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 brand
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)
 ```
 
 </td><td>
