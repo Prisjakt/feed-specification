@@ -1,0 +1,39 @@
+import OptionalField from '../partials/_optional_field.md';
+import RequiredField from '../partials/_required_field.md';
+
+# Required vs Not Required Fields
+
+## Optional Fields
+
+<OptionalField />
+
+Most fields in Prisjakt are optional, which means that you don´t have to supply them. Your offer will be indexed anyway. Please note that this may limit the functionality we can present for your offer. You should always strive towards supplying as much (and correct) information as possible.
+
+## Required Fields
+
+<RequiredField />
+
+Some fields, we simply cannot work without such as a link to your offer, a price and an image. If any of these fields are missing, your whole offer will be omitted.
+
+The following fields are required
+
+- [Availability](/docs/fields/availability)
+- [Condition](/docs/fields/condition)
+- [Id](/docs/fields/id)
+- [Link](/docs/fields/link)
+- [Price](/docs/fields/price)
+- [Title](/docs/fields/title)
+- **At least one of**: [Product Type](/docs/fields/product_type) OR [Google Product Category](/docs/fields/google_product_category)
+
+## Changelog
+
+All notable changes to *the list of required fields* will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).#
+
+### [0.0.1] - 2022-12-05
+
+#### Added
+
+- Complete list of required fields
