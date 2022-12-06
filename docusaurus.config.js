@@ -27,7 +27,27 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    async function myPlugin(context, options) {
+      // ...
+      return {
+        name: 'prisjakt-plugin',
+        configureWebpack: function () {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.xml/,
+                  type: 'asset/resource'
+                }
+              ]
+            },
+          };
+        },
+      };
+    },
+  ],
   markdown: {
     mermaid: true,
   },
