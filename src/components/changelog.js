@@ -1,6 +1,9 @@
 import React from 'react';
 
 /*
+Changelog format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+versions adheres to <a href="Semantic Versioning">https://semver.org/spec/v2.0.0.html</a>.
+
 Example usage: 
 
 <ChangeLog versionHistory={[
@@ -73,8 +76,5 @@ export default function ChangeLog({ versionHistory, dateOnly }) {
             </div>
         ))
         }
-
-        Changelog format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
-        versions adheres to <a href="Semantic Versioning">https://semver.org/spec/v2.0.0.html</a>.
     </>
 }
