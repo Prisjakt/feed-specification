@@ -1,5 +1,6 @@
 import OptionalField from '../partials/_optional_field.md';
 import RequiredField from '../partials/_required_field.md';
+import ChangeLog from '@site/src/components/changelog';
 
 # Required vs Not Required Fields
 
@@ -25,15 +26,12 @@ The following fields are required
 - [Title](/docs/fields/title)
 - **At least one of**: [Product Type](/docs/fields/product_type) OR [Google Product Category](/docs/fields/google_product_category)
 
-## Changelog
-
-All notable changes to *the list of required fields* will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).#
-
-### [0.0.1] - 2022-12-05
-
-#### Added
-
-- Complete list of required fields
+<ChangeLog versionHistory={[
+  {
+    semanticVersion: "0.0.1",
+    date: new Date("2022-12-06"),
+    added: [
+        "Complete list of required fields"
+    ]
+  }
+]} dateOnly={true}/>
