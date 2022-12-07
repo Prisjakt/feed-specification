@@ -2,45 +2,63 @@
 sidebar_position: 1
 ---
 
+import Definition from '@site/src/components/definition';
+
 # Terms
 
 ## Prisjakt Specific
 
-- <a id="term_feed" class="anchor">Feed</a><a class="hash-link" href="#term_feed" title="Direct link"></a>
+<Definition id="term_feed" title="Feed">
+    This is the definition of the first term.
+</Definition>
 
-  - This is the definition of the first term.
+<Definition id="term_offer" title="Offer">
+    This is the definition of the first term.
+</Definition>
 
-- **Offer**
-  - This is one definition of the second term.
-  - This is another definition of the second term.
+<Definition id="term_field" title="Field">
+    This is the definition of the first term.
+</Definition>
 
-- **Field**
-  - This is the definition of the first term.
-
-- **Price**
-  - This is the definition of the first term.
+<Definition id="term_price" title="Price">
+    This is the definition of the first term.
+</Definition>
 
 ## Ingestion Specific
 
-Nested
-: This is the definition of the first term.
 
-Repeatable
-: This is the definition of the first term.
+<Definition id="term_nested" title="Nested">
+    This is the definition of the first term.
+</Definition>
 
-Agent
-: This is the definition of the first term.
 
-Validation  Rule
-: This is the definition of the first term.
+<Definition id="term_repeatable" title="Repeatable">
+    This is the definition of the first term.
+</Definition>
 
-Ingestion Run
-: This is the definition of the first term.
+<Definition id="term_agent" title="Agent">
+    This is the definition of the first term.
+</Definition>
 
-Severity
-: This is the definition of the first term.
+
+<Definition id="term_validation_rule" title="Validation  Rule">
+    This is the definition of the first term.
+</Definition>
+
+
+<Definition id="term_ingestion_run" title="Ingestion Run">
+    This is the definition of the first term.
+</Definition>
+
+
+<Definition id="term_severity" title="Severity">
+
+    Please see [validation severity levels](/docs/terminology/severity-levels)
+
+</Definition>
 
 ## Technical
 
-Case Sensitive
-: This is the definition of the first term.
+<Definition id="term_case_sensitive" title="Case Sensitive">
+    This is the definition of the first term.
+</Definition>
