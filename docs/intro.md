@@ -4,19 +4,17 @@ sidebar_position: 1
 
 # Introduction
 
-Let's discover **Prisjakt feed format in less than 5 minutes**.
+## Overview
 
-Prisjakt feed specification is a set of guidlines and good pracices on how to set up feeds both big and small.
+This documentation covers everything related to Prisjakt feed specs from basics to advanced incremental reading. Explore articles below to learn more about accepted formats, supported attributes and good practices when working with data feeds.
+
+Prisjakt feeds specification enables you to easily integrate your inventory with Prisjakt price comparison engine and with our channels as the feed specification is closely related to Google Merchant specification.
+
  
-## Why
+## Quick start
 
-Google feed specification allows to easily import your inventory to Prisjakt systems which enables:
-- feed validation in Business Center and further inventory analysis
-- shipping and delivery options*
-- variants*
-- automatic indexing*
+See 'Overview' section for guidelines on how to set up basic feed. 
 
-## How
-
-Before you start please take a look at [best practices](/docs/overview/best-practices). If you're able to create feed on your own please make sure you follow requirement set for each [attributes](/docs/category/fields) or take a look at [example feed](/docs/category/examples). Alternatively you can use Woocoomerce or Magento plugin available [here](https://example-link.com) or [here](https://example-link.com). 
+For small and medium businesses we recommend integrating product feeds in our self-service portal [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
+We're also able to prepare custom integration for enterprice clients. Our go to-to solution is 'delta feed' setup described in 'Advanced' section. For more information please contanct our support at support@prisjakt.nu.
 
