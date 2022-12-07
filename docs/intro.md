@@ -4,44 +4,19 @@ sidebar_position: 1
 
 # Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **Prisjakt feed format in less than 5 minutes**.
 
-## Getting Started
+Prisjakt feed specification is a set of guidlines and good pracices on how to set up feeds both big and small.
+ 
+## Why
 
-Get started by **creating a new site**.
+Google feed specification allows to easily import your inventory to Prisjakt systems which enables:
+- feed validation in Business Center and further inventory analysis
+- shipping and delivery options*
+- variants*
+- automatic indexing*
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## How
 
-### What you'll need
+Before you start please take a look at [best practices](/docs/overview/best-practices). If you're able to create feed on your own please make sure you follow requierment set for each [attributes](/docs/category/fields) or take a look at [example feed](/docs/category/examples/). Alternatively you can use Woocoomerce or Magento plugin available [here](external-link) or [here](external-link). 
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
