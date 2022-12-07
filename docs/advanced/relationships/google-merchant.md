@@ -1,0 +1,1 @@
+# Google Merchant Product Specification
