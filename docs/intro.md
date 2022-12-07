@@ -18,5 +18,5 @@ Google feed specification allows to easily import your inventory to Prisjakt sys
 
 ## How
 
-Before you start please take a look at [best practices](/docs/overview/best-practices). If you're able to create feed on your own please make sure you follow requierment set for each [attributes](/docs/category/fields) or take a look at [example feed](/docs/category/examples). Alternatively you can use Woocoomerce or Magento plugin available [here](https://example-link.com) or [here](https://example-link.com). 
+Before you start please take a look at [best practices](/docs/overview/best-practices). If you're able to create feed on your own please make sure you follow requirement set for each [attributes](/docs/category/fields) or take a look at [example feed](/docs/category/examples). Alternatively you can use Woocoomerce or Magento plugin available [here](https://example-link.com) or [here](https://example-link.com). 
 
