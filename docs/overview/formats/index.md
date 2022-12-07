@@ -1,5 +1,0 @@
-# Formats
-
-## XML
-
-## CSV

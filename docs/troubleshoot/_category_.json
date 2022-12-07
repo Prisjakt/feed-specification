@@ -1,0 +1,8 @@
+{
+  "label": "Troubleshoot",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Guidance for common problems."
+  }
+}

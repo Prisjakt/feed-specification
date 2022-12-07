@@ -1,6 +1,6 @@
 {
   "label": "Authenticated Feeds",
-  "position": 1,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Describes the authentication methods we support if you don´t want your feed public to the world."
