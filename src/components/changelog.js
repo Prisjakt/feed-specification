@@ -54,8 +54,6 @@ const renderVerblist = (heading, items) => <>
 export default function ChangeLog({ versionHistory, dateOnly }) {
 
     return <>
-        <h2>Changelog</h2>
-
         {versionHistory && versionHistory.map((v, i) => (
             <div id="v{v.semanticVersion}" style={{ marginTop: '1em' }}>
                 {dateOnly &&
