@@ -121,14 +121,14 @@ It's strongly recommented to use this attribute for Electronics/Household Applia
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example               </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 energy_efficiency_class
-a+++                
+a+++
 ```
 
 </td></tr>
@@ -136,7 +136,7 @@ a+++
 
 ```csv
 energy_efficiency_class
-a++                
+a++ 
 ```
 
 </td></tr>
@@ -144,7 +144,7 @@ a++
 
 ```csv
 energy_efficiency_class
-a+                
+a+  
 ```
 
 </td></tr>
@@ -152,7 +152,7 @@ a+
 
 ```csv
 energy_efficiency_class
-a                
+a   
 ```
 
 </td></tr>
@@ -160,7 +160,7 @@ a
 
 ```csv
 energy_efficiency_class
-b                
+b   
 ```
 
 </td></tr>
@@ -168,7 +168,7 @@ b
 
 ```csv
 energy_efficiency_class
-c                
+c   
 ```
 
 </td></tr>
@@ -176,7 +176,7 @@ c
 
 ```csv
 energy_efficiency_class
-d                
+d   
 ```
 
 </td></tr>
@@ -184,7 +184,7 @@ d
 
 ```csv
 energy_efficiency_class
-e                
+e   
 ```
 
 </td></tr>
@@ -192,7 +192,7 @@ e
 
 ```csv
 energy_efficiency_class
-f                
+f   
 ```
 
 </td></tr>
@@ -200,7 +200,7 @@ f
 
 ```csv
 energy_efficiency_class
-g                
+g   
 ```
 
 </td></tr>
@@ -234,14 +234,14 @@ validation_invalid_enum
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
+<tr><th>Invalid example                </th><th>Resulting error code   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 energy_efficiency_class
-unknown                  
+unknown
 ```
 
 </td><td>

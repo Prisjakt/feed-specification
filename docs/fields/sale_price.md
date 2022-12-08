@@ -47,7 +47,7 @@ It should be the same as the currently active sales price on your product page. 
 <tr><td>
 
 ```xml
-                                          
+<channel/>                                
 ```
 
 </td></tr>
@@ -114,14 +114,14 @@ It should be the same as the currently active sales price on your product page. 
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example             </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 sale_price
-""                
+""             
 ```
 
 </td></tr>
@@ -129,7 +129,7 @@ sale_price
 
 ```csv
 sale_price
-100 SEK                
+100 SEK        
 ```
 
 </td></tr>
@@ -137,7 +137,7 @@ sale_price
 
 ```csv
 sale_price
-SEK 100                
+SEK 100        
 ```
 
 </td></tr>
@@ -145,7 +145,7 @@ SEK 100
 
 ```csv
 sale_price
-99.99 SEK                
+99.99 SEK      
 ```
 
 </td></tr>
@@ -153,7 +153,7 @@ sale_price
 
 ```csv
 sale_price
-"99,99 SEK"                
+"99,99 SEK"    
 ```
 
 </td></tr>
@@ -161,7 +161,7 @@ sale_price
 
 ```csv
 sale_price
-"10,000.00 SEK"                
+"10,000.00 SEK"
 ```
 
 </td></tr>
@@ -169,7 +169,7 @@ sale_price
 
 ```csv
 sale_price
-10 000.00 SEK                
+10 000.00 SEK  
 ```
 
 </td></tr>
@@ -177,7 +177,7 @@ sale_price
 
 ```csv
 sale_price
-10.000 SEK                
+10.000 SEK     
 ```
 
 </td></tr>
@@ -185,7 +185,7 @@ sale_price
 
 ```csv
 sale_price
-1.144.000 SEK                
+1.144.000 SEK  
 ```
 
 </td></tr>
@@ -349,14 +349,14 @@ validation_missing_currency
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
+<tr><th>Invalid example          </th><th>Resulting error code          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 sale_price
-$100                  
+$100          
 ```
 
 </td><td>
@@ -370,7 +370,7 @@ validation_unknown_currency
 
 ```csv
 sale_price
-100$                  
+100$          
 ```
 
 </td><td>
@@ -384,7 +384,7 @@ validation_unknown_currency
 
 ```csv
 sale_price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
 </td><td>
@@ -398,7 +398,7 @@ validation_not_number
 
 ```csv
 sale_price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
 </td><td>
@@ -412,7 +412,7 @@ validation_not_number
 
 ```csv
 sale_price
-foo SEK                  
+foo SEK       
 ```
 
 </td><td>
@@ -426,7 +426,7 @@ validation_missing_price_value
 
 ```csv
 sale_price
-1000                  
+1000          
 ```
 
 </td><td>
@@ -440,7 +440,7 @@ validation_missing_currency
 
 ```csv
 sale_price
--10 SEK                  
+-10 SEK       
 ```
 
 </td><td>
@@ -454,7 +454,7 @@ validation_not_positive_number
 
 ```csv
 sale_price
-0 SEK                  
+0 SEK         
 ```
 
 </td><td>
@@ -468,7 +468,7 @@ validation_not_positive_number
 
 ```csv
 sale_price
-5.00 dollars                  
+5.00 dollars  
 ```
 
 </td><td>
@@ -482,7 +482,7 @@ validation_missing_currency
 
 ```csv
 sale_price
-SEK                  
+SEK           
 ```
 
 </td><td>
@@ -496,7 +496,7 @@ validation_missing_price_value
 
 ```csv
 sale_price
-5.00                  
+5.00          
 ```
 
 </td><td>

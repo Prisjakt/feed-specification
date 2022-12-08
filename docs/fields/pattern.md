@@ -58,14 +58,14 @@ Using this attribute is strongly recommended for Fashion categories. Add it to i
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 pattern
-stripped                
+stripped
 ```
 
 </td></tr>
@@ -73,7 +73,7 @@ stripped
 
 ```csv
 pattern
-strips                
+strips  
 ```
 
 </td></tr>
@@ -107,14 +107,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                                                               </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 pattern
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)
 ```
 
 </td><td>

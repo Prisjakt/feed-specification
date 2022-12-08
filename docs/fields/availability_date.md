@@ -35,14 +35,14 @@ It should be used to indicate either a preorder date or release date.
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example                                                                                                        </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>preorder</g:availability>                
+<g:availability>preorder</g:availability>                      
 ```
 
 </td></tr>
@@ -50,7 +50,7 @@ It should be used to indicate either a preorder date or release date.
 
 ```xml
 <g:availability_date>2021-12-22T03:12:58.019077+00:00</g:availability_date>
-<g:availability>preorder</g:availability>                
+<g:availability>preorder</g:availability>
 ```
 
 </td></tr>
@@ -61,14 +61,14 @@ It should be used to indicate either a preorder date or release date.
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example                                                           </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 availability_date,availability
-2021-03-21,preorder                
+2021-03-21,preorder                      
 ```
 
 </td></tr>
@@ -76,7 +76,7 @@ availability_date,availability
 
 ```csv
 availability_date,availability
-2021-12-22T03:12:58.019077+00:00,preorder                
+2021-12-22T03:12:58.019077+00:00,preorder
 ```
 
 </td></tr>
@@ -87,13 +87,13 @@ availability_date,availability
 
 <table>
 <thead>
-<tr><th>Invalid example                                               </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                                  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:availability_date>2021/12/22/12:23:00</g:availability_date>
+<g:availability_date>2021/12/22/12:23:00</g:availability_date>                                                   
 ```
 
 </td><td>
@@ -106,7 +106,7 @@ validation_invalid_format
 <tr><td>
 
 ```xml
-<g:availability_date>today</g:availability_date>              
+<g:availability_date>today</g:availability_date>                                                                 
 ```
 
 </td><td>
@@ -119,7 +119,7 @@ validation_invalid_format
 <tr><td>
 
 ```xml
-<g:availability>preorder</g:availability>                     
+<g:availability>preorder</g:availability>                                                                        
 ```
 
 </td><td>
@@ -133,7 +133,7 @@ validation_missing_field
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>in_stock</g:availability>                                                               
+<g:availability>in_stock</g:availability>                  
 ```
 
 </td><td>
@@ -147,7 +147,7 @@ validation_invalid_value
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>out_of_stock</g:availability>                                                               
+<g:availability>out_of_stock</g:availability>              
 ```
 
 </td><td>
@@ -161,7 +161,7 @@ validation_invalid_value
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>pickup</g:availability>                                                               
+<g:availability>pickup</g:availability>                    
 ```
 
 </td><td>
@@ -175,7 +175,7 @@ validation_invalid_value
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>download</g:availability>                                                               
+<g:availability>download</g:availability>                  
 ```
 
 </td><td>
@@ -189,7 +189,7 @@ validation_invalid_value
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>not_available_for_purchase</g:availability>                                                               
+<g:availability>not_available_for_purchase</g:availability>
 ```
 
 </td><td>
@@ -206,14 +206,14 @@ validation_invalid_value
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                     </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 availability_date
-2021/12/22/12:23:00                  
+2021/12/22/12:23:00                               
 ```
 
 </td><td>
@@ -227,7 +227,7 @@ validation_invalid_format
 
 ```csv
 availability_date
-today                  
+today                                             
 ```
 
 </td><td>
@@ -241,7 +241,7 @@ validation_invalid_format
 
 ```csv
 availability_date,availability
-,preorder                  
+,preorder                            
 ```
 
 </td><td>
@@ -269,7 +269,7 @@ validation_invalid_value
 
 ```csv
 availability_date,availability
-2021-03-21,out_of_stock                  
+2021-03-21,out_of_stock              
 ```
 
 </td><td>
@@ -283,7 +283,7 @@ validation_invalid_value
 
 ```csv
 availability_date,availability
-2021-03-21,pickup                  
+2021-03-21,pickup                    
 ```
 
 </td><td>
@@ -311,7 +311,7 @@ validation_invalid_value
 
 ```csv
 availability_date,availability
-2021-03-21,not_available_for_purchase                  
+2021-03-21,not_available_for_purchase
 ```
 
 </td><td>

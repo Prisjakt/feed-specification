@@ -58,14 +58,14 @@ It is recommended to use this attribute in Fashion categories. Add it to improve
 
 <table>
 <thead>
-<tr><th>Valid example  </th></tr>
+<tr><th>Valid example          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 material
-Cotton                
+Cotton        
 ```
 
 </td></tr>
@@ -73,7 +73,7 @@ Cotton
 
 ```csv
 material
-Cotton/Leather                
+Cotton/Leather
 ```
 
 </td></tr>
@@ -120,14 +120,14 @@ validation_too_many_repetitions
 
 <table>
 <thead>
-<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
+<tr><th>Invalid example                                                                                                                                                                                                                                                                                           </th><th>Resulting error code           </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 material
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)
 ```
 
 </td><td>
@@ -141,7 +141,7 @@ validation_invalid_length
 
 ```csv
 material
-Cotton/Leather/Elastane/Cotton                  
+Cotton/Leather/Elastane/Cotton                                                                                                                                                                                                                                                                   
 ```
 
 </td><td>
