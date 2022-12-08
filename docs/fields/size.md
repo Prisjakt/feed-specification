@@ -65,7 +65,7 @@ It is recommended to add this attribute for fashion products to improve results 
 
 ```csv
 size
-XS        
+XS                
 ```
 
 </td></tr>
@@ -73,7 +73,7 @@ XS
 
 ```csv
 size
-XXXL      
+XXXL                
 ```
 
 </td></tr>
@@ -107,14 +107,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                                                            </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 size
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)                  
 ```
 
 </td><td>

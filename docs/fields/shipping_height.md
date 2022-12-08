@@ -93,14 +93,14 @@ It is recommended to add this attribute if delivery costs based on dimensions.
 
 <table>
 <thead>
-<tr><th>Valid example           </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_height
-""      
+""                
 ```
 
 </td></tr>
@@ -108,7 +108,7 @@ shipping_height
 
 ```csv
 shipping_height
-0 cm    
+0 cm                
 ```
 
 </td></tr>
@@ -116,7 +116,7 @@ shipping_height
 
 ```csv
 shipping_height
-0.0 in  
+0.0 in                
 ```
 
 </td></tr>
@@ -124,7 +124,7 @@ shipping_height
 
 ```csv
 shipping_height
-11 cm   
+11 cm                
 ```
 
 </td></tr>
@@ -132,7 +132,7 @@ shipping_height
 
 ```csv
 shipping_height
-15.2 in 
+15.2 in                
 ```
 
 </td></tr>
@@ -140,7 +140,7 @@ shipping_height
 
 ```csv
 shipping_height
-10.12 cm
+10.12 cm                
 ```
 
 </td></tr>
@@ -226,14 +226,14 @@ validation_missing_value
 
 <table>
 <thead>
-<tr><th>Invalid example               </th><th>Resulting error code          </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_height
-123cm         
+123cm                  
 ```
 
 </td><td>
@@ -247,7 +247,7 @@ validation_invalid_format
 
 ```csv
 shipping_height
-2 m           
+2 m                  
 ```
 
 </td><td>
@@ -261,7 +261,7 @@ validation_invalid_length_unit
 
 ```csv
 shipping_height
-unkn own      
+unkn own                  
 ```
 
 </td><td>
@@ -275,7 +275,7 @@ validation_invalid_value
 
 ```csv
 shipping_height
-111.222.333 in
+111.222.333 in                  
 ```
 
 </td><td>
@@ -289,7 +289,7 @@ validation_invalid_value
 
 ```csv
 shipping_height
- in           
+ in                  
 ```
 
 </td><td>

@@ -58,14 +58,14 @@ It should contain the full product name. The title is used to clearly state what
 
 <table>
 <thead>
-<tr><th>Valid example                     </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 title
-Samsung Galaxy S8 Black 128G
+Samsung Galaxy S8 Black 128G                
 ```
 
 </td></tr>
@@ -112,14 +112,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                         </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 title
-""                                                                                                                                                                                                                                                                                                
+""                  
 ```
 
 </td><td>
@@ -133,7 +133,7 @@ validation_missing_value
 
 ```csv
 title
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)                  
 ```
 
 </td><td>

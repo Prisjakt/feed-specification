@@ -66,14 +66,14 @@ This attribute is strongly recommended for fashion and beauty segment. It helps 
 
 <table>
 <thead>
-<tr><th>Valid example       </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 item_group_id
-""    
+""                
 ```
 
 </td></tr>
@@ -81,7 +81,7 @@ item_group_id
 
 ```csv
 item_group_id
-AAA111
+AAA111                
 ```
 
 </td></tr>
@@ -89,7 +89,7 @@ AAA111
 
 ```csv
 item_group_id
-aaa111
+aaa111                
 ```
 
 </td></tr>
@@ -123,14 +123,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                  </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 item_group_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
 ```
 
 </td><td>

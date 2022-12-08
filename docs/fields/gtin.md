@@ -47,76 +47,76 @@ Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https
 
 <table>
 <thead>
-<tr><th>Valid example                                            </th></tr>
+<tr><th>Valid example                   </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<channel/>                                               
+<channel/>                      
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>90311017</g:gtin>                                
+<g:gtin>90311017</g:gtin>       
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>036282818705</g:gtin>                            
+<g:gtin>036282818705</g:gtin>   
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>8806088269696</g:gtin>                           
+<g:gtin>8806088269696</g:gtin>  
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>10614141000415</g:gtin>                          
+<g:gtin>10614141000415</g:gtin> 
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin> -</g:gtin>                                      
+<g:gtin> -</g:gtin>             
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>9031-1017</g:gtin>                               
+<g:gtin>9031-1017</g:gtin>      
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>0362 8281-8705</g:gtin>                          
+<g:gtin>0362 8281-8705</g:gtin> 
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>8806-08826 9696</g:gtin>                         
+<g:gtin>8806-08826 9696</g:gtin>
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:gtin>10614141000415</g:gtin>                          
+<g:gtin>10614141000415</g:gtin> 
 ```
 
 </td></tr>
@@ -124,7 +124,7 @@ Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https
 
 ```xml
 <g:gtin>10614141000415</g:gtin>
-<g:gtin>90311017</g:gtin>
+<g:gtin>90311017</g:gtin>                                 
 ```
 
 </td></tr>
@@ -135,14 +135,14 @@ Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https
 
 <table>
 <thead>
-<tr><th>Valid example                 </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 gtin
-""                       
+""                
 ```
 
 </td></tr>
@@ -150,7 +150,7 @@ gtin
 
 ```csv
 gtin
-90311017                 
+90311017                
 ```
 
 </td></tr>
@@ -158,7 +158,7 @@ gtin
 
 ```csv
 gtin
-036282818705             
+036282818705                
 ```
 
 </td></tr>
@@ -166,7 +166,7 @@ gtin
 
 ```csv
 gtin
-8806088269696            
+8806088269696                
 ```
 
 </td></tr>
@@ -174,7 +174,7 @@ gtin
 
 ```csv
 gtin
-10614141000415           
+10614141000415                
 ```
 
 </td></tr>
@@ -182,7 +182,7 @@ gtin
 
 ```csv
 gtin
- -                       
+ -                
 ```
 
 </td></tr>
@@ -198,7 +198,7 @@ gtin
 
 ```csv
 gtin
-0362 8281-8705           
+0362 8281-8705                
 ```
 
 </td></tr>
@@ -206,7 +206,7 @@ gtin
 
 ```csv
 gtin
-8806-08826 9696          
+8806-08826 9696                
 ```
 
 </td></tr>
@@ -214,7 +214,7 @@ gtin
 
 ```csv
 gtin
-10614141000415           
+10614141000415                
 ```
 
 </td></tr>
@@ -222,7 +222,7 @@ gtin
 
 ```csv
 gtin
-"10614141000415,90311017"
+"10614141000415,90311017"                
 ```
 
 </td></tr>
@@ -360,14 +360,14 @@ validation_gtin_invalid_check_digit
 
 <table>
 <thead>
-<tr><th>Invalid example        </th><th>Resulting error code               </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code               </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 gtin
-88aaa08869696     
+88aaa08869696                  
 ```
 
 </td><td>
@@ -381,7 +381,7 @@ validation_not_integer
 
 ```csv
 gtin
-881111088111169696
+881111088111169696                  
 ```
 
 </td><td>
@@ -395,7 +395,7 @@ validation_invalid_length
 
 ```csv
 gtin
-026282818705      
+026282818705                  
 ```
 
 </td><td>
@@ -409,7 +409,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-046282818705      
+046282818705                  
 ```
 
 </td><td>
@@ -423,7 +423,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-236282818705      
+236282818705                  
 ```
 
 </td><td>
@@ -437,7 +437,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-056282818705      
+056282818705                  
 ```
 
 </td><td>
@@ -451,7 +451,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-986282818705      
+986282818705                  
 ```
 
 </td><td>
@@ -465,7 +465,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-996282818705      
+996282818705                  
 ```
 
 </td><td>
@@ -479,7 +479,7 @@ validation_gtin_prefix_not_allowed
 
 ```csv
 gtin
-03628281          
+03628281                  
 ```
 
 </td><td>

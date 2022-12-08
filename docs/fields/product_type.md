@@ -59,7 +59,7 @@ Please note that `product_type` is **required** if `google_product_category` is 
 
 ```xml
 <g:product_type>type 1</g:product_type>
-<g:product_type>type 2</g:product_type>                               
+<g:product_type>type 2</g:product_type>                                                                                                               
 ```
 
 </td></tr>
@@ -77,14 +77,14 @@ Please note that `product_type` is **required** if `google_product_category` is 
 
 <table>
 <thead>
-<tr><th>Valid example                                                                 </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 product_type
-""                                                               
+""                
 ```
 
 </td></tr>
@@ -92,7 +92,7 @@ product_type
 
 ```csv
 product_type
-Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates
+Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates                
 ```
 
 </td></tr>
@@ -100,7 +100,7 @@ Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates
 
 ```csv
 product_type
-"type 1,type 2"                                                  
+"type 1,type 2"                
 ```
 
 </td></tr>
@@ -108,7 +108,7 @@ product_type
 
 ```csv
 product_type
-computer_accessories                                             
+computer_accessories                
 ```
 
 </td></tr>
@@ -142,14 +142,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                                </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 product_type
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)                  
 ```
 
 </td><td>

@@ -41,41 +41,41 @@ Use the availability attribute to display your stock status.
 
 <table>
 <thead>
-<tr><th>Valid example                                                                                  </th></tr>
+<tr><th>Valid example                                              </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:availability>in_stock</g:availability>                                                      
+<g:availability>in_stock</g:availability>                  
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:availability>out_of_stock</g:availability>                                                  
+<g:availability>out_of_stock</g:availability>              
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:availability>pickup</g:availability>                                                        
+<g:availability>pickup</g:availability>                    
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:availability>download</g:availability>                                                      
+<g:availability>download</g:availability>                  
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:availability>not_available_for_purchase</g:availability>                                    
+<g:availability>not_available_for_purchase</g:availability>
 ```
 
 </td></tr>
@@ -83,7 +83,15 @@ Use the availability attribute to display your stock status.
 
 ```xml
 <g:availability>preorder</g:availability>
-<g:availability_date>2021-03-21</g:availability_date>
+<g:availability_date>2021-03-21</g:availability_date>                                                            
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:availability>backorder</g:availability>
+<g:availability_date>2021-03-21</g:availability_date>                                                            
 ```
 
 </td></tr>
@@ -94,14 +102,14 @@ Use the availability attribute to display your stock status.
 
 <table>
 <thead>
-<tr><th>Valid example                                     </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 availability
-in_stock                             
+in_stock                
 ```
 
 </td></tr>
@@ -109,7 +117,7 @@ in_stock
 
 ```csv
 availability
-out_of_stock                         
+out_of_stock                
 ```
 
 </td></tr>
@@ -117,7 +125,7 @@ out_of_stock
 
 ```csv
 availability
-pickup                               
+pickup                
 ```
 
 </td></tr>
@@ -125,7 +133,7 @@ pickup
 
 ```csv
 availability
-download                             
+download                
 ```
 
 </td></tr>
@@ -133,7 +141,7 @@ download
 
 ```csv
 availability
-not_available_for_purchase           
+not_available_for_purchase                
 ```
 
 </td></tr>
@@ -141,7 +149,15 @@ not_available_for_purchase
 
 ```csv
 availability,availability_date
-preorder,2021-03-21
+preorder,2021-03-21                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+availability,availability_date
+backorder,2021-03-21                
 ```
 
 </td></tr>
@@ -188,14 +204,14 @@ validation_invalid_enum
 
 <table>
 <thead>
-<tr><th>Invalid example     </th><th>Resulting error code    </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 availability
-""     
+""                  
 ```
 
 </td><td>
@@ -209,7 +225,7 @@ validation_missing_value
 
 ```csv
 availability
-unknown
+unknown                  
 ```
 
 </td><td>

@@ -57,14 +57,14 @@ Shipping label allows mapping your inventory to specific shipping service.
 
 <table>
 <thead>
-<tr><th>Valid example          </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_label
-bulky   
+bulky                
 ```
 
 </td></tr>
@@ -72,7 +72,7 @@ bulky
 
 ```csv
 shipping_label
-dhl/free
+dhl/free                
 ```
 
 </td></tr>
@@ -106,14 +106,14 @@ validation_too_many_repetitions
 
 <table>
 <thead>
-<tr><th>Invalid example                     </th><th>Resulting error code           </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_label
-a/b/c/d/e/f/g/h/i/j/k
+a/b/c/d/e/f/g/h/i/j/k                  
 ```
 
 </td><td>

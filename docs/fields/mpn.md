@@ -66,7 +66,7 @@ Add valid MPN, manufacturer part number for the specific product. MPN is a uniqu
 
 ```csv
 mpn
-SM-G920F   
+SM-G920F                
 ```
 
 </td></tr>
@@ -74,7 +74,7 @@ SM-G920F
 
 ```csv
 mpn
-MGCH3LL/A  
+MGCH3LL/A                
 ```
 
 </td></tr>
@@ -108,14 +108,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                            </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 mpn
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)                  
 ```
 
 </td><td>

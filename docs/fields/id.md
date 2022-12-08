@@ -99,14 +99,14 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 <table>
 <thead>
-<tr><th>Valid example    </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 id
-213888        
+213888                
 ```
 
 </td></tr>
@@ -114,7 +114,7 @@ id
 
 ```csv
 id
-120431832     
+120431832                
 ```
 
 </td></tr>
@@ -122,7 +122,7 @@ id
 
 ```csv
 id
-aBCd1123      
+aBCd1123                
 ```
 
 </td></tr>
@@ -130,7 +130,7 @@ aBCd1123
 
 ```csv
 id
-aBCd-1123     
+aBCd-1123                
 ```
 
 </td></tr>
@@ -138,7 +138,7 @@ aBCd-1123
 
 ```csv
 id
-aBCd_1123     
+aBCd_1123                
 ```
 
 </td></tr>
@@ -146,7 +146,7 @@ aBCd_1123
 
 ```csv
 id
-aBCd1123      
+aBCd1123                
 ```
 
 </td></tr>
@@ -154,7 +154,7 @@ aBCd1123
 
 ```csv
 id
-sv-2131.prod-1
+sv-2131.prod-1                
 ```
 
 </td></tr>
@@ -266,14 +266,14 @@ validation_invalid_value
 
 <table>
 <thead>
-<tr><th>Invalid example                         </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 id
-""                                   
+""                  
 ```
 
 </td><td>
@@ -287,7 +287,7 @@ validation_missing_value
 
 ```csv
 id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                  
 ```
 
 </td><td>
@@ -301,7 +301,7 @@ validation_invalid_length
 
 ```csv
 id
-aBCd/1123                            
+aBCd/1123                  
 ```
 
 </td><td>
@@ -315,7 +315,7 @@ validation_invalid_value
 
 ```csv
 id
-aBCd#1123                            
+aBCd#1123                  
 ```
 
 </td><td>
@@ -329,7 +329,7 @@ validation_invalid_value
 
 ```csv
 id
-aBCd 1123                            
+aBCd 1123                  
 ```
 
 </td><td>
@@ -343,7 +343,7 @@ validation_invalid_value
 
 ```csv
 id
-aBCd1(123)                           
+aBCd1(123)                  
 ```
 
 </td><td>
@@ -357,7 +357,7 @@ validation_invalid_value
 
 ```csv
 id
-aBCd+1123                            
+aBCd+1123                  
 ```
 
 </td><td>

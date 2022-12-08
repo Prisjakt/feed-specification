@@ -88,14 +88,14 @@ Using this attribute is strongly recommended for Fashion and Beauty categories. 
 
 <table>
 <thead>
-<tr><th>Valid example       </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 color
-""            
+""                
 ```
 
 </td></tr>
@@ -103,7 +103,7 @@ color
 
 ```csv
 color
-red           
+red                
 ```
 
 </td></tr>
@@ -111,7 +111,7 @@ red
 
 ```csv
 color
-green         
+green                
 ```
 
 </td></tr>
@@ -119,7 +119,7 @@ green
 
 ```csv
 color
-blue          
+blue                
 ```
 
 </td></tr>
@@ -127,7 +127,7 @@ blue
 
 ```csv
 color
-red/green/blue
+red/green/blue                
 ```
 
 </td></tr>
@@ -135,7 +135,7 @@ red/green/blue
 
 ```csv
 color
-RED/GREEN/BLUE
+RED/GREEN/BLUE                
 ```
 
 </td></tr>
@@ -182,14 +182,14 @@ validation_too_many_repetitions
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                </th><th>Resulting error code           </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 color
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)                  
 ```
 
 </td><td>
@@ -203,7 +203,7 @@ validation_invalid_length
 
 ```csv
 color
-black/mint/blue/white                                                    
+black/mint/blue/white                  
 ```
 
 </td><td>

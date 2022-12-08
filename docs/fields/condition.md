@@ -83,14 +83,14 @@ It allows us to properly display condition of a product in our product listing.
 
 <table>
 <thead>
-<tr><th>Valid example              </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 condition
-new              
+new                
 ```
 
 </td></tr>
@@ -98,7 +98,7 @@ new
 
 ```csv
 condition
-refurbished      
+refurbished                
 ```
 
 </td></tr>
@@ -106,7 +106,7 @@ refurbished
 
 ```csv
 condition
-used             
+used                
 ```
 
 </td></tr>
@@ -114,7 +114,7 @@ used
 
 ```csv
 condition
-damaged packaging
+damaged packaging                
 ```
 
 </td></tr>
@@ -122,7 +122,7 @@ damaged packaging
 
 ```csv
 condition
-demo             
+demo                
 ```
 
 </td></tr>
@@ -176,7 +176,7 @@ validation_invalid_enum
 
 ```csv
 condition
-""     
+""                  
 ```
 
 </td><td>
@@ -190,7 +190,7 @@ validation_missing_value
 
 ```csv
 condition
-unknown
+unknown                  
 ```
 
 </td><td>

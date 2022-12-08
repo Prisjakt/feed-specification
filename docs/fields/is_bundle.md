@@ -116,7 +116,7 @@ This attribute indicates if the offer is a bundle of products (mobile phone and 
 
 ```csv
 is_bundle
-""   
+""                
 ```
 
 </td></tr>
@@ -124,7 +124,7 @@ is_bundle
 
 ```csv
 is_bundle
-true 
+true                
 ```
 
 </td></tr>
@@ -132,7 +132,7 @@ true
 
 ```csv
 is_bundle
-false
+false                
 ```
 
 </td></tr>
@@ -140,7 +140,7 @@ false
 
 ```csv
 is_bundle
-yes  
+yes                
 ```
 
 </td></tr>
@@ -148,7 +148,7 @@ yes
 
 ```csv
 is_bundle
-no   
+no                
 ```
 
 </td></tr>
@@ -156,7 +156,7 @@ no
 
 ```csv
 is_bundle
-YES  
+YES                
 ```
 
 </td></tr>
@@ -164,7 +164,7 @@ YES
 
 ```csv
 is_bundle
-NO   
+NO                
 ```
 
 </td></tr>
@@ -172,7 +172,7 @@ NO
 
 ```csv
 is_bundle
-tRuE 
+tRuE                
 ```
 
 </td></tr>
@@ -180,7 +180,7 @@ tRuE
 
 ```csv
 is_bundle
-fAlSE
+fAlSE                
 ```
 
 </td></tr>
@@ -221,7 +221,7 @@ validation_invalid_value
 
 ```csv
 is_bundle
-unknown
+unknown                  
 ```
 
 </td><td>

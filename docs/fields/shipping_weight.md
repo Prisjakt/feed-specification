@@ -93,14 +93,14 @@ It is recommended to add this attribute if delivery costs based on weight.
 
 <table>
 <thead>
-<tr><th>Valid example          </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_weight
-11 kg  
+11 kg                
 ```
 
 </td></tr>
@@ -108,7 +108,7 @@ shipping_weight
 
 ```csv
 shipping_weight
-11.2 kg
+11.2 kg                
 ```
 
 </td></tr>
@@ -116,7 +116,7 @@ shipping_weight
 
 ```csv
 shipping_weight
-11 g   
+11 g                
 ```
 
 </td></tr>
@@ -124,7 +124,7 @@ shipping_weight
 
 ```csv
 shipping_weight
-11.2 g 
+11.2 g                
 ```
 
 </td></tr>
@@ -132,7 +132,7 @@ shipping_weight
 
 ```csv
 shipping_weight
-11 oz  
+11 oz                
 ```
 
 </td></tr>
@@ -140,7 +140,7 @@ shipping_weight
 
 ```csv
 shipping_weight
-11 lb  
+11 lb                
 ```
 
 </td></tr>
@@ -239,14 +239,14 @@ validation_invalid_value
 
 <table>
 <thead>
-<tr><th>Invalid example               </th><th>Resulting error code          </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 shipping_weight
-"11.,.,.,111" 
+"11.,.,.,111"                  
 ```
 
 </td><td>
@@ -260,7 +260,7 @@ validation_invalid_format
 
 ```csv
 shipping_weight
-11 kilo       
+11 kilo                  
 ```
 
 </td><td>
@@ -274,7 +274,7 @@ validation_invalid_weight_unit
 
 ```csv
 shipping_weight
-unkn-own      
+unkn-own                  
 ```
 
 </td><td>
@@ -288,7 +288,7 @@ validation_invalid_format
 
 ```csv
 shipping_weight
-empty value   
+empty value                  
 ```
 
 </td><td>
@@ -302,7 +302,7 @@ validation_invalid_value
 
 ```csv
 shipping_weight
-11            
+11                  
 ```
 
 </td><td>
@@ -316,7 +316,7 @@ validation_missing_value
 
 ```csv
 shipping_weight
-111.222.333 kg
+111.222.333 kg                  
 ```
 
 </td><td>

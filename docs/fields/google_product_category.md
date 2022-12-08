@@ -94,14 +94,14 @@ It should contain full category path from Google taxonomy or respective category
 
 <table>
 <thead>
-<tr><th>Valid example                                                                                  </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 google_product_category
-""                                                                     
+""                
 ```
 
 </td></tr>
@@ -109,7 +109,7 @@ google_product_category
 
 ```csv
 google_product_category
-1                                                                      
+1                
 ```
 
 </td></tr>
@@ -117,7 +117,7 @@ google_product_category
 
 ```csv
 google_product_category
-1144                                                                   
+1144                
 ```
 
 </td></tr>
@@ -125,7 +125,7 @@ google_product_category
 
 ```csv
 google_product_category
-1157                                                                   
+1157                
 ```
 
 </td></tr>
@@ -133,7 +133,7 @@ google_product_category
 
 ```csv
 google_product_category
-Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies   
+Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies                
 ```
 
 </td></tr>
@@ -141,7 +141,7 @@ Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies
 
 ```csv
 google_product_category
-Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde
+Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde                
 ```
 
 </td></tr>
@@ -149,7 +149,7 @@ Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde
 
 ```csv
 google_product_category
-Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates      
+Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates                
 ```
 
 </td></tr>
@@ -222,14 +222,14 @@ validation_category_not_found
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </th><th>Resulting error code         </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code         </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 google_product_category
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)                  
 ```
 
 </td><td>
@@ -243,7 +243,7 @@ validation_invalid_length
 
 ```csv
 google_product_category
-144                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+144                  
 ```
 
 </td><td>
@@ -257,7 +257,7 @@ validation_category_not_found
 
 ```csv
 google_product_category
-Divers sports > Water polo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+Divers sports > Water polo                  
 ```
 
 </td><td>
@@ -271,7 +271,7 @@ validation_category_not_found
 
 ```csv
 google_product_category
-toys & puzzle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+toys & puzzle                  
 ```
 
 </td><td>

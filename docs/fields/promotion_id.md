@@ -33,13 +33,13 @@ Promotion_id allows mapping your inventory to promotion defined in Business Cent
 
 <table>
 <thead>
-<tr><th>Valid example                                                                                         </th></tr>
+<tr><th>Valid example                               </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:promotion_id>super promo</g:promotion_id>                                                          
+<g:promotion_id>super promo</g:promotion_id>
 ```
 
 </td></tr>
@@ -47,7 +47,7 @@ Promotion_id allows mapping your inventory to promotion defined in Business Cent
 
 ```xml
 <g:promotion_id>10-year-anniversary-promo</g:promotion_id>
-<g:promotion_id>mega deals</g:promotion_id>
+<g:promotion_id>mega deals</g:promotion_id>                                             
 ```
 
 </td></tr>
@@ -58,14 +58,14 @@ Promotion_id allows mapping your inventory to promotion defined in Business Cent
 
 <table>
 <thead>
-<tr><th>Valid example                                      </th></tr>
+<tr><th>Valid example  </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 promotion_id
-super promo                           
+super promo                
 ```
 
 </td></tr>
@@ -73,7 +73,7 @@ super promo
 
 ```csv
 promotion_id
-"10-year-anniversary-promo,mega deals"
+"10-year-anniversary-promo,mega deals"                
 ```
 
 </td></tr>
@@ -107,14 +107,14 @@ validation_invalid_length
 
 <table>
 <thead>
-<tr><th>Invalid example                                                                                 </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```csv
 promotion_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
 ```
 
 </td><td>
