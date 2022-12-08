@@ -1,40 +1,86 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import RequiredField from '@site/docs/partials/_required_field.md';
+
 # condition
+
+<RequiredField/>
+
+|                                                      **Property** | **Description**        |
+|------------------------------------------------------------------:|:-----------------------|
+|                                                     **Data Type** | string        |
+|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
+| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
+|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
+|                                              **Repeatable limit** | 0 |
+
+
 
 ## Description
 
-This attribute is **required**.
-It allows us to properly display condition of a product in our product listing.
-
-## Requirements
-
-* **required**
+State the condition of the product you are selling for your customers.
 
 
-## Specification Details
 
-- Use only one attribute of this type per product
+:::tip Effects When Used
+
+- Will improve filtering capabilities for customers
+
+:::
+
+
+
+
+
+
+## Allowed Enum Values
+
+```
+damaged packaging
+```
+```
+demo
+```
+```
+new
+```
+```
+refurbished
+```
+```
+used
+```
+
+
+## Validation Rules
+
+- Value must be one of the allowed enum values
+
+
+## Best Practices
+
+
+### Do
+
 - Make sure the attributes reflects actual product condition
 
-## Allowed Values
-- damaged packaging
-- demo
-- new
-- refurbished
-- used
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
 
 
-## Validation Error Codes
 
-### validation_invalid_enum
-### validation_missing_value
 
-## Valid XML Examples
+## Error Codes
+
+- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
+- <Anchor id="validation_missing_value" title="validation_missing_value" />
+
+## Examples
+### Valid
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
 
 <table>
 <thead>
@@ -79,7 +125,8 @@ It allows us to properly display condition of a product in our product listing.
 </tbody>
 </table>
 
-## Valid CSV Examples
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
 
 <table>
 <thead>
@@ -129,8 +176,13 @@ demo
 </tbody>
 </table>
 
-## Invalid XML Examples
+  </TabItem>
+</Tabs>
 
+### Invalid
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                   </th><th>Resulting error code    </th></tr>
@@ -164,9 +216,8 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
-
-## Invalid CSV Examples
-
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
@@ -202,6 +253,17 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324469
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324469)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />

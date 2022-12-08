@@ -1,37 +1,76 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # availability_date
+
+<OptionalField/>
+
+|                                                      **Property** | **Description**        |
+|------------------------------------------------------------------:|:-----------------------|
+|                                                     **Data Type** | date        |
+|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
+| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
+|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
+|                                              **Repeatable limit** | 0 |
+
+
 
 ## Description
 
-This attribute is *optional*.
-It should be used to indicate either a preorder date or release date.
-
-## Requirements
-
-* *optional*
+This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
 
 
-## Specification Details
 
-- Use ISO 8601 formatted datetime
-- If time is missing, release will be set to 12:00 AM CET
+:::tip Effects When Used
 
-## Allowed Values
-- Standard: ISO 8601
+- We will display a label alongside with availability indicator that says when the product is available
 
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
+:::
 
 
-## Validation Error Codes
 
-### validation_invalid_format
-### validation_invalid_value
-### validation_missing_field
+:::caution Effects When Omitted
 
-## Valid XML Examples
+- No information is available for customer regarding when a `preorder` or `backorder` offer is available
+
+:::
+
+
+
+
+
+
+## Validation Rules
+
+- Value must parse as valid ISO 8601, see examples
+
+
+## Best Practices
+
+
+### Do
+
+- Include the time portion of the date (if missing 12:00 AM CET will be set)
+
+
+
+
+
+## Error Codes
+
+- <Anchor id="validation_invalid_format" title="validation_invalid_format" />
+- <Anchor id="validation_invalid_value" title="validation_invalid_value" />
+- <Anchor id="validation_missing_field" title="validation_missing_field" />
+
+## Examples
+### Valid
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
 
 <table>
 <thead>
@@ -57,7 +96,8 @@ It should be used to indicate either a preorder date or release date.
 </tbody>
 </table>
 
-## Valid CSV Examples
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
 
 <table>
 <thead>
@@ -83,8 +123,13 @@ availability_date,availability
 </tbody>
 </table>
 
-## Invalid XML Examples
+  </TabItem>
+</Tabs>
 
+### Invalid
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                                               </th><th>Resulting error code     </th></tr>
@@ -201,9 +246,8 @@ validation_invalid_value
 </td></tr>
 </tbody>
 </table>
-
-## Invalid CSV Examples
-
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
@@ -323,6 +367,18 @@ validation_invalid_value
 </td></tr>
 </tbody>
 </table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324470
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324470)
+- [Wikipedia on ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />
