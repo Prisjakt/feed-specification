@@ -1,45 +1,86 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # additional_image_link
+
+<OptionalField/>
+
+|                                                      **Property** | **Description**        |
+|------------------------------------------------------------------:|:-----------------------|
+|                                                     **Data Type** | Url        |
+|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
+| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
+|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | True       |
+|                                              **Repeatable limit** | 10 |
+
+
 
 ## Description
 
-This attribute is *optional*.
 Used to add additional image links. The images may include different angles, colours etc. This gives the user the option to view different variants that might exist for a product.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+:::tip Effects When Used
+
+- Your user will se more product images
+
+:::
+
+
+
+
+
+
+
+
+## Validation Rules
+
+- Must be valid [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) uri
+- Must have a protocol (eg. `https`)
+- Must have a path (eg. `.../my-product`)
+- Must be shorter than `2047` characters
+- Unicode characters must be [url encoded](/docs/troubleshoot/url-encode)
+
+
+## Best Practices
+
+
+### Do
 
 - Use stable url (for better user experience)
 - Use URL to pre-selected product variants (if applicable)
 - Use as few redirects as possible (for better user experience)
-- Replace symbols or spaces with URL encoded entities, meaning you should replace for instance `?` with `%3F`
-
-## Allowed Values
-- Standard: RFC 3986
-
-## Format
-
-- Type: List[Url]
-- Encoding: UTF-8
-- Repeatable: yes, up to 10
-- Length: up to 2047 characters
 
 
-## Validation Error Codes
 
-### validation_invalid_length
-### validation_invalid_url
-### validation_invalid_url_fragment
-### validation_invalid_url_host
-### validation_invalid_url_path
-### validation_invalid_url_port
-### validation_invalid_url_query
-### validation_url_scheme_not_allowed
+### Don´t
 
-## Valid XML Examples
+- Supply uri's to other things than images
+
+
+
+
+## Error Codes
+
+- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+- <Anchor id="validation_invalid_url" title="validation_invalid_url" />
+- <Anchor id="validation_invalid_url_fragment" title="validation_invalid_url_fragment" />
+- <Anchor id="validation_invalid_url_host" title="validation_invalid_url_host" />
+- <Anchor id="validation_invalid_url_path" title="validation_invalid_url_path" />
+- <Anchor id="validation_invalid_url_port" title="validation_invalid_url_port" />
+- <Anchor id="validation_invalid_url_query" title="validation_invalid_url_query" />
+- <Anchor id="validation_url_scheme_not_allowed" title="validation_url_scheme_not_allowed" />
+
+## Examples
+### Valid
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
 
 <table>
 <thead>
@@ -120,7 +161,8 @@ Used to add additional image links. The images may include different angles, col
 </tbody>
 </table>
 
-## Valid CSV Examples
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
 
 <table>
 <thead>
@@ -210,8 +252,13 @@ http://example.com/link-%E2%84%A2-mu-20%C2%B5m
 </tbody>
 </table>
 
-## Invalid XML Examples
+  </TabItem>
+</Tabs>
 
+### Invalid
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </th><th>Resulting error code             </th></tr>
@@ -336,9 +383,8 @@ validation_invalid_url_path
 </td></tr>
 </tbody>
 </table>
-
-## Invalid CSV Examples
-
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code             </th></tr>
@@ -472,6 +518,18 @@ validation_invalid_url_path
 </td></tr>
 </tbody>
 </table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324370
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324370?hl=en)
+- [Uniform Resource Identifier (URI): Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />
