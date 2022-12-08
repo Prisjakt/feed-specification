@@ -9,45 +9,45 @@ import Definition from '@site/src/components/definition';
 ## Prisjakt Specific
 
 <Definition id="term_feed" title="Feed">
-    This is the definition of the first term.
+    Feed is a structured file containing information about products.
 </Definition>
 
 <Definition id="term_offer" title="Offer">
-    This is the definition of the first term.
+    Offer is a set of data containing all information about product. It contains information about product itself, its price, shipping cost and delivery method.
 </Definition>
 
 <Definition id="term_field" title="Field">
-    This is the definition of the first term.
+    Field (or attribute) is a single datapoint describing one of offer's property like price, name, size etc.
 </Definition>
 
 <Definition id="term_price" title="Price">
-    This is the definition of the first term.
+    Price is the cost of the product including VAT. 
 </Definition>
 
 ## Ingestion Specific
 
 
 <Definition id="term_nested" title="Nested">
-    This is the definition of the first term.
+    Fields like shipping have more complex structure to accomodate all data required to descibe them. In this case field contain internal fields that's why it's reffered as nested field (or attribute).
 </Definition>
 
 
 <Definition id="term_repeatable" title="Repeatable">
-    This is the definition of the first term.
+    In some cases it's possible to repeat the same field for a single product. Each field has this defined along with maximum number of repetitions. 
 </Definition>
 
 <Definition id="term_agent" title="Agent">
-    This is the definition of the first term.
+    Agent is internal prisjakt service that integrates the data with Prisjakt comparison engine.
 </Definition>
 
 
 <Definition id="term_validation_rule" title="Validation  Rule">
-    This is the definition of the first term.
+    Validation rule defines what type of offers are accepted by Prisjakt Agent.
 </Definition>
 
 
 <Definition id="term_ingestion_run" title="Ingestion Run">
-    This is the definition of the first term.
+    Ingestion run is an event when Prisjakt's Agent processes the data.
 </Definition>
 
 
