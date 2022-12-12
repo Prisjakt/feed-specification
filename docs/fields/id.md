@@ -65,55 +65,55 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 <table>
 <thead>
-<tr><th>Valid example              </th></tr>
+<tr><th>Valid example                          </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:id>213888</g:id>        
+<g:id><![CDATA[213888]]></g:id>        
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>120431832</g:id>     
+<g:id><![CDATA[120431832]]></g:id>     
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>aBCd1123</g:id>      
+<g:id><![CDATA[aBCd1123]]></g:id>      
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>aBCd-1123</g:id>     
+<g:id><![CDATA[aBCd-1123]]></g:id>     
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>aBCd_1123</g:id>     
+<g:id><![CDATA[aBCd_1123]]></g:id>     
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>aBCd1123</g:id>      
+<g:id><![CDATA[aBCd1123]]></g:id>      
 ```
 
 </td></tr>
 <tr><td>
 
 ```xml
-<g:id>sv-2131.prod-1</g:id>
+<g:id><![CDATA[sv-2131.prod-1]]></g:id>
 ```
 
 </td></tr>
@@ -196,13 +196,13 @@ sv-2131.prod-1
   <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
-<tr><th>Invalid example                                   </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                               </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<channel/>                                        
+<channel/>                                                    
 ```
 
 </td><td>
@@ -215,7 +215,7 @@ validation_missing_value
 <tr><td>
 
 ```xml
-<g:id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</g:id>
+<g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
 ```
 
 </td><td>
@@ -228,7 +228,7 @@ validation_invalid_length
 <tr><td>
 
 ```xml
-<g:id>aBCd/1123</g:id>                            
+<g:id><![CDATA[aBCd/1123]]></g:id>                            
 ```
 
 </td><td>
@@ -241,7 +241,7 @@ validation_invalid_value
 <tr><td>
 
 ```xml
-<g:id>aBCd#1123</g:id>                            
+<g:id><![CDATA[aBCd#1123]]></g:id>                            
 ```
 
 </td><td>
@@ -254,7 +254,7 @@ validation_invalid_value
 <tr><td>
 
 ```xml
-<g:id>aBCd 1123</g:id>                            
+<g:id><![CDATA[aBCd 1123]]></g:id>                            
 ```
 
 </td><td>
@@ -267,7 +267,7 @@ validation_invalid_value
 <tr><td>
 
 ```xml
-<g:id>aBCd1(123)</g:id>                           
+<g:id><![CDATA[aBCd1(123)]]></g:id>                           
 ```
 
 </td><td>
@@ -280,7 +280,7 @@ validation_invalid_value
 <tr><td>
 
 ```xml
-<g:id>aBCd+1123</g:id>                            
+<g:id><![CDATA[aBCd+1123]]></g:id>                            
 ```
 
 </td><td>

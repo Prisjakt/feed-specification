@@ -67,13 +67,13 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 
 <table>
 <thead>
-<tr><th>Valid example                                  </th></tr>
+<tr><th>Valid example                                              </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<g:title>Samsung Galaxy S8 Black 128G</g:title>
+<g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
 ```
 
 </td></tr>
@@ -108,13 +108,13 @@ Samsung Galaxy S8 Black 128G
   <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                                      </th><th>Resulting error code     </th></tr>
+<tr><th>Invalid example                                                                                                                                                                                                                                                                                                                  </th><th>Resulting error code     </th></tr>
 </thead>
 <tbody>
 <tr><td>
 
 ```xml
-<channel/>                                                                                                                                                                                                                                                                                                           
+<channel/>                                                                                                                                                                                                                                                                                                                       
 ```
 
 </td><td>
@@ -127,7 +127,7 @@ validation_missing_value
 <tr><td>
 
 ```xml
-<g:title>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)</g:title>
+<g:title><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)]]></g:title>
 ```
 
 </td><td>
