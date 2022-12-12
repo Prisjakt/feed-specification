@@ -1,67 +1,42 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # id
-
-<RequiredField/>
-
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | True   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
-
-
 
 ## Description
 
+This attribute is **required**.
 Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
 
+## Requirements
+
+* **required**
 
 
+## Specification Details
+
+- It must be unique (If not unique, your product will be indexed incorrectly)
+- It must be case-insensitive (Casing will not make IDs unique, abc123 = ABC123)
+- It cannot be re-used (If re-used, your product might end up indexed to the wrong Prisjakt product)
+- It cannot change (If changed, the product will need to be indexed again)
+- It must follow UTF-8 specs
+
+## Allowed Values
+- Value must be unique
+- Numbers, letters (case insensitive), dash (-) and underscore (_)
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: from 1 up to 36 characters
 
 
-## Validation Rules
+## Validation Error Codes
 
-- Length must be between `1-36`
-- Must be unique
-- Valid characters are bumbers, letters, dash (-) and underscore (_)
+### validation_invalid_length
+### validation_invalid_value
+### validation_missing_value
 
-
-## Best Practices
-
-
-### Do
-
-- Use SKUs as ids
-
-
-
-### Don´t
-
-- Re-use, if re-used, your product might end up indexed to the wrong Prisjakt product
-- Change over time, if changed, the product will need to be indexed again
-
-
-
-
-## Error Codes
-
-- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-- <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
+## Valid XML Examples
 
 <table>
 <thead>
@@ -120,8 +95,7 @@ Identifier should be unique for every product and not be changed or re-used for 
 </tbody>
 </table>
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
+## Valid CSV Examples
 
 <table>
 <thead>
@@ -187,13 +161,8 @@ sv-2131.prod-1
 </tbody>
 </table>
 
-  </TabItem>
-</Tabs>
+## Invalid XML Examples
 
-### Invalid
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                                   </th><th>Resulting error code     </th></tr>
@@ -292,8 +261,9 @@ validation_invalid_value
 </td></tr>
 </tbody>
 </table>
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+
+## Invalid CSV Examples
+
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
@@ -399,17 +369,6 @@ validation_invalid_value
 </td></tr>
 </tbody>
 </table>
-  </TabItem>
-</Tabs>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324405)
-
-## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+* https://support.google.com/merchants/answer/6324405

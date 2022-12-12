@@ -1,99 +1,43 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # availability
-
-<RequiredField/>
-
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | enum        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
-
-
 
 ## Description
 
+This attribute is **required**.
 Use the availability attribute to display your stock status.
 
+## Requirements
+
+* **required**
 
 
-:::tip Effects When Used
-
-- Will visually (green, yellow, red) indicate if a customer can order the product
-
-:::
-
-
-
-
-
-
-## Allowed Enum Values
-
-```
-download
-```
-```
-in_stock
-```
-```
-not_available_for_purchase
-```
-```
-out_of_stock
-```
-```
-pickup
-```
-```
-preorder
-```
-```
-backorder
-```
-
-
-## Validation Rules
-
-- Value must be one of the allowed enum values
-
-
-## Best Practices
-
-
-### Do
+## Specification Details
 
 - Use up-to-date stock info
-
-
-
-### Don´t
-
 - Don't use out of stock when the shop is temporarily down
 - Don't use out of stock when you want to remove the product from the listing
 - Don't use out of stock for products that are discontinued
 
+## Allowed Values
+- download
+- in_stock
+- not_available_for_purchase
+- out_of_stock
+- pickup
+- preorder
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
 
 
+## Validation Error Codes
 
-## Error Codes
+### validation_invalid_enum
+### validation_missing_value
 
-- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
+## Valid XML Examples
 
 <table>
 <thead>
@@ -154,8 +98,7 @@ backorder
 </tbody>
 </table>
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
+## Valid CSV Examples
 
 <table>
 <thead>
@@ -221,13 +164,8 @@ backorder,2021-03-21
 </tbody>
 </table>
 
-  </TabItem>
-</Tabs>
+## Invalid XML Examples
 
-### Invalid
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                         </th><th>Resulting error code    </th></tr>
@@ -261,8 +199,9 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+
+## Invalid CSV Examples
+
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
@@ -298,29 +237,6 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
-  </TabItem>
-</Tabs>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
-
-## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-20"),
-changed: [
-"Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set `availability_date`",
-    ]  },
-{
-    semanticVersion: "",
-    date: new Date("2022-12-08"),
-added: [
-"New enum value `backorder`, this value should be used for products that are orderable but currently not in stock.",
-    ]  },
-{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+* https://support.google.com/merchants/answer/6324448

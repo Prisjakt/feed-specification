@@ -1,78 +1,38 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # age_group
-
-<OptionalField/>
-
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
-
-
 
 ## Description
 
-Sets the demographic age your product is designed for.
+This attribute is *optional*.
+It is recommended to add this attribute for fashion products to improve results and listing.
+
+## Requirements
+
+* *optional*
 
 
+## Specification Details
+
+- Use standard values
+
+## Allowed Values
+- adult
+- infant
+- kids
+- newborn
+- toddler
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
 
 
+## Validation Error Codes
 
+### validation_invalid_enum
 
-
-## Allowed Enum Values
-
-```
-adult
-```
-```
-infant
-```
-```
-kids
-```
-```
-newborn
-```
-```
-toddler
-```
-
-
-## Validation Rules
-
-- Value must be one of the allowed enum values
-
-
-## Best Practices
-
-
-### Do
-
-- It is recommended to add this attribute for fashion products to improve results and listing
-
-
-
-
-
-## Error Codes
-
-- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
-
-## Examples
-### Valid
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
+## Valid XML Examples
 
 <table>
 <thead>
@@ -124,8 +84,7 @@ toddler
 </tbody>
 </table>
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
+## Valid CSV Examples
 
 <table>
 <thead>
@@ -183,13 +142,8 @@ toddler
 </tbody>
 </table>
 
-  </TabItem>
-</Tabs>
+## Invalid XML Examples
 
-### Invalid
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                   </th><th>Resulting error code   </th></tr>
@@ -210,8 +164,9 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+
+## Invalid CSV Examples
+
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
@@ -233,17 +188,6 @@ validation_invalid_enum
 </td></tr>
 </tbody>
 </table>
-  </TabItem>
-</Tabs>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324463)
-
-## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+* https://support.google.com/merchants/answer/6324463

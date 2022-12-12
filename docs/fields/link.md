@@ -1,70 +1,47 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # link
-
-<RequiredField/>
-
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | url        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
-
-
 
 ## Description
 
+This attribute is **required**.
 We need links to be able to re-direct users to your product page. In the link attribute you provide the URL for your product page.
 
+## Requirements
+
+* **required**
 
 
-
-
-## Validation Rules
-
-- Must be valid [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) uri
-- Must have a protocol (eg. `https`)
-- Must have a path (eg. `.../my-product`)
-- Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/docs/troubleshoot/url-encode)
-
-
-## Best Practices
-
-
-### Do
+## Specification Details
 
 - Use stable url (for better user experience)
 - Use URL to pre-selected product variants (if applicable)
 - Use as few redirects as possible (for better user experience)
+- Replace symbols or spaces with URL encoded entities, meaning you should replace for instance `?` with `%3F`
+
+## Allowed Values
+- Start with `http` or `https`
+- URL encoded
+- Only one value per product
+
+## Format
+
+- Type: Url
+- Encoding: UTF-8
+- Repeatable: no
+- Length: up to 2047 characters
 
 
+## Validation Error Codes
 
+### validation_invalid_length
+### validation_invalid_url
+### validation_invalid_url_fragment
+### validation_invalid_url_host
+### validation_invalid_url_path
+### validation_invalid_url_port
+### validation_invalid_url_query
+### validation_url_scheme_not_allowed
 
-
-## Error Codes
-
-- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-- <Anchor id="validation_invalid_url" title="validation_invalid_url" />
-- <Anchor id="validation_invalid_url_fragment" title="validation_invalid_url_fragment" />
-- <Anchor id="validation_invalid_url_host" title="validation_invalid_url_host" />
-- <Anchor id="validation_invalid_url_path" title="validation_invalid_url_path" />
-- <Anchor id="validation_invalid_url_port" title="validation_invalid_url_port" />
-- <Anchor id="validation_invalid_url_query" title="validation_invalid_url_query" />
-- <Anchor id="validation_url_scheme_not_allowed" title="validation_url_scheme_not_allowed" />
-
-## Examples
-### Valid
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
+## Valid XML Examples
 
 <table>
 <thead>
@@ -116,8 +93,7 @@ We need links to be able to re-direct users to your product page. In the link at
 </tbody>
 </table>
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
+## Valid CSV Examples
 
 <table>
 <thead>
@@ -175,13 +151,8 @@ http://example.com/link-%E2%84%A2-mu-20%C2%B5m
 </tbody>
 </table>
 
-  </TabItem>
-</Tabs>
+## Invalid XML Examples
 
-### Invalid
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </th><th>Resulting error code             </th></tr>
@@ -306,8 +277,9 @@ validation_invalid_url_path
 </td></tr>
 </tbody>
 </table>
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+
+## Invalid CSV Examples
+
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code             </th></tr>
@@ -441,18 +413,6 @@ validation_invalid_url_path
 </td></tr>
 </tbody>
 </table>
-  </TabItem>
-</Tabs>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324416)
-- [Uniform Resource Identifier (URI): Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986)
-
-## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+* https://support.google.com/merchants/answer/6324416

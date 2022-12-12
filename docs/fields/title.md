@@ -1,69 +1,43 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # title
-
-<RequiredField/>
-
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
-
-
 
 ## Description
 
-Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
+This attribute is **required**.
+It should contain the full product name. The title is used to clearly state what product your shop is selling. It's the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain a manufacturer name along with product name or model. Including size, color and gender is recommended for product types that specifies this.
+
+## Requirements
+
+* **required**
 
 
+## Specification Details
 
-
-
-## Validation Rules
-
-- Length should be between `1-255`
-
-
-## Best Practices
-
-
-### Do
-
+- It should contain the full product name (it should be easy to identify the product by title)
 - Use the same title as it is present on your product page
-- Preferred syntax is `[brand] + [model name] + [additional product information]`
-- Use language of the specific market where the product is being sold (for better user experience)
-- Embed in a [CDATA](/docs/syntax/cdata) tag if using xml in order to avoid any potential issues with special characters
-
-
-
-### Don´t
-
-- Avoid commas, tabs, extra spaces, newlines and other special characters (especially if you use CSV format)
-- Do not use HTML tags or any other codes
-- Do not include promotional text
+- Add variant information if applicable: colour, size, gender etc.
+- Do not use HTML tag - Do not include promotional text
+- Do not use tabs or extra spaces
 - Do not write detailed information in title, this belongs in the description attribute
+- Preferred syntax [brand] + [model name] + [additional product information]
+- Use language of the specific market where the product is being sold (for better user experience)
+
+## Allowed Values
+- Use only one title attribute per product
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: from 1 up to 255 characters
 
 
+## Validation Error Codes
 
+### validation_invalid_length
+### validation_missing_value
 
-## Error Codes
-
-- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
+## Valid XML Examples
 
 <table>
 <thead>
@@ -80,8 +54,7 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 </tbody>
 </table>
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
+## Valid CSV Examples
 
 <table>
 <thead>
@@ -99,13 +72,8 @@ Samsung Galaxy S8 Black 128G
 </tbody>
 </table>
 
-  </TabItem>
-</Tabs>
+## Invalid XML Examples
 
-### Invalid
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 <table>
 <thead>
 <tr><th>Invalid example                                                                                                                                                                                                                                                                                                      </th><th>Resulting error code     </th></tr>
@@ -139,8 +107,9 @@ validation_invalid_length
 </td></tr>
 </tbody>
 </table>
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+
+## Invalid CSV Examples
+
 <table>
 <thead>
 <tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
@@ -176,17 +145,6 @@ validation_invalid_length
 </td></tr>
 </tbody>
 </table>
-  </TabItem>
-</Tabs>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324415)
-
-## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+* https://support.google.com/merchants/answer/6324415
