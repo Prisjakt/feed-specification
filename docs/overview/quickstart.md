@@ -6,26 +6,33 @@ sidebar_position: 3
 
 1. Right click  [this link](pathname:///examples/min-sample.csv) and choose **Save Link As** to get the minimal CSV file example
 
-1. Import into a Google Spreadsheet
+2. Import into a Google Spreadsheet
    
    ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-import.png)
    
    ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-upload.png)
 
-1. Add your [offers](/docs/terminology/terms#term_offer) on new rows
+3. Add your [offers](/docs/terminology/terms#term_offer) on new rows
 
    ![Add offers](@site/docs/assets/guides/quickstart/google-spreadsheet-add-products.png)
 
-1. [Share](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop) the **public** URL of the spreadsheet
 
-    ![Share feed](@site/docs/assets/guides/quickstart/google-spreadsheet-share.png)
+4. [Make the spreadsheet accessible for everyone](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop) the **public** URL of the spreadsheet
 
-2. Add a feed in [Business Center](https://support.prisjakt.nu/sv/articles/6175300-hantera-produkt-feeds-i-business-center) and use the shared url as feed url
+    ![Make the spreadsheet accessible for everyone](@site/docs/assets/guides/quickstart/google-spreadsheet-share.png)
+
+5. Create feed URL by adding manipulating URL
+   - Copy key from spreadsheet URL (key is part after "/d/")
+   - Paste key to following URL `https://docs.google.com/spreadsheets/d/{key}/gviz/tq?tqx=out:csv`
+   
+   Your new feed url should look like this `https://docs.google.com/spreadsheets/d/1sny8zoEuBKCdUkn88ay6kB3gjvH0RBQZo6fGXnS542c/gviz/tq?tqx=out:csv`
+
+6. Add URL you crated in step 5 to [Business Center](https://support.prisjakt.nu/sv/articles/6175300-hantera-produkt-feeds-i-business-center) and use the shared url as feed url
 
    ![Add feed in Business Center](@site/docs/assets/guides/quickstart/business-center-add-feed.png)
 
-3. **Wait** until an ingestion run have taken place (usually a couple of minutes)
-4. **Done!** Your offers will be available on https://prisjakt.nu shortly
+7. **Wait** until an ingestion run have taken place (usually a couple of minutes)
+8. **Done!** Your offers will be available on https://prisjakt.nu shortly
 
 :::caution Quickstart is not best practice
 
