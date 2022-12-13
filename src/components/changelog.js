@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactMarkdown from 'react-markdown'
 /*
 Changelog format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
 versions adheres to <a href="Semantic Versioning">https://semver.org/spec/v2.0.0.html</a>.
@@ -43,7 +43,7 @@ const renderVerblist = (heading, items) => <>
             <h4>{heading}</h4>
             <ul>
                 {items.map((item, i) => (
-                    <li>{item}</li>
+                    <li><ReactMarkdown>{item}</ReactMarkdown></li>
                 ))
                 }
             </ul>
