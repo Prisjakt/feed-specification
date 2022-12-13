@@ -1,147 +1,192 @@
+---
+description: Specify the gender your product is designed for.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # gender
+
+<OptionalField/>
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **enum**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+
 
 ## Description
 
-This attribute is *optional*.
-It is recommended to use this attribute in Fashion categories. Add it to improve search results and listing.
-
-## Requirements
-
-* *optional*
+Specify the gender your product is designed for.
 
 
-## Specification Details
+
+:::note Effects When Used
+
+- Customers can accurately filter products they wan't
+
+:::
+
+
+
+
+
+
+## Allowed Enum Values
+
+```
+female
+```
+```
+male
+```
+```
+unisex
+```
+
+
+## Validation Rules
+
+- Value must be one of the allowed enum values
+
+
+## Best Practices
+
+
+### Do
 
 - Use standard values
+
+
+
+### Don´t
+
 - Don't add info like `none`, `NA`
 
-## Allowed Values
-- female
-- male
-- unisex
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
 
 
-## Validation Error Codes
 
-### validation_invalid_enum
+## Example Values
 
-## Valid XML Examples
+Here are examples of how a valid *gender* value  should look like in XML and CSV (with header) respectively.
 
-<table>
-<thead>
-<tr><th>Valid example              </th></tr>
-</thead>
-<tbody>
-<tr><td>
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
 <g:gender>female</g:gender>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:gender>male</g:gender>  
+<g:gender>female</g:gender>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:gender>male</g:gender>
+```
 
 ```xml
 <g:gender>unisex</g:gender>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 gender
-female                
+female
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 gender
-male                
+female
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gender
-unisex                
+male
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+gender
+unisex
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example             </th><th>Resulting error code   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```xml
 <g:gender>unknown</g:gender>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_enum
-```
 
-</td></tr>
-</tbody>
-</table>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```csv
 gender
-unknown                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_enum
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324479
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324479)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />

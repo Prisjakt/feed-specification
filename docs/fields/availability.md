@@ -1,3 +1,7 @@
+---
+description: Use the availability attribute to display your stock status.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,13 +13,13 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | enum        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **enum**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
@@ -25,7 +29,7 @@ Use the availability attribute to display your stock status.
 
 
 
-:::tip Effects When Used
+:::note Effects When Used
 
 - Will visually (green, yellow, red) indicate if a customer can order the product
 
@@ -84,220 +88,163 @@ backorder
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
+Here are examples of how a valid *availability* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                                              </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<g:availability>in_stock</g:availability>                  
+<g:availability>in_stock</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:availability>out_of_stock</g:availability>              
+<g:availability>in_stock</g:availability>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:availability>pickup</g:availability>                    
+<g:availability>out_of_stock</g:availability>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:availability>download</g:availability>                  
+<g:availability>pickup</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:availability>download</g:availability>
+```
 
 ```xml
 <g:availability>not_available_for_purchase</g:availability>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <g:availability>preorder</g:availability>
-<g:availability_date>2021-03-21</g:availability_date>                                                            
+<g:availability_date>2021-03-21</g:availability_date>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:availability>backorder</g:availability>
-<g:availability_date>2021-03-21</g:availability_date>                                                            
+<g:availability_date>2021-03-21</g:availability_date>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 availability
-in_stock                
+in_stock
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 availability
-out_of_stock                
+in_stock
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-pickup                
+out_of_stock
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-download                
+pickup
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-not_available_for_purchase                
+download
 ```
 
-</td></tr>
-<tr><td>
+```csv
+availability
+not_available_for_purchase
+```
 
 ```csv
 availability,availability_date
-preorder,2021-03-21                
+preorder,2021-03-21
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability,availability_date
-backorder,2021-03-21                
+backorder,2021-03-21
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                         </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<channel/>                              
-```
-
-</td><td>
-
-```xml
-validation_missing_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```xml
 <g:availability>unknown</g:availability>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-validation_invalid_enum 
+(empty string)
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```csv
 availability
-""                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 availability
-unknown                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_enum 
-```
 
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

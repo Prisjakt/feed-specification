@@ -1,3 +1,7 @@
+---
+description: Use this attribute to tell customers what you charge for your product.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,13 +13,13 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | price        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **price**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
@@ -53,507 +57,238 @@ Use this attribute to tell customers what you charge for your product.
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_missing_currency" title="validation_missing_currency" />
-- <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-- <Anchor id="validation_not_number" title="validation_not_number" />
-- <Anchor id="validation_not_positive_number" title="validation_not_positive_number" />
-- <Anchor id="validation_unknown_currency" title="validation_unknown_currency" />
-
-## Examples
-### Valid
+Here are examples of how a valid *price* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<g:price>100 SEK</g:price>      
+<g:price>100 SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:price>SEK 100</g:price>      
+<g:price>100 SEK</g:price>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:price>99.99 SEK</g:price>    
+<g:price>SEK 100</g:price>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:price>99,99 SEK</g:price>    
+<g:price>99.99 SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:price>99,99 SEK</g:price>
+```
 
 ```xml
 <g:price>10,000.00 SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <g:price>10 000.00 SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:price>10.000 SEK</g:price>   
+<g:price>10.000 SEK</g:price>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:price>1.144.000 SEK</g:price>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 price
-100 SEK                
+100 SEK
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 price
-SEK 100                
+100 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-99.99 SEK                
+SEK 100
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-"99,99 SEK"                
+99.99 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-"10,000.00 SEK"                
+"99,99 SEK"
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-10 000.00 SEK                
+"10,000.00 SEK"
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-10.000 SEK                
+10 000.00 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 price
-1.144.000 SEK                
+10.000 SEK
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+price
+1.144.000 SEK
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
 
 ```xml
-<g:price>$100</g:price>          
+<g:price>1000</g:price>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
 
 ```xml
-validation_unknown_currency   
+<g:price>foo SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-<g:price>100$</g:price>          
+(empty string)
 ```
 
-</td><td>
+:::
 
-```xml
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
 
 ```xml
 <g:price>10.0.00.00 SEK</g:price>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
 
 ```xml
-validation_not_number         
+<g:price>-10 SEK</g:price>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
 
 ```xml
-<g:price>10.0.00.00 SEK</g:price>
+<g:price>$100</g:price>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_not_number         
-```
 
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>foo SEK</g:price>       
-```
-
-</td><td>
-
-```xml
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>1000</g:price>          
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>-10 SEK</g:price>       
-```
-
-</td><td>
-
-```xml
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>0 SEK</g:price>         
-```
-
-</td><td>
-
-```xml
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>5.00 dollars</g:price>  
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>SEK</g:price>           
-```
-
-</td><td>
-
-```xml
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:price>5.00</g:price>          
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<channel/>                       
-```
-
-</td><td>
-
-```xml
-validation_missing_value      
-```
-
-</td></tr>
-</tbody>
-</table>
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
 
 ```csv
 price
-$100                  
+1000
 ```
 
-</td><td>
+:::
 
-```csv
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
 
 ```csv
 price
-100$                  
+foo SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 price
-10.0.00.00 SEK                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_not_number         
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
 
 ```csv
 price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_not_number         
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
 
 ```csv
 price
-foo SEK                  
+-10 SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
 
 ```csv
 price
-1000                  
+$100
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_currency   
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-price
--10 SEK                  
-```
-
-</td><td>
-
-```csv
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-price
-0 SEK                  
-```
-
-</td><td>
-
-```csv
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-price
-5.00 dollars                  
-```
-
-</td><td>
-
-```csv
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-price
-SEK                  
-```
-
-</td><td>
-
-```csv
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-price
-5.00                  
-```
-
-</td><td>
-
-```csv
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-price
-""                  
-```
-
-</td><td>
-
-```csv
-validation_missing_value      
-```
-
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

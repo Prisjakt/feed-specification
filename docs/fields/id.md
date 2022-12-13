@@ -1,3 +1,7 @@
+---
+description: Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,13 +13,13 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | True   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
@@ -51,354 +55,178 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-- <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
+Here are examples of how a valid *id* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<g:id><![CDATA[213888]]></g:id>        
+<g:id><![CDATA[213888]]></g:id>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:id><![CDATA[120431832]]></g:id>     
+<g:id><![CDATA[213888]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id><![CDATA[aBCd1123]]></g:id>      
+<g:id><![CDATA[120431832]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id><![CDATA[aBCd-1123]]></g:id>     
+<g:id><![CDATA[aBCd1123]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id><![CDATA[aBCd_1123]]></g:id>     
+<g:id><![CDATA[aBCd-1123]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id><![CDATA[aBCd1123]]></g:id>      
+<g:id><![CDATA[aBCd_1123]]></g:id>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:id><![CDATA[aBCd1123]]></g:id>
+```
 
 ```xml
 <g:id><![CDATA[sv-2131.prod-1]]></g:id>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 id
-213888                
+213888
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 id
-120431832                
+213888
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd1123                
+120431832
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd-1123                
+aBCd1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd_1123                
+aBCd-1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd1123                
+aBCd_1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-sv-2131.prod-1                
+aBCd1123
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+id
+sv-2131.prod-1
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                                               </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<channel/>                                                    
-```
-
-</td><td>
-
-```xml
-validation_missing_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```xml
-validation_invalid_length
+<g:id><![CDATA[aBCd/1123]]></g:id>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-<g:id><![CDATA[aBCd/1123]]></g:id>                            
+(empty string)
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_value 
-```
 
-</td></tr>
-<tr><td>
-
-```xml
-<g:id><![CDATA[aBCd#1123]]></g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id><![CDATA[aBCd 1123]]></g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id><![CDATA[aBCd1(123)]]></g:id>                           
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id><![CDATA[aBCd+1123]]></g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-</tbody>
-</table>
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 id
-""                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
 id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                  
+aBCd/1123
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 id
-aBCd/1123                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value 
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-id
-aBCd#1123                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-id
-aBCd 1123                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-id
-aBCd1(123)                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-id
-aBCd+1123                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

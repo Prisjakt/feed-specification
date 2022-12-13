@@ -1,3 +1,7 @@
+---
+description: State the condition of the product you are selling for your customers.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,13 +13,13 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
@@ -25,7 +29,7 @@ State the condition of the product you are selling for your customers.
 
 
 
-:::tip Effects When Used
+:::note Effects When Used
 
 - Will improve filtering capabilities for customers
 
@@ -71,188 +75,143 @@ used
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
+Here are examples of how a valid *condition* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                               </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<g:condition>new</g:condition>              
+<g:condition>new</g:condition>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:condition>refurbished</g:condition>      
+<g:condition>new</g:condition>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:condition>used</g:condition>             
+<g:condition>refurbished</g:condition>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:condition>used</g:condition>
+```
 
 ```xml
 <g:condition>damaged packaging</g:condition>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:condition>demo</g:condition>             
+<g:condition>demo</g:condition>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 condition
-new                
+new
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 condition
-refurbished                
+new
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 condition
-used                
+refurbished
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 condition
-damaged packaging                
+used
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 condition
-demo                
+damaged packaging
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+condition
+demo
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                   </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<channel/>                        
-```
-
-</td><td>
-
-```xml
-validation_missing_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```xml
 <g:condition>unknown</g:condition>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-validation_invalid_enum 
+(empty string)
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```csv
 condition
-""                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 condition
-unknown                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_enum 
-```
 
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

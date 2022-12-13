@@ -1,3 +1,7 @@
+---
+description: Sets the demographic age your product is designed for.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,23 +13,19 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
 ## Description
 
 Sets the demographic age your product is designed for.
-
-
-
-
 
 
 
@@ -64,175 +64,135 @@ toddler
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
-
-## Examples
-### Valid
+Here are examples of how a valid *age_group* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<g:age_group>adult</g:age_group>  
+<g:age_group>adult</g:age_group>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:age_group>infant</g:age_group> 
+<g:age_group>adult</g:age_group>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:age_group>kids</g:age_group>   
+<g:age_group>infant</g:age_group>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:age_group>kids</g:age_group>
+```
 
 ```xml
 <g:age_group>newborn</g:age_group>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<channel/>                        
+(empty string)
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:age_group>toddler</g:age_group>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 age_group
-adult                
+adult
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 age_group
-infant                
+adult
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 age_group
-kids                
+infant
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 age_group
-newborn                
+kids
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 age_group
-""                
+newborn
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 age_group
-toddler                
+""
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+age_group
+toddler
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                   </th><th>Resulting error code   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```xml
 <g:age_group>unknown</g:age_group>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_enum
-```
 
-</td></tr>
-</tbody>
-</table>
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```csv
 age_group
-unknown                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_enum
-```
 
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

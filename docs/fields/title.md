@@ -1,3 +1,7 @@
+---
+description: Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,13 +13,13 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | string        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
@@ -54,128 +58,107 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-- <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-## Examples
-### Valid
+Here are examples of how a valid *title* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                                              </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
 <g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
+
+```xml
+<g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
+```
+
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 title
-Samsung Galaxy S8 Black 128G                
+Samsung Galaxy S8 Black 128G
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
+
+```csv
+title
+Samsung Galaxy S8 Black 128G
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                                                  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<channel/>                                                                                                                                                                                                                                                                                                                       
-```
-
-</td><td>
-
-```xml
-validation_missing_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:title><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)]]></g:title>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-validation_invalid_length
+(empty string)
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 title
-""                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 title
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length
-```
 
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

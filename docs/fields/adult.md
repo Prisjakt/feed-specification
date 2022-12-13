@@ -1,3 +1,7 @@
+---
+description: Should be used for tagging products for an adult audience. Not used to describe age group, but for specific product types, such as sex toys.
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ValidExamples from "./gtin_valid_examples.mdx"
@@ -9,23 +13,19 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|                                                      **Property** | **Description**        |
-|------------------------------------------------------------------:|:-----------------------|
-|                                                     **Data Type** | Boolean        |
-|                 **[Nested](/docs/terminology/terms#term_nested)** | False           |
-| **[Case Sensitive](/docs/terminology/terms#term_case_sensitive)** | False   |
-|  **[Repeatable](/docs/terminology/terms#term_repeatable) (list)** | False       |
-|                                              **Repeatable limit** | 0 |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **Boolean**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 
 
 ## Description
 
 Should be used for tagging products for an adult audience. Not used to describe age group, but for specific product types, such as sex toys.
-
-
-
-
 
 
 
@@ -47,220 +47,162 @@ Should be used for tagging products for an adult audience. Not used to describe 
 
 
 
-## Error Codes
+## Example Values
 
-- <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-
-## Examples
-### Valid
+Here are examples of how a valid *adult* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example           </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<channel/>              
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:adult>true</g:adult> 
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:adult>true</g:adult>
+```
 
 ```xml
 <g:adult>false</g:adult>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:adult>yes</g:adult>  
+<g:adult>yes</g:adult>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:adult>no</g:adult>   
+<g:adult>no</g:adult>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:adult>YES</g:adult>  
+<g:adult>YES</g:adult>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:adult>NO</g:adult>   
+<g:adult>NO</g:adult>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:adult>tRuE</g:adult> 
+<g:adult>tRuE</g:adult>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:adult>fAlSE</g:adult>
 ```
 
-</td></tr>
-</tbody>
-</table>
+
+  </div>
+</details>
 
  </TabItem>
   <TabItem value="valid_csv" label="CSV">
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 adult
-""                
+""
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 adult
-true                
+""
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-false                
+true
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-yes                
+false
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-no                
+yes
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-YES                
+no
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-NO                
+YES
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-tRuE                
+NO
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 adult
-fAlSE                
+tRuE
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+adult
+fAlSE
+```
+
+
+  </div>
+</details>
 
   </TabItem>
 </Tabs>
 
-### Invalid
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
-<table>
-<thead>
-<tr><th>Invalid example           </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```xml
 <g:adult>unknown</g:adult>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_value
-```
 
-</td></tr>
-</tbody>
-</table>
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
 adult
-unknown                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value
-```
 
-</td></tr>
-</tbody>
-</table>
   </TabItem>
 </Tabs>
 

@@ -1,496 +1,269 @@
+---
+description: Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https://www.gs1.org/standards/id-keys/gtin).
+  A GTIN uniquely identifies your product.
+  Including this will help indexing your products faster on Pricespy.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # gtin
+
+<OptionalField/>
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+
 
 ## Description
 
-This attribute is *optional*.
-Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https://www.gs1.org/standards/id-keys/gtin). A GTIN uniquely identifies your product. Including this will help indexing your products faster on Pricespy.
-
-## Requirements
-
-* *optional*
+Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https://www.gs1.org/standards/id-keys/gtin).
+  A GTIN uniquely identifies your product.
+  Including this will help indexing your products faster on Pricespy.
 
 
-## Specification Details
 
-- GTIN enables automated product classification therefore any new products added to the feed will be indexed automatically
-- See [Google Merchant Help Regarding GTIN](https://support.google.com/merchants/answer/6324461)
-- We're strictly following UPC/EAN/JAN/ISBN/ITF-14 standard to minimize risk of indexing errors
-- Wikipedia contains excellent documentation about:
-  [UPC](https://en.wikipedia.org/wiki/Universal_Product_Code#Composition),
-  [EAN](https://en.wikipedia.org/wiki/International_Article_Number#Composition),
-  [JAN](https://en.wikipedia.org/wiki/International_Article_Number#jan),
-  [ISBN](https://en.wikipedia.org/wiki/International_Standard_Book_Number)
-  and [ITF-14](https://en.wikipedia.org/wiki/ITF-14)
 
-## Allowed Values
+
+## Validation Rules
+
 - Use only one attribute of this type per product
 - Length should be one of `0, 8, 12, 13, or 14` digits (UPC, EAN, JAN, or ISBN)
 - Make sure that the check digit is present and correct using the [GS1 Check digit calculator](https://www.gs1.org/check-digit-calculator)
 - Don’t submit a GTIN in the restricted ranges. Restricted ranges have the following prefixes: `02, 04, or 2`
 - Don’t submit a GTIN in the coupon ranges. Coupons have the following GS1 prefixes ranges: `05, 98–99`
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
+- Must be an number
 
 
-## Validation Error Codes
+## Example Values
 
-### validation_gtin_invalid_check_digit
-### validation_gtin_prefix_not_allowed
-### validation_invalid_length
-### validation_not_integer
+Here are examples of how a valid *gtin* value  should look like in XML and CSV (with header) respectively.
 
-## Valid XML Examples
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
 
-<table>
-<thead>
-<tr><th>Valid example                   </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```xml
-<channel/>                      
+<g:gtin>90311017</g:gtin>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:gtin>90311017</g:gtin>       
+<g:gtin>90311017</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:gtin>036282818705</g:gtin>   
+<g:gtin>036282818705</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:gtin>8806088269696</g:gtin>  
+<g:gtin>8806088269696</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:gtin>10614141000415</g:gtin> 
+<g:gtin>10614141000415</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:gtin> -</g:gtin>             
+<g:gtin>9031-1017</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:gtin>9031-1017</g:gtin>      
+<g:gtin>0362 8281-8705</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>0362 8281-8705</g:gtin> 
-```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:gtin>8806-08826 9696</g:gtin>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:gtin>10614141000415</g:gtin> 
+<g:gtin>10614141000415</g:gtin>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:gtin>10614141000415</g:gtin>
-<g:gtin>90311017</g:gtin>                                 
+<g:gtin>90311017</g:gtin>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 gtin
-""                
+90311017
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 gtin
-90311017                
+90311017
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-036282818705                
+036282818705
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-8806088269696                
+8806088269696
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-10614141000415                
+10614141000415
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
- -                
+9031-1017
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-9031-1017                
+0362 8281-8705
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-0362 8281-8705                
+8806-08826 9696
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-8806-08826 9696                
+10614141000415
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 gtin
-10614141000415                
+"10614141000415,90311017"
 ```
 
-</td></tr>
-<tr><td>
 
-```csv
-gtin
-"10614141000415,90311017"                
-```
+  </div>
+</details>
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
-## Invalid XML Examples
+## Error Codes
 
-<table>
-<thead>
-<tr><th>Invalid example                    </th><th>Resulting error code               </th></tr>
-</thead>
-<tbody>
-<tr><td>
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" /> 
 
 ```xml
-<g:gtin>88aaa08869696</g:gtin>     
+<g:gtin>03628281</g:gtin>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" /> 
 
 ```xml
-validation_not_integer             
+<g:gtin>026282818705</g:gtin>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:gtin>881111088111169696</g:gtin>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
 
 ```xml
-validation_invalid_length          
+<g:gtin>88aaa08869696</g:gtin>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```xml
-<g:gtin>026282818705</g:gtin>      
-```
 
-</td><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>046282818705</g:gtin>      
-```
-
-</td><td>
-
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>236282818705</g:gtin>      
-```
-
-</td><td>
-
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>056282818705</g:gtin>      
-```
-
-</td><td>
-
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>986282818705</g:gtin>      
-```
-
-</td><td>
-
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>996282818705</g:gtin>      
-```
-
-</td><td>
-
-```xml
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:gtin>03628281</g:gtin>          
-```
-
-</td><td>
-
-```xml
-validation_gtin_invalid_check_digit
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code               </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" /> 
 
 ```csv
 gtin
-88aaa08869696                  
+03628281
 ```
 
-</td><td>
+:::
 
-```csv
-validation_not_integer             
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" /> 
 
 ```csv
 gtin
-881111088111169696                  
+026282818705
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length          
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 gtin
-026282818705                  
+881111088111169696
 ```
 
-</td><td>
+:::
 
-```csv
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
 
 ```csv
 gtin
-046282818705                  
+88aaa08869696
 ```
 
-</td><td>
+:::
 
-```csv
-validation_gtin_prefix_not_allowed 
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-gtin
-236282818705                  
-```
-
-</td><td>
-
-```csv
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-gtin
-056282818705                  
-```
-
-</td><td>
-
-```csv
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-gtin
-986282818705                  
-```
-
-</td><td>
-
-```csv
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-gtin
-996282818705                  
-```
-
-</td><td>
-
-```csv
-validation_gtin_prefix_not_allowed 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-gtin
-03628281                  
-```
-
-</td><td>
-
-```csv
-validation_gtin_invalid_check_digit
-```
-
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324461
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324461)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />

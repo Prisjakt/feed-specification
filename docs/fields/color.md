@@ -1,220 +1,215 @@
+---
+description: Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # color
+
+<OptionalField/>
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **3** | If a list, this specifices the max number of items           |
+
+
 
 ## Description
 
-This attribute is *optional*.
-Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
-
-## Requirements
-
-* *optional*
+Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
 
 
-## Specification Details
 
-- Include up to 3 different color in format `blue/black/green` where the first is primary, and the other two secondary
+
+
+## Validation Rules
+
+- Up to three color strings separated by a forward slash is allowed
+
+
+## Best Practices
+
+
+### Do
+
+- Use the same color as in your product page
+
+
+
+### Don´t
+
 - Don't use numbers and HTML color coding
 - Don't use phrases describing other product properties like design, pattern, size etc
 
-## Allowed Values
-- Use the same color as in your product page
-
-## Format
-
-- Type: List[String]
-- Encoding: UTF-8
-- Repeatable: yes, up to 3
-- Length: up to 40 characters
 
 
-## Validation Error Codes
 
-### validation_invalid_length
-### validation_too_many_repetitions
+## Example Values
 
-## Valid XML Examples
+Here are examples of how a valid *color* value  should look like in XML and CSV (with header) respectively.
 
-<table>
-<thead>
-<tr><th>Valid example                    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<channel/>                       
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:color>red</g:color>           
+(empty string)
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:color>green</g:color>         
+<g:color>red</g:color>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:color>blue</g:color>          
+<g:color>green</g:color>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:color>blue</g:color>
+```
 
 ```xml
 <g:color>red/green/blue</g:color>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <g:color>RED/GREEN/BLUE</g:color>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 color
-""                
+""
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 color
-red                
+""
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 color
-green                
+red
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 color
-blue                
+green
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 color
-red/green/blue                
+blue
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 color
-RED/GREEN/BLUE                
+red/green/blue
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+color
+RED/GREEN/BLUE
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                                                             </th><th>Resulting error code           </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:color>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)</g:color>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
 
 ```xml
-validation_invalid_length      
+<g:color>black/mint/blue/white</g:color>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```xml
-<g:color>black/mint/blue/white</g:color>                                                    
-```
 
-</td><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```xml
-validation_too_many_repetitions
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 color
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length      
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
 
 ```csv
 color
-black/mint/blue/white                  
+black/mint/blue/white
 ```
 
-</td><td>
+:::
 
-```csv
-validation_too_many_repetitions
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324487
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324487)
+
+## Changelog
+<ChangeLog versionHistory={[{
+    semanticVersion: "",
+    date: new Date("2022-12-07"),
+added: [
+"Initial definition",
+    ]  },
+]} dateOnly={true} />
