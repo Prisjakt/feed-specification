@@ -57,11 +57,11 @@ export default function ChangeLog({ versionHistory, dateOnly }) {
         {versionHistory && versionHistory.map((v, i) => (
             <div id="v{v.semanticVersion}" style={{ marginTop: '1em' }}>
                 {dateOnly &&
-                    <h3>{v.date.toISOString().slice(0, 10)}</h3>
+                    <h3>{new Date(v.date).toISOString().slice(0, 10)}</h3>
                 }
 
                 {!dateOnly &&
-                    <h3>[{v.semanticVersion}] - {v.date.toISOString().slice(0, 10)}</h3>
+                    <h3>[{v.semanticVersion}] - {new Date(v.date).toISOString().slice(0, 10)}</h3>
                 }
 
 
