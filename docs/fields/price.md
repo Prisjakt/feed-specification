@@ -287,13 +287,7 @@ $100
 - [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
 
 ## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## Properties
 

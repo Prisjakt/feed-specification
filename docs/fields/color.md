@@ -196,13 +196,7 @@ black/mint/blue/white
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324487)
 
 ## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## Properties
 

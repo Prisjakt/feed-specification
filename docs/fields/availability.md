@@ -240,25 +240,7 @@ availability
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
 
 ## Changelog
-<ChangeLog versionHistory={[{
-    semanticVersion: "",
-    date: new Date("2022-12-20"),
-changed: [
-"Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/docs/fields/availability_date)",
-    ]  },
-{
-    semanticVersion: "",
-    date: new Date("2022-12-08"),
-added: [
-"New enum value `backorder`, this value should be used for products that are orderable but currently not in stock.",
-    ]  },
-{
-    semanticVersion: "",
-    date: new Date("2022-12-07"),
-added: [
-"Initial definition",
-    ]  },
-]} dateOnly={true} />
+<ChangeLog versionHistory={[{"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/docs/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## Properties
 
