@@ -13,27 +13,15 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [product_type](/docs/fields/product_type) instead.
 
 
 
-:::note Effects When Used
+### Effects When Used
 
 - This information helps us to make the products discoverable and searchable for the users
-
-:::
 
 
 
@@ -236,3 +224,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

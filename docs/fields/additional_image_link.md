@@ -13,27 +13,15 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **Url**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **10** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Used to add additional image links. The images may include different angles, colours etc. This gives the user the option to view different variants that might exist for a product.
 
 
 
-:::note Effects When Used
+### Effects When Used
 
 - Your user will se more product images
-
-:::
 
 
 
@@ -369,3 +357,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **Url**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **10** | If a list, this specifices the max number of items           |

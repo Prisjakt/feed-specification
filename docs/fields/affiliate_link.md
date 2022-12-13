@@ -13,27 +13,15 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|     **Property** | **Value** | **Description**                                              |
-|-----------------:|:---------:|:-------------------------------------------------------------|
-|        Data Type |  **Url**  | Closest data type in code                                    |
-|           Nested | **False** | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive | **False** | If small or large letters matter for this field              |
-|       Repeatable | **False** | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit |   **0**   | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Add this attribute if you're using affiliate platform tracking.
 
 
 
-:::note Effects When Used
+### Effects When Used
 
 - Affiliate tracking is enabled
-
-:::
 
 
 
@@ -313,11 +301,20 @@ foo://example.com/link
 
 
 ## Changelog
-
 <ChangeLog versionHistory={[{
     semanticVersion: "",
     date: new Date("2022-12-07"),
 added: [
-"Initial **definition**",
+"Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **Url**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

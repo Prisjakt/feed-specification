@@ -13,16 +13,6 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
@@ -173,3 +163,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

@@ -13,16 +13,6 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
@@ -241,3 +231,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

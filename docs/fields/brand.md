@@ -13,16 +13,6 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 The brand attribute is used to indicate a product's brand/manufacturer name.
@@ -168,3 +158,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

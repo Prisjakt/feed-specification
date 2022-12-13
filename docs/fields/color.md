@@ -13,16 +13,6 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **3** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
@@ -213,3 +203,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **3** | If a list, this specifices the max number of items           |

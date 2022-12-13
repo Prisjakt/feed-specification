@@ -13,27 +13,15 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 <RequiredField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **enum**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 Use the availability attribute to display your stock status.
 
 
 
-:::note Effects When Used
+### Effects When Used
 
 - Will visually (green, yellow, red) indicate if a customer can order the product
-
-:::
 
 
 
@@ -256,7 +244,7 @@ availability
     semanticVersion: "",
     date: new Date("2022-12-20"),
 changed: [
-"Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set `availability_date`",
+"Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/docs/fields/availability_date)",
     ]  },
 {
     semanticVersion: "",
@@ -271,3 +259,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **enum**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

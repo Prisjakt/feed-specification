@@ -13,35 +13,22 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 <OptionalField/>
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **date**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
-
-
-
 ## Description
 
 This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
 
 
 
-:::note Effects When Used
+### Effects When Used
 
 - We will display a label alongside with availability indicator that says when the product is available
 
-:::
 
 
-
-:::caution Effects When Omitted
+### Effects When Omitted
 
 - No information is available for customer regarding when a `preorder` or `backorder` offer is available
 
-:::
 
 
 
@@ -210,3 +197,13 @@ added: [
 "Initial definition",
     ]  },
 ]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **date**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
