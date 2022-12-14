@@ -21,7 +21,7 @@ Use the availability attribute to display your stock status.
 
 ### Effects When Used
 
-- Will visually (green, yellow, red) indicate if a customer can order the product
+- Enables us to indicate if a customer can order the product
 
 
 

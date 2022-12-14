@@ -1,132 +1,164 @@
+---
+description: Add valid MPN, manufacturer part number for the specific product. MPN is a unique number which identifies specific products among a manufacturer's product range. The numbers are used by shoppers to find specifically what they are looking for. MPNs help Prisjakt index your offers more efficiently.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # mpn
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 Add valid MPN, manufacturer part number for the specific product. MPN is a unique number which identifies specific products among a manufacturer's product range. The numbers are used by shoppers to find specifically what they are looking for. MPNs help Prisjakt index your offers more efficiently.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+### Effects When Used
 
-- MPN enables automated product classification therefore any new products added to the feed will be indexed automatically.
-- Only MPNs created by a manufacturer should be added here.
-- Distinguish between variants
-
-## Allowed Values
-- Use only one attribute of this type per product
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
-- Length: up to 70 characters
+- Including this will help indexing your products faster on Pricespy.
 
 
-## Validation Error Codes
 
-### validation_invalid_length
 
-## Valid XML Examples
 
-<table>
-<thead>
-<tr><th>Valid example           </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<g:mpn>SM-G920F</g:mpn> 
+## Allowed Enum Values
+
+```
+None
 ```
 
-</td></tr>
-<tr><td>
+
+## Validation Rules
+
+- Length must be between `1-70` characters
+
+
+## Best Practices
+
+
+### Do
+
+- Only MPNs created by a manufacturer should be added here.
+
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *mpn* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
+
+```xml
+<g:mpn>SM-G920F</g:mpn>
+```
+
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
+
+```xml
+<g:mpn>SM-G920F</g:mpn>
+```
 
 ```xml
 <g:mpn>MGCH3LL/A</g:mpn>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 mpn
-SM-G920F                
+SM-G920F
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 mpn
-MGCH3LL/A                
+SM-G920F
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+mpn
+MGCH3LL/A
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                                                                                       </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:mpn>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)</g:mpn>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_length
-```
 
-</td></tr>
-</tbody>
-</table>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 mpn
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324482
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324482)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
