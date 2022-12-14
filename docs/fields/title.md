@@ -34,7 +34,7 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 - Use the same title as it is present on your product page
 - Preferred syntax is `[brand] + [model name] + [additional product information]`
 - Use language of the specific market where the product is being sold (for better user experience)
-- Embed in a [CDATA](/docs/syntax/cdata) tag if using xml in order to avoid any potential issues with special characters
+- Embed in a [CDATA](/docs/advanced/encoding/cdata) tag if using xml in order to avoid any potential issues with special characters
 
 
 

@@ -36,7 +36,7 @@ Used to add additional image links. The images may include different angles, col
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/docs/troubleshoot/url-encode)
+- Unicode characters must be [url encoded](/docs/advanced/encoding/url-encode)
 
 
 ## Best Practices

@@ -36,7 +36,7 @@ Add this attribute if you're using affiliate platform tracking.
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/docs/troubleshoot/url-encode)
+- Unicode characters must be [url encoded](/docs/advanced/encoding/url-encode)
 
 
 ## Example Values
