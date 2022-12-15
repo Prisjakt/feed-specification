@@ -1,509 +1,292 @@
+---
+description: This is product price that is active for users with active membership
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # member_price
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
-It should be the same as the price value on your product page with active membership program. Prisjakt XML namespace definition is available at `https://storage.googleapis.com/prisjakt-namespace/ns`
-
-## Requirements
-
-* *optional*
+This is product price that is active for users with active membership
 
 
-## Specification Details
-
-- Price value must be greater than 0
-- Don't provide more than 2 digits after decimal point
-- Don't provide comma or point as separator for both thousands and fractional part, i.e. we don't support `1,000,00 SEK` and `1.000.00 SEK` formats
-
-## Allowed Values
-- Mixed values: number, currency (ISO 4217) and decimal point
-- Only one price value per product followed by one currency unit, or one currency unit followed by only one price value per product
-
-## Format
-
-- Type: Price
-- Encoding: UTF-8
-- Repeatable: no
 
 
-## Validation Error Codes
 
-### validation_missing_currency
-### validation_missing_price_value
-### validation_not_number
-### validation_not_positive_number
-### validation_unknown_currency
+## Validation Rules
 
-## Valid XML Examples
+- Must be a number (value) followed by a space and a currency (unit)
+- Number *may* have **two decimals**, separated by a `.` (dot)
+- Currency must be three upper case characters and a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency
+- Zero prices are **not** allowed
 
-<table>
-<thead>
-<tr><th>Valid example                                   </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<channel/>                                      
-```
+## Best Practices
 
-</td></tr>
-<tr><td>
+
+### Do
+
+- Price sent in feed should be the same as the price value on your product page
+- Currency sent in feed should match currency on your product page
+
+
+
+### Don´t
+
+- Do **not** include extra charges in the cost (such as shipping cost)
+- Do **not** use thousand separators or similar in the value (while we may handle some of these cases we recommend you to just send plain numbers like `10000.50 SEK`)
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *member_price* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<pj:member_price>100 SEK</pj:member_price>      
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<pj:member_price>SEK 100</pj:member_price>      
+(empty string)
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<pj:member_price>99.99 SEK</pj:member_price>    
+<pj:member_price>100 SEK</pj:member_price>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<pj:member_price>99,99 SEK</pj:member_price>    
+<pj:member_price>SEK 100</pj:member_price>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<pj:member_price>99.99 SEK</pj:member_price>
+```
+
+```xml
+<pj:member_price>99,99 SEK</pj:member_price>
+```
 
 ```xml
 <pj:member_price>10,000.00 SEK</pj:member_price>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <pj:member_price>10 000.00 SEK</pj:member_price>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<pj:member_price>10.000 SEK</pj:member_price>   
+<pj:member_price>10.000 SEK</pj:member_price>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <pj:member_price>1.144.000 SEK</pj:member_price>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 member_price
-""                
+""
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 member_price
-100 SEK                
+""
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-SEK 100                
+100 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-99.99 SEK                
+SEK 100
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-"99,99 SEK"                
+99.99 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-"10,000.00 SEK"                
+"99,99 SEK"
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-10 000.00 SEK                
+"10,000.00 SEK"
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-10.000 SEK                
+10 000.00 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 member_price
-1.144.000 SEK                
+10.000 SEK
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+member_price
+1.144.000 SEK
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
 
 ```xml
-<pj:member_price>$100</pj:member_price>          
+<pj:member_price>1000</pj:member_price>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
 
 ```xml
-validation_unknown_currency   
+<pj:member_price>foo SEK</pj:member_price>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```xml
-<pj:member_price>100$</pj:member_price>          
-```
-
-</td><td>
-
-```xml
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
 
 ```xml
 <pj:member_price>10.0.00.00 SEK</pj:member_price>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
 
 ```xml
-validation_not_number         
+<pj:member_price>-10 SEK</pj:member_price>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
 
 ```xml
-<pj:member_price>10.0.00.00 SEK</pj:member_price>
+<pj:member_price>$100</pj:member_price>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_not_number         
-```
 
-</td></tr>
-<tr><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```xml
-<pj:member_price>foo SEK</pj:member_price>       
-```
-
-</td><td>
-
-```xml
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>1000</pj:member_price>          
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>-10 SEK</pj:member_price>       
-```
-
-</td><td>
-
-```xml
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>0 SEK</pj:member_price>         
-```
-
-</td><td>
-
-```xml
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>5.00 dollars</pj:member_price>  
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>SEK</pj:member_price>           
-```
-
-</td><td>
-
-```xml
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<pj:member_price>5.00</pj:member_price>          
-```
-
-</td><td>
-
-```xml
-validation_missing_currency   
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
 
 ```csv
 member_price
-$100                  
+1000
 ```
 
-</td><td>
+:::
 
-```csv
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
 
 ```csv
 member_price
-100$                  
+foo SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_unknown_currency   
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
 
 ```csv
 member_price
-10.0.00.00 SEK                  
+10.0.00.00 SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_not_number         
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
 
 ```csv
 member_price
-10.0.00.00 SEK                  
+-10 SEK
 ```
 
-</td><td>
+:::
 
-```csv
-validation_not_number         
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
 
 ```csv
 member_price
-foo SEK                  
+$100
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_price_value
-```
 
-</td></tr>
-<tr><td>
+  </TabItem>
+</Tabs>
 
-```csv
-member_price
-1000                  
-```
+## References
+- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
+- [Prisjakt XML namespace](https://storage.googleapis.com/prisjakt-namespace/ns`)
 
-</td><td>
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
-```csv
-validation_missing_currency   
-```
+## Properties
 
-</td></tr>
-<tr><td>
-
-```csv
-member_price
--10 SEK                  
-```
-
-</td><td>
-
-```csv
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-member_price
-0 SEK                  
-```
-
-</td><td>
-
-```csv
-validation_not_positive_number
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-member_price
-5.00 dollars                  
-```
-
-</td><td>
-
-```csv
-validation_missing_currency   
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-member_price
-SEK                  
-```
-
-</td><td>
-
-```csv
-validation_missing_price_value
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-member_price
-5.00                  
-```
-
-</td><td>
-
-```csv
-validation_missing_currency   
-```
-
-</td></tr>
-</tbody>
-</table>
-
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **price**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

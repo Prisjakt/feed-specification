@@ -1,374 +1,237 @@
+---
+description: Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import RequiredField from '@site/docs/partials/_required_field.md';
+
 # id
+
+<RequiredField/>
 
 ## Description
 
-This attribute is **required**.
 Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
 
-## Requirements
-
-* **required**
 
 
-## Specification Details
-
-- It must be unique (If not unique, your product will be indexed incorrectly)
-- It must be case-insensitive (Casing will not make IDs unique, abc123 = ABC123)
-- It cannot be re-used (If re-used, your product might end up indexed to the wrong Prisjakt product)
-- It cannot change (If changed, the product will need to be indexed again)
-- It must follow UTF-8 specs
-
-## Allowed Values
-- Value must be unique
-- Numbers, letters (case insensitive), dash (-) and underscore (_)
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
-- Length: from 1 up to 36 characters
 
 
-## Validation Error Codes
+## Validation Rules
 
-### validation_invalid_length
-### validation_invalid_value
-### validation_missing_value
+- Length must be between `1-36`
+- Must be unique
+- Valid characters are bumbers, letters, dash (-) and underscore (_)
 
-## Valid XML Examples
 
-<table>
-<thead>
-<tr><th>Valid example              </th></tr>
-</thead>
-<tbody>
-<tr><td>
+## Best Practices
+
+
+### Do
+
+- Use SKUs as ids
+
+
+
+### Don´t
+
+- Re-use, if re-used, your product might end up indexed to the wrong Prisjakt product
+- Change over time, if changed, the product will need to be indexed again
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *id* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<g:id>213888</g:id>        
+<g:id><![CDATA[213888]]></g:id>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:id>120431832</g:id>     
+<g:id><![CDATA[213888]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id>aBCd1123</g:id>      
+<g:id><![CDATA[120431832]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id>aBCd-1123</g:id>     
+<g:id><![CDATA[aBCd1123]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id>aBCd_1123</g:id>     
+<g:id><![CDATA[aBCd-1123]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id>aBCd1123</g:id>      
+<g:id><![CDATA[aBCd_1123]]></g:id>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:id>sv-2131.prod-1</g:id>
+<g:id><![CDATA[aBCd1123]]></g:id>
 ```
 
-</td></tr>
-</tbody>
-</table>
+```xml
+<g:id><![CDATA[sv-2131.prod-1]]></g:id>
+```
 
-## Valid CSV Examples
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 id
-213888                
+213888
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 id
-120431832                
+213888
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd1123                
+120431832
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd-1123                
+aBCd1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd_1123                
+aBCd-1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-aBCd1123                
+aBCd_1123
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 id
-sv-2131.prod-1                
+aBCd1123
 ```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid XML Examples
-
-<table>
-<thead>
-<tr><th>Invalid example                                   </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
-
-```xml
-<channel/>                                        
-```
-
-</td><td>
-
-```xml
-validation_missing_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</g:id>
-```
-
-</td><td>
-
-```xml
-validation_invalid_length
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aBCd/1123</g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aBCd#1123</g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aBCd 1123</g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aBCd1(123)</g:id>                           
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:id>aBCd+1123</g:id>                            
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
 ```csv
 id
-""                  
+sv-2131.prod-1
 ```
 
-</td><td>
 
-```csv
-validation_missing_value 
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+
+```xml
+<g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```csv
-id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                  
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+
+```xml
+<g:id><![CDATA[aBCd/1123]]></g:id>
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+
+```xml
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```csv
-id
-aBCd/1123                  
-```
 
-</td><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-id
-aBCd#1123                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 id
-aBCd 1123                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
 id
-aBCd1(123)                  
+aBCd/1123
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 id
-aBCd+1123                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value 
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324405
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324405)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

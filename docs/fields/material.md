@@ -1,158 +1,176 @@
+---
+description: It is recommended to use this attribute in Fashion categories. Add it to improve search results and listing.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # material
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 It is recommended to use this attribute in Fashion categories. Add it to improve search results and listing.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+### Effects When Used
+
+- This attribute helps us categorize products and present relevant search results for the users.
+
+
+
+
+
+
+
+
+## Validation Rules
+
+- Add up to 3 materials separated by slash like `Cotton/Leather`
+
+
+## Best Practices
+
+
+
+### Don´t
 
 - Don't use values that do not describe material `None`, `N/A`
 
-## Allowed Values
-- Include the main fabric or material
-- Add up to 3 materials separated by slash `Cotton/Leather`
-
-## Format
-
-- Type: List[String]
-- Encoding: UTF-8
-- Repeatable: yes, up to 3
 
 
-## Validation Error Codes
 
-### validation_invalid_length
-### validation_too_many_repetitions
+## Example Values
 
-## Valid XML Examples
+Here are examples of how a valid *material* value  should look like in XML and CSV (with header) respectively.
 
-<table>
-<thead>
-<tr><th>Valid example                          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<g:material>Cotton</g:material>        
+<g:material><![CDATA[Cotton]]></g:material>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:material>Cotton/Leather</g:material>
+<g:material><![CDATA[Cotton]]></g:material>
 ```
 
-</td></tr>
-</tbody>
-</table>
+```xml
+<g:material><![CDATA[Cotton/Leather]]></g:material>
+```
 
-## Valid CSV Examples
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 material
-Cotton                
+Cotton
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 material
-Cotton/Leather                
+Cotton
 ```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid XML Examples
-
-<table>
-<thead>
-<tr><th>Invalid example                                                                                                                                                                                                                                                                                                           </th><th>Resulting error code           </th></tr>
-</thead>
-<tbody>
-<tr><td>
-
-```xml
-<g:material>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)</g:material>
-```
-
-</td><td>
-
-```xml
-validation_invalid_length      
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:material>Cotton/Leather/Elastane/Cotton</g:material>                                                                                                                                                                                                                                                                   
-```
-
-</td><td>
-
-```xml
-validation_too_many_repetitions
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
 ```csv
 material
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)                  
+Cotton/Leather
 ```
 
-</td><td>
 
-```csv
-validation_invalid_length      
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+
+```xml
+<g:material><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)]]></g:material>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+
+```xml
+<g:material><![CDATA[Cotton/Leather/Elastane/Cotton]]></g:material>
+```
+
+:::
+
+
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
 material
-Cotton/Leather/Elastane/Cotton                  
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 255 characters value)
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
 
 ```csv
-validation_too_many_repetitions
+material
+Cotton/Leather/Elastane/Cotton
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324410
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324410)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **3** | If a list, this specifices the max number of items           |
