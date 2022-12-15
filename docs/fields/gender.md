@@ -1,184 +1,147 @@
----
-description: Specify the gender your product is designed for.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # gender
-
-<OptionalField/>
 
 ## Description
 
-Specify the gender your product is designed for.
+This attribute is *optional*.
+It is recommended to use this attribute in Fashion categories. Add it to improve search results and listing.
+
+## Requirements
+
+* *optional*
 
 
-
-### Effects When Used
-
-- Customers can accurately filter products they wan't
-
-
-
-
-
-
-## Allowed Enum Values
-
-```
-female
-```
-```
-male
-```
-```
-unisex
-```
-
-
-## Validation Rules
-
-- Value must be one of the allowed enum values
-
-
-## Best Practices
-
-
-### Do
+## Specification Details
 
 - Use standard values
-
-
-
-### Don´t
-
 - Don't add info like `none`, `NA`
 
+## Allowed Values
+- female
+- male
+- unisex
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
 
 
+## Validation Error Codes
 
-## Example Values
+### validation_invalid_enum
 
-Here are examples of how a valid *gender* value  should look like in XML and CSV (with header) respectively.
+## Valid XML Examples
 
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example              </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:gender>female</g:gender>
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```xml
-<g:gender>female</g:gender>
+<g:gender>male</g:gender>  
 ```
 
-```xml
-<g:gender>male</g:gender>
-```
+</td></tr>
+<tr><td>
 
 ```xml
 <g:gender>unisex</g:gender>
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-gender
-female
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 gender
-female
+female                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 gender
-male
+male                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 gender
-unisex
+unisex                
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Invalid XML Examples
 
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+<table>
+<thead>
+<tr><th>Invalid example             </th><th>Resulting error code   </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:gender>unknown</g:gender>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_enum
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 gender
-unknown
+unknown                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_enum
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324479)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **enum**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324479

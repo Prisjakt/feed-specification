@@ -1,169 +1,150 @@
----
-description: Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # title
-
-<RequiredField/>
 
 ## Description
 
-Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
+This attribute is **required**.
+It should contain the full product name. The title is used to clearly state what product your shop is selling. It's the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain a manufacturer name along with product name or model. Including size, color and gender is recommended for product types that specifies this.
+
+## Requirements
+
+* **required**
 
 
+## Specification Details
 
-
-
-## Validation Rules
-
-- Length should be between `1-255`
-
-
-## Best Practices
-
-
-### Do
-
+- It should contain the full product name (it should be easy to identify the product by title)
 - Use the same title as it is present on your product page
-- Preferred syntax is `[brand] + [model name] + [additional product information]`
-- Use language of the specific market where the product is being sold (for better user experience)
-- Embed in a [CDATA](/docs/advanced/encoding/cdata) tag if using xml in order to avoid any potential issues with special characters
-
-
-
-### Don´t
-
-- Avoid commas, tabs, extra spaces, newlines and other special characters (especially if you use CSV format)
-- Do not use HTML tags or any other codes
-- Do not include promotional text
+- Add variant information if applicable: colour, size, gender etc.
+- Do not use HTML tag - Do not include promotional text
+- Do not use tabs or extra spaces
 - Do not write detailed information in title, this belongs in the description attribute
+- Preferred syntax [brand] + [model name] + [additional product information]
+- Use language of the specific market where the product is being sold (for better user experience)
+
+## Allowed Values
+- Use only one title attribute per product
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: from 1 up to 255 characters
 
 
+## Validation Error Codes
 
+### validation_invalid_length
+### validation_missing_value
 
-## Example Values
+## Valid XML Examples
 
-Here are examples of how a valid *title* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                                  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
+<g:title>Samsung Galaxy S8 Black 128G</g:title>
 ```
 
-:::
+</td></tr>
+</tbody>
+</table>
 
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+## Valid CSV Examples
 
-```xml
-<g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
-```
-
-
-  </div>
-</details>
-
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 title
-Samsung Galaxy S8 Black 128G
+Samsung Galaxy S8 Black 128G                
 ```
 
-:::
+</td></tr>
+</tbody>
+</table>
 
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+## Invalid XML Examples
 
-```csv
-title
-Samsung Galaxy S8 Black 128G
-```
-
-
-  </div>
-</details>
-
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                                                                                                                                                                                                                      </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:title><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)]]></g:title>
+<channel/>                                                                                                                                                                                                                                                                                                           
 ```
 
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+</td><td>
 
 ```xml
-(empty string)
+validation_missing_value 
 ```
 
-:::
+</td></tr>
+<tr><td>
 
+```xml
+<g:title>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)</g:title>
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td><td>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+```xml
+validation_invalid_length
+```
+
+</td></tr>
+</tbody>
+</table>
+
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 title
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)
+""                  
 ```
 
-:::
+</td><td>
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+```csv
+validation_missing_value 
+```
+
+</td></tr>
+<tr><td>
 
 ```csv
 title
-""
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_length
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324415)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324415

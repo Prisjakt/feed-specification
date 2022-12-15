@@ -1,173 +1,147 @@
----
-description: This attribute is strongly recommended for fashion and beauty segment. It helps us group variant offers and present relevant offers to the users.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # item_group_id
-
-<OptionalField/>
 
 ## Description
 
+This attribute is *optional*.
 This attribute is strongly recommended for fashion and beauty segment. It helps us group variant offers and present relevant offers to the users.
 
+## Requirements
+
+* *optional*
 
 
-### Effects When Used
+## Specification Details
 
-- With this attibute we're able to present the user a list of available
+- Don't mix up `id` and `item_group_id`
+- Make sure the combination of `item_group_id` and color/pattern/size matches the information on the product page
 
+## Allowed Values
+- Use the same value for variants of the same product
+- Don't re-use the same `item_group_id` for other products
 
+## Format
 
-
-
-
-
-
-## Validation Rules
-
-- Length must be between `1-50` characters
-
-
-## Best Practices
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: up to 50 characters
 
 
-### Do
+## Validation Error Codes
 
-- Make sure the combination of `item_group_id` and other variant specific attributes like `color`, `size` and `pattern` are consistent
+### validation_invalid_length
 
+## Valid XML Examples
 
-
-### Don´t
-
-- Be extra careful and don't mix up `id` and `item_group_id`
-
-
-
-
-## Example Values
-
-Here are examples of how a valid *item_group_id* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                            </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-(empty string)
+<channel/>                               
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
-
-```xml
-(empty string)
-```
+</td></tr>
+<tr><td>
 
 ```xml
 <g:item_group_id>AAA111</g:item_group_id>
 ```
 
+</td></tr>
+<tr><td>
+
 ```xml
 <g:item_group_id>aaa111</g:item_group_id>
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-item_group_id
-""
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 item_group_id
-""
+""                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 item_group_id
-AAA111
+AAA111                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 item_group_id
-aaa111
+aaa111                
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Invalid XML Examples
 
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                       </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:item_group_id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)</g:item_group_id>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_length
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 item_group_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_length
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324507)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324507

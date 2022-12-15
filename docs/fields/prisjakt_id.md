@@ -1,176 +1,156 @@
----
-description: Add this information if you know to which Prisjakt product we should match your product.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # prisjakt_id
-
-<OptionalField/>
 
 ## Description
 
-Add this information if you know to which Prisjakt product we should match your product.
+This attribute is *optional*.
+Add this information if you know to which Prisjakt product we should match your product. Prisjakt XML namespace definition is available at `https://storage.googleapis.com/prisjakt-namespace/ns`
+
+## Requirements
+
+* *optional*
 
 
-
-### Effects When Used
+## Specification Details
 
 - Adding this will give you control over indexing process
 
+## Allowed Values
+- Only digits are allowed
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: up to 50 characters
 
 
+## Validation Error Codes
 
+### validation_invalid_length
+### validation_not_integer
 
+## Valid XML Examples
 
-
-
-## Validation Rules
-
-- Length must be between `1-50` characters
-
-
-## Best Practices
-
-
-### Do
-
-- Make sure you add correct prisjakt_id
-
-
-
-
-
-## Example Values
-
-Here are examples of how a valid *prisjakt_id* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                       </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
+<pj:prisjakt_id>1</pj:prisjakt_id>  
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
-
-```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
-```
+</td></tr>
+<tr><td>
 
 ```xml
 <pj:prisjakt_id>123</pj:prisjakt_id>
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-prisjakt_id
-1
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 prisjakt_id
-1
+1                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 prisjakt_id
-123
+123                
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Invalid XML Examples
 
-  </TabItem>
-</Tabs>
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                     </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
-## Error Codes
+```xml
+<pj:prisjakt_id>foo</pj:prisjakt_id>                                                                                
+```
 
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+</td><td>
 
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
+```xml
+validation_not_integer   
+```
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+</td></tr>
+<tr><td>
 
 ```xml
 <pj:prisjakt_id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)</pj:prisjakt_id>
 ```
 
-:::
-
-:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
+</td><td>
 
 ```xml
-<pj:prisjakt_id>foo</pj:prisjakt_id>
+validation_invalid_length
 ```
 
-:::
+</td></tr>
+</tbody>
+</table>
 
+## Invalid CSV Examples
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 prisjakt_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
+foo                  
 ```
 
-:::
+</td><td>
 
-:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
+```csv
+validation_not_integer   
+```
+
+</td></tr>
+<tr><td>
 
 ```csv
 prisjakt_id
-foo
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_length
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
-## References
-- [Prisjakt XML namespace](https://storage.googleapis.com/prisjakt-namespace/ns)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |

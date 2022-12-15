@@ -1,243 +1,258 @@
----
-description: It's strongly recommented to use this attribute for Electronics/Household Appliances categories.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # energy_efficiency_class
-
-<OptionalField/>
 
 ## Description
 
+This attribute is *optional*.
 It's strongly recommented to use this attribute for Electronics/Household Appliances categories.
 
+## Requirements
+
+* *optional*
 
 
-## Allowed Enum Values
+## Specification Details
 
-```
-a
-```
-```
-a+
-```
-```
-a++
-```
-```
-a+++
-```
-```
-b
-```
-```
-c
-```
-```
-d
-```
-```
-e
-```
-```
-f
-```
-```
-g
-```
+- TBD
+
+## Allowed Values
+- a
+- a+
+- a++
+- a+++
+- b
+- c
+- d
+- e
+- f
+- g
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
 
 
-## Validation Rules
+## Validation Error Codes
 
-- Value must be one of the allowed enum values
+### validation_invalid_enum
 
+## Valid XML Examples
 
-## Example Values
-
-Here are examples of how a valid *energy_efficiency_class* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                                              </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:energy_efficiency_class>a+++</g:energy_efficiency_class>
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>a+++</g:energy_efficiency_class>
+<g:energy_efficiency_class>a++</g:energy_efficiency_class> 
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>a++</g:energy_efficiency_class>
+<g:energy_efficiency_class>a+</g:energy_efficiency_class>  
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>a+</g:energy_efficiency_class>
+<g:energy_efficiency_class>a</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>a</g:energy_efficiency_class>
+<g:energy_efficiency_class>b</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>b</g:energy_efficiency_class>
+<g:energy_efficiency_class>c</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>c</g:energy_efficiency_class>
+<g:energy_efficiency_class>d</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>d</g:energy_efficiency_class>
+<g:energy_efficiency_class>e</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>e</g:energy_efficiency_class>
+<g:energy_efficiency_class>f</g:energy_efficiency_class>   
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:energy_efficiency_class>f</g:energy_efficiency_class>
+<g:energy_efficiency_class>g</g:energy_efficiency_class>   
 ```
 
-```xml
-<g:energy_efficiency_class>g</g:energy_efficiency_class>
-```
+</td></tr>
+</tbody>
+</table>
 
+## Valid CSV Examples
 
-  </div>
-</details>
-
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-a+++
+a+++                
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-a+++
+a++                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-a++
+a+                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-a+
+a                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-a
+b                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-b
+c                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-c
+d                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-d
+e                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-e
+f                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-f
+g                
 ```
 
-```csv
-energy_efficiency_class
-g
-```
+</td></tr>
+</tbody>
+</table>
 
+## Invalid XML Examples
 
-  </div>
-</details>
-
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                               </th><th>Resulting error code   </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:energy_efficiency_class>unknown</g:energy_efficiency_class>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_enum
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code   </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 energy_efficiency_class
-unknown
+unknown                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_enum
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/7562785)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **enum**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/7562785

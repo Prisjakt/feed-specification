@@ -1,209 +1,220 @@
----
-description: Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # color
-
-<OptionalField/>
 
 ## Description
 
-Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
+This attribute is *optional*.
+Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
+
+## Requirements
+
+* *optional*
 
 
+## Specification Details
 
-
-
-## Validation Rules
-
-- Up to three color strings separated by a forward slash is allowed
-
-
-## Best Practices
-
-
-### Do
-
-- Use the same color as in your product page
-
-
-
-### Don´t
-
+- Include up to 3 different color in format `blue/black/green` where the first is primary, and the other two secondary
 - Don't use numbers and HTML color coding
 - Don't use phrases describing other product properties like design, pattern, size etc
 
+## Allowed Values
+- Use the same color as in your product page
+
+## Format
+
+- Type: List[String]
+- Encoding: UTF-8
+- Repeatable: yes, up to 3
+- Length: up to 40 characters
 
 
+## Validation Error Codes
 
-## Example Values
+### validation_invalid_length
+### validation_too_many_repetitions
 
-Here are examples of how a valid *color* value  should look like in XML and CSV (with header) respectively.
+## Valid XML Examples
 
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
-
-```xml
-(empty string)
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
-
-```xml
-(empty string)
-```
-
-```xml
-<g:color>red</g:color>
-```
+<table>
+<thead>
+<tr><th>Valid example                    </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:color>green</g:color>
+<channel/>                       
 ```
 
+</td></tr>
+<tr><td>
+
 ```xml
-<g:color>blue</g:color>
+<g:color>red</g:color>           
 ```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:color>green</g:color>         
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:color>blue</g:color>          
+```
+
+</td></tr>
+<tr><td>
 
 ```xml
 <g:color>red/green/blue</g:color>
 ```
 
+</td></tr>
+<tr><td>
+
 ```xml
 <g:color>RED/GREEN/BLUE</g:color>
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-color
-""
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 color
-""
+""                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-red
+red                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-green
+green                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-blue
+blue                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-red/green/blue
+red/green/blue                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-RED/GREEN/BLUE
+RED/GREEN/BLUE                
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Invalid XML Examples
 
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                                                             </th><th>Resulting error code           </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:color>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)</g:color>
 ```
 
-:::
-
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+</td><td>
 
 ```xml
-<g:color>black/mint/blue/white</g:color>
+validation_invalid_length      
 ```
 
-:::
+</td></tr>
+<tr><td>
 
+```xml
+<g:color>black/mint/blue/white</g:color>                                                    
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td><td>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+```xml
+validation_too_many_repetitions
+```
+
+</td></tr>
+</tbody>
+</table>
+
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code           </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 color
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)                  
 ```
 
-:::
+</td><td>
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+```csv
+validation_invalid_length      
+```
+
+</td></tr>
+<tr><td>
 
 ```csv
 color
-black/mint/blue/white
+black/mint/blue/white                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_too_many_repetitions
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324487)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **3** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324487

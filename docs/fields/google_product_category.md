@@ -1,230 +1,288 @@
----
-description: This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [product_type](/docs/fields/product_type) instead.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
-
 # google_product_category
-
-<RequiredField/>
 
 ## Description
 
-This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [product_type](/docs/fields/product_type) instead.
+This attribute is *optional*.
+It should contain full category path from Google taxonomy or respective category id. If you don't know or have Google product category, submit `product_type` instead.
+
+## Requirements
+
+* *optional*
 
 
+## Specification Details
 
-### Effects When Used
+- Use the most nested category possible, avoid using root categories
+- This information helps us to make the products searchable for the users
+- Use full category path or respective category id from the [list](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt)
 
-- This information helps us to make the products discoverable and searchable for the users
-
-
-
-
-
-
-
-
-## Validation Rules
-
-- If id is used it must match an existing Google Product Category id (see references below)
-- If category path is used, it must match Google Product Category path exactly (see references below)
+## Allowed Values
 - Use only one attribute of this type per product
 
+## Format
 
-## Best Practices
-
-
-### Do
-
-- Prefer using id's instead of strings if possible
-- Use the most nested category possible
-- Avoid using root categories
-- Use full category path or respective category id from the list (see references)
-- Wrap in a CDATA element if using xml
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
 
 
+## Validation Error Codes
 
+### validation_category_not_found
+### validation_invalid_length
 
+## Valid XML Examples
 
-## Example Values
-
-Here are examples of how a valid *google_product_category* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                                                                                                                             </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-(empty string)
+<channel/>                                                                                                                                
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```xml
-(empty string)
+<g:google_product_category>1</g:google_product_category>                                                                                  
 ```
 
-```xml
-<g:google_product_category>1</g:google_product_category>
-```
+</td></tr>
+<tr><td>
 
 ```xml
-<g:google_product_category>1144</g:google_product_category>
+<g:google_product_category>1144</g:google_product_category>                                                                               
 ```
 
-```xml
-<g:google_product_category>1157</g:google_product_category>
-```
+</td></tr>
+<tr><td>
 
 ```xml
-<g:google_product_category><![CDATA[Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies]]></g:google_product_category>
+<g:google_product_category>1157</g:google_product_category>                                                                               
 ```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:google_product_category><![CDATA[Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies]]></g:google_product_category>   
+```
+
+</td></tr>
+<tr><td>
 
 ```xml
 <g:google_product_category><![CDATA[Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde]]></g:google_product_category>
 ```
 
-```xml
-<g:google_product_category><![CDATA[Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates]]></g:google_product_category>
-```
-
-
-  </div>
-</details>
-
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-google_product_category
-""
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
-
-```csv
-google_product_category
-""
-```
-
-```csv
-google_product_category
-1
-```
-
-```csv
-google_product_category
-1144
-```
-
-```csv
-google_product_category
-1157
-```
-
-```csv
-google_product_category
-Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies
-```
-
-```csv
-google_product_category
-Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde
-```
-
-```csv
-google_product_category
-Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates
-```
-
-
-  </div>
-</details>
-
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_category_not_found" title="validation_category_not_found" /> 
+</td></tr>
+<tr><td>
 
 ```xml
-<g:google_product_category>144</g:google_product_category>
+<g:google_product_category><![CDATA[Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates]]></g:google_product_category>      
 ```
 
-:::
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+## Valid CSV Examples
+
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
+
+```csv
+google_product_category
+""                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+1                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+1144                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+1157                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+Animals & Pet Supplies > Pet Supplies > Reptile & Amphibian Supplies                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+Dyr og tilbehør til kæledyr > Tilbehør til kæledyr > Tilbehør til hunde                
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates                
+```
+
+</td></tr>
+</tbody>
+</table>
+
+## Invalid XML Examples
+
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </th><th>Resulting error code         </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:google_product_category>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)</g:google_product_category>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_length    
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+<tr><td>
 
-:::danger <Anchor id="validation_category_not_found" title="validation_category_not_found" /> 
+```xml
+<g:google_product_category>144</g:google_product_category>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+```
+
+</td><td>
+
+```xml
+validation_category_not_found
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:google_product_category><![CDATA[Divers sports > Water polo]]></g:google_product_category>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+```
+
+</td><td>
+
+```xml
+validation_category_not_found
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:google_product_category><![CDATA[toys & puzzle]]></g:google_product_category>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+```
+
+</td><td>
+
+```xml
+validation_category_not_found
+```
+
+</td></tr>
+</tbody>
+</table>
+
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code         </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 google_product_category
-144
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)                  
 ```
 
-:::
+</td><td>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+```csv
+validation_invalid_length    
+```
+
+</td></tr>
+<tr><td>
 
 ```csv
 google_product_category
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)
+144                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_category_not_found
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+Divers sports > Water polo                  
+```
+
+</td><td>
+
+```csv
+validation_category_not_found
+```
+
+</td></tr>
+<tr><td>
+
+```csv
+google_product_category
+toys & puzzle                  
+```
+
+</td><td>
+
+```csv
+validation_category_not_found
+```
+
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324436)
-- [Google Taxonomy With Ids (en-US)](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt)
-- [Google Taxonomy With Ids (sv-SE)](https://www.google.com/basepages/producttype/taxonomy-with-ids.sv-SE.txt)
-- [Google Taxonomy With Ids (no-NO)](https://www.google.com/basepages/producttype/taxonomy-with-ids.no-NO.txt)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324436

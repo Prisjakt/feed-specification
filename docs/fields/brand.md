@@ -1,164 +1,146 @@
----
-description: The brand attribute is used to indicate a product's brand/manufacturer name.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # brand
-
-<OptionalField/>
 
 ## Description
 
-The brand attribute is used to indicate a product's brand/manufacturer name.
+This attribute is *optional*.
+The brand attribute is used to indicate a product's brand/manufacturer name. Prisjakt strongly encourage using only valid brands.
+
+## Requirements
+
+* *optional*
 
 
+## Specification Details
+
+- Don't provide a value that is not a brand like N/A, generic, unknown
+- Use valid brands
+
+## Allowed Values
+- Skip `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers.
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: up to 70 characters
 
 
+## Validation Error Codes
 
-## Validation Rules
+### validation_invalid_length
 
-- Length must be between `1-70` characters
+## Valid XML Examples
 
-
-## Best Practices
-
-
-### Do
-
-- Use only valid brands
-
-
-
-### Don´t
-
-- DonÂ´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
-
-
-
-
-## Example Values
-
-Here are examples of how a valid *brand* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
-
-```xml
-(empty string)
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example              </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-(empty string)
+<channel/>                 
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:brand><![CDATA[Prisjakt]]></g:brand>
+<g:brand>Prisjakt</g:brand>
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
-<g:brand><![CDATA[Sony]]></g:brand>
+<g:brand>Sony</g:brand>    
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 brand
-""
+""                
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```csv
 brand
-""
+Prisjakt                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 brand
-Prisjakt
+Sony                
 ```
 
-```csv
-brand
-Sony
-```
+</td></tr>
+</tbody>
+</table>
 
+## Invalid XML Examples
 
-  </div>
-</details>
-
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                           </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:brand><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)]]></g:brand>
+<g:brand>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)</g:brand>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_length
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 brand
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_length
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324351)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324351

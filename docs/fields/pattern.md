@@ -1,164 +1,131 @@
----
-description: Using this attribute is strongly recommended for Fashion categories.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # pattern
-
-<OptionalField/>
 
 ## Description
 
-Using this attribute is strongly recommended for Fashion categories.
+This attribute is *optional*.
+Using this attribute is strongly recommended for Fashion categories. Add it to improve search results and listing.
+
+## Requirements
+
+* *optional*
 
 
-
-### Effects When Used
-
-- Add it to improve search results and listing.
-
-
-
-
-
-
-
-
-## Validation Rules
-
-- Length must be between `1-100` characters
-
-
-## Best Practices
-
-
-### Do
-
-- Add only one value like `stripped` or `dotted`
-
-
-
-### Don´t
+## Specification Details
 
 - Don't use values that do not describe pattern `None`, `N/A`
 
+## Allowed Values
+- Include a pattern or graphic
+- Add only one value
+
+## Format
+
+- Type: String
+- Encoding: UTF-8
+- Repeatable: no
+- Length: up to 100 characters
 
 
+## Validation Error Codes
 
-## Example Values
+### validation_invalid_length
 
-Here are examples of how a valid *pattern* value  should look like in XML and CSV (with header) respectively.
+## Valid XML Examples
 
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example                  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:pattern><![CDATA[stripped]]></g:pattern>
+<g:pattern>stripped</g:pattern>
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```xml
-<g:pattern><![CDATA[stripped]]></g:pattern>
+<g:pattern>strips</g:pattern>  
 ```
 
-```xml
-<g:pattern><![CDATA[strips]]></g:pattern>
-```
+</td></tr>
+</tbody>
+</table>
 
+## Valid CSV Examples
 
-  </div>
-</details>
-
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 pattern
-stripped
+stripped                
 ```
 
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+</td></tr>
+<tr><td>
 
 ```csv
 pattern
-stripped
+strips                
 ```
 
-```csv
-pattern
-strips
-```
+</td></tr>
+</tbody>
+</table>
 
+## Invalid XML Examples
 
-  </div>
-</details>
-
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+<table>
+<thead>
+<tr><th>Invalid example                                                                                                                                              </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-<g:pattern><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)]]></g:pattern>
+<g:pattern>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)</g:pattern>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_length
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 pattern
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_length
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324483)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324483

@@ -1,213 +1,237 @@
----
-description: Should be used for tagging products for an adult audience. Not used to describe age group, but for specific product types, such as sex toys.
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
-import Anchor from "@site/src/components/anchor"
-import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
-
 # adult
-
-<OptionalField/>
 
 ## Description
 
+This attribute is *optional*.
 Should be used for tagging products for an adult audience. Not used to describe age group, but for specific product types, such as sex toys.
 
+## Requirements
+
+* *optional*
 
 
+## Specification Details
+
+- Don't use adult to indicate age_group
+
+## Allowed Values
+- false
+- no
+- true
+- yes
+
+## Format
+
+- Type: Boolean
+- Encoding: UTF-8
+- Repeatable: no
 
 
-## Validation Rules
+## Validation Error Codes
 
-- Should be one of the examples in [valid examples](#valid)
+### validation_invalid_value
 
+## Valid XML Examples
 
-## Best Practices
-
-
-
-### Don´t
-
-- Don't use adult to indicate [age_group](/docs/fields/age_group)
-
-
-
-
-## Example Values
-
-Here are examples of how a valid *adult* value  should look like in XML and CSV (with header) respectively.
-
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
-
-:::tip Valid Value
-
-```xml
-(empty string)
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid XML examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example           </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
-(empty string)
+<channel/>              
 ```
 
+</td></tr>
+<tr><td>
+
 ```xml
-<g:adult>true</g:adult>
+<g:adult>true</g:adult> 
 ```
+
+</td></tr>
+<tr><td>
 
 ```xml
 <g:adult>false</g:adult>
 ```
 
-```xml
-<g:adult>yes</g:adult>
-```
+</td></tr>
+<tr><td>
 
 ```xml
-<g:adult>no</g:adult>
+<g:adult>yes</g:adult>  
 ```
 
-```xml
-<g:adult>YES</g:adult>
-```
+</td></tr>
+<tr><td>
 
 ```xml
-<g:adult>NO</g:adult>
+<g:adult>no</g:adult>   
 ```
 
+</td></tr>
+<tr><td>
+
 ```xml
-<g:adult>tRuE</g:adult>
+<g:adult>YES</g:adult>  
 ```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:adult>NO</g:adult>   
+```
+
+</td></tr>
+<tr><td>
+
+```xml
+<g:adult>tRuE</g:adult> 
+```
+
+</td></tr>
+<tr><td>
 
 ```xml
 <g:adult>fAlSE</g:adult>
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Valid CSV Examples
 
- </TabItem>
-  <TabItem value="valid_csv" label="CSV">
-
-:::tip Valid Value
-
-```csv
-adult
-""
-```
-
-:::
-
-<details>
-  <summary>Click to show more valid CSV examples</summary>
-  <div>
+<table>
+<thead>
+<tr><th>Valid example  </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 adult
-""
+""                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-true
+true                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-false
+false                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-yes
+yes                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-no
+no                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-YES
+YES                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-NO
+NO                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-tRuE
+tRuE                
 ```
+
+</td></tr>
+<tr><td>
 
 ```csv
 adult
-fAlSE
+fAlSE                
 ```
 
+</td></tr>
+</tbody>
+</table>
 
-  </div>
-</details>
+## Invalid XML Examples
 
-  </TabItem>
-</Tabs>
-
-## Error Codes
-
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
-
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
-
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+<table>
+<thead>
+<tr><th>Invalid example           </th><th>Resulting error code    </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```xml
 <g:adult>unknown</g:adult>
 ```
 
-:::
+</td><td>
 
+```xml
+validation_invalid_value
+```
 
- </TabItem>
-  <TabItem value="invalid_csv" label="CSV">
+</td></tr>
+</tbody>
+</table>
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+## Invalid CSV Examples
+
+<table>
+<thead>
+<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
+</thead>
+<tbody>
+<tr><td>
 
 ```csv
 adult
-unknown
+unknown                  
 ```
 
-:::
+</td><td>
 
+```csv
+validation_invalid_value
+```
 
-  </TabItem>
-</Tabs>
+</td></tr>
+</tbody>
+</table>
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324508)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
-## Properties
-
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **Boolean**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+* https://support.google.com/merchants/answer/6324508
