@@ -1,174 +1,194 @@
+---
+description: In this attribute add all structured information about the product.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # product_detail
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 In this attribute add all structured information about the product.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+### Effects When Used
 
-- Make sure data is properly formatted - no HTML tags inside attributes
-- Do not add product description
-- Only add confirmed information
+- We're able to present this information in product page which makes it more visible in search.
 
-## Allowed Values
-- Do not add information covered in other attributes
 
-## Format
 
-- Type: List[Nested]
-- Encoding: UTF-8
-- Repeatable: yes, up to 1000
-- Subattributes:
-   - attribute_name (**required**) - String, up to 140 characters   - attribute_value (**required**) - String, up to 1000 characters   - section_name (**required**) - String, up to 140 characters
 
-## Validation Error Codes
 
-### validation_invalid_length
-### validation_missing_field
 
-## Valid XML Examples
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
-```xml
-<g:product_detail>
-  <g:section_name>Display</g:section_name>
-  <g:attribute_name>Diagonal Size</g:attribute_name>
-  <g:attribute_value>2.5</g:attribute_value>
-</g:product_detail>                
-```
+## Validation Rules
 
-</td></tr>
-<tr><td>
+- make sure data is properly formatted - no HTML tags inside attributes
+
+
+## Best Practices
+
+
+### Do
+
+- Only add confirmed informatio
+
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *product_detail* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
 <g:product_detail>
-  <g:section_name>disc</g:section_name>
-  <g:attribute_name>memory</g:attribute_name>
-  <g:attribute_value>500 GB</g:attribute_value>
-</g:product_detail>                
+  <g:section_name><![CDATA[Display]]></g:section_name>
+  <g:attribute_name><![CDATA[Diagonal Size]]></g:attribute_name>
+  <g:attribute_value><![CDATA[2.5]]></g:attribute_value>
+</g:product_detail>
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
 
-## Valid CSV Examples
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+```xml
+<g:product_detail>
+  <g:section_name><![CDATA[Display]]></g:section_name>
+  <g:attribute_name><![CDATA[Diagonal Size]]></g:attribute_name>
+  <g:attribute_value><![CDATA[2.5]]></g:attribute_value>
+</g:product_detail>
+```
+
+```xml
+<g:product_detail>
+  <g:section_name><![CDATA[disc]]></g:section_name>
+  <g:attribute_name><![CDATA[memory]]></g:attribute_name>
+  <g:attribute_value><![CDATA[500 GB]]></g:attribute_value>
+</g:product_detail>
+```
+
+
+  </div>
+</details>
+
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 product_detail(section_name:attribute_name:attribute_value)
-Display:Diagonal Size:2.5                
+Display:Diagonal Size:2.5
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 product_detail(section_name:attribute_name:attribute_value)
-disc:memory:500 GB                
+Display:Diagonal Size:2.5
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+product_detail(section_name:attribute_name:attribute_value)
+disc:memory:500 GB
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```xml
 <g:product_detail>
-  <g:section_name>x</g:section_name>
-</g:product_detail>                  
+  <g:section_name><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)]]></g:section_name>
+  <g:attribute_name><![CDATA[memory]]></g:attribute_name>
+  <g:attribute_value><![CDATA[500 GB]]></g:attribute_value>
+</g:product_detail>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_missing_field 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
 
 ```xml
 <g:product_detail>
-  <g:section_name>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value)</g:section_name>
-  <g:attribute_name>memory</g:attribute_name>
-  <g:attribute_value>500 GB</g:attribute_value>
-</g:product_detail>                  
+  <g:section_name><![CDATA[x]]></g:section_name>
+</g:product_detail>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_length
+
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+
+```csv
+product_detail(section_name:attribute_name:attribute_value)
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value):memory:500 GB
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
 
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
 
 ```csv
 product_detail(section_name)
-x                  
+x
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_field 
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-product_detail(section_name:attribute_name:attribute_value)
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 1000 characters value):memory:500 GB                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_length
-```
-
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/9218260
+- [Google Merchant Specification](https://support.google.com/merchants/answer/9218260)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **List[Nested]**     | Closest data type in code                                    |
+|           Nested |      **True**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **100** | If a list, this specifices the max number of items           |

@@ -1,328 +1,203 @@
+---
+description: This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # availability_date
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
-It should be used to indicate either a preorder date or release date.
-
-## Requirements
-
-* *optional*
+This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
 
 
-## Specification Details
 
-- Use ISO 8601 formatted datetime
-- If time is missing, release will be set to 12:00 AM CET
+### Effects When Used
 
-## Allowed Values
-- Standard: ISO 8601
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
+- We will display a label alongside with availability indicator that says when the product is available
 
 
-## Validation Error Codes
 
-### validation_invalid_format
-### validation_invalid_value
-### validation_missing_field
+### Effects When Omitted
 
-## Valid XML Examples
+- No information is available for customer regarding when a `preorder` or `backorder` offer is available
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+
+
+
+
+
+## Validation Rules
+
+- Value must parse as valid ISO 8601, see examples
+
+
+## Best Practices
+
+
+### Do
+
+- Include the time portion of the date (if missing 12:00 AM CET will be set)
+
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *availability_date* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>preorder</g:availability>                
+<g:availability>preorder</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
+
+```xml
+<g:availability_date>2021-03-21</g:availability_date>
+<g:availability>preorder</g:availability>
+```
 
 ```xml
 <g:availability_date>2021-12-22T03:12:58.019077+00:00</g:availability_date>
-<g:availability>preorder</g:availability>                
+<g:availability>preorder</g:availability>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 availability_date,availability
-2021-03-21,preorder                
+2021-03-21,preorder
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 availability_date,availability
-2021-12-22T03:12:58.019077+00:00,preorder                
+2021-03-21,preorder
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+availability_date,availability
+2021-12-22T03:12:58.019077+00:00,preorder
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                               </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```xml
 <g:availability_date>2021/12/22/12:23:00</g:availability_date>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:availability_date>today</g:availability_date>              
-```
-
-</td><td>
-
-```xml
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:availability>preorder</g:availability>                     
-```
-
-</td><td>
-
-```xml
-validation_missing_field 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>in_stock</g:availability>                                                               
+<g:availability>in_stock</g:availability>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
 
 ```xml
-validation_invalid_value 
+<g:availability>preorder</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```xml
-<g:availability_date>2021-03-21</g:availability_date>
-<g:availability>out_of_stock</g:availability>                                                               
-```
 
-</td><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:availability_date>2021-03-21</g:availability_date>
-<g:availability>pickup</g:availability>                                                               
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:availability_date>2021-03-21</g:availability_date>
-<g:availability>download</g:availability>                                                               
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:availability_date>2021-03-21</g:availability_date>
-<g:availability>not_available_for_purchase</g:availability>                                                               
-```
-
-</td><td>
-
-```xml
-validation_invalid_value 
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```csv
 availability_date
-2021/12/22/12:23:00                  
+2021/12/22/12:23:00
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-availability_date
-today                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
 availability_date,availability
-,preorder                  
+2021-03-21,in_stock
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_field 
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
 
 ```csv
 availability_date,availability
-2021-03-21,in_stock                  
+,preorder
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value 
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-availability_date,availability
-2021-03-21,out_of_stock                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-availability_date,availability
-2021-03-21,pickup                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-availability_date,availability
-2021-03-21,download                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-availability_date,availability
-2021-03-21,not_available_for_purchase                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value 
-```
-
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324470
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324470)
+- [Wikipedia on ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **date**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

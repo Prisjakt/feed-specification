@@ -1,242 +1,253 @@
+---
+description: Use the availability attribute to display your stock status.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ValidExamples from "./gtin_valid_examples.mdx"
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import RequiredField from '@site/docs/partials/_required_field.md';
+
 # availability
+
+<RequiredField/>
 
 ## Description
 
-This attribute is **required**.
 Use the availability attribute to display your stock status.
 
-## Requirements
-
-* **required**
 
 
-## Specification Details
+### Effects When Used
+
+- Enables us to indicate if a customer can order the product
+
+
+
+
+
+
+## Allowed Enum Values
+
+```
+download
+```
+```
+in_stock
+```
+```
+not_available_for_purchase
+```
+```
+out_of_stock
+```
+```
+pickup
+```
+```
+preorder
+```
+```
+backorder
+```
+
+
+## Validation Rules
+
+- Value must be one of the allowed enum values
+
+
+## Best Practices
+
+
+### Do
 
 - Use up-to-date stock info
+
+
+
+### Don´t
+
 - Don't use out of stock when the shop is temporarily down
 - Don't use out of stock when you want to remove the product from the listing
 - Don't use out of stock for products that are discontinued
 
-## Allowed Values
-- download
-- in_stock
-- not_available_for_purchase
-- out_of_stock
-- pickup
-- preorder
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
 
 
-## Validation Error Codes
 
-### validation_invalid_enum
-### validation_missing_value
+## Example Values
 
-## Valid XML Examples
+Here are examples of how a valid *availability* value  should look like in XML and CSV (with header) respectively.
 
-<table>
-<thead>
-<tr><th>Valid example                                              </th></tr>
-</thead>
-<tbody>
-<tr><td>
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<g:availability>in_stock</g:availability>                  
+<g:availability>in_stock</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:availability>out_of_stock</g:availability>              
+<g:availability>in_stock</g:availability>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:availability>pickup</g:availability>                    
+<g:availability>out_of_stock</g:availability>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:availability>download</g:availability>                  
+<g:availability>pickup</g:availability>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:availability>download</g:availability>
+```
 
 ```xml
 <g:availability>not_available_for_purchase</g:availability>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <g:availability>preorder</g:availability>
-<g:availability_date>2021-03-21</g:availability_date>                                                            
+<g:availability_date>2021-03-21</g:availability_date>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
 <g:availability>backorder</g:availability>
-<g:availability_date>2021-03-21</g:availability_date>                                                            
+<g:availability_date>2021-03-21</g:availability_date>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 availability
-in_stock                
+in_stock
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 availability
-out_of_stock                
+in_stock
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-pickup                
+out_of_stock
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-download                
+pickup
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability
-not_available_for_purchase                
+download
 ```
 
-</td></tr>
-<tr><td>
+```csv
+availability
+not_available_for_purchase
+```
 
 ```csv
 availability,availability_date
-preorder,2021-03-21                
+preorder,2021-03-21
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 availability,availability_date
-backorder,2021-03-21                
+backorder,2021-03-21
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Invalid XML Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Invalid example                         </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </TabItem>
+</Tabs>
 
-```xml
-<channel/>                              
-```
+## Error Codes
 
-</td><td>
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
-```xml
-validation_missing_value
-```
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
 
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```xml
 <g:availability>unknown</g:availability>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-validation_invalid_enum 
+(empty string)
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
 
-## Invalid CSV Examples
 
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code    </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
+
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
 
 ```csv
 availability
-""                  
+unknown
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 availability
-unknown                  
+""
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_enum 
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324448
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
+
+## Changelog
+<ChangeLog versionHistory={[{"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/docs/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **enum**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
