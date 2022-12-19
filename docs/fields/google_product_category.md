@@ -4,14 +4,13 @@ description: This attribute is used to help us place products in relevant  categ
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
+import OptionalField from '@site/docs/partials/_optional_field.md';
 
 # google_product_category
 
-<RequiredField/>
+<OptionalField/>
 
 ## Description
 

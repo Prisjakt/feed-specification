@@ -1,333 +1,237 @@
+---
+description: It is recommended to add this attribute if delivery costs based on weight.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # shipping_weight
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 It is recommended to add this attribute if delivery costs based on weight.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+
+
+## Validation Rules
+
+- Length must be between `1-50` characters
+- Use values like: 0 lb, 0.0 oz, 0 g, 10.12 g, 11 kg, 15.2 kg
+
+
+## Best Practices
+
+
+### Do
 
 - Use accepted units systems
 
-## Allowed Values
-- 0 lb
-- 0.0 oz
-- 0 g
-- 10.12 g
-- 11 kg
-- 15.2 kg
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
-- Length: up to 50 characters
 
 
-## Validation Error Codes
 
-### validation_invalid_format
-### validation_invalid_value
-### validation_invalid_weight_unit
-### validation_missing_value
 
-## Valid XML Examples
+## Example Values
 
-<table>
-<thead>
-<tr><th>Valid example                                 </th></tr>
-</thead>
-<tbody>
-<tr><td>
+Here are examples of how a valid *shipping_weight* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<g:shipping_weight>11 kg</g:shipping_weight>  
+<g:shipping_weight>11 kg</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
+
+```xml
+<g:shipping_weight>11 kg</g:shipping_weight>
+```
 
 ```xml
 <g:shipping_weight>11.2 kg</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:shipping_weight>11 g</g:shipping_weight>   
+<g:shipping_weight>11 g</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:shipping_weight>11.2 g</g:shipping_weight> 
+<g:shipping_weight>11.2 g</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:shipping_weight>11 oz</g:shipping_weight>  
+<g:shipping_weight>11 oz</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
-<g:shipping_weight>11 lb</g:shipping_weight>  
+<g:shipping_weight>11 lb</g:shipping_weight>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 shipping_weight
-11 kg                
+11 kg
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 shipping_weight
-11.2 kg                
+11 kg
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_weight
-11 g                
+11.2 kg
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_weight
-11.2 g                
+11 g
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_weight
-11 oz                
+11.2 g
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_weight
-11 lb                
+11 oz
 ```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid XML Examples
-
-<table>
-<thead>
-<tr><th>Invalid example                                      </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
-
-```xml
-<g:shipping_weight>11.,.,.,111</g:shipping_weight>   
-```
-
-</td><td>
-
-```xml
-validation_invalid_format     
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_weight>11 kilo</g:shipping_weight>       
-```
-
-</td><td>
-
-```xml
-validation_invalid_weight_unit
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_weight>unkn-own</g:shipping_weight>      
-```
-
-</td><td>
-
-```xml
-validation_invalid_format     
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_weight>empty value</g:shipping_weight>   
-```
-
-</td><td>
-
-```xml
-validation_invalid_value      
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_weight>11 </g:shipping_weight>           
-```
-
-</td><td>
-
-```xml
-validation_missing_value      
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_weight>111.222.333 kg</g:shipping_weight>
-```
-
-</td><td>
-
-```xml
-validation_invalid_value      
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
 ```csv
 shipping_weight
-"11.,.,.,111"                  
+11 lb
 ```
 
-</td><td>
 
-```csv
-validation_invalid_format     
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+
+```xml
+<g:shipping_weight>11.,.,.,111</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```csv
-shipping_weight
-11 kilo                  
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+
+```xml
+<g:shipping_weight>empty value</g:shipping_weight>
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_weight_unit
+:::danger <Anchor id="validation_invalid_weight_unit" title="validation_invalid_weight_unit" /> 
+
+```xml
+<g:shipping_weight>11 kilo</g:shipping_weight>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```csv
-shipping_weight
-unkn-own                  
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+
+```xml
+<g:shipping_weight>11 </g:shipping_weight>
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_format     
-```
 
-</td></tr>
-<tr><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```csv
-shipping_weight
-empty value                  
-```
-
-</td><td>
-
-```csv
-validation_invalid_value      
-```
-
-</td></tr>
-<tr><td>
-
-```csv
-shipping_weight
-11                  
-```
-
-</td><td>
-
-```csv
-validation_missing_value      
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```csv
 shipping_weight
-111.222.333 kg                  
+"11.,.,.,111"
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
-validation_invalid_value      
+shipping_weight
+empty value
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+:::danger <Anchor id="validation_invalid_weight_unit" title="validation_invalid_weight_unit" /> 
+
+```csv
+shipping_weight
+11 kilo
+```
+
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+
+```csv
+shipping_weight
+11
+```
+
+:::
+
+
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324503
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324503)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

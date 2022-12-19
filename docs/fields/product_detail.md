@@ -4,7 +4,6 @@ description: In this attribute add all structured information about the product.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -40,7 +39,7 @@ In this attribute add all structured information about the product.
 
 ### Do
 
-- Only add confirmed informatio
+- Only add confirmed information
 
 
 

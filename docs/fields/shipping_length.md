@@ -1,306 +1,236 @@
+---
+description: It is recommended to add this attribute if delivery costs based on dimensions.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # shipping_length
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 It is recommended to add this attribute if delivery costs based on dimensions.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+
+
+## Validation Rules
+
+- Length must be between `1-50` characters
+
+
+## Best Practices
+
+
+### Do
 
 - Use accepted units systems
 
-## Allowed Values
-- 11 cm
-- 15.2 in
-- 10.12 cm
-- 0 cm
-- 0.0 in
-- 0 lb
-
-## Format
-
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
-- Length: up to 50 characters
 
 
-## Validation Error Codes
 
-### validation_invalid_format
-### validation_invalid_length_unit
-### validation_invalid_value
-### validation_missing_value
 
-## Valid XML Examples
+## Example Values
 
-<table>
-<thead>
-<tr><th>Valid example                                  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+Here are examples of how a valid *shipping_length* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<channel/>                                     
+(empty string)
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:shipping_length>0 cm</g:shipping_length>    
+(empty string)
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:shipping_length>0.0 in</g:shipping_length>  
+<g:shipping_length>0 cm</g:shipping_length>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:shipping_length>11 cm</g:shipping_length>   
+<g:shipping_length>0.0 in</g:shipping_length>
 ```
-
-</td></tr>
-<tr><td>
 
 ```xml
-<g:shipping_length>15.2 in</g:shipping_length> 
+<g:shipping_length>11 cm</g:shipping_length>
 ```
 
-</td></tr>
-<tr><td>
+```xml
+<g:shipping_length>15.2 in</g:shipping_length>
+```
 
 ```xml
 <g:shipping_length>10.12 cm</g:shipping_length>
 ```
 
-</td></tr>
-</tbody>
-</table>
 
-## Valid CSV Examples
+  </div>
+</details>
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 shipping_length
-""                
+""
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 shipping_length
-0 cm                
+""
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_length
-0.0 in                
+0 cm
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_length
-11 cm                
+0.0 in
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_length
-15.2 in                
+11 cm
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 shipping_length
-10.12 cm                
+15.2 in
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+shipping_length
+10.12 cm
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                      </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```xml
-<g:shipping_length>123cm</g:shipping_length>         
+<g:shipping_length>123cm</g:shipping_length>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" /> 
 
 ```xml
-validation_invalid_format     
+<g:shipping_length>2 m</g:shipping_length>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```xml
-<g:shipping_length>2 m</g:shipping_length>           
+<g:shipping_length>unkn own</g:shipping_length>
 ```
 
-</td><td>
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-validation_invalid_length_unit
+<g:shipping_length> in</g:shipping_length>
 ```
 
-</td></tr>
-<tr><td>
+:::
 
-```xml
-<g:shipping_length>unkn own</g:shipping_length>      
-```
 
-</td><td>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-```xml
-validation_invalid_value      
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_length>111.222.333 in</g:shipping_length>
-```
-
-</td><td>
-
-```xml
-validation_invalid_value      
-```
-
-</td></tr>
-<tr><td>
-
-```xml
-<g:shipping_length> in</g:shipping_length>           
-```
-
-</td><td>
-
-```xml
-validation_missing_value      
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code          </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```csv
 shipping_length
-123cm                  
+123cm
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_format     
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" /> 
 
 ```csv
 shipping_length
-2 m                  
+2 m
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_length_unit
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
 
 ```csv
 shipping_length
-unkn own                  
+unkn own
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value      
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 shipping_length
-111.222.333 in                  
+ in
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_value      
-```
 
-</td></tr>
-<tr><td>
-
-```csv
-shipping_length
- in                  
-```
-
-</td><td>
-
-```csv
-validation_missing_value      
-```
-
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324498?hl=en-GB&ref_topic=6324338
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324498?hl=en-GB&ref_topic=6324338)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
