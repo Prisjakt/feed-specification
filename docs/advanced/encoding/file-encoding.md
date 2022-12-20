@@ -1,7 +1,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# File Encoding
+# File Encoding (UTF-8)
 
 In order for computers to understand each other and to be able to represent the large amount of different languages characters and symbols, encodings are needed. Encodings are a way of defining a set where numbers correspond to a certain symbol.
 
