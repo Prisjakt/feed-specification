@@ -1,8 +1,4 @@
 {
   "label": "Example Files",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Full examples of valid feed files"
-  }
+  "position": 2
 }

@@ -1,8 +1,4 @@
 {
   "label": "Advanced",
-  "position": 8,
-  "link": {
-    "type": "generated-index",
-    "description": "More in-depth articles regarding technical details and specifications"
-  }
+  "position": 8
 }

@@ -8,14 +8,16 @@ Delta feeds is a way of splitting up your inventory to a base feed and then peri
 
 Delta files can be read at a higher frequency and contains offers + an `action field` for each offer that specifies if the offer should be `added/updated/removed`.
 
+To get started with delta feeds please contact our support at support@prisjakt.nu.
+
 ## Advantages
 
 - Can handle large volumes (> millions of offers)
-- Average time for price update is low (< 10min)
+- Average time for price update is low
 
 ## Disadvantages
 
-- Complex for to setup (requires work on webserver to produce delta files)
+- Complex for to setup since it requires work on webserver to produce delta files
 
 ## Flow
 
@@ -45,7 +47,6 @@ sequenceDiagram
             F->>A: Responds with delta feed
             A->>A: Ingests delta feed
             A->>A: Stores last ingested delta number and timestamp
-            note over A: We also store a ingestion run for the delta run
         end
     end
 ```
