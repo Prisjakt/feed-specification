@@ -8,8 +8,12 @@ import Definition from '@site/src/components/definition';
 
 ## Prisjakt Specific
 
+<Definition id="term_shop" title="Shop">
+    A shop is an e-commerce retailer that is selling the products defined in its Product Feed; the inventory. A shop has a primary market, typically associated with an Internet domain (e.g. amazon.se is Amazon Sweden).
+</Definition>
+
 <Definition id="term_feed" title="Feed">
-    Feed is a structured file containing information about products.
+    Feed is a structured representation of inventory information and updates. Most often represented as one or more xml or csv files.
 </Definition>
 
 <Definition id="term_offer" title="Offer">
@@ -23,6 +27,8 @@ import Definition from '@site/src/components/definition';
 <Definition id="term_price" title="Price">
     Price is the cost of the product including VAT. 
 </Definition>
+
+
 
 ## Ingestion Specific
 
@@ -53,12 +59,12 @@ import Definition from '@site/src/components/definition';
 
 <Definition id="term_severity" title="Severity">
 
-    Please see [validation severity levels](/docs/terminology/severity-levels)
+Please see [validation severity levels](/terminology/severity-levels.md)
 
 </Definition>
 
 ## Technical
 
 <Definition id="term_case_sensitive" title="Case Sensitive">
-    This is the definition of the first term.
+    When a comparison between strings consider capital vs small letters to be not equal.
 </Definition>
