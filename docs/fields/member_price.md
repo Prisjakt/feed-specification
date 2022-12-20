@@ -4,7 +4,6 @@ description: This is product price that is active for users with active membersh
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -57,7 +56,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 :::tip Valid Value
 
 ```xml
-(empty string)
+<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 :::
@@ -67,7 +66,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
   <div>
 
 ```xml
-(empty string)
+<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 ```xml
@@ -76,10 +75,6 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 
 ```xml
 <pj:member_price>SEK 100</pj:member_price>
-```
-
-```xml
-<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 ```xml
@@ -113,7 +108,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 
 ```csv
 member_price
-""
+99.99 SEK
 ```
 
 :::
@@ -124,7 +119,7 @@ member_price
 
 ```csv
 member_price
-""
+99.99 SEK
 ```
 
 ```csv
@@ -135,11 +130,6 @@ member_price
 ```csv
 member_price
 SEK 100
-```
-
-```csv
-member_price
-99.99 SEK
 ```
 
 ```csv

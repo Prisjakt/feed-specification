@@ -4,7 +4,6 @@ description: Used to add additional image links. The images may include differen
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -67,7 +66,7 @@ Here are examples of how a valid *additional_image_link* value  should look like
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:additional_image_link>http://example.com/link</g:additional_image_link>
 ```
 
 :::
@@ -75,23 +74,6 @@ Here are examples of how a valid *additional_image_link* value  should look like
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
-
-```xml
-<g:additional_image_link>ftp://example.com/link</g:additional_image_link>
-```
-
-```xml
-<g:additional_image_link>ftps://example.com/link</g:additional_image_link>
-```
-
-```xml
-<g:additional_image_link>https://example.com/image1.jpg</g:additional_image_link>
-<g:additional_image_link>https://example.com/image2.jpg</g:additional_image_link>
-```
 
 ```xml
 <g:additional_image_link>http://example.com/link</g:additional_image_link>
@@ -117,6 +99,19 @@ Here are examples of how a valid *additional_image_link* value  should look like
 <g:additional_image_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</g:additional_image_link>
 ```
 
+```xml
+<g:additional_image_link>ftp://example.com/link</g:additional_image_link>
+```
+
+```xml
+<g:additional_image_link>ftps://example.com/link</g:additional_image_link>
+```
+
+```xml
+<g:additional_image_link>https://example.com/image1.jpg</g:additional_image_link>
+<g:additional_image_link>https://example.com/image2.jpg</g:additional_image_link>
+```
+
 
   </div>
 </details>
@@ -128,7 +123,7 @@ Here are examples of how a valid *additional_image_link* value  should look like
 
 ```csv
 additional_image_link
-""
+http://example.com/link
 ```
 
 :::
@@ -136,26 +131,6 @@ additional_image_link
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-additional_image_link
-""
-```
-
-```csv
-additional_image_link
-ftp://example.com/link
-```
-
-```csv
-additional_image_link
-ftps://example.com/link
-```
-
-```csv
-additional_image_link
-"https://example.com/image1.jpg,https://example.com/image2.jpg"
-```
 
 ```csv
 additional_image_link
@@ -185,6 +160,21 @@ https://example.com/link?utm_source=1&utm_medium=2
 ```csv
 additional_image_link
 http://example.com/link-%E2%84%A2-mu-20%C2%B5m
+```
+
+```csv
+additional_image_link
+ftp://example.com/link
+```
+
+```csv
+additional_image_link
+ftps://example.com/link
+```
+
+```csv
+additional_image_link
+"https://example.com/image1.jpg,https://example.com/image2.jpg"
 ```
 
 

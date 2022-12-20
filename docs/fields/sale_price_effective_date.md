@@ -1,179 +1,195 @@
+---
+description: Datetime range indicating when `sale_price` is active. If you don't submit this attribute [`sale_price`](sale_price.md) always applies.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # sale_price_effective_date
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 Datetime range indicating when `sale_price` is active. If you don't submit this attribute [`sale_price`](sale_price.md) always applies.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+### Effects When Used
 
-- This attribute requires start date and stop date to work properly
-- If you don't include time, start time default to 12 AM CET (midnight) of start day and stop time is set to 23:59:59 of stop day
-- Start datetime shall be earlier than stop datetime
+- This will cause sale_price to be applied only within interval specified by start and end datetime
 
-## Allowed Values
+
+
+
+
+
+
+
+## Validation Rules
+
 - Standard: ISO 8601
 - Up to 51 characters
 - Two dates separated with "/" (ISO 8601)
 
-## Format
 
-- Type: String
-- Encoding: UTF-8
-- Repeatable: no
+## Best Practices
 
 
-## Validation Error Codes
+### Do
 
-### validation_invalid_format
-### validation_missing_value
+- Start datetime shall be earlier than stop datetime
 
-## Valid XML Examples
 
-<table>
-<thead>
-<tr><th>Valid example                         </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+### Don´t
+
+- If you don't include time, start time default to 12 AM CET (midnight) of start day and stop time is set to 23:59:59 of stop day
+
+
+
+
+## Example Values
+
+Here are examples of how a valid *sale_price_effective_date* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
+
+```xml
+<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
+<g:sale_price>11.50 SEK</g:sale_price>
+```
+
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
+
+```xml
+<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
+<g:sale_price>11.50 SEK</g:sale_price>
+```
 
 ```xml
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
-</td></tr>
-<tr><td>
-
 ```xml
 <g:sale_price_effective_date>2016-02-24/2016-02-26</g:sale_price_effective_date>
-<g:sale_price>11.50 SEK</g:sale_price>                                       
+<g:sale_price>11.50 SEK</g:sale_price>
 ```
 
-</td></tr>
-<tr><td>
 
-```xml
-<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
-<g:sale_price>11.50 SEK</g:sale_price>                                       
-```
+  </div>
+</details>
 
-</td></tr>
-</tbody>
-</table>
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
 
-## Valid CSV Examples
-
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::tip Valid Value
 
 ```csv
 sale_price_effective_date,sale_price
-,11.50 SEK                
+2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24/2016-02-26,11.50 SEK                
+2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
 ```
-
-</td></tr>
-<tr><td>
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK                
+,11.50 SEK
 ```
 
-</td></tr>
-</tbody>
-</table>
+```csv
+sale_price_effective_date,sale_price
+2016-02-24/2016-02-26,11.50 SEK
+```
 
-## Invalid XML Examples
 
-<table>
-<thead>
-<tr><th>Invalid example                                                           </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```xml
 <g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
 <g:sale_price_effective_date>2016-02-29T15:30-0800</g:sale_price_effective_date>
-<g:sale_price>11.50 GBP</g:sale_price>                                                                           
+<g:sale_price>11.50 GBP</g:sale_price>
 ```
 
-</td><td>
+:::
 
-```xml
-validation_missing_value 
-```
 
-</td></tr>
-</tbody>
-</table>
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
 
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```csv
 sale_price_effective_date,sale_price
-2018/2016-02-29,                  
+2018/2016-02-29,
 ```
 
-</td><td>
+:::
 
-```csv
-validation_invalid_format
-```
-
-</td></tr>
-<tr><td>
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-29T15:30-0800,11.50 GBP                  
+2016-02-29T15:30-0800,11.50 GBP
 ```
 
-</td><td>
+:::
 
-```csv
-validation_missing_value 
-```
 
-</td></tr>
-</tbody>
-</table>
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/6324460
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324460)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **string**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |

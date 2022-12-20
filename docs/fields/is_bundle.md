@@ -4,7 +4,6 @@ description: This attribute indicates if the offer is a bundle of products (mobi
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -66,7 +65,7 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:is_bundle>true</g:is_bundle>
 ```
 
 :::
@@ -74,10 +73,6 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:is_bundle>true</g:is_bundle>
@@ -122,7 +117,7 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 
 ```csv
 is_bundle
-""
+true
 ```
 
 :::
@@ -130,11 +125,6 @@ is_bundle
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-is_bundle
-""
-```
 
 ```csv
 is_bundle

@@ -4,7 +4,6 @@ description: Should be used for tagging products for an adult audience. Not used
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -47,7 +46,7 @@ Here are examples of how a valid *adult* value  should look like in XML and CSV 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:adult>true</g:adult>
 ```
 
 :::
@@ -55,10 +54,6 @@ Here are examples of how a valid *adult* value  should look like in XML and CSV 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:adult>true</g:adult>
@@ -103,7 +98,7 @@ Here are examples of how a valid *adult* value  should look like in XML and CSV 
 
 ```csv
 adult
-""
+true
 ```
 
 :::
@@ -111,11 +106,6 @@ adult
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-adult
-""
-```
 
 ```csv
 adult

@@ -1,131 +1,149 @@
+---
+description: Promotion_id allows mapping your inventory to promotion defined in Business Center.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Anchor from "@site/src/components/anchor"
+import ChangeLog from '@site/src/components/changelog';
+import OptionalField from '@site/docs/partials/_optional_field.md';
+
 # promotion_id
+
+<OptionalField/>
 
 ## Description
 
-This attribute is *optional*.
 Promotion_id allows mapping your inventory to promotion defined in Business Center.
 
-## Requirements
-
-* *optional*
 
 
-## Specification Details
+### Effects When Used
 
 - Use this attribute if you want to highlight offers included in your current promotion campaigns.
 
-## Allowed Values
-- Choose your own values for promotion_id based on your inventory
-
-## Format
-
-- Type: List[String]
-- Encoding: UTF-8
-- Repeatable: yes, up to 10
-- Length: up to 50 characters
 
 
-## Validation Error Codes
 
-### validation_invalid_length
 
-## Valid XML Examples
 
-<table>
-<thead>
-<tr><th>Valid example                               </th></tr>
-</thead>
-<tbody>
-<tr><td>
+
+
+## Validation Rules
+
+- Length must be between `1-50` characters
+
+
+## Example Values
+
+Here are examples of how a valid *promotion_id* value  should look like in XML and CSV (with header) respectively.
+
+<Tabs>
+  <TabItem value="valid_xml" label="XML" default>
+
+:::tip Valid Value
 
 ```xml
-<g:promotion_id>super promo</g:promotion_id>
+<g:promotion_id><![CDATA[10-year-anniversary-promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[mega deals]]></g:promotion_id>
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid XML examples</summary>
+  <div>
 
 ```xml
-<g:promotion_id>10-year-anniversary-promo</g:promotion_id>
-<g:promotion_id>mega deals</g:promotion_id>                                             
+<g:promotion_id><![CDATA[10-year-anniversary-promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[mega deals]]></g:promotion_id>
 ```
 
-</td></tr>
-</tbody>
-</table>
+```xml
+<g:promotion_id><![CDATA[super promo]]></g:promotion_id>
+```
 
-## Valid CSV Examples
 
-<table>
-<thead>
-<tr><th>Valid example  </th></tr>
-</thead>
-<tbody>
-<tr><td>
+  </div>
+</details>
+
+ </TabItem>
+  <TabItem value="valid_csv" label="CSV">
+
+:::tip Valid Value
 
 ```csv
 promotion_id
-super promo                
+"10-year-anniversary-promo,mega deals"
 ```
 
-</td></tr>
-<tr><td>
+:::
+
+<details>
+  <summary>Click to show more valid CSV examples</summary>
+  <div>
 
 ```csv
 promotion_id
-"10-year-anniversary-promo,mega deals"                
+"10-year-anniversary-promo,mega deals"
 ```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid XML Examples
-
-<table>
-<thead>
-<tr><th>Invalid example                                                                                                     </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
-
-```xml
-<g:promotion_id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)</g:promotion_id>
-```
-
-</td><td>
-
-```xml
-validation_invalid_length
-```
-
-</td></tr>
-</tbody>
-</table>
-
-## Invalid CSV Examples
-
-<table>
-<thead>
-<tr><th>Invalid example  </th><th>Resulting error code     </th></tr>
-</thead>
-<tbody>
-<tr><td>
 
 ```csv
 promotion_id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)                  
+super promo
 ```
 
-</td><td>
+
+  </div>
+</details>
+
+  </TabItem>
+</Tabs>
+
+## Error Codes
+
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+
+<Tabs>
+  <TabItem value="invalid_xml" label="XML" default>
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+
+```xml
+<g:promotion_id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)]]></g:promotion_id>
+```
+
+:::
+
+
+ </TabItem>
+  <TabItem value="invalid_csv" label="CSV">
+
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
 
 ```csv
-validation_invalid_length
+promotion_id
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)
 ```
 
-</td></tr>
-</tbody>
-</table>
+:::
+
+
+  </TabItem>
+</Tabs>
 
 ## References
-* https://support.google.com/merchants/answer/7050148
+- [Google Merchant Specification](https://support.google.com/merchants/answer/7050148)
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## Properties
+
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **List[String]**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **10** | If a list, this specifices the max number of items           |

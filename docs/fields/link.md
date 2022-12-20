@@ -4,7 +4,6 @@ description: We need links to be able to re-direct users to your product page. I
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';

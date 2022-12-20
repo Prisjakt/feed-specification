@@ -4,7 +4,6 @@ description: The brand attribute is used to indicate a product's brand/manufactu
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -37,7 +36,7 @@ The brand attribute is used to indicate a product's brand/manufacturer name.
 
 ### Don´t
 
-- DonÂ´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
+- Don´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
 
 
 
@@ -52,7 +51,7 @@ Here are examples of how a valid *brand* value  should look like in XML and CSV 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:brand><![CDATA[Prisjakt]]></g:brand>
 ```
 
 :::
@@ -60,10 +59,6 @@ Here are examples of how a valid *brand* value  should look like in XML and CSV 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:brand><![CDATA[Prisjakt]]></g:brand>
@@ -84,7 +79,7 @@ Here are examples of how a valid *brand* value  should look like in XML and CSV 
 
 ```csv
 brand
-""
+Prisjakt
 ```
 
 :::
@@ -92,11 +87,6 @@ brand
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-brand
-""
-```
 
 ```csv
 brand

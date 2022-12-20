@@ -4,14 +4,13 @@ description: This attribute is used to help us place products in relevant  categ
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
+import OptionalField from '@site/docs/partials/_optional_field.md';
 
 # google_product_category
 
-<RequiredField/>
+<OptionalField/>
 
 ## Description
 
@@ -62,7 +61,7 @@ Here are examples of how a valid *google_product_category* value  should look li
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:google_product_category>1144</g:google_product_category>
 ```
 
 :::
@@ -72,15 +71,11 @@ Here are examples of how a valid *google_product_category* value  should look li
   <div>
 
 ```xml
-(empty string)
+<g:google_product_category>1144</g:google_product_category>
 ```
 
 ```xml
 <g:google_product_category>1</g:google_product_category>
-```
-
-```xml
-<g:google_product_category>1144</g:google_product_category>
 ```
 
 ```xml
@@ -110,7 +105,7 @@ Here are examples of how a valid *google_product_category* value  should look li
 
 ```csv
 google_product_category
-""
+1144
 ```
 
 :::
@@ -121,17 +116,12 @@ google_product_category
 
 ```csv
 google_product_category
-""
+1144
 ```
 
 ```csv
 google_product_category
 1
-```
-
-```csv
-google_product_category
-1144
 ```
 
 ```csv

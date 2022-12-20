@@ -1,10 +1,9 @@
 ---
-description: Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
+description: Describe your product´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -15,7 +14,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Describe your productÂ´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
+Describe your product´s color. Using this attribute is strongly recommended for Fashion and Beauty categories. Add it to improve search results and listing.
 
 
 
@@ -53,7 +52,7 @@ Here are examples of how a valid *color* value  should look like in XML and CSV 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:color>red</g:color>
 ```
 
 :::
@@ -61,10 +60,6 @@ Here are examples of how a valid *color* value  should look like in XML and CSV 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:color>red</g:color>
@@ -97,7 +92,7 @@ Here are examples of how a valid *color* value  should look like in XML and CSV 
 
 ```csv
 color
-""
+red
 ```
 
 :::
@@ -105,11 +100,6 @@ color
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-color
-""
-```
 
 ```csv
 color

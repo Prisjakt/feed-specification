@@ -7,10 +7,10 @@
     <item>
       <g:availability>in_stock</g:availability>
       <g:condition>new</g:condition>
-      <g:google_product_category>1</g:google_product_category>
+      <g:google_product_category>1144</g:google_product_category>
       <g:id><![CDATA[213888]]></g:id>
       <g:link>http://example.com/link</g:link>
-      <g:price>100 SEK</g:price>
+      <g:price>99.99 SEK</g:price>
       <g:title><![CDATA[Samsung Galaxy S8 Black 128G]]></g:title>
     </item>
   </channel>

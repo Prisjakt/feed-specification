@@ -4,7 +4,6 @@ description: Add this information if you know to which Prisjakt product we shoul
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -56,7 +55,7 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
 :::tip Valid Value
 
 ```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
+<pj:prisjakt_id>123</pj:prisjakt_id>
 ```
 
 :::
@@ -66,11 +65,11 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
   <div>
 
 ```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
+<pj:prisjakt_id>123</pj:prisjakt_id>
 ```
 
 ```xml
-<pj:prisjakt_id>123</pj:prisjakt_id>
+<pj:prisjakt_id>1</pj:prisjakt_id>
 ```
 
 
@@ -84,7 +83,7 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
 
 ```csv
 prisjakt_id
-1
+123
 ```
 
 :::
@@ -95,12 +94,12 @@ prisjakt_id
 
 ```csv
 prisjakt_id
-1
+123
 ```
 
 ```csv
 prisjakt_id
-123
+1
 ```
 
 

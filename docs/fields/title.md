@@ -1,10 +1,9 @@
 ---
-description: Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
+description: It should contain the full product name. The title is used to clearly state what product your shop is selling. It's the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain a manufacturer name along with product name or model. Including size, color and gender is recommended for product types that specifies this.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
@@ -15,7 +14,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Title is the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain manufacturer name along with product name and/or model. Additionally size, color and gender is recommended for product types that specifies this.
+It should contain the full product name. The title is used to clearly state what product your shop is selling. It's the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain a manufacturer name along with product name or model. Including size, color and gender is recommended for product types that specifies this.
 
 
 
@@ -23,7 +22,8 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 
 ## Validation Rules
 
-- Length should be between `1-255`
+- Use only one title attribute per product
+- Length must be between `1-255` characters
 
 
 ## Best Practices
@@ -31,18 +31,18 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 
 ### Do
 
+- Add full product name
 - Use the same title as it is present on your product page
-- Preferred syntax is `[brand] + [model name] + [additional product information]`
+- Add variant information if applicable: colour, size, gender etc.
+- Preferred syntax [brand] + [model name] + [additional product information]
 - Use language of the specific market where the product is being sold (for better user experience)
-- Embed in a [CDATA](/docs/advanced/encoding/cdata) tag if using xml in order to avoid any potential issues with special characters
 
 
 
 ### Don´t
 
-- Avoid commas, tabs, extra spaces, newlines and other special characters (especially if you use CSV format)
-- Do not use HTML tags or any other codes
-- Do not include promotional text
+- Do not use HTML tag - Do not include promotional text
+- Do not use tabs or extra spaces
 - Do not write detailed information in title, this belongs in the description attribute
 
 

@@ -4,7 +4,6 @@ description: This attribute is strongly recommended for fashion and beauty segme
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ValidExamples from "./gtin_valid_examples.mdx"
 import Anchor from "@site/src/components/anchor"
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
@@ -61,7 +60,7 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:item_group_id>AAA111</g:item_group_id>
 ```
 
 :::
@@ -69,10 +68,6 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:item_group_id>AAA111</g:item_group_id>
@@ -93,7 +88,7 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 
 ```csv
 item_group_id
-""
+AAA111
 ```
 
 :::
@@ -101,11 +96,6 @@ item_group_id
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-item_group_id
-""
-```
 
 ```csv
 item_group_id
