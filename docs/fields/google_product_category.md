@@ -61,7 +61,7 @@ Here are examples of how a valid *google_product_category* value  should look li
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:google_product_category>1144</g:google_product_category>
 ```
 
 :::
@@ -71,15 +71,11 @@ Here are examples of how a valid *google_product_category* value  should look li
   <div>
 
 ```xml
-(empty string)
+<g:google_product_category>1144</g:google_product_category>
 ```
 
 ```xml
 <g:google_product_category>1</g:google_product_category>
-```
-
-```xml
-<g:google_product_category>1144</g:google_product_category>
 ```
 
 ```xml
@@ -109,7 +105,7 @@ Here are examples of how a valid *google_product_category* value  should look li
 
 ```csv
 google_product_category
-""
+1144
 ```
 
 :::
@@ -120,17 +116,12 @@ google_product_category
 
 ```csv
 google_product_category
-""
+1144
 ```
 
 ```csv
 google_product_category
 1
-```
-
-```csv
-google_product_category
-1144
 ```
 
 ```csv

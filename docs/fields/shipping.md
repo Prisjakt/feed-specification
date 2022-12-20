@@ -24,11 +24,6 @@ The `shipping` attribute is used to set cost, time and methods of delivery. Plea
 
 
 
-### Effects When Omitted
-
-- None
-
-
 
 
 
@@ -72,9 +67,13 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 ```xml
 <g:shipping>
   <g:country>SE</g:country>
-  <g:region>New York</g:region>
+  <g:region>Skåne</g:region>
   <g:service>DHL</g:service>
-  <g:price>5 SEK</g:price>
+  <g:price>25.00 SEK</g:price>
+  <g:min_handling_time>1</g:min_handling_time>
+  <g:max_handling_time>2</g:max_handling_time>
+  <g:min_transit_time>1</g:min_transit_time>
+  <g:max_transit_time>3</g:max_transit_time>
 </g:shipping>
 ```
 
@@ -83,6 +82,19 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
+
+```xml
+<g:shipping>
+  <g:country>SE</g:country>
+  <g:region>Skåne</g:region>
+  <g:service>DHL</g:service>
+  <g:price>25.00 SEK</g:price>
+  <g:min_handling_time>1</g:min_handling_time>
+  <g:max_handling_time>2</g:max_handling_time>
+  <g:min_transit_time>1</g:min_transit_time>
+  <g:max_transit_time>3</g:max_transit_time>
+</g:shipping>
+```
 
 ```xml
 <g:shipping>
@@ -145,8 +157,8 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 :::tip Valid Value
 
 ```csv
-shipping(country:region:service:price)
-SE:New York:DHL:5 SEK
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
+SE:Skåne:DHL:25.00 SEK:1:2:1:3
 ```
 
 :::
@@ -154,6 +166,11 @@ SE:New York:DHL:5 SEK
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
+
+```csv
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
+SE:Skåne:DHL:25.00 SEK:1:2:1:3
+```
 
 ```csv
 shipping(country:region:service:price)

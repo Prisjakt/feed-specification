@@ -23,17 +23,7 @@ It is recommended to add this attribute if delivery costs based on dimensions.
 ## Validation Rules
 
 - Length must be between `1-50` characters
-
-
-## Best Practices
-
-
-### Do
-
-- Use accepted units systems
-
-
-
+- Unit must be one of `cm` or `in`
 
 
 ## Example Values
@@ -46,7 +36,7 @@ Here are examples of how a valid *shipping_width* value  should look like in XML
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:shipping_width>10.12 cm</g:shipping_width>
 ```
 
 :::
@@ -56,7 +46,7 @@ Here are examples of how a valid *shipping_width* value  should look like in XML
   <div>
 
 ```xml
-(empty string)
+<g:shipping_width>10.12 cm</g:shipping_width>
 ```
 
 ```xml
@@ -75,10 +65,6 @@ Here are examples of how a valid *shipping_width* value  should look like in XML
 <g:shipping_width>15.2 in</g:shipping_width>
 ```
 
-```xml
-<g:shipping_width>10.12 cm</g:shipping_width>
-```
-
 
   </div>
 </details>
@@ -90,7 +76,7 @@ Here are examples of how a valid *shipping_width* value  should look like in XML
 
 ```csv
 shipping_width
-""
+10.12 cm
 ```
 
 :::
@@ -101,7 +87,7 @@ shipping_width
 
 ```csv
 shipping_width
-""
+10.12 cm
 ```
 
 ```csv
@@ -122,11 +108,6 @@ shipping_width
 ```csv
 shipping_width
 15.2 in
-```
-
-```csv
-shipping_width
-10.12 cm
 ```
 
 

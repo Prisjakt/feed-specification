@@ -60,7 +60,7 @@ Here are examples of how a valid *availability_date* value  should look like in 
 :::tip Valid Value
 
 ```xml
-<g:availability_date>2021-03-21</g:availability_date>
+<g:availability_date>2021-12-22T03:12:58.019077+00:00</g:availability_date>
 <g:availability>preorder</g:availability>
 ```
 
@@ -71,12 +71,12 @@ Here are examples of how a valid *availability_date* value  should look like in 
   <div>
 
 ```xml
-<g:availability_date>2021-03-21</g:availability_date>
+<g:availability_date>2021-12-22T03:12:58.019077+00:00</g:availability_date>
 <g:availability>preorder</g:availability>
 ```
 
 ```xml
-<g:availability_date>2021-12-22T03:12:58.019077+00:00</g:availability_date>
+<g:availability_date>2021-03-21</g:availability_date>
 <g:availability>preorder</g:availability>
 ```
 
@@ -91,7 +91,7 @@ Here are examples of how a valid *availability_date* value  should look like in 
 
 ```csv
 availability_date,availability
-2021-03-21,preorder
+2021-12-22T03:12:58.019077+00:00,preorder
 ```
 
 :::
@@ -102,12 +102,12 @@ availability_date,availability
 
 ```csv
 availability_date,availability
-2021-03-21,preorder
+2021-12-22T03:12:58.019077+00:00,preorder
 ```
 
 ```csv
 availability_date,availability
-2021-12-22T03:12:58.019077+00:00,preorder
+2021-03-21,preorder
 ```
 
 

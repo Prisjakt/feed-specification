@@ -56,7 +56,7 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:sale_price>99.99 SEK</g:sale_price>
 ```
 
 :::
@@ -66,7 +66,7 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
   <div>
 
 ```xml
-(empty string)
+<g:sale_price>99.99 SEK</g:sale_price>
 ```
 
 ```xml
@@ -75,10 +75,6 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 
 ```xml
 <g:sale_price>SEK 100</g:sale_price>
-```
-
-```xml
-<g:sale_price>99.99 SEK</g:sale_price>
 ```
 
 ```xml
@@ -112,7 +108,7 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 
 ```csv
 sale_price
-""
+99.99 SEK
 ```
 
 :::
@@ -123,7 +119,7 @@ sale_price
 
 ```csv
 sale_price
-""
+99.99 SEK
 ```
 
 ```csv
@@ -134,11 +130,6 @@ sale_price
 ```csv
 sale_price
 SEK 100
-```
-
-```csv
-sale_price
-99.99 SEK
 ```
 
 ```csv

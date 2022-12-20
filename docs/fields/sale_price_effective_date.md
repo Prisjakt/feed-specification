@@ -62,6 +62,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
 :::tip Valid Value
 
 ```xml
+<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
@@ -72,16 +73,16 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
   <div>
 
 ```xml
+<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
+<g:sale_price>11.50 SEK</g:sale_price>
+```
+
+```xml
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
 ```xml
 <g:sale_price_effective_date>2016-02-24/2016-02-26</g:sale_price_effective_date>
-<g:sale_price>11.50 SEK</g:sale_price>
-```
-
-```xml
-<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
@@ -96,7 +97,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
 
 ```csv
 sale_price_effective_date,sale_price
-,11.50 SEK
+2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
 ```
 
 :::
@@ -107,17 +108,17 @@ sale_price_effective_date,sale_price
 
 ```csv
 sale_price_effective_date,sale_price
+2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
+```
+
+```csv
+sale_price_effective_date,sale_price
 ,11.50 SEK
 ```
 
 ```csv
 sale_price_effective_date,sale_price
 2016-02-24/2016-02-26,11.50 SEK
-```
-
-```csv
-sale_price_effective_date,sale_price
-2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
 ```
 
 

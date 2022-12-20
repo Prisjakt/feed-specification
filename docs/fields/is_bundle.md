@@ -65,7 +65,7 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:is_bundle>true</g:is_bundle>
 ```
 
 :::
@@ -73,10 +73,6 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:is_bundle>true</g:is_bundle>
@@ -121,7 +117,7 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 
 ```csv
 is_bundle
-""
+true
 ```
 
 :::
@@ -129,11 +125,6 @@ is_bundle
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-is_bundle
-""
-```
 
 ```csv
 is_bundle

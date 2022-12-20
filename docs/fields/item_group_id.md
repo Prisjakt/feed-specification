@@ -60,7 +60,7 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:item_group_id>AAA111</g:item_group_id>
 ```
 
 :::
@@ -68,10 +68,6 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:item_group_id>AAA111</g:item_group_id>
@@ -92,7 +88,7 @@ Here are examples of how a valid *item_group_id* value  should look like in XML 
 
 ```csv
 item_group_id
-""
+AAA111
 ```
 
 :::
@@ -100,11 +96,6 @@ item_group_id
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-item_group_id
-""
-```
 
 ```csv
 item_group_id

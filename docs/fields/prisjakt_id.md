@@ -55,7 +55,7 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
 :::tip Valid Value
 
 ```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
+<pj:prisjakt_id>123</pj:prisjakt_id>
 ```
 
 :::
@@ -65,11 +65,11 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
   <div>
 
 ```xml
-<pj:prisjakt_id>1</pj:prisjakt_id>
+<pj:prisjakt_id>123</pj:prisjakt_id>
 ```
 
 ```xml
-<pj:prisjakt_id>123</pj:prisjakt_id>
+<pj:prisjakt_id>1</pj:prisjakt_id>
 ```
 
 
@@ -83,7 +83,7 @@ Here are examples of how a valid *prisjakt_id* value  should look like in XML an
 
 ```csv
 prisjakt_id
-1
+123
 ```
 
 :::
@@ -94,12 +94,12 @@ prisjakt_id
 
 ```csv
 prisjakt_id
-1
+123
 ```
 
 ```csv
 prisjakt_id
-123
+1
 ```
 
 

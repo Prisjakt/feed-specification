@@ -23,18 +23,7 @@ It is recommended to add this attribute if delivery costs based on weight.
 ## Validation Rules
 
 - Length must be between `1-50` characters
-- Use values like: 0 lb, 0.0 oz, 0 g, 10.12 g, 11 kg, 15.2 kg
-
-
-## Best Practices
-
-
-### Do
-
-- Use accepted units systems
-
-
-
+- Unit must be one of `g`, `kg`, `lb` or `oz`
 
 
 ## Example Values
@@ -47,7 +36,7 @@ Here are examples of how a valid *shipping_weight* value  should look like in XM
 :::tip Valid Value
 
 ```xml
-<g:shipping_weight>11 kg</g:shipping_weight>
+<g:shipping_weight>11.2 kg</g:shipping_weight>
 ```
 
 :::
@@ -57,11 +46,11 @@ Here are examples of how a valid *shipping_weight* value  should look like in XM
   <div>
 
 ```xml
-<g:shipping_weight>11 kg</g:shipping_weight>
+<g:shipping_weight>11.2 kg</g:shipping_weight>
 ```
 
 ```xml
-<g:shipping_weight>11.2 kg</g:shipping_weight>
+<g:shipping_weight>11 kg</g:shipping_weight>
 ```
 
 ```xml
@@ -91,7 +80,7 @@ Here are examples of how a valid *shipping_weight* value  should look like in XM
 
 ```csv
 shipping_weight
-11 kg
+11.2 kg
 ```
 
 :::
@@ -102,12 +91,12 @@ shipping_weight
 
 ```csv
 shipping_weight
-11 kg
+11.2 kg
 ```
 
 ```csv
 shipping_weight
-11.2 kg
+11 kg
 ```
 
 ```csv

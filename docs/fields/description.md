@@ -53,7 +53,7 @@ Here are examples of how a valid *description* value  should look like in XML an
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]]></g:description>
 ```
 
 :::
@@ -61,10 +61,6 @@ Here are examples of how a valid *description* value  should look like in XML an
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]]></g:description>
@@ -81,7 +77,7 @@ Here are examples of how a valid *description* value  should look like in XML an
 
 ```csv
 description
-""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 ```
 
 :::
@@ -89,11 +85,6 @@ description
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-description
-""
-```
 
 ```csv
 description

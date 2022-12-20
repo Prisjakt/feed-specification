@@ -44,7 +44,8 @@ Here are examples of how a valid *promotion_id* value  should look like in XML a
 :::tip Valid Value
 
 ```xml
-<g:promotion_id><![CDATA[super promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[10-year-anniversary-promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[mega deals]]></g:promotion_id>
 ```
 
 :::
@@ -54,12 +55,12 @@ Here are examples of how a valid *promotion_id* value  should look like in XML a
   <div>
 
 ```xml
-<g:promotion_id><![CDATA[super promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[10-year-anniversary-promo]]></g:promotion_id>
+<g:promotion_id><![CDATA[mega deals]]></g:promotion_id>
 ```
 
 ```xml
-<g:promotion_id><![CDATA[10-year-anniversary-promo]]></g:promotion_id>
-<g:promotion_id><![CDATA[mega deals]]></g:promotion_id>
+<g:promotion_id><![CDATA[super promo]]></g:promotion_id>
 ```
 
 
@@ -73,7 +74,7 @@ Here are examples of how a valid *promotion_id* value  should look like in XML a
 
 ```csv
 promotion_id
-super promo
+"10-year-anniversary-promo,mega deals"
 ```
 
 :::
@@ -84,12 +85,12 @@ super promo
 
 ```csv
 promotion_id
-super promo
+"10-year-anniversary-promo,mega deals"
 ```
 
 ```csv
 promotion_id
-"10-year-anniversary-promo,mega deals"
+super promo
 ```
 
 

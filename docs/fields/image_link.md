@@ -62,7 +62,7 @@ Here are examples of how a valid *image_link* value  should look like in XML and
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:image_link>http://example.com/link</g:image_link>
 ```
 
 :::
@@ -70,18 +70,6 @@ Here are examples of how a valid *image_link* value  should look like in XML and
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
-
-```xml
-<g:image_link>ftp://example.com/link</g:image_link>
-```
-
-```xml
-<g:image_link>ftps://example.com/link</g:image_link>
-```
 
 ```xml
 <g:image_link>http://example.com/link</g:image_link>
@@ -107,6 +95,14 @@ Here are examples of how a valid *image_link* value  should look like in XML and
 <g:image_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</g:image_link>
 ```
 
+```xml
+<g:image_link>ftp://example.com/link</g:image_link>
+```
+
+```xml
+<g:image_link>ftps://example.com/link</g:image_link>
+```
+
 
   </div>
 </details>
@@ -118,7 +114,7 @@ Here are examples of how a valid *image_link* value  should look like in XML and
 
 ```csv
 image_link
-""
+http://example.com/link
 ```
 
 :::
@@ -126,21 +122,6 @@ image_link
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-image_link
-""
-```
-
-```csv
-image_link
-ftp://example.com/link
-```
-
-```csv
-image_link
-ftps://example.com/link
-```
 
 ```csv
 image_link
@@ -170,6 +151,16 @@ https://example.com/link?utm_source=1&utm_medium=2
 ```csv
 image_link
 http://example.com/link-%E2%84%A2-mu-20%C2%B5m
+```
+
+```csv
+image_link
+ftp://example.com/link
+```
+
+```csv
+image_link
+ftps://example.com/link
 ```
 
 

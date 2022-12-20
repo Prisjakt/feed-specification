@@ -60,7 +60,7 @@ Here are examples of how a valid *product_type* value  should look like in XML a
 :::tip Valid Value
 
 ```xml
-(empty string)
+<g:product_type><![CDATA[Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates]]></g:product_type>
 ```
 
 :::
@@ -68,10 +68,6 @@ Here are examples of how a valid *product_type* value  should look like in XML a
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
-
-```xml
-(empty string)
-```
 
 ```xml
 <g:product_type><![CDATA[Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates]]></g:product_type>
@@ -97,7 +93,7 @@ Here are examples of how a valid *product_type* value  should look like in XML a
 
 ```csv
 product_type
-""
+Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates
 ```
 
 :::
@@ -105,11 +101,6 @@ product_type
 <details>
   <summary>Click to show more valid CSV examples</summary>
   <div>
-
-```csv
-product_type
-""
-```
 
 ```csv
 product_type

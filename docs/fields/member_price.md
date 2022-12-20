@@ -56,7 +56,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 :::tip Valid Value
 
 ```xml
-(empty string)
+<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 :::
@@ -66,7 +66,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
   <div>
 
 ```xml
-(empty string)
+<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 ```xml
@@ -75,10 +75,6 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 
 ```xml
 <pj:member_price>SEK 100</pj:member_price>
-```
-
-```xml
-<pj:member_price>99.99 SEK</pj:member_price>
 ```
 
 ```xml
@@ -112,7 +108,7 @@ Here are examples of how a valid *member_price* value  should look like in XML a
 
 ```csv
 member_price
-""
+99.99 SEK
 ```
 
 :::
@@ -123,7 +119,7 @@ member_price
 
 ```csv
 member_price
-""
+99.99 SEK
 ```
 
 ```csv
@@ -134,11 +130,6 @@ member_price
 ```csv
 member_price
 SEK 100
-```
-
-```csv
-member_price
-99.99 SEK
 ```
 
 ```csv
