@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::caution Recommendation
 
-While CSV is lightweight and easy to use, [XML](xml.md) is more well defined and have better support for handling complex data encodings and strctures. We recommend using XML over CSV.
+While CSV is lightweight and easy to use, [XML](./xml.md) is more well defined and have better support for handling complex data encodings and strctures. We recommend using XML over CSV.
 
 :::
 
