@@ -19,6 +19,21 @@ To get started with delta feeds please contact our support at support@prisjakt.n
 
 - Complex for to setup since it requires work on webserver to produce delta files
 
+## Expected File Structure
+
+```bash
+my-delta-feed
+├── 2019-05-28-full
+│   ├── 2019-05-28-1.md
+│   ├── 2019-05-28-2.md
+│   └── 2020-05-28-3.md
+├── 2019-05-29-full
+│   ├── 2019-05-29-1.md
+│   ├── 2019-05-29-2.md
+│   └── 2020-05-29-3.md
+└── index
+```
+
 ## Flow
 
 ```mermaid
