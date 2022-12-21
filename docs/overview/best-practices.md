@@ -18,12 +18,12 @@ For larger feeds and higher update frequencies please look into using a [delta f
 If possible, then use [XML](/types-of-feeds/pull/file-formats/xml.md) over CSV. This is because xml is:
 
 - More well defined than csv
-- Have better tools to handle [escaping and encoding](/docs/advanced) 
+- Have better tools to handle [escaping and encoding](/advanced) 
 - Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/fields/shipping.md)
 
 ## Data
 
-- Ensure that you [escape and encode](/docs/advanced) your data correctly or use [CDATA](/types-of-feeds/pull/file-formats/xml.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
+- Ensure that you [escape and encode](/advanced) your data correctly or use [CDATA](/types-of-feeds/pull/file-formats/xml.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
 - Check your datas health by looking at the validation reports in [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center) and try to fix all warnings in order to get the most out of our services
 - Ensure that all your urls are properly formated and encoded
 

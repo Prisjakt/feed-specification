@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Feeds
 
-A single file feed is a file containing the *full inventory* of your shop in it´s current state. It´s read by our agents periodically based on you SLA agreement. You can see examples of this type of feeds in the [examples section](/docs/examples).
+A single file feed is a file containing the *full inventory* of your shop in it´s current state. It´s read by our agents periodically based on you SLA agreement. You can see examples of this type of feeds in the [examples section](/examples).
 
 ## Advantages
 

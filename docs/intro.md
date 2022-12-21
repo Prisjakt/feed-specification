@@ -13,13 +13,13 @@ This documentation covers everything related to Prisjakt feed specifications fro
 
 To get you started we have organized this documentation in the sidebar menu to the left in the following sections:
 
-- [Overview](/docs/overview) section will give you basic terminology, a  quick start guide and some best practices
-- [Example files](/docs/examples) is when you simply want to copy and paste or look at the final end result directly
-- [Fields](/docs/fields) contain specifics, error codes or copy & paste examples for each individual field we support
-- [Terminology](/docs/terminology) is a reference section with terms and definitions
-- [Types Of Feeds](/docs/types-of-feeds) will guide you through the different alternatives you have of providing your inventory to us
-- [Infrastructure](/docs/infrastructure) has information of how to setup and configure your infrastructure in the best possible way for serving your content to us
-- [Advanced](/docs/advanced) goes in to detail of how to handling the tricky cases and dealing with the layout and formats of your data
+- [Overview](/overview) section will give you basic terminology, a  quick start guide and some best practices
+- [Example files](/examples) is when you simply want to copy and paste or look at the final end result directly
+- [Fields](/fields) contain specifics, error codes or copy & paste examples for each individual field we support
+- [Terminology](/terminology) is a reference section with terms and definitions
+- [Types Of Feeds](/types-of-feeds) will guide you through the different alternatives you have of providing your inventory to us
+- [Infrastructure](/infrastructure) has information of how to setup and configure your infrastructure in the best possible way for serving your content to us
+- [Advanced](/advanced) goes in to detail of how to handling the tricky cases and dealing with the layout and formats of your data
 - [FAQ](/faq.md) has the guidance or answers to the most common questions asked
   
 
