@@ -1,7 +1,4 @@
 {
   "label": "Pull",
-  "position": 1,
-  "link": {
-    "description": "Pull based feeds is when our agents collect price changes from your data on a scheduled basis"
-  }
+  "position": 1
 }
