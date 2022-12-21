@@ -1,4 +1,4 @@
-# CDATA Encoding in XML Files
+# CDATA in XML Files
 
 Since XML is a tag based language: `<tag>content</tag>` some characters like brackets (`<` or `>`) are reserved for the XML markup itself. If your data contains these characters it may cause a parser to become confused. We recommend that you embed **all fields that contain string values** in [CDATA](/docs/advanced/encoding/cdata) tags in order to avoid the risk of your content causing troubles for our parser.
 
