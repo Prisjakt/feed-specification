@@ -1,5 +1,5 @@
 ---
-description: This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
+description: This field is used together with [availability](/fields/availability) for `preorder` or `backorder` values.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,7 +14,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This field is used together with [availability](/docs/fields/availability) for `preorder` or `backorder` values.
+This field is used together with [availability](/fields/availability) for `preorder` or `backorder` values.
 
 
 
@@ -193,10 +193,10 @@ availability_date,availability
 
 ## Properties
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **date**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+|     **Property** | **Value** | **Description**                                              |
+|-----------------:|:---------:|:-------------------------------------------------------------|
+|        Data Type | **date**  | Closest data type in code                                    |
+|           Nested | **False** | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive | **False** | If small or large letters matter for this field              |
+|       Repeatable | **False** | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit |   **0**   | If a list, this specifices the max number of items           |
