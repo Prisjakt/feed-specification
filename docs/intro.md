@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # Introduction
@@ -47,5 +48,3 @@ Please do not hesitate to contact us about it! You can either:
 - [Post an issue](https://github.com/Prisjakt/feed-specification/issues/new/choose) to us
 - Do a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) with corrections (much appreciated), all pages have an *Edit this page* button referring to it´s source
 - Contact us att support@prisjakt.nu
-
-how to use this documentation
