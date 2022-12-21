@@ -239,14 +239,14 @@ availability
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
 
 ## Changelog
-<ChangeLog versionHistory={[{"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/docs/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## Properties
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **enum**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+|     **Property** | **Value** | **Description**                                              |
+|-----------------:|:---------:|:-------------------------------------------------------------|
+|        Data Type | **enum**  | Closest data type in code                                    |
+|           Nested | **False** | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive | **False** | If small or large letters matter for this field              |
+|       Repeatable | **False** | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit |   **0**   | If a list, this specifices the max number of items           |

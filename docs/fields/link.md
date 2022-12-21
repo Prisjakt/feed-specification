@@ -26,7 +26,7 @@ We need links to be able to re-direct users to your product page. In the link at
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/docs/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
 
 
 ## Best Practices
@@ -302,10 +302,10 @@ foo://example.com/link
 
 ## Properties
 
-|     **Property** |         **Value**          | **Description**                                              |
-|-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **url**     | Closest data type in code                                    |
-|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+|     **Property** | **Value** | **Description**                                              |
+|-----------------:|:---------:|:-------------------------------------------------------------|
+|        Data Type |  **url**  | Closest data type in code                                    |
+|           Nested | **False** | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive | **False** | If small or large letters matter for this field              |
+|       Repeatable | **False** | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit |   **0**   | If a list, this specifices the max number of items           |
