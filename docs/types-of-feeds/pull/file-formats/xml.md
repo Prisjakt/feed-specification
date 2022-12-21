@@ -10,7 +10,7 @@ Prisjakt XML feeds are based on the [Google Product Data Specification](https://
 
 ## Namespaces
 
-A Prisjakt feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/docs/terminology/prisjakt-specific-fields) defined by us.
+A Prisjakt feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/terminology/prisjakt-specific-fields) defined by us.
 
 ```xml
 <rss xmlns:pj="https://schema.prisjakt.nu/ns/1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">

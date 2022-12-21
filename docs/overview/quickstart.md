@@ -8,7 +8,7 @@ In this section we will walk you through setting up delivery of some offers to u
 
 :::info Quickstart is not best practice
 
-This is one of the simplest and quickest ways to get results from our feeds, but it´s not the way we [recommend](/docs/overview/best-practices) you to do it!
+This is one of the simplest and quickest ways to get results from our feeds, but it´s not the way we [recommend](/overview/best-practices) you to do it!
 :::
 ## Steps
 
@@ -20,7 +20,7 @@ This is one of the simplest and quickest ways to get results from our feeds, but
    
    ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-upload.png)
 
-3. Add your [offers](/docs/terminology/terms#term_offer) on new rows
+3. Add your [offers](/terminology/terms#term_offer) on new rows
 
    ![Add offers](@site/docs/assets/guides/quickstart/google-spreadsheet-add-products.png)
 

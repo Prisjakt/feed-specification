@@ -4,4 +4,6 @@ sidebar_position: 1
 
 # Encoding
 
-Encoding in general is a process of converting data to a defined format. In the context of product feeds we require [unicode](https://en.wikipedia.org/wiki/Unicode)
+Somewhat simplified: **encoding** (of strings or binary data) is the process of transforming the data between different representations (UTF-8, XML Entity encoding, etc.). For a more in depth explanation please see [this StackOverflow Question](https://stackoverflow.com/a/4354301)
+
+This is different then the process of [escaping](../escaping/index.md) where you use special characters to treat the following characters in a different way within a given string.

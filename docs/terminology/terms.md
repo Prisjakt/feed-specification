@@ -6,7 +6,7 @@ import Definition from '@site/src/components/definition';
 
 # Terms
 
-## Prisjakt Specific
+## Prisjakt
 
 <Definition id="term_shop" title="Shop">
     A shop is an e-commerce retailer that is selling the products defined in its Product Feed; the inventory. A shop has a primary market, typically associated with an Internet domain (e.g. amazon.se is Amazon Sweden).
@@ -30,7 +30,7 @@ import Definition from '@site/src/components/definition';
 
 
 
-## Ingestion Specific
+## Ingestion
 
 
 <Definition id="term_nested" title="Nested">
