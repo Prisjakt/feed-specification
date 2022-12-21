@@ -22,7 +22,7 @@ Here is a good explanation from YouTuber Alex that explains UTF-8 encoding.
 
 You can use multiple common tools or programming languages in order to create UTF-8 encoded files.
 
-### Using A Text Editor
+### Using a Text Editor
 
 - Open your file in a good text editor like [Sublime Text](https://sublimetext.com)
 - Click File in the top-left corner

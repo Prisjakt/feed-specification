@@ -3,13 +3,13 @@ sidebar_position: 5
 ---
 # Best Practices
 
-## Numbers And Sizes
+## Numbers and Sizes
 
-### Small feeds < 250 000 offers
+### Small Feeds < 250 000 Offers
 
 For small and medium businesses we recommend using a [single file feed](/types-of-feeds/pull/feed.md) and adding it in our self-service portal [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
 
-### Large feeds > 250 000 offers
+### Large Feeds > 250 000 Offers
 
 For larger feeds and higher update frequencies please look into using a [delta feed](/types-of-feeds/pull/delta-feeds.md) setup. In some cases we're also able to prepare custom integrations for larger enterprise clients. For more information please contact our support at support@prisjakt.nu.
 

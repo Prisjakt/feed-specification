@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Why use?
+# Why Use?
 
 Sometimes you wan´t to limit the traffic to your feed or allow only certain actors (like Prisjakt) to access your data. We support that you publish you feed with authentication and provide us credentials so that our agents can access your feed.
 

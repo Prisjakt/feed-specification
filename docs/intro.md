@@ -8,7 +8,7 @@ sidebar_position: 1
 
 This documentation covers everything related to Prisjakt feed specifications from basics to advanced incremental reading. Explore articles to learn more about accepted formats, supported attributes and good practices when working with data feeds. Prisjakt feed specification enables you to easily integrate your inventory with Prisjakt price comparison engine.
  
-## How To Use This Documentation
+## How to Use This Documentation
 
 To get you started we have organized this documentation in the sidebar menu to the left in the following sections:
 
