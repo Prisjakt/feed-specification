@@ -4,4 +4,6 @@ sidebar_position: 1
 
 # Escaping
 
-Certain characters are used in various programming languages and sending them in the offer may cause errors. That's why it's important to *escape* them by using `/` so the system knows to threat them as literals.
+**Escaping** is where you use special characters to treat the following characters in a different way within a given string. For a more in depth explanation please see [this StackOverflow Question](https://stackoverflow.com/a/4354301)
+
+This is different then the process of [encoding](../encoding/index.md) where you transform all data in a specific way.
