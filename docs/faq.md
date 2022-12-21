@@ -22,6 +22,6 @@ We support reading feeds formated according to Amazon Marketplace format but wit
 <details>
   <summary><strong>How does the Prisjakt Feed relate to Amazon Deal Feeds?</strong></summary>
     
-We support reading feeds formated according to Amazon Marketplace format but with less data mapped than if you use our format.
+We support reading feeds formated according to Amazon Deals format but with less data mapped than if you use our format.
 
 </details>

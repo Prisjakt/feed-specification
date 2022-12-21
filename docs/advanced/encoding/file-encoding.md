@@ -8,7 +8,7 @@ In order for computers to understand each other and to be able to represent the 
 
 ## UTF8
 
-We support  [UTF-8](https://en.wikipedia.org/wiki/UTF-8) (and *only* UTF-8, se below) which is the most common used character encoding for the web and it is also the recommended encoding in the [HTML 5 Specification](https://www.w3.org/TR/2011/WD-html5-20110405/infrastructure.html#utf-8).
+We support  [UTF-8](https://en.wikipedia.org/wiki/UTF-8) (and *only* UTF-8, see [below](#why-not-more-encodings)) which is the most common used character encoding for the web and it is also the recommended encoding in the [HTML 5 Specification](https://www.w3.org/TR/2011/WD-html5-20110405/infrastructure.html#utf-8).
 
 :::note Learn about UTF 8
 
@@ -83,8 +83,7 @@ file.write_all(b"content")?;
 
 ## Why Not More Encodings?
 
-There are multiple other common encodings such as `iso-8859-1` or `windows-1252`. We **do not** support sending us files using these encodings and the reason for that is that as soon as we start accepting multiple encodings we have to do guesswork and detect the encoding before parsing. This is an error prone and uncertain task and only adds the risk of creating errors to no real benefit.
-
+There are multiple other common encodings such as `iso-8859-1` or `windows-1252`. We **do not** support sending us files using these encodings and the reason for that is that as soon as we start accepting multiple encodings we have to use heuristics in order to detect the encoding before parsing. This is an *error prone* and *uncertain* task and only adds the risk of creating errors to no real benefit, hence we have opted to only support UTF-8.
 
 ## References
 
