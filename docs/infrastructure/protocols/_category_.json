@@ -1,8 +1,4 @@
 {
   "label": "Transport Protocols",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Descripes supported protocols for delivery of a feed."
-  }
+  "position": 2
 }
