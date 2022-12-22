@@ -34,7 +34,9 @@ import Definition from '@site/src/components/definition';
 
 
 <Definition id="term_nested" title="Nested">
-    Fields like shipping have more complex structure to accomodate all data required to descibe them. In this case field contain internal fields that's why it's reffered as nested field (or attribute).
+
+Fields like [`shipping`](/fields/shipping.md) have more complex structure to accomodate all data required to descibe them. In this case field contain internal fields that's why it's reffered as nested field (or attribute).
+    
 </Definition>
 
 
