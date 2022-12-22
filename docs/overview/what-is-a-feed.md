@@ -14,3 +14,5 @@ flowchart LR
 
     s -- feed containing inventory updates --> p
 ```
+
+Please see our [quickstart](./quickstart.md) and [minimal examples](/examples/minimal.mdx) in order to create a small feed which you can add to your shop in [Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
