@@ -62,7 +62,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
 :::tip Valid Value
 
 ```xml
-<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
+<g:sale_price_effective_date>2016-02-24T13:00:00-08:00/2016-02-29T15:30:00+02:00</g:sale_price_effective_date>
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
@@ -73,7 +73,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
   <div>
 
 ```xml
-<g:sale_price_effective_date>2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00</g:sale_price_effective_date>
+<g:sale_price_effective_date>2016-02-24T13:00:00-08:00/2016-02-29T15:30:00+02:00</g:sale_price_effective_date>
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
@@ -97,7 +97,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
+2016-02-24T13:00:00-08:00/2016-02-29T15:30:00+02:00,11.50 SEK
 ```
 
 :::
@@ -108,7 +108,7 @@ sale_price_effective_date,sale_price
 
 ```csv
 sale_price_effective_date,sale_price
-2016-02-24T13:00:00.000000-08:00/2016-02-29T15:30:00.000000+02:00,11.50 SEK
+2016-02-24T13:00:00-08:00/2016-02-29T15:30:00+02:00,11.50 SEK
 ```
 
 ```csv
@@ -135,6 +135,14 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
+:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" /> 
+
+```xml
+<g:sale_price_effective_date>2050-02-05/2050-02-05</g:sale_price_effective_date>
+```
+
+:::
+
 :::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
 ```xml
@@ -155,6 +163,15 @@ Below you will find possible error codes generated when validating this field al
 
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
+
+:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" /> 
+
+```csv
+sale_price_effective_date
+2050-02-05/2050-02-05
+```
+
+:::
 
 :::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
 
