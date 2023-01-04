@@ -28,3 +28,53 @@
   --ifm-color-primary-lightest: #1ed0ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.cl-item {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.cl-item>p {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.cl-pill {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: 2px 12px;
+  border-radius: 6px;
+  height: fit-content;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.cl-added {
+  background-color: var(--ifm-color-primary-lighter);
+  color: white;
+}
+
+.cl-changed {
+  background-color: var(--ifm-color-warning-lightest);
+  color: black;
+}
+
+.cl-deprecated {
+  background-color: var(--ifm-color-warning-lighter);
+  color: black;
+}
+
+.cl-removed {
+  background-color: var(--ifm-color-danger-lighter);
+  color: white;
+}
+
+.cl-fixed {
+  background-color: var(--ifm-color-success-lighter);
+  color: white;
+}
