@@ -40,13 +40,10 @@ const renderVerblist = (heading, items) => <>
 
     {items && items.length > 0 &&
         <>
-            <h4>{heading}</h4>
-            <ul>
-                {items.map((item, i) => (
-                    <li><ReactMarkdown>{item}</ReactMarkdown></li>
-                ))
-                }
-            </ul>
+            {items.map((item, i) => (
+                <div class="cl-item"><span class={`cl-pill cl-${heading.toLowerCase()}`}>{heading}</span> <ReactMarkdown class="cl-item-content">{item}</ReactMarkdown></div>
+            ))
+            }
         </>
     }
 </>;
@@ -55,13 +52,13 @@ export default function ChangeLog({ versionHistory, dateOnly }) {
 
     return <>
         {versionHistory && versionHistory.map((v, i) => (
-            <div id="v{v.semanticVersion}" style={{ marginTop: '1em' }}>
+            <div id={v.semanticVersion} style={{ marginTop: '1em' }}>
                 {dateOnly &&
-                    <h3>{new Date(v.date).toISOString().slice(0, 10)}</h3>
+                    <h3> &#128197; {new Date(v.date).toISOString().slice(0, 10)}</h3>
                 }
 
                 {!dateOnly &&
-                    <h3>[{v.semanticVersion}] - {new Date(v.date).toISOString().slice(0, 10)}</h3>
+                    <h3> &#128197; [{v.semanticVersion}] - {new Date(v.date).toISOString().slice(0, 10)}</h3>
                 }
 
 
