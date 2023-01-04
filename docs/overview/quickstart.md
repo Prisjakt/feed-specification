@@ -50,5 +50,5 @@ This is one of the simplest and quickest ways to get results from our feeds, but
    ```
 
 6. **Add the resulting URL** from step 5 to [Business Center](https://support.prisjakt.nu/en/articles/6175300-manage-product-feeds-in-business-center) and use it as feed url
-7. **Wait** until an ingestion run have taken place (usually a couple of minutes)
+7. **Wait** until an ingestion run have taken place (see status in [Business Center](https://support.prisjakt.nu/en/articles/6175300-manage-product-feeds-in-business-center))
 8. **Done**, your offers will be available on https://prisjakt.nu shortly!
