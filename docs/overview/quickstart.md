@@ -14,12 +14,10 @@ This is one of the simplest and quickest ways to get results from our feeds, but
 
 1. Right click  [this link](pathname:///examples/min-sample.csv) and choose **Save Link As** to get the minimal CSV file example
 
-2. Import into a Google Spreadsheet
+2. [Import](https://support.google.com/docs/answer/40608?hl=en&co=GENIE.Platform%3DDesktop) into a Google Spreadsheet by uploading the CSV file you just downloaded
    
    ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-import.png)
    
-   ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-upload.png)
-
 3. Add your [offers](/terminology/terms#term_offer) on new rows
 
    ![Add offers](@site/docs/assets/guides/quickstart/google-spreadsheet-add-products.png)
@@ -31,15 +29,26 @@ This is one of the simplest and quickest ways to get results from our feeds, but
 
    You now have a publically hosted spreadsheet with your offers!
 
-5. Get a CSV export of your spreadsheet by changing the spreadsheet URL
-   - Copy key from spreadsheet URL (key is part after `/d/`)
-   - Paste key to following URL `https://docs.google.com/spreadsheets/d/`**{key}**`/gviz/tq?tqx=out:csv`
+5. Get a **CSV export of your spreadsheet** by changing the spreadsheet URL
+
+   Copy your spreadsheet URL, it should look similar to this
    
-   Your new feed url should look like this `https://docs.google.com/spreadsheets/d/1sny8zoEuBKCdUkn88ay6kB3gjvH0RBQZo6fGXnS542c/gviz/tq?tqx=out:csv`
+   ```
+   https://docs.google.com/spreadsheets/d/1sny8zoEuBKCdUkn88ay6kB3gjvH0RBQZo6fGXnS542c/
+   ```
 
-6. Add URL you created in step 5 to [Business Center](https://support.prisjakt.nu/sv/articles/6175300-hantera-produkt-feeds-i-business-center) and use the shared url as feed url
+   Append the following to the end of your url to create a csv export URL
+   
+   ```
+   gviz/tq?tqx=out:csv
+   ``` 
 
-   ![Add feed in Business Center](@site/docs/assets/guides/quickstart/business-center-add-feed.png)
+   Result
 
+   ```
+   https://docs.google.com/spreadsheets/d/1sny8zoEuBKCdUkn88ay6kB3gjvH0RBQZo6fGXnS542c/gviz/tq?tqx=out:csv
+   ```
+
+6. **Add the resulting URL** from step 5 to [Business Center](https://support.prisjakt.nu/en/articles/6175300-manage-product-feeds-in-business-center) and use it as feed url
 7. **Wait** until an ingestion run have taken place (usually a couple of minutes)
-8. **Done!** Your offers will be available on https://prisjakt.nu shortly
+8. **Done**, your offers will be available on https://prisjakt.nu shortly!
