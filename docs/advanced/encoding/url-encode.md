@@ -2,13 +2,13 @@
 
 [![What Is An Url?](@site/docs/assets/url.png)](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
 
-URL´s are complex datatypes that carry a lot of information and can be a bit hard to handle sometimes. In this article we will try to explain how to deal with some tricky but not uncommon cases. All fields that are of type URL such as the [link](/fields/link) field have both [valid examples](/fields/link#example-values) and [invalid examples](/fields/link#error-codes) of URL´s in their respective sections.
+URLs are complex datatypes that carry a lot of information and can be a bit hard to handle sometimes. In this article we will try to explain how to deal with some tricky but not uncommon cases. All fields that are of type URL such as the [link](/fields/link) field have both [valid examples](/fields/link#example-values) and [invalid examples](/fields/link#error-codes) of URLs in their respective sections.
 
 The image above is borrowed from Mozilla MDN[^1].
 
 ## Rules
 
-Before we explain how to encode URL´s, here is what we expect regarding urls:
+Before we explain how to encode URLs, here is what we expect regarding urls:
 
 - They **must** follow RFC3986[^2]
 - They **must** be absolute (we do not accept relative urls)
@@ -79,7 +79,7 @@ If you suspect that any of these characters exist in your url then paste it in a
 
 ## Why So Strict?
 
-The URL´s passed in for your products will be sent to a lot of systems (ours, partners, customer devices). Some of these systems are more liberal than others in accepting unicode characters and other symbols directly (browsers are very liberal), but some are not (for example older phones). We don´t want to break the experience for any customer who is using our product in order to find your products and make a purchase. Hence we require well formed URL´s that will work across the broadest range of devices and systems.
+The URLs passed in for your products will be sent to a lot of systems (ours, partners, customer devices). Some of these systems are more liberal than others in accepting unicode characters and other symbols directly (browsers are very liberal), but some are not (for example older phones). We don´t want to break the experience for any customer who is using our product in order to find your products and make a purchase. Hence we require well formed URLs that will work across the broadest range of devices and systems.
 
 ## References
 
