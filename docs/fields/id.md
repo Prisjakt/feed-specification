@@ -24,7 +24,7 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 - Length must be between `1-36`
 - Must be unique
-- Valid characters are bumbers, letters, dash (-) and underscore (_)
+- Valid characters are numbers, letters, dash (-) and underscore (_)
 
 
 ## Best Practices
