@@ -5,6 +5,8 @@ description: The `shipping` attribute is used to set cost, time and methods of d
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -25,6 +27,27 @@ The `shipping` attribute is used to set cost, time and methods of delivery. Plea
 
 
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+shipping -- might be determined by  --- shipping_length
+  click shipping_length "/fields/shipping_length" "shipping_length" _blank
+shipping -- might be determined by  --- shipping_height
+  click shipping_height "/fields/shipping_height" "shipping_height" _blank
+shipping -- might be determined by  --- shipping_weight
+  click shipping_weight "/fields/shipping_weight" "shipping_weight" _blank
+shipping -- might be determined by  --- shipping_width
+  click shipping_width "/fields/shipping_width" "shipping_width" _blank
+shipping -- might be determined by  --- shipping_label
+  click shipping_label "/fields/shipping_label" "shipping_label" _blank
+   
+  
+  click shipping "/fields/shipping" "shipping" _blank
+  style shipping fill:#4cb3d4
+```
 
 
 
@@ -254,12 +277,6 @@ SE:Skåne:DHL:5.00 SEK:1
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324484)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -269,3 +286,9 @@ SE:Skåne:DHL:5.00 SEK:1
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **100** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324484)

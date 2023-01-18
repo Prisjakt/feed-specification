@@ -5,6 +5,8 @@ description: State the condition of the product you are selling for your custome
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
@@ -27,23 +29,56 @@ State the condition of the product you are selling for your customers.
 
 
 
+
 ## Allowed Enum Values
 
-```
-damaged packaging
-```
-```
-demo
-```
-```
-new
-```
-```
-refurbished
-```
-```
-used
-```
+<dl>
+<dt>
+      <pre>
+      <code>
+      damaged packaging
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      demo
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      new
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      refurbished
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      used
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+</dl>
 
 
 ## Validation Rules
@@ -202,12 +237,6 @@ condition
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324469)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -217,3 +246,9 @@ condition
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324469)

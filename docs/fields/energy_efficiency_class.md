@@ -5,6 +5,8 @@ description: It's strongly recommented to use this attribute for Electronics/Hou
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -18,38 +20,101 @@ It's strongly recommented to use this attribute for Electronics/Household Applia
 
 
 
+
 ## Allowed Enum Values
 
-```
-a
-```
-```
-a+
-```
-```
-a++
-```
-```
-a+++
-```
-```
-b
-```
-```
-c
-```
-```
-d
-```
-```
-e
-```
-```
-f
-```
-```
-g
-```
+<dl>
+<dt>
+      <pre>
+      <code>
+      a
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      a+
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      a++
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      a+++
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      b
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      c
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      d
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      e
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      f
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      g
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+</dl>
 
 
 ## Validation Rules
@@ -225,12 +290,6 @@ unknown
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/7562785)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -240,3 +299,9 @@ unknown
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/7562785)

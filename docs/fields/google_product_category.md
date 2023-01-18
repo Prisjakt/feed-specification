@@ -5,6 +5,8 @@ description: This attribute is used to help us place products in relevant  categ
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -25,6 +27,19 @@ This attribute is used to help us place products in relevant  categories. It sho
 
 
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+google_product_category -- either is required  --- product_type
+  click product_type "/fields/product_type" "product_type" _blank
+   
+  
+  click google_product_category "/fields/google_product_category" "google_product_category" _blank
+  style google_product_category fill:#4cb3d4
+```
 
 
 
@@ -200,15 +215,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324436)
-- [Google Taxonomy With Ids (en-US)](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt)
-- [Google Taxonomy With Ids (sv-SE)](https://www.google.com/basepages/producttype/taxonomy-with-ids.sv-SE.txt)
-- [Google Taxonomy With Ids (no-NO)](https://www.google.com/basepages/producttype/taxonomy-with-ids.no-NO.txt)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -218,3 +224,12 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324436)
+- [Google Taxonomy With Ids (en-US)](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt)
+- [Google Taxonomy With Ids (sv-SE)](https://www.google.com/basepages/producttype/taxonomy-with-ids.sv-SE.txt)
+- [Google Taxonomy With Ids (no-NO)](https://www.google.com/basepages/producttype/taxonomy-with-ids.no-NO.txt)

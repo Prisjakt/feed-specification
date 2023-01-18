@@ -5,6 +5,8 @@ description: We need links to be able to re-direct users to your product page. I
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
@@ -16,6 +18,19 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 We need links to be able to re-direct users to your product page. In the link attribute you provide the URL for your product page.
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+link -- might be backreferenced by  --- affiliate_link
+  click affiliate_link "/fields/affiliate_link" "affiliate_link" _blank
+   
+  
+  click link "/fields/link" "link" _blank
+  style link fill:#4cb3d4
+```
 
 
 
@@ -38,6 +53,11 @@ We need links to be able to re-direct users to your product page. In the link at
 - Use URL to pre-selected product variants (if applicable)
 - Use as few redirects as possible (for better user experience)
 
+
+
+### Don´t
+
+- Don't add affiliate tracking in this field, we have a separate field [`affiliate_link`](/fields/affiliate_link.md) for that
 
 
 
@@ -293,19 +313,19 @@ foo://example.com/link
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324416)
-- [Uniform Resource Identifier (URI): Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
 |-----------------:|:--------------------------:|:-------------------------------------------------------------|
 |        Data Type |    **url**     | Closest data type in code                                    |
 |           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324416)
+- [Uniform Resource Identifier (URI): Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986)

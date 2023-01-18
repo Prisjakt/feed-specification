@@ -1,5 +1,5 @@
 ---
-description: This attribute indicates if the offer is a bundle of products (mobile phone and subscription or DSLR camera and additional lens etc). It is **optional** in most countries, but **required** for products sold on French market.
+description: This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect  in [normal feeds](/types-of-feeds/pull/feed).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,22 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
-# is_bundle
+# delta_command
 
 <OptionalField/>
 
 ## Description
 
-This attribute indicates if the offer is a bundle of products (mobile phone and subscription or DSLR camera and additional lens etc). It is **optional** in most countries, but **required** for products sold on French market.
+This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect  in [normal feeds](/types-of-feeds/pull/feed).
+
+
+
+### Effects When Used
+
+- Will tell us what operation to use for the change
+
+
+
 
 
 
@@ -27,7 +36,7 @@ This attribute indicates if the offer is a bundle of products (mobile phone and 
 <dt>
       <pre>
       <code>
-      false
+      upsert
       </code>
       </pre>
     </dt>
@@ -36,25 +45,7 @@ This attribute indicates if the offer is a bundle of products (mobile phone and 
 <dt>
       <pre>
       <code>
-      no
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    </dd>
-<dt>
-      <pre>
-      <code>
-      true
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    </dd>
-<dt>
-      <pre>
-      <code>
-      yes
+      remove
       </code>
       </pre>
     </dt>
@@ -65,7 +56,7 @@ This attribute indicates if the offer is a bundle of products (mobile phone and 
 
 ## Validation Rules
 
-- The list of allowed values is limited
+- Value must be one of the allowed enum values
 
 
 ## Best Practices
@@ -73,20 +64,17 @@ This attribute indicates if the offer is a bundle of products (mobile phone and 
 
 ### Do
 
-- Use this attribute if your product is a custom bundle
+- When operation is `remove` only offer id should be supplied
+- When operation is `upsert` send only the fields that have changed
+- When operation is `upsert` and you wan't to add a new offer, send complete offer
 
-
-
-### Don´t
-
-- Don't use this attribute for manufacturer specific bundles
 
 
 
 
 ## Example Values
 
-Here are examples of how a valid *is_bundle* value  should look like in XML and CSV (with header) respectively.
+Here are examples of how a valid *delta_command* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
@@ -94,7 +82,7 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 :::tip Valid Value
 
 ```xml
-<g:is_bundle>true</g:is_bundle>
+<g:delta_command>upsert</g:delta_command>
 ```
 
 :::
@@ -104,35 +92,11 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
   <div>
 
 ```xml
-<g:is_bundle>true</g:is_bundle>
+<g:delta_command>upsert</g:delta_command>
 ```
 
 ```xml
-<g:is_bundle>false</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>yes</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>no</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>YES</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>NO</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>tRuE</g:is_bundle>
-```
-
-```xml
-<g:is_bundle>fAlSE</g:is_bundle>
+<g:delta_command>remove</g:delta_command>
 ```
 
 
@@ -145,8 +109,8 @@ Here are examples of how a valid *is_bundle* value  should look like in XML and 
 :::tip Valid Value
 
 ```csv
-is_bundle
-true
+delta_command
+upsert
 ```
 
 :::
@@ -156,43 +120,13 @@ true
   <div>
 
 ```csv
-is_bundle
-true
+delta_command
+upsert
 ```
 
 ```csv
-is_bundle
-false
-```
-
-```csv
-is_bundle
-yes
-```
-
-```csv
-is_bundle
-no
-```
-
-```csv
-is_bundle
-YES
-```
-
-```csv
-is_bundle
-NO
-```
-
-```csv
-is_bundle
-tRuE
-```
-
-```csv
-is_bundle
-fAlSE
+delta_command
+remove
 ```
 
 
@@ -209,26 +143,9 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
-
-```xml
-<g:is_bundle>unknown</g:is_bundle>
-```
-
-:::
-
 
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
-
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
-
-```csv
-is_bundle
-unknown
-```
-
-:::
 
 
   </TabItem>
@@ -245,7 +162,7 @@ unknown
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2023-01-12"}]} dateOnly={true} />
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324449)
+- [Prisjakt XML namespace](https://storage.googleapis.com/prisjakt-namespace/ns)

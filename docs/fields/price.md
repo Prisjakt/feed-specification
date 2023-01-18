@@ -1,10 +1,12 @@
 ---
-description: Use this attribute to tell customers what you charge for your product. A price can be overriden by a [sale_price](/fields/sale_price.md) during a given time period using [sale_price_effective_date](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
+description: Use this attribute to tell customers what you charge for your product. A price can be overriden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
@@ -14,8 +16,25 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Use this attribute to tell customers what you charge for your product. A price can be overriden by a [sale_price](/fields/sale_price.md) during a given time period using [sale_price_effective_date](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
+Use this attribute to tell customers what you charge for your product. A price can be overriden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+price -- overridden by if member  --- member_price
+  click member_price "/fields/member_price" "member_price" _blank
+price -- overridden by if exist  --- sale_price
+  click sale_price "/fields/sale_price" "sale_price" _blank
+price -- determines if overriden  --- sale_price_effective_date
+  click sale_price_effective_date "/fields/sale_price_effective_date" "sale_price_effective_date" _blank
+   
+  
+  click price "/fields/price" "price" _blank
+  style price fill:#4cb3d4
+```
 
 
 
@@ -281,13 +300,6 @@ $100
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324371)
-- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -297,3 +309,10 @@ $100
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324371)
+- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)

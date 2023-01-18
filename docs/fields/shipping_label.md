@@ -5,6 +5,8 @@ description: Shipping label allows mapping your inventory to specific shipping s
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -16,6 +18,27 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 Shipping label allows mapping your inventory to specific shipping service.
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+shipping_label -- might be determined by  --- shipping_length
+  click shipping_length "/fields/shipping_length" "shipping_length" _blank
+shipping_label -- might be determined by  --- shipping_height
+  click shipping_height "/fields/shipping_height" "shipping_height" _blank
+shipping_label -- might be determined by  --- shipping_weight
+  click shipping_weight "/fields/shipping_weight" "shipping_weight" _blank
+shipping_label -- might be determined by  --- shipping_width
+  click shipping_width "/fields/shipping_width" "shipping_width" _blank
+shipping_label -- affects price and eligibility of  --- shipping
+  click shipping "/fields/shipping" "shipping" _blank
+   
+  
+  click shipping_label "/fields/shipping_label" "shipping_label" _blank
+  style shipping_label fill:#4cb3d4
+```
 
 
 
@@ -130,12 +153,6 @@ a/b/c/d/e/f/g/h/i/j/k
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324504)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -145,3 +162,9 @@ a/b/c/d/e/f/g/h/i/j/k
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **10** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324504)

@@ -5,6 +5,8 @@ description: Promotion_id allows mapping your inventory to promotion defined in 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -21,6 +23,7 @@ Promotion_id allows mapping your inventory to promotion defined in Business Cent
 ### Effects When Used
 
 - Use this attribute if you want to highlight offers included in your current promotion campaigns.
+
 
 
 
@@ -132,12 +135,6 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters val
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/7050148)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -147,3 +144,9 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters val
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **10** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/7050148)

@@ -7,6 +7,8 @@ description: Use the GTIN attribute to submit a [Global Trade Item Number (GTIN)
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -19,6 +21,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https://www.gs1.org/standards/id-keys/gtin).
   A GTIN uniquely identifies your product.
   Including this will help indexing your products faster on Pricespy.
+
 
 
 
@@ -245,12 +248,6 @@ gtin
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324461)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -260,3 +257,9 @@ gtin
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **10** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324461)
