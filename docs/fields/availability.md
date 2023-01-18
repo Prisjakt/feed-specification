@@ -5,6 +5,8 @@ description: Use the availability attribute to display your stock status.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
@@ -26,30 +28,96 @@ Use the availability attribute to display your stock status.
 
 
 
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+availability -- requires for some values  --- availability_date
+  click availability_date "/fields/availability_date" "availability_date" _blank
+   
+  
+  click availability "/fields/availability" "availability" _blank
+  style availability fill:#4cb3d4
+```
+
 
 ## Allowed Enum Values
 
-```
-download
-```
-```
-in_stock
-```
-```
-not_available_for_purchase
-```
-```
-out_of_stock
-```
-```
-pickup
-```
-```
-preorder
-```
-```
-backorder
-```
+<dl>
+<dt>
+      <pre>
+      <code>
+      download
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      When the product is made digitally available, eg. game or software downloads
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      in_stock
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      You're currently accepting orders for this product and can fulfill the purchase request directly.
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      not_available_for_purchase
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      The product is not available for purchase (legacy value, use `out_of_stock` if possible).
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      out_of_stock
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      You're not currently accepting orders for this product.
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      preorder
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      You're currently taking orders for this product, but it's not yet been released for sale. You're required to provide the availability date [`availability_date`](/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      backorder
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      The product is not available at the moment, but you're accepting orders and it'll be shipped as soon as it becomes available again. You're required to provide the availability date [`availability_date`](/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+    </ReactMarkdown>
+    </dd>
+</dl>
 
 
 ## Validation Rules
@@ -235,18 +303,18 @@ availability
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
-
-## Changelog
-<ChangeLog versionHistory={[{"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stuck but still orderable you should use `backorder` and set [availability_date](/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
-|     **Property** | **Value** | **Description**                                              |
-|-----------------:|:---------:|:-------------------------------------------------------------|
-|        Data Type | **enum**  | Closest data type in code                                    |
-|           Nested | **False** | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive | **False** | If small or large letters matter for this field              |
-|       Repeatable | **False** | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit |   **0**   | If a list, this specifices the max number of items           |
+|     **Property** |         **Value**          | **Description**                                              |
+|-----------------:|:--------------------------:|:-------------------------------------------------------------|
+|        Data Type |    **enum**     | Closest data type in code                                    |
+|           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"date": "2023-01-05", "deprecated": ["Enum value `pickup` is now deprecated and should not be used anymore. Pickup is a delivery option and should be specified using the [`shipping`](/fields/shipping) field."]}, {"changed": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stock but still orderable you should use `backorder` and set [`availability_date`](/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)

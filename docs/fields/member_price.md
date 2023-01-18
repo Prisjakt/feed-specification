@@ -5,6 +5,8 @@ description: This is product price that is active for users with active membersh
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -16,6 +18,21 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 This is product price that is active for users with active membership
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+member_price -- overrides if member  --- price
+  click price "/fields/price" "price" _blank
+member_price -- overrides if member  --- sale_price
+  click sale_price "/fields/sale_price" "sale_price" _blank
+   
+  
+  click member_price "/fields/member_price" "member_price" _blank
+  style member_price fill:#4cb3d4
+```
 
 
 
@@ -264,13 +281,6 @@ $100
   </TabItem>
 </Tabs>
 
-## References
-- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
-- [Prisjakt XML namespace](https://storage.googleapis.com/prisjakt-namespace/ns`)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -280,3 +290,10 @@ $100
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
+- [Prisjakt XML namespace](https://storage.googleapis.com/prisjakt-namespace/ns`)

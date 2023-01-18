@@ -5,6 +5,8 @@ description: It is recommended to add this attribute if delivery costs based on 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
@@ -16,6 +18,27 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 It is recommended to add this attribute if delivery costs based on dimensions.
 
+
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+shipping_height -- should be supplied together  --- shipping_length
+  click shipping_length "/fields/shipping_length" "shipping_length" _blank
+shipping_height -- should be supplied together  --- shipping_weight
+  click shipping_weight "/fields/shipping_weight" "shipping_weight" _blank
+shipping_height -- should be supplied together  --- shipping_width
+  click shipping_width "/fields/shipping_width" "shipping_width" _blank
+shipping_height -- affects price and eligibility of  --- shipping
+  click shipping "/fields/shipping" "shipping" _blank
+shipping_height -- determines label of  --- shipping_label
+  click shipping_label "/fields/shipping_label" "shipping_label" _blank
+   
+  
+  click shipping_height "/fields/shipping_height" "shipping_height" _blank
+  style shipping_height fill:#4cb3d4
+```
 
 
 
@@ -200,12 +223,6 @@ shipping_height
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324498?hl=en-GB&ref_topic=6324338)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -215,3 +232,9 @@ shipping_height
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324498?hl=en-GB&ref_topic=6324338)

@@ -5,6 +5,8 @@ description: It should contain the full product name. The title is used to clear
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Anchor from "@site/src/components/anchor"
+import Field from '@site/docs/partials/_field.mdx';
+import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
@@ -15,6 +17,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 ## Description
 
 It should contain the full product name. The title is used to clearly state what product your shop is selling. It's the **most important attribute** for Prisjakt to be able to index your product/offer correctly. It should contain a manufacturer name along with product name or model. Including size, color and gender is recommended for product types that specifies this.
+
 
 
 
@@ -152,12 +155,6 @@ title
   </TabItem>
 </Tabs>
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324415)
-
-## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
-
 ## Properties
 
 |     **Property** |         **Value**          | **Description**                                              |
@@ -167,3 +164,9 @@ title
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
+
+## Changelog
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+
+## References
+- [Google Merchant Specification](https://support.google.com/merchants/answer/6324415)
