@@ -29,6 +29,7 @@
       <g:material><![CDATA[Cotton/Leather]]></g:material>
       <g:mpn>MGCH3LL/A</g:mpn>
       <pj:member_price>1.144.000 SEK</pj:member_price>
+      <g:delta_command>remove</g:delta_command>
       <g:pattern><![CDATA[strips]]></g:pattern>
       <g:price>1.144.000 SEK</g:price>
       <pj:prisjakt_id>1</pj:prisjakt_id>
