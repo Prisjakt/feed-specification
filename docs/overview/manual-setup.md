@@ -1,14 +1,17 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Quickstart
+# Example: Manual Setup
 
-In this section we will walk you through setting up delivery of some offers to us in a simplified manner. This is intended to get you aquainted with terminology and our process.
+In this section we will walk you through setting up delivery of some offers to us in a manual simplified manner.
+
+- This is intended to get you aquainted with terminology and our process, not as a final solution
+- This **does not** auto update your prices from your e-commerce platform, it requires manual editing of a spreadsheet
 
 :::info Quickstart is not best practice
 
-This is one of the simplest and quickest ways to get results from our feeds, but it´s not the way we [recommend](/overview/best-practices) you to do it!
+This is one of the simplest and quickest ways to get results from our feeds, but it´s not the way we [recommend](/overview/best-practices) you to do it since this will not automatically update prices from your eCommerce system!
 :::
 ## Steps
 
