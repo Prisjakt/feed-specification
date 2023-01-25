@@ -18,6 +18,8 @@ The following content is auto generated from our internal systems in order to ke
 
 ## Local Development
 
+This documentation is based on [Docusaurus](https://docusaurus.io/docs/markdown-features) head over to their documentation too see what features are supported.
+
 ### First Time Setup
 
 Here is a first time setup guide.
@@ -59,6 +61,29 @@ Here is a first time setup guide.
 
 1. Open the page http://localhost:3000 in your web browser 
 
+1. [Create a branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) to hold your changes
+   
+   ```shell
+   $ git checkout -b feature/fix-spelling-mistakes
+   ```
+
 1. Start editing the files in the `/docs` folder
 
 1. Watch the content in the browser update automatically
+
+1. Repeat until you are satisfied
+
+1. [Commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) your changes with a good [descripton](https://www.conventionalcommits.org/en/v1.0.0/)
+
+    ```shell
+    $ git add . # add all files
+    $ git commit -m "Descriptive message that follows conventional commits standard"
+    ```
+
+1. [Push changes](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
+
+    ```shell
+    $ git push
+    ```
+
+1. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui)
