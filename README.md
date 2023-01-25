@@ -1,8 +1,5 @@
 # Prisjakt Feed Specification
 
-> **Note**
-> This is currently work in progress and **should not be considered official and live** until this note is removed
-
 This repository contains specifications and instructions of how to format feeds with price offerigns for ingestion into [Prisjakt](https://prisjakt.nu). The
 documentation is published at https://schema.prisjakt.nu
 
@@ -21,26 +18,47 @@ The following content is auto generated from our internal systems in order to ke
 
 ## Local Development
 
-### Install Packages
+### First Time Setup
 
-```shell
-$ yarn
-```
+Here is a first time setup guide.
 
-### Run Local Server
+1. Install [git](https://git-scm.com/downloads)
+   
+1. Install [nodejs](https://nodejs.org/en/download/)
+   
+   - Installation might require a restart of your terminal/apps to pick up the commands on path
 
-Please note that the top right static search does not support local dev server. To test it, make a production build and then serve the page.
+1. Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
-```shell
-$ yarn start
-```
+    ```shell
+    $ npm install --global yarn
+    ```
+1. Clone the repository to your computer
+   
+    ```shell
+    git clone https://github.com/Prisjakt/feed-specification.git
+    ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+1. In the folder you checked out, install the packages with yarn
 
-### Build
+    ```shell
+    $ yarn
+    ```
+1. Pick a good text editor like (eg. [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/3)) and open the folder you just cloned in it
 
-```shell
-$ yarn build
-```
+### Edit Workflow
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+1. Run Local Server
+
+    ```shell
+    $ yarn start
+    ```
+
+     - Please note that the **search does not support local dev server**. To test it, make a production build and then serve the page.
+
+1. Open the page http://localhost:3000 in your web browser 
+
+1. Start editing the files in the `/docs` folder
+
+1. Watch the content in the browser update automatically
