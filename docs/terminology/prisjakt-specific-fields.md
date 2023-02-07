@@ -8,7 +8,7 @@ Most fields in use in our feed are also part of the [Google Product Data Specifi
 
 But in order to be able to provide you with extra functionality we sometimes add extra fields that can be used for an even better experience at Prisjakt for your customers.
 
-Currently our Prisjakt specific fields are:
+Currently, our Prisjakt specific fields are:
 
 - [prisjakt_id](/fields/prisjakt_id.md)
 - [member_price](/fields/member_price.md)
