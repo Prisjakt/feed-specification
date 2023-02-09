@@ -32,8 +32,9 @@ Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https
 - Use only one attribute of this type per product
 - Length should be one of `0, 8, 12, 13, or 14` digits (UPC, EAN, JAN, or ISBN)
 - Make sure that the check digit is present and correct using the [GS1 Check digit calculator](https://www.gs1.org/check-digit-calculator)
-- Don’t submit a GTIN in the restricted ranges. Restricted ranges have the following prefixes: `02, 04, or 2`
-- Don’t submit a GTIN in the coupon ranges. Coupons have the following GS1 prefixes ranges: `05, 98–99`
+- Don’t submit a GTIN in the restricted ranges. Restricted ranges have the following prefixes: `02, 04, or 2 (when gtin is 13-digit number)`
+- Don’t submit a GTIN in the coupon ranges. Coupons have the following GS1 prefixes ranges: `05, 98–99 (when gtin is 13-digit number)`
+- GTINs with restircted prefixes from above are valid when gtin is 12 or 14-digit number
 - Must be an number
 
 
@@ -175,7 +176,7 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" /> 
 
 ```xml
-<g:gtin>03628281</g:gtin>
+<g:gtin>026282818705</g:gtin>
 ```
 
 :::
@@ -183,7 +184,7 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" /> 
 
 ```xml
-<g:gtin>026282818705</g:gtin>
+<g:gtin>9900114145837</g:gtin>
 ```
 
 :::
@@ -212,7 +213,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```csv
 gtin
-03628281
+026282818705
 ```
 
 :::
@@ -221,7 +222,7 @@ gtin
 
 ```csv
 gtin
-026282818705
+9900114145837
 ```
 
 :::
