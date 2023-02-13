@@ -1,6 +1,6 @@
 # Prisjakt Feed Specification
 
-This repository contains specifications and instructions of how to format feeds with price offerigns for ingestion into [Prisjakt](https://prisjakt.nu). The
+This repository contains specifications and instructions of how to format feeds with price offerings for ingestion into [Prisjakt](https://prisjakt.nu). The
 documentation is published at https://schema.prisjakt.nu
 
 ## Contribute
@@ -9,7 +9,7 @@ Feel free to contribute if you find anything that can be improved, open a pull r
 
 ### Auto Generated Content
 
-The following content is auto generated from our internal systems in order to keep in sync with models and a fixed structure, hence it´s not advicable to make changes to these files. If you find something that needs to be corrected in these areas, please open an issue and describe the changes you would like to see.
+The following content is auto generated from our internal systems in order to keep in sync with models and a fixed structure, hence it´s not advisable to make changes to these files. If you find something that needs to be corrected in these areas, please open an issue and describe the changes you would like to see.
 
 - [Field articles](https://github.com/Prisjakt/feed-specification/tree/master/docs/fields) in `docs/fields/*`
 - [Example files](https://github.com/Prisjakt/feed-specification/tree/master/static/examples) in
@@ -18,7 +18,7 @@ The following content is auto generated from our internal systems in order to ke
 
 ## Local Development
 
-This documentation is based on [Docusaurus](https://docusaurus.io/docs/markdown-features) head over to their documentation too see what features are supported.
+This documentation is based on [Docusaurus](https://docusaurus.io/docs/markdown-features) head over to their documentation to see what features are supported.
 
 ### First Time Setup
 
@@ -46,7 +46,7 @@ Here is a first time setup guide.
     ```shell
     $ yarn
     ```
-1. Pick a good text editor like (eg. [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/3)) and open the folder you just cloned in it
+1. Pick a good text editor like (e.g. [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/3)) and open the folder you just cloned in it
 
 ### Edit Workflow
 
@@ -73,7 +73,7 @@ Here is a first time setup guide.
 
 1. Repeat until you are satisfied
 
-1. [Commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) your changes with a good [descripton](https://www.conventionalcommits.org/en/v1.0.0/)
+1. [Commit](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) your changes with a good [description](https://www.conventionalcommits.org/en/v1.0.0/)
 
     ```shell
     $ git add . # add all files
