@@ -1,5 +1,5 @@
 ---
-description: Use this attribute to tell customers what you charge for your product. A price can be overriden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
+description: Use this attribute to tell customers what you charge for your product. A price can be overridden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [`member_price`](/fields/member_price.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Use this attribute to tell customers what you charge for your product. A price can be overriden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [member_price](/fields/member_price.md).
+Use this attribute to tell customers what you charge for your product. A price can be overridden by a [`sale_price`](/fields/sale_price.md) during a given time period using [`sale_price_effective_date`](/fields/sale_price_effective_date.md) or it may be complemented for members by using [`member_price`](/fields/member_price.md).
 
 
 ## Related Fields
@@ -28,7 +28,7 @@ price -- overridden by if member  --- member_price
   click member_price "/fields/member_price" "member_price" _blank
 price -- overridden by if exist  --- sale_price
   click sale_price "/fields/sale_price" "sale_price" _blank
-price -- determines if overriden  --- sale_price_effective_date
+price -- determines if overridden  --- sale_price_effective_date
   click sale_price_effective_date "/fields/sale_price_effective_date" "sale_price_effective_date" _blank
    
   

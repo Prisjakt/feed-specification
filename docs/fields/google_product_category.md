@@ -1,5 +1,5 @@
 ---
-description: This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [product_type](/fields/product_type) instead.
+description: This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [product_type](/fields/product_type) instead.
+This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
 
 
 
@@ -33,7 +33,7 @@ This attribute is used to help us place products in relevant  categories. It sho
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
-google_product_category -- either is required  --- product_type
+google_product_category -- can be used instead  --- product_type
   click product_type "/fields/product_type" "product_type" _blank
    
   
@@ -226,7 +226,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Remove requirement on [`google_product_category`](/fields/google_product_category) if [`product_type`](/fields/product_type) is not present"], "date": "2023-02-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324436)

@@ -1,5 +1,5 @@
 ---
-description: It's strongly recommented to use this attribute for Electronics/Household Appliances categories.
+description: It's strongly recommended to use this attribute for Electronics/Household Appliances categories.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-It's strongly recommented to use this attribute for Electronics/Household Appliances categories.
+It's strongly recommended to use this attribute for Electronics/Household Appliances categories.
 
 
 

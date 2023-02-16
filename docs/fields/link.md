@@ -24,7 +24,7 @@ We need links to be able to re-direct users to your product page. In the link at
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
-link -- might be backreferenced by  --- affiliate_link
+link -- might be back referenced by  --- affiliate_link
   click affiliate_link "/fields/affiliate_link" "affiliate_link" _blank
    
   

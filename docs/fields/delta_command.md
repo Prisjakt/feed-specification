@@ -66,7 +66,7 @@ This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to 
 
 - When operation is `remove` only offer id should be supplied
 - When operation is `upsert` send only the fields that have changed
-- When operation is `upsert` and you wan't to add a new offer, send complete offer
+- When operation is `upsert` and you want to add a new offer, send complete offer
 
 
 

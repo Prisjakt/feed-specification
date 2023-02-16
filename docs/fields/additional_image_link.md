@@ -62,7 +62,7 @@ additional_image_link -- extends  --- image_link
 - Prefer using high resolution images at least 300x300 pixels size, the bigger size the better
 - The product should be in the center of the image
 - Prefer a white background without added content
-- Use proffesional images only, not amateur, shadows from the camera flash or bad image setup is often an indicator
+- Use professional images only, not amateur, shadows from the camera flash or bad image setup is often an indicator
 
 
 

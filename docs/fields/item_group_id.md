@@ -22,7 +22,7 @@ This attribute is strongly recommended for fashion and beauty segment. It helps 
 
 ### Effects When Used
 
-- With this attibute we're able to present the user a list of available
+- With this attribute we're able to present the user a list of available
 
 
 

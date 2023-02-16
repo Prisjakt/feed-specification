@@ -34,7 +34,7 @@ Add it to improve search results and listing. If you have more then one image yo
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
-image_link -- can be exended by  --- additional_image_link
+image_link -- can be extended by  --- additional_image_link
   click additional_image_link "/fields/additional_image_link" "additional_image_link" _blank
    
   
@@ -65,7 +65,7 @@ image_link -- can be exended by  --- additional_image_link
 - Prefer using high resolution images at least 300x300 pixels size, the bigger size the better
 - The product should be in the center of the image
 - Prefer a white background without added content
-- Prefer professional images, shadows from the camera flash or bad image setup is often an indicator of amateur images, altough any image is better than no image
+- Prefer professional images, shadows from the camera flash or bad image setup is often an indicator of amateur images, although any image is better than no image
 
 
 

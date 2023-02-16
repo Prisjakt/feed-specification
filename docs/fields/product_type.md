@@ -1,5 +1,5 @@
 ---
-description: Please note that `product_type` is **required** if `google_product_category` is not present.
+description: It's strongly recommended to use this attribute if [`google_product_category`](/fields/google_product_category) is not present.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Please note that `product_type` is **required** if `google_product_category` is not present.
+It's strongly recommended to use this attribute if [`google_product_category`](/fields/google_product_category) is not present.
 
 
 
@@ -33,7 +33,7 @@ Please note that `product_type` is **required** if `google_product_category` is 
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
-product_type -- either is required  --- google_product_category
+product_type -- can be used instead  --- google_product_category
   click google_product_category "/fields/google_product_category" "google_product_category" _blank
    
   
@@ -182,7 +182,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Remove requirement on [`product_type`](/fields/product_type) if [`google_product_category`](/fields/google_product_category) is not present"], "date": "2023-02-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324406)

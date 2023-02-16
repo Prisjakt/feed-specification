@@ -22,7 +22,7 @@ Specify the gender your product is designed for.
 
 ### Effects When Used
 
-- Customers can accurately filter products they wan't
+- Customers can accurately filter products they want
 
 
 

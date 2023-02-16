@@ -34,7 +34,7 @@ Use the GTIN attribute to submit a [Global Trade Item Number (GTIN) | GS1](https
 - Make sure that the check digit is present and correct using the [GS1 Check digit calculator](https://www.gs1.org/check-digit-calculator)
 - Don’t submit a GTIN in the restricted ranges. Restricted ranges have the following prefixes: `02, 04, or 2 (when gtin is 13-digit number)`
 - Don’t submit a GTIN in the coupon ranges. Coupons have the following GS1 prefixes ranges: `05, 98–99 (when gtin is 13-digit number)`
-- GTINs with restircted prefixes from above are valid when gtin is 12 or 14-digit number
+- GTINs with restricted prefixes from above are valid when gtin is 12 or 14-digit number
 - Must be an number
 
 

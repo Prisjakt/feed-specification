@@ -1,5 +1,5 @@
 ---
-description: This field is used together with [availability](/fields/availability) for `preorder` or `backorder` values.
+description: This field is used together with [`availability`](/fields/availability.md) for `preorder` or `backorder` values.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This field is used together with [availability](/fields/availability) for `preorder` or `backorder` values.
+This field is used together with [`availability`](/fields/availability.md) for `preorder` or `backorder` values.
 
 
 
