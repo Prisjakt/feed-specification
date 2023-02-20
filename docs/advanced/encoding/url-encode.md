@@ -63,9 +63,33 @@ In the example above the following encodings have taken place.
 
 `/categories/överlevnadsutrustning/super ficklampa` to `/categories/%C3%B6verlevnadsutrustning/super%20ficklampa` according to percent encoding[^4]
 
-#### Parameter value
+#### Parameter values
 
 `extra-bright!` to `extra-bright!` since here is nothing to do, all characters are already plain [ascii](https://en.wikipedia.org/wiki/ASCII)
+
+##### Do not encode parameter separators
+
+If a questionmark `?` or an ampersand `&` are meant to separate parameters, then they should **not** be encoded. But if they are a part of the value or the parameter name, then they should be encoded. Please compare:
+
+```
+?movietitle=Godfather&rating=5 
+
+# should be unchanged when encoded
+
+?movietitle=Godfather&rating=5 
+```
+
+vs
+
+```
+?movietitle=Tom & Jerry&rating=5
+
+# the ampersand in Tom & Jerry should be encoded, but not the ampersand separating the rating parameter
+
+?movietitle=Tom%20%26%20Jerry&rating=5 
+```
+
+It is a **common mistake** to simply *encode the whole* query parameter string. Instead you should encode the *parameter names and parameter values* separately before combining them.
 
 #### Anchor
 
