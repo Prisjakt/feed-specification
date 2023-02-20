@@ -1,5 +1,5 @@
 ---
-description: Shipping label allows mapping your inventory to specific shipping service.
+description: Shipping label allows mapping your inventory to specific shipping service. Please see our [documentation for shipping services for details](https://support.prisjakt.nu/en/articles/5807189-shipping-services).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Shipping label allows mapping your inventory to specific shipping service.
+Shipping label allows mapping your inventory to specific shipping service. Please see our [documentation for shipping services for details](https://support.prisjakt.nu/en/articles/5807189-shipping-services).
 
 
 ## Related Fields
