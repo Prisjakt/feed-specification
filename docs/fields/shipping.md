@@ -228,6 +228,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:shipping>
+  <g:country></g:country>
   <g:region>New York</g:region>
   <g:service>DHL</g:service>
   <g:price>5 SEK</g:price>

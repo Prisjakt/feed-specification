@@ -1,5 +1,5 @@
 ---
-description: This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
+description: This attribute is used to help us place products in relevant categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This attribute is used to help us place products in relevant  categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
+This attribute is used to help us place products in relevant categories. It should contain full category path from Google Taxonomy or respective category id. If you don't know or have Google product category, submit [`product_type`](/fields/product_type) instead.
 
 
 

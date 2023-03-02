@@ -1,5 +1,5 @@
 ---
-description: This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect  in [normal feeds](/types-of-feeds/pull/feed).
+description: This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect in [normal feeds](/types-of-feeds/pull/feed).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect  in [normal feeds](/types-of-feeds/pull/feed).
+This is a field used only in [delta feeds](/types-of-feeds/pull/delta-feeds) to specify the operation of a change in a delta file. This field have no effect in [normal feeds](/types-of-feeds/pull/feed).
 
 
 

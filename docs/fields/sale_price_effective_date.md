@@ -93,6 +93,7 @@ Here are examples of how a valid *sale_price_effective_date* value  should look 
 ```
 
 ```xml
+<g:sale_price_effective_date></g:sale_price_effective_date>
 <g:sale_price>11.50 SEK</g:sale_price>
 ```
 
@@ -162,6 +163,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>
+<g:sale_price></g:sale_price>
 ```
 
 :::

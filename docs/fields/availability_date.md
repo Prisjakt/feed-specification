@@ -159,6 +159,7 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
 
 ```xml
+<g:availability_date></g:availability_date>
 <g:availability>preorder</g:availability>
 ```
 

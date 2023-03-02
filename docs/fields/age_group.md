@@ -125,7 +125,7 @@ Here are examples of how a valid *age_group* value  should look like in XML and 
 ```
 
 ```xml
-(empty string)
+<g:age_group></g:age_group>
 ```
 
 ```xml

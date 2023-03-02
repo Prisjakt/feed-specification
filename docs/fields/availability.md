@@ -272,7 +272,7 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
 
 ```xml
-(empty string)
+<g:availability></g:availability>
 ```
 
 :::

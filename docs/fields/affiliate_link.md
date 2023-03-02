@@ -97,7 +97,7 @@ Here are examples of how a valid *affiliate_link* value  should look like in XML
 ```
 
 ```xml
-(empty string)
+<g:affiliate_link></g:affiliate_link>
 ```
 
 
