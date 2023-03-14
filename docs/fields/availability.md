@@ -72,18 +72,6 @@ availability -- requires for some values  --- availability_date
 <dt>
       <pre>
       <code>
-      not_available_for_purchase
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    <ReactMarkdown>
-      The product is not available for purchase (legacy value, use `out_of_stock` if possible).
-    </ReactMarkdown>
-    </dd>
-<dt>
-      <pre>
-      <code>
       out_of_stock
       </code>
       </pre>
@@ -179,10 +167,6 @@ Here are examples of how a valid *availability* value  should look like in XML a
 ```
 
 ```xml
-<g:availability>not_available_for_purchase</g:availability>
-```
-
-```xml
 <g:availability>preorder</g:availability>
 <g:availability_date>2021-03-21</g:availability_date>
 ```
@@ -230,11 +214,6 @@ pickup
 ```csv
 availability
 download
-```
-
-```csv
-availability
-not_available_for_purchase
 ```
 
 ```csv
@@ -314,7 +293,7 @@ availability
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"date": "2023-01-05", "deprecated": ["Enum value `pickup` is now deprecated and should not be used anymore. Pickup is a delivery option and should be specified using the [`shipping`](/fields/shipping) field."]}, {"changed": ["Previously `out_of_stock` values were still order-able, from now on `out_of_stock` will not be order-able. If you want to represent a product that is not in stock but still order-able you should use `backorder` and set [`availability_date`](/fields/availability_date)"], "date": "2022-12-20"}, {"added": ["New enum value `backorder`, this value should be used for products that are order-able but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"changed": ["Offers with value `out_of_stock` are no longer orderable. See deprecation notice below."], "date": "2023-03-13", "deprecated": ["Value `not_available_for_purchase` should no longer be used, please use `out_of_stock` instead"]}, {"date": "2023-01-05", "deprecated": ["Enum value `pickup` is now deprecated and should not be used anymore. Pickup is a delivery option and should be specified using the [`shipping`](/fields/shipping) field."]}, {"date": "2022-12-20", "deprecated": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stock but still orderable you should use `backorder` and set [`availability_date`](/fields/availability_date)"]}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)
