@@ -31,7 +31,7 @@ is missing, the **whole** offer will be omitted from Prisjakt.
 
 ## Fields
 
-A field is either valid or invalid. Invalid field data is always **omitted** when entering Prisjakt's datastore.
+A field is either valid, invalid or omitted. Invalid field data is always **omitted** when entering Prisjakt's datastore.
 
 :::tip Valid
 
@@ -41,7 +41,13 @@ A *field* is valid if it fulfills the validation rules of the field.
 
 :::danger Invalid
 
-A *field* is invalid if it fulfills the validation rules of the field.
+A *field* is invalid if it does not fulfills the validation rules of the field.
+
+:::
+
+:::tip Omitted
+
+A *field* is omitted if it is not present in offer or it is empty.
 
 :::
 
@@ -51,6 +57,7 @@ Nested fields and lists may contain partially correct information, a nested fiel
 
 * is considered *valid* if it fulfills the minimum requirements of the field as given by the validation rules
 * is considered *invalid* if it does not fulfill the minimum requirements of the field as given by the validation rules
+* is considered *omitted* if it is not present or it is empty
 
 
 ### Optional Fields and Severity Levels
