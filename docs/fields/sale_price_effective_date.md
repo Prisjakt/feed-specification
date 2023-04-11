@@ -49,6 +49,7 @@ sale_price_effective_date -- used by  --- sale_price
 - Standard: ISO 8601
 - Up to 51 characters
 - Two dates separated with "/" (ISO 8601)
+- Start and end must be within one year from current date
 
 
 ## Best Practices
@@ -63,6 +64,7 @@ sale_price_effective_date -- used by  --- sale_price
 ### Don´t
 
 - If you don't include time, start time default to 12 AM CET (midnight) of start day and stop time is set to 23:59:59 of stop day
+- Don't set start or end datetime further than one year in the future. This will cause warning in feed validation. Moreover sale_price_effective_date and sale_price won't be used in product listing.
 
 
 
@@ -223,7 +225,7 @@ sale_price_effective_date,sale_price
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Start and end are limited to one year from current datetime"], "date": "2023-04-06"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324460)
