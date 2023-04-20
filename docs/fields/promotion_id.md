@@ -1,5 +1,5 @@
 ---
-description: Promotion_id allows mapping your inventory to promotion defined in Business Center.
+description: The `promotion_id` field allows mapping your inventory to promotions.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Promotion_id allows mapping your inventory to promotion defined in Business Center.
+The `promotion_id` field allows mapping your inventory to promotions.
 
 
 

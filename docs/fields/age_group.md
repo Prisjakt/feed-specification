@@ -19,6 +19,18 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 Sets the demographic age your product is designed for.
 
 
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+age_group -- may improve info for  --- size
+  click size "/fields/size" "size" _blank
+   
+  
+  click age_group "/fields/age_group" "age_group" _blank
+  style age_group fill:#4cb3d4
+```
 
 
 ## Allowed Enum Values

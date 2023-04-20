@@ -178,8 +178,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 |        Data Type |    **string**     | Closest data type in code                                    |
 |           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
 |   Case Sensitive |  **False**  | If small or large letters matter for this field              |
-|       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
-| Repeatable limit | **0** | If a list, this specifices the max number of items           |
+|       Repeatable |    **True**    | If you can supply multiple items of this field (it´s a list) |
+| Repeatable limit | **100** | If a list, this specifices the max number of items           |
 
 ## Changelog
 <ChangeLog versionHistory={[{"added": ["Remove requirement on [`product_type`](/fields/product_type) if [`google_product_category`](/fields/google_product_category) is not present"], "date": "2023-02-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />

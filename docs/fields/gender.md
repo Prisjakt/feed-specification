@@ -28,6 +28,18 @@ Specify the gender your product is designed for.
 
 
 
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+gender -- may improve info for  --- size
+  click size "/fields/size" "size" _blank
+   
+  
+  click gender "/fields/gender" "gender" _blank
+  style gender fill:#4cb3d4
+```
 
 
 ## Allowed Enum Values

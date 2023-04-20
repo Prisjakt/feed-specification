@@ -1,5 +1,5 @@
 ---
-description: Using this attribute is strongly recommended if [`size`](size.md) for product is present.
+description: Using this attribute is required if [`size`](size.md) is specified for a product.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,9 +16,21 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Using this attribute is strongly recommended if [`size`](size.md) for product is present.
+Using this attribute is required if [`size`](size.md) is specified for a product.
 
 
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+size_system -- required if used  --- size
+  click size "/fields/size" "size" _blank
+   
+  
+  click size_system "/fields/size_system" "size_system" _blank
+  style size_system fill:#4cb3d4
+```
 
 
 
@@ -31,7 +43,7 @@ Using this attribute is strongly recommended if [`size`](size.md) for product is
 ### Do
 
 - Use accepted size systems
-- Do not create own size system
+- Do not create own size systems
 
 
 

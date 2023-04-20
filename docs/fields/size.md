@@ -1,5 +1,5 @@
 ---
-description: It is recommended to add this attribute for fashion products to improve results and listing.
+description: Used to describe size in **fashion categories**. It is recommended to add this attribute for fashion products to improve results and listing.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-It is recommended to add this attribute for fashion products to improve results and listing.
+Used to describe size in **fashion categories**. It is recommended to add this attribute for fashion products to improve results and listing.
 
 
 
@@ -28,6 +28,22 @@ It is recommended to add this attribute for fashion products to improve results 
 
 
 
+## Related Fields
+
+```mermaid
+%%{init: {'theme':'neutral'}}%%
+flowchart LR
+size -- required if size is used  --- size_system
+  click size_system "/fields/size_system" "size_system" _blank
+size -- used for conversion between size systems  --- age_group
+  click age_group "/fields/age_group" "age_group" _blank
+size -- used for conversion between size systems  --- gender
+  click gender "/fields/gender" "gender" _blank
+   
+  
+  click size "/fields/size" "size" _blank
+  style size fill:#4cb3d4
+```
 
 
 
