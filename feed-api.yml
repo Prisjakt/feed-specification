@@ -1,0 +1,848 @@
+openapi: 3.0.2
+info:
+  title: Feed API
+  description: |+
+
+    Feed API is the front line for retrieving data from shops into Prisjakt. 
+    For more information please check 
+
+    - [schema.prisjakt.nu](https://schema.prisjakt.nu)
+    - [developer.prisjakt.nu](https://developer.prisjakt.nu)
+
+  version: "3"
+paths:
+  /operations/status:
+    get:
+      tags:
+        - operations
+      summary: Check status of the application
+      description: |
+
+        Checks status of the application. It does not perform any
+        complex operations (like hitting a database),
+        it's intended to check just a HTTP server.
+      operationId: get_status_operations_status_get
+      parameters:
+        - required: false
+          schema:
+            title: Sleep Time
+            type: integer
+          name: sleep_time
+          in: query
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StatusModel"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      security:
+        - oauthClientCredentials: []
+  /operations/health:
+    get:
+      tags:
+        - operations
+      summary: Health check endpoint
+      description: >
+
+        Health check endpoint that verifies that the api and it´s dependencies
+        returns OK response.
+
+        Response model follows [rfc
+        proposal](https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check)
+
+        for api health checks.
+
+
+        Use this endpoint for monitoring from external systems.
+      operationId: get_health_operations_health_get
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheckModel"
+      security:
+        - oauthClientCredentials: []
+  /runs:
+    post:
+      tags:
+        - runs
+      summary: Trigger Run
+      description: >-
+        trigger validation run without feed, should not allow triggering
+        ingestion run
+      operationId: trigger_run_runs_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TriggerRunRequestBody"
+        required: true
+      responses:
+        "201":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RunModel"
+        "403":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: INVALID_CREDENTIALS
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+        "500":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: QUEUE_WRITER_ERROR
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+      security:
+        - oauthClientCredentials: []
+  /runs/{run_id}:
+    get:
+      tags:
+        - runs
+      summary: Get Run
+      description: Returns a single Run.
+      operationId: get_run_runs__run_id__get
+      parameters:
+        - required: true
+          schema:
+            title: Run Id
+            type: string
+            format: uuid
+          name: run_id
+          in: path
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RunModel"
+        "403":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: INVALID_CREDENTIALS
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: MODEL_NOT_FOUND
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      security:
+        - oauthClientCredentials: []
+  /runs/{run_id}/exceptions:
+    get:
+      tags:
+        - runs
+      summary: Get Run Process Exceptions
+      description: Returns list of process exceptions for single Run.
+      operationId: get_run_process_exceptions_runs__run_id__exceptions_get
+      parameters:
+        - required: true
+          schema:
+            title: Run Id
+            type: string
+            format: uuid
+          name: run_id
+          in: path
+      responses:
+        "200":
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RunProcessExceptionsModel"
+        "403":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: INVALID_CREDENTIALS
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "404":
+          description: >-
+            Error response, see code and description for details.<br/>Possible
+            error code values with this http status code: MODEL_NOT_FOUND
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "422":
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HTTPValidationError"
+      security:
+        - oauthClientCredentials: []
+components:
+  schemas:
+    ActionCountsModel:
+      title: ActionCountsModel
+      required:
+        - upserted
+        - removed
+        - unchanged
+      type: object
+      properties:
+        upserted:
+          title: Upserted
+          type: integer
+        removed:
+          title: Removed
+          type: integer
+        unchanged:
+          title: Unchanged
+          type: integer
+    ApiError:
+      title: ApiError
+      required:
+        - code
+        - description
+      type: object
+      properties:
+        code:
+          $ref: "#/components/schemas/ErrorCode"
+        description:
+          title: Description
+          type: string
+      description: Error model for Feed API
+    ErrorCode:
+      title: ErrorCode
+      enum:
+        - INVALID_CREDENTIALS
+        - MODEL_NOT_FOUND
+        - FEED_URL_ALREADY_EXISTS
+        - SHOP_HAVE_ACTIVE_LEGACY_SCRAPER
+        - SHOP_HAVE_PENDING_ACTIONS
+        - SHOP_HAS_TOO_MANY_SCHEDULED_RUNS
+        - SHOP_IS_BLOCKED
+        - RUN_ALREADY_STARTED
+        - RUN_NOT_STARTED
+        - LEGACY_FEED_INGESTION_INVALID_QUERY_PARAMETERS
+        - FEED_INGESTION_INVALID_QUERY_PARAMETERS
+        - LEGACY_FEED_INGESTION_ERROR
+        - DIFF_SERVICE_UNAVAILABLE
+        - QUEUE_WRITER_ERROR
+        - ENDPOINT_DEPRECATED
+        - UNEXPECTED_ERROR
+        - UNABLE_TO_CHANGE_FEED_TYPE
+        - LEGACY_SHOP_CANNOT_BE_ENABLED
+        - UNABLE_TO_TRIGGER_DELTA_FEED
+      type: string
+      description: >-
+        A Feed API specific unique error code
+        <dl><dt><strong>INVALID_CREDENTIALS</strong></dt><dd>Could not validate
+        credentials</dd></dl>
+
+        <dl><dt><strong>MODEL_NOT_FOUND</strong></dt><dd>{model_name} not
+        found</dd></dl>
+
+        <dl><dt><strong>FEED_URL_ALREADY_EXISTS</strong></dt><dd>feed_url
+        {feed_url} already exists</dd></dl>
+
+        <dl><dt><strong>SHOP_HAVE_ACTIVE_LEGACY_SCRAPER</strong></dt><dd>unable
+        to add new feeds to a shop which have active legacy scraper, please
+        contact CX or B2B Ingestion/Inventory Operation teams</dd></dl>
+
+        <dl><dt><strong>SHOP_HAVE_PENDING_ACTIONS</strong></dt><dd>There's
+        already a pending task for one of your feeds. Only one pending action is
+        allowed, please wait for it to complete and try again.</dd></dl>
+
+        <dl><dt><strong>SHOP_HAS_TOO_MANY_SCHEDULED_RUNS</strong></dt><dd>too
+        many scheduled runs for this shop, remove scheduled runs or wait for
+        them to finish</dd></dl>
+
+        <dl><dt><strong>SHOP_IS_BLOCKED</strong></dt><dd>this shop is blocked -
+        unable to make changes, one of reasons this can happen is due to a shop
+        having legacy feed setups that need to be manually migrated by our team,
+        please contact CX or B2B Ingestion/Inventory Operations teams</dd></dl>
+
+        <dl><dt><strong>RUN_ALREADY_STARTED</strong></dt><dd>this run has been
+        already started</dd></dl>
+
+        <dl><dt><strong>RUN_NOT_STARTED</strong></dt><dd>this run has not been
+        started</dd></dl>
+
+        <dl><dt><strong>LEGACY_FEED_INGESTION_INVALID_QUERY_PARAMETERS</strong></dt><dd>provided
+        query parameters cannot be used for requested operation</dd></dl>
+
+        <dl><dt><strong>FEED_INGESTION_INVALID_QUERY_PARAMETERS</strong></dt><dd>provided
+        query parameters cannot be used for requested operation</dd></dl>
+
+        <dl><dt><strong>LEGACY_FEED_INGESTION_ERROR</strong></dt><dd>cannot
+        trigger ingestion due to error from diff service</dd></dl>
+
+        <dl><dt><strong>DIFF_SERVICE_UNAVAILABLE</strong></dt><dd>diff service
+        is unavailable, try again later</dd></dl>
+
+        <dl><dt><strong>QUEUE_WRITER_ERROR</strong></dt><dd>cannot trigger run
+        due to error from publisher error (PubSub), try again later</dd></dl>
+
+        <dl><dt><strong>ENDPOINT_DEPRECATED</strong></dt><dd>this endpoint is
+        deprecated</dd></dl>
+
+        <dl><dt><strong>UNEXPECTED_ERROR</strong></dt><dd>unexpected error
+        occurred</dd></dl>
+
+        <dl><dt><strong>UNABLE_TO_CHANGE_FEED_TYPE</strong></dt><dd>Unable to
+        change feed type, feature would be available after dropping /v2
+        version</dd></dl>
+
+        <dl><dt><strong>LEGACY_SHOP_CANNOT_BE_ENABLED</strong></dt><dd>FIS does
+        not support legacy feeds so you cannot enable feed with legacy
+        settings</dd></dl>
+
+        <dl><dt><strong>UNABLE_TO_TRIGGER_DELTA_FEED</strong></dt><dd>Unable to
+        trigger delta feed.</dd></dl>
+    FeedParser:
+      title: FeedParser
+      enum:
+        - google_xml
+        - google_csv
+        - prisjakt_xml
+        - prisjakt_csv
+        - amazon_csv
+        - ebay_csv
+        - amazon_deals_csv
+        - rakuten_xml
+      type: string
+      description: An enumeration.
+    HTTPValidationError:
+      title: HTTPValidationError
+      type: object
+      properties:
+        detail:
+          title: Detail
+          type: array
+          items:
+            $ref: "#/components/schemas/ValidationError"
+    HealthCheckComponent:
+      title: HealthCheckComponent
+      required:
+        - componentType
+        - status
+      type: object
+      properties:
+        componentType:
+          allOf:
+            - $ref: "#/components/schemas/HealthComponentType"
+          description: type of the component
+        status:
+          $ref: "#/components/schemas/HealthStatus"
+        time:
+          title: Time
+          type: string
+          description: >-
+            the date-time, in ISO8601 format, at which the reading of the status
+            was recorded
+          format: date-time
+        affectedEndpoints:
+          title: Affectedendpoints
+          type: array
+          items:
+            type: string
+          description: >-
+            indicates which particular endpoints are affected by a particular
+            check's troubles. Not returned on status PASS
+        output:
+          title: Output
+          type: string
+          description: >-
+            raw error output, in case of fail or warn. Not returned on status
+            PASS
+        componentId:
+          title: Componentid
+          type: string
+          description: >-
+            A unique identifier of an instance of a specific
+            sub-component/dependency of a service
+    HealthCheckModel:
+      title: HealthCheckModel
+      required:
+        - status
+        - checks
+      type: object
+      properties:
+        status:
+          allOf:
+            - $ref: "#/components/schemas/HealthStatus"
+          description: indicates whether the service status is acceptable or not
+        version:
+          title: Version
+          type: string
+          description: public version of the service
+        checks:
+          title: Checks
+          allOf:
+            - $ref: "#/components/schemas/HealthChecksModel"
+          description: >-
+            detailed health statuses of additional downstream systems and
+            endpoints which can affect the overall health of the main API. Since
+            each sub-component may be backed by several nodes with varying
+            health statuses, these keys point to arrays of objects. In case of a
+            single-node sub-component (or if presence of nodes is not relevant),
+            a single-element array SHOULD be used as the value, for consistency.
+      description: |-
+        HealthCheck response in rfc format.
+
+        1. https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check
+    HealthChecksModel:
+      title: HealthChecksModel
+      required:
+        - mysql
+        - postgres
+        - kafka
+        - ingestion_service
+      type: object
+      properties:
+        mysql:
+          title: Mysql
+          type: array
+          items:
+            $ref: "#/components/schemas/HealthCheckComponent"
+          description: legacy mysql database component
+        postgres:
+          title: Postgres
+          type: array
+          items:
+            $ref: "#/components/schemas/HealthCheckComponent"
+          description: gcp cloud postgres database
+        kafka:
+          title: Kafka
+          type: array
+          items:
+            $ref: "#/components/schemas/HealthCheckComponent"
+          description: kafka service bus
+        ingestion_service:
+          title: Ingestion Service
+          type: array
+          items:
+            $ref: "#/components/schemas/HealthCheckComponent"
+          description: Ingestion Service
+    HealthComponentType:
+      title: HealthComponentType
+      enum:
+        - component
+        - datastore
+        - system
+      type: string
+      description: >-
+        Component type as defined in
+        [rfc](https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check#section-4.2)
+
+
+        <dl>
+
+
+        <dt><strong>component</strong></dt>
+
+        <dd>component</dd>
+
+
+        <dt><strong>datastore</strong></dt>
+
+        <dd>datastore</dd>
+
+
+        <dt><strong>system</strong></dt>
+
+        <dd>system</dd>
+
+
+        </dl>
+    HealthStatus:
+      title: HealthStatus
+      enum:
+        - pass
+        - fail
+      type: string
+      description: >-
+        Health status as defined in
+        [rfc](https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check#section-3.1)
+
+
+        <dl>
+
+
+        <dt><strong>pass</strong></dt>
+
+        <dd>healthy</dd>
+
+
+        <dt><strong>fail</strong></dt>
+
+        <dd>unhealthy</dd>
+
+
+        <dt><strong>warn</strong></dt>
+
+        <dd>healthy, with some concerns</dd>
+
+
+        </dl>
+    OfferStateCountModel:
+      title: OfferStateCountModel
+      required:
+        - rejected
+        - partially_accepted
+        - accepted
+        - skipped
+      type: object
+      properties:
+        rejected:
+          title: Rejected
+          type: integer
+        partially_accepted:
+          title: Partially Accepted
+          type: integer
+        accepted:
+          title: Accepted
+          type: integer
+        skipped:
+          title: Skipped
+          type: integer
+    ParserOfferFieldLevelProcessExceptionModel:
+      title: ParserOfferFieldLevelProcessExceptionModel
+      required:
+        - code
+        - path
+        - total_offers_affected
+        - class
+      type: object
+      properties:
+        visibility:
+          title: Visibility
+          enum:
+            - public
+          type: string
+          default: public
+        code:
+          title: Code
+          type: string
+        details:
+          title: Details
+          type: string
+        path:
+          title: Path
+          type: string
+        total_offers_affected:
+          title: Total Offers Affected
+          type: integer
+        class:
+          title: Class
+          enum:
+            - ParserOfferFieldLevelProcessExceptionMessage
+          type: string
+    ParserOfferLevelProcessExceptionModel:
+      title: ParserOfferLevelProcessExceptionModel
+      required:
+        - code
+        - total_offers_affected
+        - class
+      type: object
+      properties:
+        visibility:
+          title: Visibility
+          enum:
+            - public
+          type: string
+          default: public
+        code:
+          title: Code
+          type: string
+        details:
+          title: Details
+          type: string
+        total_offers_affected:
+          title: Total Offers Affected
+          type: integer
+        class:
+          title: Class
+          enum:
+            - ParserOfferLevelProcessExceptionMessage
+          type: string
+    RunMode:
+      title: RunMode
+      enum:
+        - validation
+        - ingestion
+        - ingestion_force_upsert
+      type: string
+      description: >-
+        Represents different run modes
+
+
+        <dl>
+
+
+        <dt><strong>validation</strong></dt>
+
+        <dd>only validate</dd>
+
+
+        <dt><strong>ingestion</strong></dt>
+
+        <dd>run both validation and ingestion</dd>
+
+
+        <dt><strong>ingestion_force_upsert</strong></dt>
+
+        <dd>run both validation and ingestion but ingest all offers to ingress
+        without checking the cache</dd>
+
+
+        </dl>
+    RunModel:
+      title: RunModel
+      required:
+        - id
+        - mode
+        - url
+        - state
+        - result
+        - created_at
+        - last_modified_at
+      type: object
+      properties:
+        id:
+          title: Id
+          type: string
+          format: uuid
+        feed_id:
+          title: Feed Id
+          type: string
+          format: uuid
+        mode:
+          $ref: "#/components/schemas/RunMode"
+        url:
+          title: Url
+          type: string
+        state:
+          $ref: "#/components/schemas/RunState"
+        result:
+          $ref: "#/components/schemas/RunResult"
+        created_at:
+          title: Created At
+          type: string
+          format: date-time
+        last_modified_at:
+          title: Last Modified At
+          type: string
+          format: date-time
+        start:
+          title: Start
+          type: string
+          format: date-time
+        end:
+          title: End
+          type: string
+          format: date-time
+        exception_code:
+          title: Exception Code
+          type: string
+        exception_details:
+          title: Exception Details
+          type: string
+        offer_state_count:
+          title: Offer State Count
+          allOf:
+            - $ref: "#/components/schemas/OfferStateCountModel"
+          nullable: true
+        action_counts:
+          title: Action Counts
+          allOf:
+            - $ref: "#/components/schemas/ActionCountsModel"
+          nullable: true
+    RunProcessExceptionsModel:
+      title: RunProcessExceptionsModel
+      required:
+        - exceptions
+      type: object
+      properties:
+        exceptions:
+          title: Exceptions
+          type: array
+          items:
+            anyOf:
+              - $ref: "#/components/schemas/ParserOfferLevelProcessExceptionModel"
+              - $ref: >-
+                  #/components/schemas/ParserOfferFieldLevelProcessExceptionModel
+              - $ref: >-
+                  #/components/schemas/ValidatorOfferFieldLevelProcessExceptionModel
+    RunResult:
+      title: RunResult
+      enum:
+        - unknown
+        - success
+        - exception
+      type: string
+      description: An enumeration.
+    RunState:
+      title: RunState
+      enum:
+        - scheduled
+        - running
+        - completed
+      type: string
+      description: |-
+        Represents different run stages:
+
+
+        <dl>
+
+        <dt><strong>scheduled</strong></dt>
+        <dd>Run created but not started yet by FIS</dd>
+
+        <dt><strong>running</strong></dt>
+        <dd>FIS started processing this run</dd>
+
+        <dt><strong>completed</strong></dt>
+        <dd>FIS completed this run</dd>
+
+        </dl>
+    StatusModel:
+      title: StatusModel
+      type: object
+      properties:
+        status:
+          title: Status
+          type: string
+          description: Status of the server, always `ok`
+          default: ok
+        revision:
+          title: Revision
+          type: string
+          description: Revision of the application
+    TriggerRunRequestBody:
+      title: TriggerRunRequestBody
+      required:
+        - parser
+        - url
+        - mode
+      type: object
+      properties:
+        parser:
+          $ref: "#/components/schemas/FeedParser"
+        url:
+          title: Url
+          maxLength: 2000
+          minLength: 1
+          type: string
+          format: uri
+        mode:
+          title: Mode
+          enum:
+            - validation
+          type: string
+        file_encoding:
+          title: File Encoding
+          type: string
+      additionalProperties: false
+    ValidationError:
+      title: ValidationError
+      required:
+        - loc
+        - msg
+        - type
+      type: object
+      properties:
+        loc:
+          title: Location
+          type: array
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+    ValidatorOfferFieldLevelProcessExceptionModel:
+      title: ValidatorOfferFieldLevelProcessExceptionModel
+      required:
+        - code
+        - path
+        - example_offer_ids
+        - total_offers_affected
+        - is_blocking_ingestion
+        - class
+      type: object
+      properties:
+        visibility:
+          title: Visibility
+          enum:
+            - public
+          type: string
+          default: public
+        code:
+          title: Code
+          type: string
+        details:
+          title: Details
+          type: string
+        path:
+          title: Path
+          type: string
+        example_offer_ids:
+          title: Example Offer Ids
+          type: array
+          items:
+            type: string
+        total_offers_affected:
+          title: Total Offers Affected
+          type: integer
+        is_blocking_ingestion:
+          title: Is Blocking Ingestion
+          type: boolean
+        class:
+          title: Class
+          enum:
+            - ValidatorOfferFieldLevelProcessExceptionMessage
+          type: string
+  securitySchemes:
+    oauthClientCredentials:
+      type: oauth2
+      description: This API uses OAuth 2 with client credentials grant flow.
+      flows:
+        clientCredentials:
+          authorizationUrl: https://api.schibsted.com/oauth2/authorize
+          scopes:
+            read_pets: read your pets
+            write_pets: modify pets in your account

@@ -47,11 +47,30 @@ const config = {
         },
       };
     },
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "apiDocs",
+        docsPluginId: "classic",
+        // See: https://github.com/PaloAltoNetworks/docusaurus-openapi-docs#config
+        config: {
+          petstore: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "feed-api.yml", // Path to designated spec file
+            outputDir: "docs/api", // Output directory for generated .mdx docs
+            baseUrl: "https://api.schibsted.com/prisjakt/feed-api",
+            hideSendButton: false,
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+        }
+      },
+    ]
   ],
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', 'docusaurus-theme-openapi-docs'],
 
   presets: [
     [
@@ -64,6 +83,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Prisjakt/feed-specification/tree/master/',
+          //docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi-docs
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
