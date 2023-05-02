@@ -1,0 +1,45 @@
+---
+id: get-status-operations-status-get
+title: "Check status of the application"
+description: "Checks status of the application. It does not perform any"
+sidebar_label: "Check status of the application"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["operations"],"description":"\nChecks status of the application. It does not perform any\ncomplex operations (like hitting a database),\nit's intended to check just a HTTP server.\n","operationId":"get_status_operations_status_get","parameters":[{"required":false,"schema":{"title":"Sleep Time","type":"integer"},"name":"sleep_time","in":"query"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"title":"StatusModel","type":"object","properties":{"status":{"title":"Status","type":"string","description":"Status of the server, always `ok`","default":"ok"},"revision":{"title":"Revision","type":"string","description":"Revision of the application"}}}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"title":"HTTPValidationError","type":"object","properties":{"detail":{"title":"Detail","type":"array","items":{"title":"ValidationError","required":["loc","msg","type"],"type":"object","properties":{"loc":{"title":"Location","type":"array","items":{"anyOf":[{"type":"string"},{"type":"integer"}]}},"msg":{"title":"Message","type":"string"},"type":{"title":"Error Type","type":"string"}}}}}}}}}},"security":[{"oauthClientCredentials":[]}],"method":"get","path":"/operations/status","securitySchemes":{"oauthClientCredentials":{"type":"oauth2","description":"This API uses OAuth 2 with client credentials grant flow.","flows":{"clientCredentials":{"authorizationUrl":"https://api.schibsted.com/oauth2/authorize","scopes":{"read_pets":"read your pets","write_pets":"modify pets in your account"}}}}},"info":{"title":"Feed API","description":"\nFeed API is the front line for retrieving data from shops into Prisjakt. \nFor more information please check \n\n- [schema.prisjakt.nu](https://schema.prisjakt.nu)\n- [developer.prisjakt.nu](https://developer.prisjakt.nu)\n\n","version":"3"},"postman":{"name":"Check status of the application","description":{"content":"\nChecks status of the application. It does not perform any\ncomplex operations (like hitting a database),\nit's intended to check just a HTTP server.\n","type":"text/plain"},"url":{"path":["operations","status"],"host":["{{baseUrl}}"],"query":[{"disabled":false,"key":"sleep_time","value":""}],"variable":[]},"header":[{"key":"Accept","value":"application/json"}],"method":"GET","auth":{"type":"oauth2","oauth2":[]}}}
+sidebar_class_name: "get api-method"
+info_path: api/feed-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiDemoPanel/MethodEndpoint";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+
+<h1 className={"openapi__heading"}>Check status of the application</h1>
+
+<MethodEndpoint method={"get"} path={"/operations/status"}></MethodEndpoint>
+
+
+
+
+Checks status of the application. It does not perform any
+complex operations (like hitting a database),
+it's intended to check just a HTTP server.
+
+
+<details style={{"marginBottom":"1rem"}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"required":false,"schema":{"title":"Sleep Time","type":"integer"},"name":"sleep_time","in":"query"}}></ParamsItem></ul></div></details><div><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+Successful Response
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"status"} required={false} schemaName={"Status"} qualifierMessage={undefined} schema={{"title":"Status","type":"string","description":"Status of the server, always `ok`","default":"ok"}}></SchemaItem><SchemaItem collapsible={false} name={"revision"} required={false} schemaName={"Revision"} qualifierMessage={undefined} schema={{"title":"Revision","type":"string","description":"Revision of the application"}}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"status\": \"ok\",\n  \"revision\": \"string\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"422"} value={"422"}><div>
+
+Validation Error
+
+</div><div><MimeTabs className={"openapi-tabs__mime"} schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} className={"openapi-markdown__details"} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}} className={"openapi-markdown__details"}><summary style={{}}><strong>detail</strong><span style={{"opacity":"0.6"}}> object[]</span></summary><div style={{"marginLeft":"1rem"}}><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}>Array [</div></li><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}} className={"openapi-markdown__details"}><summary style={{}}><strong>loc</strong><span style={{"opacity":"0.6"}}> object[]</span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> required</strong></summary><div style={{"marginLeft":"1rem"}}><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}>Array [</div></li><li><span className={"badge badge--info"}>anyOf</span><SchemaTabs className={"openapi-tabs__schema"}><TabItem label={"MOD1"} value={"0-item-properties"}><li><div><strong>string</strong></div></li></TabItem><TabItem label={"MOD2"} value={"1-item-properties"}><li><div><strong>integer</strong></div></li></TabItem></SchemaTabs></li><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}>]</div></li></div></details></SchemaItem><SchemaItem collapsible={false} name={"msg"} required={true} schemaName={"Message"} qualifierMessage={undefined} schema={{"title":"Message","type":"string"}}></SchemaItem><SchemaItem collapsible={false} name={"type"} required={true} schemaName={"Error Type"} qualifierMessage={undefined} schema={{"title":"Error Type","type":"string"}}></SchemaItem><li><div style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}>]</div></li></div></details></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        0\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div></div>
+      

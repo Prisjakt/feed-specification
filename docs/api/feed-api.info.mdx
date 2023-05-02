@@ -1,0 +1,36 @@
+---
+id: feed-api
+title: "Feed API"
+description: "Feed API is the front line for retrieving data from shops into Prisjakt."
+sidebar_label: Introduction
+sidebar_position: 0
+hide_title: true
+custom_edit_url: null
+---
+
+import ApiLogo from "@theme/ApiLogo";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+import Export from "@theme/ApiDemoPanel/Export";
+
+<span className={"theme-doc-version-badge badge badge--secondary"}>Version: 3</span>
+
+<h1 className={"openapi__heading"}>Feed API</h1>
+
+
+
+
+Feed API is the front line for retrieving data from shops into Prisjakt. 
+For more information please check 
+
+- [schema.prisjakt.nu](https://schema.prisjakt.nu)
+- [developer.prisjakt.nu](https://developer.prisjakt.nu)
+
+
+
+<div style={{"marginBottom":"2rem"}}><h2 id={"authentication"} style={{"marginBottom":"1rem"}}>Authentication</h2><SchemaTabs className={"openapi-tabs__security-schemes"}><TabItem label={"OAuth 2.0: oauthClientCredentials"} value={"oauthClientCredentials"}>
+
+This API uses OAuth 2 with client credentials grant flow.
+
+<div><table><tbody><tr><th>Security Scheme Type:</th><td>oauth2</td></tr><tr><th>OAuth Flow (clientCredentials):</th><td><p>Authorization URL: https://api.schibsted.com/oauth2/authorize</p><span>Scopes:</span><ul><li>read_pets: read your pets</li><li>write_pets: modify pets in your account</li></ul></td></tr></tbody></table></div></TabItem></SchemaTabs></div>
+      
