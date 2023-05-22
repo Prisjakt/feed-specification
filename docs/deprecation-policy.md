@@ -18,4 +18,4 @@ Whenever we do changes, we note these changes in the [changelog of each individu
 ## Communication Time
 
 - When we change or remove existing functionality we will mark this change as deprecated in the field changelog **1 month in advance**
-- After **1 month** we will release the changes and they will have effect on your data at the next ingestin run
+- After **1 month** we will release the changes and they will have effect on your data at the next ingestion
