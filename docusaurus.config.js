@@ -159,7 +159,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© 2000-2022 PriceSpy UK. Built with Docusaurus.`,
+        copyright: `© 2000-${new Date().getFullYear()} PriceSpy UK. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
