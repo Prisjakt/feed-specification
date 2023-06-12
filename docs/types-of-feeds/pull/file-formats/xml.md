@@ -26,7 +26,7 @@ If multiple fields with the same name but different namepaces exist, the field w
 1. `pj:` first eg. `<pj:some_field>100 SEK</pj:some_field>`
 1. `g:` second eg. `<g:some_field>100 SEK</g:some_field>`
 1. **no namespace** third eg. `<some_field>100 SEK</some_field>`
-1. **other/unknown** third in undefined order eg. `<xyz:some_field>100 SEK</xyz:some_field>`
+1. **other/unknown** in undefined order eg. `<xyz:some_field>100 SEK</xyz:some_field>`
 ### Prisjakt XML Namespace
 
 Our namespace definiton file is located at the following URL:
