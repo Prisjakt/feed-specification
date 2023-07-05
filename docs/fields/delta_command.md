@@ -82,7 +82,7 @@ Here are examples of how a valid *delta_command* value  should look like in XML 
 :::tip Valid Value
 
 ```xml
-<g:delta_command>upsert</g:delta_command>
+<pj:delta_command>upsert</pj:delta_command>
 ```
 
 :::
@@ -92,11 +92,11 @@ Here are examples of how a valid *delta_command* value  should look like in XML 
   <div>
 
 ```xml
-<g:delta_command>upsert</g:delta_command>
+<pj:delta_command>upsert</pj:delta_command>
 ```
 
 ```xml
-<g:delta_command>remove</g:delta_command>
+<pj:delta_command>remove</pj:delta_command>
 ```
 
 

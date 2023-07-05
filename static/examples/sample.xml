@@ -19,7 +19,7 @@
       <g:brand><![CDATA[Sony]]></g:brand>
       <g:color>RED/GREEN/BLUE</g:color>
       <g:condition>demo</g:condition>
-      <g:delta_command>remove</g:delta_command>
+      <pj:delta_command>remove</pj:delta_command>
       <g:description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]]></g:description>
       <g:energy_efficiency_class>g</g:energy_efficiency_class>
       <g:gender>unisex</g:gender>
