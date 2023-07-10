@@ -123,10 +123,6 @@ Here are examples of how a valid *additional_image_link* value  should look like
 ```
 
 ```xml
-<g:additional_image_link>ftps://example.com/link</g:additional_image_link>
-```
-
-```xml
 <g:additional_image_link>https://example.com/image1.jpg</g:additional_image_link>
 <g:additional_image_link>https://example.com/image2.jpg</g:additional_image_link>
 ```
@@ -184,11 +180,6 @@ http://example.com/link-%E2%84%A2-mu-20%C2%B5m
 ```csv
 additional_image_link
 ftp://example.com/link
-```
-
-```csv
-additional_image_link
-ftps://example.com/link
 ```
 
 ```csv

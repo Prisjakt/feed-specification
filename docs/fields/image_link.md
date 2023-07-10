@@ -125,10 +125,6 @@ Here are examples of how a valid *image_link* value  should look like in XML and
 <g:image_link>ftp://example.com/link</g:image_link>
 ```
 
-```xml
-<g:image_link>ftps://example.com/link</g:image_link>
-```
-
 
   </div>
 </details>
@@ -182,11 +178,6 @@ http://example.com/link-%E2%84%A2-mu-20%C2%B5m
 ```csv
 image_link
 ftp://example.com/link
-```
-
-```csv
-image_link
-ftps://example.com/link
 ```
 
 

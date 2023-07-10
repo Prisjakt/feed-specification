@@ -26,7 +26,7 @@
       <g:google_product_category><![CDATA[Sporting Goods > Athletics > Figure Skating & Hockey > Ice Skates]]></g:google_product_category>
       <g:gtin>10614141000415</g:gtin>
       <g:gtin>90311017</g:gtin>
-      <g:image_link>ftps://example.com/link</g:image_link>
+      <g:image_link>ftp://example.com/link</g:image_link>
       <g:is_bundle>fAlSE</g:is_bundle>
       <g:item_group_id>aaa111</g:item_group_id>
       <g:material><![CDATA[Cotton/Leather]]></g:material>
