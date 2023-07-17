@@ -143,7 +143,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```xml
 <g:color>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)</g:color>
@@ -151,7 +151,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />
 
 ```xml
 <g:color>black/mint/blue/white</g:color>
@@ -163,7 +163,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
 color
@@ -172,7 +172,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 40 characters value)
 
 :::
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />
 
 ```csv
 color

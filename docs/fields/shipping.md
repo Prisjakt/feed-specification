@@ -43,8 +43,7 @@ shipping -- might be determined by  --- shipping_width
   click shipping_width "/fields/shipping_width" "shipping_width" _blank
 shipping -- might be determined by  --- shipping_label
   click shipping_label "/fields/shipping_label" "shipping_label" _blank
-   
-  
+
   click shipping "/fields/shipping" "shipping" _blank
   style shipping fill:#4cb3d4
 ```
@@ -224,7 +223,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:shipping>
@@ -238,7 +237,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" /> 
+:::danger <Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" />
 
 ```xml
 <g:shipping>
@@ -256,7 +255,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
@@ -265,7 +264,7 @@ shipping(country:region:service:price:min_handling_time)
 
 :::
 
-:::danger <Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" /> 
+:::danger <Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" />
 
 ```csv
 shipping(country:region:service:price:min_handling_time)

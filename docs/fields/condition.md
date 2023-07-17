@@ -195,7 +195,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```xml
 <g:condition>unknown</g:condition>
@@ -203,7 +203,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:condition></g:condition>
@@ -215,7 +215,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
 condition
@@ -224,7 +224,7 @@ unknown
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 condition

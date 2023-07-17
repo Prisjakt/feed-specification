@@ -26,8 +26,7 @@ Using this attribute is required if [`size`](size.md) is specified for a product
 flowchart LR
 size_system -- required if used  --- size
   click size "/fields/size" "size" _blank
-   
-  
+
   click size_system "/fields/size_system" "size_system" _blank
   style size_system fill:#4cb3d4
 ```
@@ -201,7 +200,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```xml
 <g:size_system>unknown</g:size_system>
@@ -213,7 +212,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
 size_system

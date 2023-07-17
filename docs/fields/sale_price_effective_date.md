@@ -35,8 +35,7 @@ Datetime range indicating when [`sale_price`](/fields/sale_price.md) is active. 
 flowchart LR
 sale_price_effective_date -- used by  --- sale_price
   click sale_price "/fields/sale_price" "sale_price" _blank
-   
-  
+
   click sale_price_effective_date "/fields/sale_price_effective_date" "sale_price_effective_date" _blank
   style sale_price_effective_date fill:#4cb3d4
 ```
@@ -153,7 +152,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" /> 
+:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" />
 
 ```xml
 <g:sale_price_effective_date>2050-02-05/2050-02-05</g:sale_price_effective_date>
@@ -161,7 +160,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```xml
 <g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>
@@ -170,7 +169,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:sale_price_effective_date>2016-02-29T15:30-0800</g:sale_price_effective_date>
@@ -183,7 +182,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" /> 
+:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" />
 
 ```csv
 sale_price_effective_date
@@ -192,7 +191,7 @@ sale_price_effective_date
 
 :::
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```csv
 sale_price_effective_date,sale_price
@@ -201,7 +200,7 @@ sale_price_effective_date,sale_price
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 sale_price_effective_date,sale_price

@@ -35,8 +35,7 @@ Use the availability attribute to display your stock status.
 flowchart LR
 availability -- requires for some values  --- availability_date
   click availability_date "/fields/availability_date" "availability_date" _blank
-   
-  
+
   click availability "/fields/availability" "availability" _blank
   style availability fill:#4cb3d4
 ```
@@ -231,7 +230,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```xml
 <g:availability>unknown</g:availability>
@@ -239,7 +238,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:availability></g:availability>
@@ -251,7 +250,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
 availability
@@ -260,7 +259,7 @@ unknown
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 availability

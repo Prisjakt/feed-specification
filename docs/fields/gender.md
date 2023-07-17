@@ -35,8 +35,7 @@ Specify the gender your product is designed for.
 flowchart LR
 gender -- may improve info for  --- size
   click size "/fields/size" "size" _blank
-   
-  
+
   click gender "/fields/gender" "gender" _blank
   style gender fill:#4cb3d4
 ```
@@ -176,7 +175,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```xml
 <g:gender>unknown</g:gender>
@@ -188,7 +187,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" /> 
+:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
 gender

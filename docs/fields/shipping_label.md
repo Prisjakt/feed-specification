@@ -34,8 +34,7 @@ shipping_label -- might be determined by  --- shipping_width
   click shipping_width "/fields/shipping_width" "shipping_width" _blank
 shipping_label -- affects price and eligibility of  --- shipping
   click shipping "/fields/shipping" "shipping" _blank
-   
-  
+
   click shipping_label "/fields/shipping_label" "shipping_label" _blank
   style shipping_label fill:#4cb3d4
 ```
@@ -128,7 +127,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />
 
 ```xml
 <g:shipping_label>a/b/c/d/e/f/g/h/i/j/k</g:shipping_label>
@@ -140,7 +139,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" /> 
+:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />
 
 ```csv
 shipping_label

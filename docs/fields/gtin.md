@@ -173,7 +173,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" /> 
+:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" />
 
 ```xml
 <g:gtin>026282818705</g:gtin>
@@ -181,7 +181,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" /> 
+:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" />
 
 ```xml
 <g:gtin>9900114145837</g:gtin>
@@ -189,7 +189,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```xml
 <g:gtin>881111088111169696</g:gtin>
@@ -197,7 +197,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
+:::danger <Anchor id="validation_not_integer" title="validation_not_integer" />
 
 ```xml
 <g:gtin>88aaa08869696</g:gtin>
@@ -209,7 +209,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" /> 
+:::danger <Anchor id="validation_gtin_invalid_check_digit" title="validation_gtin_invalid_check_digit" />
 
 ```csv
 gtin
@@ -218,7 +218,7 @@ gtin
 
 :::
 
-:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" /> 
+:::danger <Anchor id="validation_gtin_prefix_not_allowed" title="validation_gtin_prefix_not_allowed" />
 
 ```csv
 gtin
@@ -227,7 +227,7 @@ gtin
 
 :::
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
 gtin
@@ -236,7 +236,7 @@ gtin
 
 :::
 
-:::danger <Anchor id="validation_not_integer" title="validation_not_integer" /> 
+:::danger <Anchor id="validation_not_integer" title="validation_not_integer" />
 
 ```csv
 gtin

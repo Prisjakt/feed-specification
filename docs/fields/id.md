@@ -141,7 +141,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" /> 
+:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />
 
 ```xml
 <g:id><![CDATA[!+@#$%^&*]]></g:id>
@@ -149,7 +149,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```xml
 <g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
@@ -157,7 +157,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```xml
 <g:id><![CDATA[ ]]></g:id>
@@ -165,7 +165,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:id></g:id>
@@ -173,7 +173,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" /> 
+:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />
 
 ```xml
 <g:id><![CDATA[ąśπœę©]]></g:id>
@@ -181,7 +181,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" /> 
+:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />
 
 ```xml
 <g:id><![CDATA[a ]]></g:id>
@@ -193,7 +193,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" /> 
+:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />
 
 ```csv
 id
@@ -202,7 +202,7 @@ id
 
 :::
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
 id
@@ -211,7 +211,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
 id
@@ -219,7 +219,7 @@ id
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 id
@@ -228,7 +228,7 @@ id
 
 :::
 
-:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" /> 
+:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />
 
 ```csv
 id
@@ -237,7 +237,7 @@ id
 
 :::
 
-:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" /> 
+:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />
 
 ```csv
 id

@@ -35,8 +35,7 @@ It's strongly recommended to use this attribute if [`google_product_category`](/
 flowchart LR
 product_type -- can be used instead  --- google_product_category
   click google_product_category "/fields/google_product_category" "google_product_category" _blank
-   
-  
+
   click product_type "/fields/product_type" "product_type" _blank
   style product_type fill:#4cb3d4
 ```
@@ -146,7 +145,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```xml
 <g:product_type><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 256 characters value)]]></g:product_type>
@@ -158,7 +157,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" /> 
+:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
 product_type

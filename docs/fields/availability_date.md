@@ -40,8 +40,7 @@ This field is used together with [`availability`](/fields/availability.md) for `
 flowchart LR
 availability_date -- used by  --- availability
   click availability "/fields/availability" "availability" _blank
-   
-  
+
   click availability_date "/fields/availability_date" "availability_date" _blank
   style availability_date fill:#4cb3d4
 ```
@@ -139,7 +138,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```xml
 <g:availability_date>2021/12/22/12:23:00</g:availability_date>
@@ -147,7 +146,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
@@ -156,7 +155,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
 
 ```xml
 <g:availability_date></g:availability_date>
@@ -169,7 +168,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```csv
 availability_date
@@ -178,7 +177,7 @@ availability_date
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
 availability_date,availability
@@ -187,7 +186,7 @@ availability_date,availability
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" /> 
+:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
 
 ```csv
 availability_date,availability

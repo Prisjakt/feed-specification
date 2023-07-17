@@ -34,8 +34,7 @@ shipping_width -- affects price and eligibility of  --- shipping
   click shipping "/fields/shipping" "shipping" _blank
 shipping_width -- determines label of  --- shipping_label
   click shipping_label "/fields/shipping_label" "shipping_label" _blank
-   
-  
+
   click shipping_width "/fields/shipping_width" "shipping_width" _blank
   style shipping_width fill:#4cb3d4
 ```
@@ -147,7 +146,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```xml
 <g:shipping_width>123cm</g:shipping_width>
@@ -155,7 +154,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" /> 
+:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" />
 
 ```xml
 <g:shipping_width>2 m</g:shipping_width>
@@ -163,7 +162,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```xml
 <g:shipping_width>unkn own</g:shipping_width>
@@ -171,7 +170,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:shipping_width> in</g:shipping_width>
@@ -183,7 +182,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" /> 
+:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
 
 ```csv
 shipping_width
@@ -192,7 +191,7 @@ shipping_width
 
 :::
 
-:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" /> 
+:::danger <Anchor id="validation_invalid_length_unit" title="validation_invalid_length_unit" />
 
 ```csv
 shipping_width
@@ -201,7 +200,7 @@ shipping_width
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" /> 
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
 shipping_width
@@ -210,7 +209,7 @@ unkn own
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 shipping_width

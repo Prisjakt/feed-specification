@@ -30,8 +30,7 @@ price -- overridden by if exist  --- sale_price
   click sale_price "/fields/sale_price" "sale_price" _blank
 price -- determines if overridden  --- sale_price_effective_date
   click sale_price_effective_date "/fields/sale_price_effective_date" "sale_price_effective_date" _blank
-   
-  
+
   click price "/fields/price" "price" _blank
   style price fill:#4cb3d4
 ```
@@ -190,7 +189,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
 
 ```xml
 <g:price>1000</g:price>
@@ -198,7 +197,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
 ```xml
 <g:price>foo SEK</g:price>
@@ -206,7 +205,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:price></g:price>
@@ -214,7 +213,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
+:::danger <Anchor id="validation_not_number" title="validation_not_number" />
 
 ```xml
 <g:price>10.0.00.00 SEK</g:price>
@@ -222,7 +221,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" />
 
 ```xml
 <g:price>-10 SEK</g:price>
@@ -230,7 +229,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" />
 
 ```xml
 <g:price>$100</g:price>
@@ -242,7 +241,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" /> 
+:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
 
 ```csv
 price
@@ -251,7 +250,7 @@ price
 
 :::
 
-:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" /> 
+:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
 ```csv
 price
@@ -260,7 +259,7 @@ foo SEK
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" /> 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 price
@@ -269,7 +268,7 @@ price
 
 :::
 
-:::danger <Anchor id="validation_not_number" title="validation_not_number" /> 
+:::danger <Anchor id="validation_not_number" title="validation_not_number" />
 
 ```csv
 price
@@ -278,7 +277,7 @@ price
 
 :::
 
-:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" /> 
+:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" />
 
 ```csv
 price
@@ -287,7 +286,7 @@ price
 
 :::
 
-:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" /> 
+:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" />
 
 ```csv
 price
