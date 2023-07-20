@@ -167,6 +167,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_height>unkn own</g:shipping_height>
 ```
+```xml
+<g:shipping_height>111.222.333 in</g:shipping_height>
+```
 
 :::
 
@@ -205,6 +208,10 @@ shipping_height
 ```csv
 shipping_height
 unkn own
+```
+```csv
+shipping_height
+111.222.333 in
 ```
 
 :::

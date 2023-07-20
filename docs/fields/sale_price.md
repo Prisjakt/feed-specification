@@ -194,6 +194,12 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:sale_price>1000</g:sale_price>
 ```
+```xml
+<g:sale_price>5.00 dollars</g:sale_price>
+```
+```xml
+<g:sale_price>5.00</g:sale_price>
+```
 
 :::
 
@@ -202,11 +208,17 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:sale_price>foo SEK</g:sale_price>
 ```
+```xml
+<g:sale_price>SEK</g:sale_price>
+```
 
 :::
 
 :::danger <Anchor id="validation_not_number" title="validation_not_number" />
 
+```xml
+<g:sale_price>10.0.00.00 SEK</g:sale_price>
+```
 ```xml
 <g:sale_price>10.0.00.00 SEK</g:sale_price>
 ```
@@ -218,6 +230,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:sale_price>-10 SEK</g:sale_price>
 ```
+```xml
+<g:sale_price>0 SEK</g:sale_price>
+```
 
 :::
 
@@ -225,6 +240,9 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>$100</g:sale_price>
+```
+```xml
+<g:sale_price>100$</g:sale_price>
 ```
 
 :::
@@ -239,6 +257,14 @@ Below you will find possible error codes generated when validating this field al
 sale_price
 1000
 ```
+```csv
+sale_price
+5.00 dollars
+```
+```csv
+sale_price
+5.00
+```
 
 :::
 
@@ -248,11 +274,19 @@ sale_price
 sale_price
 foo SEK
 ```
+```csv
+sale_price
+SEK
+```
 
 :::
 
 :::danger <Anchor id="validation_not_number" title="validation_not_number" />
 
+```csv
+sale_price
+10.0.00.00 SEK
+```
 ```csv
 sale_price
 10.0.00.00 SEK
@@ -266,6 +300,10 @@ sale_price
 sale_price
 -10 SEK
 ```
+```csv
+sale_price
+0 SEK
+```
 
 :::
 
@@ -274,6 +312,10 @@ sale_price
 ```csv
 sale_price
 $100
+```
+```csv
+sale_price
+100$
 ```
 
 :::

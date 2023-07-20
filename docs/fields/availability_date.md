@@ -143,6 +143,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:availability_date>2021/12/22/12:23:00</g:availability_date>
 ```
+```xml
+<g:availability_date>today</g:availability_date>
+```
 
 :::
 
@@ -151,6 +154,18 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
 <g:availability>in_stock</g:availability>
+```
+```xml
+<g:availability_date>2021-03-21</g:availability_date>
+<g:availability>out_of_stock</g:availability>
+```
+```xml
+<g:availability_date>2021-03-21</g:availability_date>
+<g:availability>download</g:availability>
+```
+```xml
+<g:availability_date>2021-03-21</g:availability_date>
+<g:availability>not_available_for_purchase</g:availability>
 ```
 
 :::
@@ -174,6 +189,10 @@ Below you will find possible error codes generated when validating this field al
 availability_date
 2021/12/22/12:23:00
 ```
+```csv
+availability_date
+today
+```
 
 :::
 
@@ -182,6 +201,18 @@ availability_date
 ```csv
 availability_date,availability
 2021-03-21,in_stock
+```
+```csv
+availability_date,availability
+2021-03-21,out_of_stock
+```
+```csv
+availability_date,availability
+2021-03-21,download
+```
+```csv
+availability_date,availability
+2021-03-21,not_available_for_purchase
 ```
 
 :::

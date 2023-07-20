@@ -167,6 +167,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_length>unkn own</g:shipping_length>
 ```
+```xml
+<g:shipping_length>111.222.333 in</g:shipping_length>
+```
 
 :::
 
@@ -205,6 +208,10 @@ shipping_length
 ```csv
 shipping_length
 unkn own
+```
+```csv
+shipping_length
+111.222.333 in
 ```
 
 :::

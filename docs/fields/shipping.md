@@ -234,6 +234,15 @@ Below you will find possible error codes generated when validating this field al
   <g:min_handling_time>-1</g:min_handling_time>
 </g:shipping>
 ```
+```xml
+<g:shipping>
+  <g:country>SE</g:country>
+  <g:region>New York</g:region>
+  <g:service>DHL</g:service>
+  <g:price></g:price>
+  <g:min_handling_time>-1</g:min_handling_time>
+</g:shipping>
+```
 
 :::
 
@@ -246,6 +255,27 @@ Below you will find possible error codes generated when validating this field al
   <g:service>DHL</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
+</g:shipping>
+```
+```xml
+<g:shipping>
+  <g:country>SE</g:country>
+  <g:region>Skåne</g:region>
+  <g:service>DHL</g:service>
+  <g:price>5.00 SEK</g:price>
+  <g:min_handling_time>1</g:min_handling_time>
+  <g:max_handling_time>2</g:max_handling_time>
+</g:shipping>
+```
+```xml
+<g:shipping>
+  <g:country>SE</g:country>
+  <g:region>Skåne</g:region>
+  <g:service>DHL</g:service>
+  <g:price>5.00 SEK</g:price>
+  <g:min_handling_time>1</g:min_handling_time>
+  <g:max_handling_time>2</g:max_handling_time>
+  <g:min_transit_time>1</g:min_transit_time>
 </g:shipping>
 ```
 
@@ -261,6 +291,10 @@ Below you will find possible error codes generated when validating this field al
 shipping(country:region:service:price:min_handling_time)
 :New York:DHL:5 SEK:-1
 ```
+```csv
+shipping(country:region:service:price:min_handling_time)
+SE:New York:DHL::-1
+```
 
 :::
 
@@ -269,6 +303,14 @@ shipping(country:region:service:price:min_handling_time)
 ```csv
 shipping(country:region:service:price:min_handling_time)
 SE:Skåne:DHL:5.00 SEK:1
+```
+```csv
+shipping(country:region:service:price:min_handling_time:max_handling_time)
+SE:Skåne:DHL:5.00 SEK:1:2
+```
+```csv
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time)
+SE:Skåne:DHL:5.00 SEK:1:2:1
 ```
 
 :::

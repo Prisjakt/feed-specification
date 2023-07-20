@@ -177,6 +177,12 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:google_product_category>144</g:google_product_category>
 ```
+```xml
+<g:google_product_category><![CDATA[Divers sports > Water polo]]></g:google_product_category>
+```
+```xml
+<g:google_product_category><![CDATA[toys & puzzle]]></g:google_product_category>
+```
 
 :::
 
@@ -197,6 +203,14 @@ Below you will find possible error codes generated when validating this field al
 ```csv
 google_product_category
 144
+```
+```csv
+google_product_category
+Divers sports > Water polo
+```
+```csv
+google_product_category
+toys & puzzle
 ```
 
 :::

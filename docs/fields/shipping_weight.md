@@ -160,6 +160,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_weight>11.,.,.,111</g:shipping_weight>
 ```
+```xml
+<g:shipping_weight>unkn-own</g:shipping_weight>
+```
 
 :::
 
@@ -167,6 +170,9 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:shipping_weight>empty value</g:shipping_weight>
+```
+```xml
+<g:shipping_weight>111.222.333 kg</g:shipping_weight>
 ```
 
 :::
@@ -197,6 +203,10 @@ Below you will find possible error codes generated when validating this field al
 shipping_weight
 "11.,.,.,111"
 ```
+```csv
+shipping_weight
+unkn-own
+```
 
 :::
 
@@ -205,6 +215,10 @@ shipping_weight
 ```csv
 shipping_weight
 empty value
+```
+```csv
+shipping_weight
+111.222.333 kg
 ```
 
 :::

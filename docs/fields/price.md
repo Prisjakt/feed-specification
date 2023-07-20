@@ -194,6 +194,12 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:price>1000</g:price>
 ```
+```xml
+<g:price>5.00 dollars</g:price>
+```
+```xml
+<g:price>5.00</g:price>
+```
 
 :::
 
@@ -201,6 +207,9 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:price>foo SEK</g:price>
+```
+```xml
+<g:price>SEK</g:price>
 ```
 
 :::
@@ -218,6 +227,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:price>10.0.00.00 SEK</g:price>
 ```
+```xml
+<g:price>10.0.00.00 SEK</g:price>
+```
 
 :::
 
@@ -226,6 +238,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:price>-10 SEK</g:price>
 ```
+```xml
+<g:price>0 SEK</g:price>
+```
 
 :::
 
@@ -233,6 +248,9 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:price>$100</g:price>
+```
+```xml
+<g:price>100$</g:price>
 ```
 
 :::
@@ -247,6 +265,14 @@ Below you will find possible error codes generated when validating this field al
 price
 1000
 ```
+```csv
+price
+5.00 dollars
+```
+```csv
+price
+5.00
+```
 
 :::
 
@@ -255,6 +281,10 @@ price
 ```csv
 price
 foo SEK
+```
+```csv
+price
+SEK
 ```
 
 :::
@@ -274,6 +304,10 @@ price
 price
 10.0.00.00 SEK
 ```
+```csv
+price
+10.0.00.00 SEK
+```
 
 :::
 
@@ -283,6 +317,10 @@ price
 price
 -10 SEK
 ```
+```csv
+price
+0 SEK
+```
 
 :::
 
@@ -291,6 +329,10 @@ price
 ```csv
 price
 $100
+```
+```csv
+price
+100$
 ```
 
 :::

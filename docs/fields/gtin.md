@@ -178,6 +178,24 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:gtin>026282818705</g:gtin>
 ```
+```xml
+<g:gtin>046282818705</g:gtin>
+```
+```xml
+<g:gtin>03628281</g:gtin>
+```
+```xml
+<g:gtin>97795145</g:gtin>
+```
+```xml
+<g:gtin>8801088269696</g:gtin>
+```
+```xml
+<g:gtin>996282818705</g:gtin>
+```
+```xml
+<g:gtin>03628281</g:gtin>
+```
 
 :::
 
@@ -214,6 +232,30 @@ Below you will find possible error codes generated when validating this field al
 ```csv
 gtin
 026282818705
+```
+```csv
+gtin
+046282818705
+```
+```csv
+gtin
+03628281
+```
+```csv
+gtin
+97795145
+```
+```csv
+gtin
+8801088269696
+```
+```csv
+gtin
+996282818705
+```
+```csv
+gtin
+03628281
 ```
 
 :::

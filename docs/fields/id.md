@@ -186,6 +186,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:id><![CDATA[a ]]></g:id>
 ```
+```xml
+<g:id><![CDATA[ a]]></g:id>
+```
 
 :::
 
@@ -242,6 +245,10 @@ id
 ```csv
 id
 a
+```
+```csv
+id
+ a
 ```
 
 :::
