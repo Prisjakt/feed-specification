@@ -70,7 +70,7 @@ Please refer to our [section regarding CSV files](/types-of-feeds/pull/file-form
 
 :::danger <Anchor id="malformed_affiliate_link_template" title="malformed_affiliate_link_template" />
 
-The feed configuration for affiliate link template is malformed and we are unable to render links from it. Adjust the template and re-run.
+The feed configuration for affiliate link template is malformed and we are unable to render links from it. Contact support to update the template and resolve this issue.
 
 :::
 
@@ -101,7 +101,7 @@ Possible things to investigate
 
 :::danger <Anchor id="offers_to_remove_above_threshold_error" title="offers_to_remove_above_threshold_error" />
 
-This error is caused by our safeguard. To make it harder to delete the full inventory of a feed we have a safeguard setting that can be adjusted on a per feed basis. If our agent detects that it would remove more offers than this threshold then the process is aborted and this error is thrown.
+This error is caused by our safeguard. To make it harder to delete the full inventory of a feed we have a safeguard setting (default 30% of offers) that can be adjusted on a per feed basis. If our agent detects that it would remove more offers than this threshold then the process is aborted and this error is thrown. Contact support if you want to adjust this value, bot relative and absolute levels are applicable.
 
 :::
 
