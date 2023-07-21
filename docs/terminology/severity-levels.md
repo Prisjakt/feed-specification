@@ -6,12 +6,17 @@ sidebar_position: 3
 
 ## Offers
 
-And offer as whole may be in **three** states
-
+And offer as whole may be in the following states
 
 :::tip Accepted
 
 All *supplied* fields are valid.
+
+:::
+
+:::info Skipped
+
+We can filter offers based on some criteria. Eg. skipping vendors known to be malicious, or categories not used by Prisjakt. 
 
 :::
 

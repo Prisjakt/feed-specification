@@ -1,14 +1,25 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# File Encoding (UTF-8)
+# File Encoding
 
 In order for computers to understand each other and to be able to represent the large amount of different languages characters and symbols, encodings are needed. Encodings are a way of defining a set where numbers correspond to a certain symbol.
 
 
+## Supported File Encodings
+
+We support the following encodings (and only these, see [below](#why-not-more-encodings))
+
+- [utf-8](https://en.wikipedia.org/wiki/UTF-8)
+- [utf-8-sig (or utf-8 with BOM)](https://docs.python.org/3/library/codecs.html#module-encodings.utf_8_sig)
+- [ascii](https://sv.wikipedia.org/wiki/ASCII)
+- [windows-1252](https://sv.wikipedia.org/wiki/Windows-1252)
+- [iso-8859-1 (also called latin1)](https://sv.wikipedia.org/wiki/ISO/IEC_8859-1)
+
+
 ## UTF8
 
-We support  [UTF-8](https://en.wikipedia.org/wiki/UTF-8) (and *only* UTF-8, see [below](#why-not-more-encodings)) which is the most common used character encoding for the web and it is also the recommended encoding in the [HTML 5 Specification](https://www.w3.org/TR/2011/WD-html5-20110405/infrastructure.html#utf-8).
+We **strongly** recommend you to stick to UTF-8 as this is the most common used character encoding for the web and it is also the recommended encoding in the [HTML 5 Specification](https://www.w3.org/TR/2011/WD-html5-20110405/infrastructure.html#utf-8).
 
 :::note Learn about UTF 8
 
@@ -83,7 +94,7 @@ file.write_all(b"content")?;
 
 ## Why Not More Encodings?
 
-There are multiple other common encodings such as `iso-8859-1` or `windows-1252`. We **do not** support sending us files using these encodings and the reason for that is that as soon as we start accepting multiple encodings we have to use heuristics in order to detect the encoding before parsing. This is an *error prone* and *uncertain* task and only adds the risk of creating errors to no real benefit, hence we have opted to only support UTF-8.
+There are multiple other encodings not listed above. We **do not** support sending us files using other encodings than the list above. This is a decision taken weighing in complexity vs benefit vs error proneness.
 
 ## References
 
