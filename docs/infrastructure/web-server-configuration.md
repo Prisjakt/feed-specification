@@ -25,11 +25,36 @@ For optimal results it is preferable if you host your feeds with the support for
 
 ### Do
 
+#### Controlled Generation
+
 We recommend that you generate the files on your backend in a matter **you control**, either scheduled or upon changes to your data. Then host the resulting files (either [full feed](/types-of-feeds/pull/feed.md) or [delta files](/types-of-feeds/pull/delta-feeds.md)) via your server for us to fetch.
+
+#### Atomic Updates
+
+ You should update your feed in an atomic operation. This means you *should not overwrite your current feed while your are generating* as there is a small chance that we are currently reading it. You should **generate to a new file and then switch them out**.
+
+Do this 
+```bash
+feed.xml
+generate new feed to .new_feed.xml
+mv -f .new_feed.xml feed.xml # atomic operation
+```
+
+instead of
+
+```bash
+feed.xml
+generate new feed to feed.xml
+```
+
+the latter can cause problems as seen here
+
+![Atomic Update Fail](@site/docs/assets/atomic-update-fail.png)
+
 
 ### Do Not
 
-We do **not** recommend that you dynamically generate your feed files when a request is incoming.
+We **do not** recommend that you dynamically generate your feed on a per request basis.
 
 The reasons for this is that:
 
