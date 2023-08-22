@@ -3,31 +3,34 @@ sidebar_position: 1
 ---
 
 # Woocommerce
+
 Prisjakt Feed Plugin User Guide
 
-This guide provides detailed instructions on how to install and utilize the plugin to generate product feeds.
+This guide provides detailed instructions on how to install and utilize our WooCommerce plugin to generate product feeds.
 
 ## Installation
+
 1. Installation via WordPress Marketplace:
    - Navigate to your WordPress dashboard.
    - Go to Plugins > Add New.
-   - Search for "Prisjakt Feed".
-   - Click "Install Now".
-   - Once installed, click "Activate".
+   - Search for `Prisjakt Feed``.
+   - Click `Install Now``.
+   - Once installed, click `Activate`.
 
-2. Manual Installation:
+1. Manual Installation:
     - Download the Prisjakt Feed WooCommerce plugin package from the following link.
     - Navigate to your WordPress dashboard.
     - Go to Plugins > Add New.
-    - Click on "Upload Plugin".
-    - Choose the downloaded plugin package and click "Install Now".
-    - Once installed, click "Activate".
+    - Click on `Upload Plugin`.
+    - Choose the downloaded plugin package and click `Install Now`.
+    - Once installed, click `Activate`.
 
 ## Using the Plugin
 
 ### All Feeds Page
 
 This page lists all your feeds. Remember to refresh the page in the feed list view to view the progress of feed generation.
+
 1. Columns
     - Active: Toggle this to allow/disallow automatic feed generation via system cron.
     - Product feed name: Displays the feed title.
@@ -39,7 +42,7 @@ This page lists all your feeds. Remember to refresh the page in the feed list vi
     - Scheduled At: Next scheduled date for feed generation.
     - Date: Date when the feed settings were created.
 
-2. Row Actions
+1. Row Actions
     - Edit: Modify the feed settings.
     - Trash: Move the feed to the trash and disable its active status.
     - Download feed: Download the XML version of the feed.
@@ -48,46 +51,50 @@ This page lists all your feeds. Remember to refresh the page in the feed list vi
     - Delete Permanently: Completely remove the feed settings and the XML file.
 
 ### Adding New Feed
+
 1. Generating Feed
 
    - Name: Define a name for the feed.
    - Refresh interval: Schedule feed generation for every 24h, 12h, or 1h.
 
-2. Feed Mapping
+1. Feed Mapping
 
-Map your product attributes to the Prisjakt shopping attributes.
+    Map your product attributes to the Prisjakt shopping attributes.
 
-    Prisjakt shopping attributes: Lists the Prisjakt attributes.
-    Prefix/Suffix: Add a value before or after the actual value.
-    Value: Fetches data from product details.
+    - Prisjakt shopping attributes: Lists the Prisjakt attributes.
+    - Prefix/Suffix: Add a value before or after the actual value.
+    - Value: Fetches data from product details.
 
-Actions
+    Actions
 
-    Add Field Mapping: Add fields from a predefined list.
-    Add Custom Field: Define custom fields.
+    - Add Field Mapping: Add fields from a predefined list.
+    - Add Custom Field: Define custom fields.
 
-3. Feed Filters
+1. Feed Filters
 
-Fine-tune the products you want in your feed using filters.
+    Fine-tune the products you want in your feed using filters.
 
-    If: Select the attribute for filtering.
-    Condition: Define conditions like contains, equals, etc.
-    Value: Set the desired value for the condition.
+    - If: Select the attribute for filtering.
+    - Condition: Define conditions like contains, equals, etc.
+    - Value: Set the desired value for the condition.
 
-Actions
+    Actions
 
-    Add Filter: Introduce new conditions for filtering products.
+    - Add Filter: Introduce new conditions for filtering products.
 
-4. Category Mapping
+1. Category Mapping
 
-Map your product categories with Google categories for better alignment.
+    Map your product categories with Google categories for better alignment.
 
 ## Settings
+
 1. Plugin settings
    - Customize global settings of the plugin.
-2. Extra fields
+1. Extra fields
    - Introduce additional fields in the product edit view, like prisjakt_id. This works for both simple and variable products.
-3. Plugin System Check
+1. Plugin System Check
    - Review system requirements and make any necessary improvements to your server as per the suggestions.
 
-## Final Notes
+## Support and Feedback
+
+If you encounter any challenges, have questions, or wish to share insights on the WooCommerce plugin installation, don't hesitate to connect with us at `support@prisjakt.nu`.
