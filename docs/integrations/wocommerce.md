@@ -13,12 +13,12 @@ This guide provides detailed instructions on how to install and utilize our WooC
 1. Installation via WordPress Marketplace:
    - Navigate to your WordPress dashboard.
    - Go to Plugins > Add New.
-   - Search for `Prisjakt Feed``.
-   - Click `Install Now``.
+   - Search for `Prisjakt Feed`.
+   - Click `Install Now`.
    - Once installed, click `Activate`.
 
 1. Manual Installation:
-    - Download the Prisjakt Feed WooCommerce plugin package from the following link.
+    - Download the Prisjakt Feed WooCommerce plugin package from the following [link](https://drive.google.com/file/d/1ipUSYpsvzPXeoy6oNM-wKEdlN554lVpW/view?usp=drive_link)
     - Navigate to your WordPress dashboard.
     - Go to Plugins > Add New.
     - Click on `Upload Plugin`.
