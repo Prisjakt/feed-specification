@@ -91,7 +91,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>Skåne</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Express</g:service>
   <g:price>25.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>2</g:max_handling_time>
@@ -110,7 +110,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>Skåne</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Express</g:service>
   <g:price>25.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>2</g:max_handling_time>
@@ -123,7 +123,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>New York</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Home delivery</g:service>
   <g:price>5 SEK</g:price>
 </g:shipping>
 ```
@@ -132,7 +132,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>London</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Standard</g:service>
   <g:price>0 GBP</g:price>
 </g:shipping>
 ```
@@ -141,7 +141,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>Skåne</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Home Delivery</g:service>
   <g:price>25.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>2</g:max_handling_time>
@@ -161,7 +161,7 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>Skåne</g:region>
-  <g:service>UPC</g:service>
+  <g:service>Express</g:service>
   <g:price>45.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
   <g:max_handling_time>8</g:max_handling_time>
@@ -229,7 +229,7 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping>
   <g:region>New York</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Express</g:service>
   <g:price>5 SEK</g:price>
   <g:min_handling_time>-1</g:min_handling_time>
 </g:shipping>
@@ -243,7 +243,7 @@ Below you will find possible error codes generated when validating this field al
 <g:shipping>
   <g:country>SE</g:country>
   <g:region>Skåne</g:region>
-  <g:service>DHL</g:service>
+  <g:service>Home</g:service>
   <g:price>5.00 SEK</g:price>
   <g:min_handling_time>1</g:min_handling_time>
 </g:shipping>
@@ -259,7 +259,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
-:New York:DHL:5 SEK:-1
+:New York:Express:5 SEK:-1
 ```
 
 :::
@@ -268,7 +268,7 @@ shipping(country:region:service:price:min_handling_time)
 
 ```csv
 shipping(country:region:service:price:min_handling_time)
-SE:Skåne:DHL:5.00 SEK:1
+SE:Skåne:Home:5.00 SEK:1
 ```
 
 :::
