@@ -39,6 +39,8 @@ https://schema.prisjakt.nu/ns/1.0
 
 All XML feeds should start with the following header and the files should be properly [UTF-8 encoded](/advanced/encoding/file-encoding.md).
 
+Do not use [control characters](https://en.wikipedia.org/wiki/Control_character) in feed file. We support some of them trying to follow [XML spec](https://en.wikipedia.org/wiki/Valid_characters_in_XML) but not guarantee to fully support it.
+
 ```
 <?xml version='1.0' encoding='UTF-8'?>
 ```
