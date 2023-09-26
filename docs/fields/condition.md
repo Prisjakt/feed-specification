@@ -41,6 +41,9 @@ State the condition of the product you are selling for your customers.
       </pre>
     </dt>
     <dd>
+    <ReactMarkdown>
+      Product is new but the packaging is damaged or missing. May be due to the packaging being damaged in transport.
+    </ReactMarkdown>
     </dd>
 <dt>
       <pre>
@@ -50,6 +53,9 @@ State the condition of the product you are selling for your customers.
       </pre>
     </dt>
     <dd>
+    <ReactMarkdown>
+      Product has been used as an exhibition sample and is therefore not in intact packaging, or the product is completely without packaging.
+    </ReactMarkdown>
     </dd>
 <dt>
       <pre>
@@ -59,6 +65,9 @@ State the condition of the product you are selling for your customers.
       </pre>
     </dt>
     <dd>
+    <ReactMarkdown>
+      Product is new.
+    </ReactMarkdown>
     </dd>
 <dt>
       <pre>
@@ -68,6 +77,9 @@ State the condition of the product you are selling for your customers.
       </pre>
     </dt>
     <dd>
+    <ReactMarkdown>
+      Product is reconditioned/renovated.
+    </ReactMarkdown>
     </dd>
 <dt>
       <pre>
@@ -77,6 +89,21 @@ State the condition of the product you are selling for your customers.
       </pre>
     </dt>
     <dd>
+    <ReactMarkdown>
+      Product has been previously used.
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      almost new
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      Product is both technically and visually almost like new, condition has been verified by the company and has at least a 1-year warranty.
+    </ReactMarkdown>
     </dd>
 </dl>
 
@@ -136,6 +163,10 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 <g:condition>demo</g:condition>
 ```
 
+```xml
+<g:condition>almost new</g:condition>
+```
+
 
   </div>
 </details>
@@ -179,6 +210,11 @@ damaged packaging
 ```csv
 condition
 demo
+```
+
+```csv
+condition
+almost new
 ```
 
 
