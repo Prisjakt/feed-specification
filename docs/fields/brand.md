@@ -39,7 +39,7 @@ The brand attribute is used to indicate a product's brand/manufacturer name.
 
 ### Don´t
 
-- Don´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
+- DonÂ´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
 
 
 
