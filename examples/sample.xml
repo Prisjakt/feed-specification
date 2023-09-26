@@ -18,7 +18,7 @@
       <g:availability_date>2021-03-21</g:availability_date>
       <g:brand><![CDATA[Sony]]></g:brand>
       <g:color>RED/GREEN/BLUE</g:color>
-      <g:condition>demo</g:condition>
+      <g:condition>almost new</g:condition>
       <pj:delta_command>remove</pj:delta_command>
       <g:description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]]></g:description>
       <g:energy_efficiency_class>g</g:energy_efficiency_class>
@@ -46,7 +46,7 @@
       <g:shipping>
         <g:country>SE</g:country>
         <g:region>Skåne</g:region>
-        <g:service>DHL</g:service>
+        <g:service>Express</g:service>
         <g:price>25.00 SEK</g:price>
         <g:min_handling_time>1</g:min_handling_time>
         <g:max_handling_time>2</g:max_handling_time>
@@ -66,7 +66,7 @@
       <g:shipping>
         <g:country>SE</g:country>
         <g:region>Skåne</g:region>
-        <g:service>UPC</g:service>
+        <g:service>Express</g:service>
         <g:price>45.00 SEK</g:price>
         <g:min_handling_time>1</g:min_handling_time>
         <g:max_handling_time>8</g:max_handling_time>
