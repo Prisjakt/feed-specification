@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Magento 2
 
+## Installation
+
+1. Manual Installation:
+    - Download the Prisjakt Feed Magento plugin package from the following [link](https://drive.google.com/file/d/1c14NVUL6Mit4H7yJw1A6W3H7oxx8TksW/view?usp=sharing)
+    - If you encounter any issues or require assistance during the installation, please reach out to our support team at `support@prisjakt.nu`.
+
 ## Prisjakt Feed Module User Guide
 
 This guide will walk you through creating and managing product feeds in accordance with Google's guidelines using the Prisjakt module for Magento 2.
@@ -23,8 +29,6 @@ Navigate to the admin panel menu to find the Prisjakt menu. Here, you can:
 - Create new feeds
 - Set up category mappings
 - View existing feeds and mappings
-
-**Need Assistance?** Click the “Get Support” button to contact our support team.
 
 ### 2. Setting Up Category Mappings
 
