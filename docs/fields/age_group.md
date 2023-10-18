@@ -136,10 +136,6 @@ Here are examples of how a valid *age_group* value  should look like in XML and 
 ```
 
 ```xml
-<g:age_group></g:age_group>
-```
-
-```xml
 <g:age_group>toddler</g:age_group>
 ```
 
@@ -181,11 +177,6 @@ kids
 ```csv
 age_group
 newborn
-```
-
-```csv
-age_group
-""
 ```
 
 ```csv

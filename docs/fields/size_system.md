@@ -32,6 +32,109 @@ size_system -- required if used  --- size
 ```
 
 
+## Allowed Enum Values
+
+<dl>
+<dt>
+      <pre>
+      <code>
+      au
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      br
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      cn
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      de
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      eu
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      fr
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      it
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      jp
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      mex
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      uk
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      us
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    </dd>
+</dl>
 
 
 
