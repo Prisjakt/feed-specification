@@ -30,10 +30,8 @@ Link to the image that features the promotion or promotional item.
 
 ## Example Values
 
-Here are examples of how a valid *image_link* value  should look like in XML.
+Here are examples of how a valid *image_link* value should look like in XML.
 
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
 
 :::tip Valid Value
 
@@ -55,15 +53,11 @@ Here are examples of how a valid *image_link* value  should look like in XML.
   </div>
 </details>
 
- </TabItem>
-</Tabs>
 
 ## Error Codes
 
 Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 
 :::danger <Anchor id="validation_url_scheme_not_allowed" title="validation_url_scheme_not_allowed" />
 
@@ -80,8 +74,6 @@ Below you will find possible error codes generated when validating this field al
 :::
 
 
- </TabItem>
-</Tabs>
 
 ## Properties
 

@@ -31,10 +31,8 @@ Promotion description.
 
 ## Example Values
 
-Here are examples of how a valid *description* value  should look like in XML.
+Here are examples of how a valid *description* value should look like in XML.
 
-<Tabs>
-  <TabItem value="valid_xml" label="XML" default>
 
 :::tip Valid Value
 
@@ -56,15 +54,11 @@ Here are examples of how a valid *description* value  should look like in XML.
   </div>
 </details>
 
- </TabItem>
-</Tabs>
 
 ## Error Codes
 
 Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
-<Tabs>
-  <TabItem value="invalid_xml" label="XML" default>
 
 :::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
@@ -75,8 +69,6 @@ Below you will find possible error codes generated when validating this field al
 :::
 
 
- </TabItem>
-</Tabs>
 
 ## Properties
 
