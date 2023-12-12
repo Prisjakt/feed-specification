@@ -47,6 +47,19 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          const redirects_path='/fields/offer'
+          // We want to redirect from /docs/<offer_feed_field_name> to /docs/offer/<field_name>
+          if (existingPath.startsWith(redirects_path)) {
+            return existingPath.replace(redirects_path, '/fields');
+          }
+          return undefined; // No redirect
+        },
+      },
+    ],
   ],
   markdown: {
     mermaid: true,
