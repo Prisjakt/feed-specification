@@ -6,13 +6,13 @@ sidebar_position: 2
 
 Delta feeds is a way of splitting up your inventory to a base feed and then periodically supplying small files with only the changes. This improves the amount of offers and the average time for offer updates by just sending the information changed.
 
-Delta files can be read at a higher frequency and contains a [delta_command](/docs/fields/delta_command.md) plus changed fields for each offer.
+Delta files can be read at a higher frequency and contains a [delta_command](/docs/fields/offer/delta_command.md) plus changed fields for each offer.
 
 Delta feeds consists of three components:
 
 - **Index file** a list that specifies that delta files exist and when they where updated
 - **Base feed** this is the full inventory feed with all offers and all information, read at a slower pace
-- **Delta files** small files generated often that contains a [delta_command](/docs/fields/delta_command.md) plus changes only
+- **Delta files** small files generated often that contains a [delta_command](/docs/fields/offer/delta_command.md) plus changes only
 
 ## Advantages
 

@@ -19,7 +19,7 @@ If possible, then use [XML](/types-of-feeds/pull/file-formats/xml.md) over CSV. 
 
 - More well defined than csv
 - Have better tools to handle [escaping and encoding](/advanced) 
-- Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/fields/shipping.md)
+- Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/fields/offer/shipping.md)
 - CSVs have no end marker while an XML file have an end tag, it´s therefore harder to know if a CSV have been read to the end or aborted due to network problems
 
 ## Data

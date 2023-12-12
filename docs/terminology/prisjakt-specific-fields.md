@@ -10,8 +10,8 @@ But in order to be able to provide you with extra functionality we sometimes add
 
 Currently, our Prisjakt specific fields are:
 
-- [prisjakt_id](/fields/prisjakt_id.md)
-- [member_price](/fields/member_price.md)
+- [prisjakt_id](/fields/offer/prisjakt_id.md)
+- [member_price](/fields/offer/member_price.md)
 
 
 The fields are also defined in [our xml namespace](/types-of-feeds/pull/file-formats/xml.md#prisjakt-xml-namespace)
