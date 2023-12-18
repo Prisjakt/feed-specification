@@ -28,6 +28,9 @@ Defines the time period when the promotion is active.
 - Must be a string
 - Must contain two dates (start date, end date) separated by a forward slash `/
 - ISO-8601 date format with timezone offset (e.g. `2023-12-20T12:00:00+00:00`)
+- Start date must start in future (`start_date > now`)
+- End date must be after start date (`end_date > start_date`)
+- Ongoing promotion cannot be updated.
 
 
 ## Example Values

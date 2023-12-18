@@ -10,7 +10,7 @@ Prisjakt XML feeds are based on the [Google Product Data Specification](https://
 
 ## Namespaces
 
-A Prisjakt feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/terminology/prisjakt-specific-fields) defined by us.
+A Prisjakt feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/terminology/prisjakt-specific-fields#offer-feeds) defined by us.
 
 ```xml
 <rss xmlns:pj="https://schema.prisjakt.nu/ns/1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
@@ -21,7 +21,7 @@ All fields stemming from the Google Product Data specification will use the `g:`
 
 #### Priority When Parsed
 
-If multiple fields with the same name but different namepaces exist, the field will be parsed with the following priority:
+If multiple fields with the same name but different namespaces exist, the field will be parsed with the following priority:
 
 1. `pj:` first eg. `<pj:some_field>100 SEK</pj:some_field>`
 1. `g:` second eg. `<g:some_field>100 SEK</g:some_field>`
@@ -29,7 +29,7 @@ If multiple fields with the same name but different namepaces exist, the field w
 1. **other/unknown** in undefined order eg. `<xyz:some_field>100 SEK</xyz:some_field>`
 ### Prisjakt XML Namespace
 
-Our namespace definiton file is located at the following URL:
+Our namespace definition file is located at the following URL:
 
 ```
 https://schema.prisjakt.nu/ns/1.0
