@@ -14,7 +14,7 @@ While CSV is lightweight and easy to use, [XML](./xml.md) is more well defined a
 
 ## Format
 
-We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/examples/all.mdx)
+We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/examples/offer/all.mdx)
 
 - First row is a header row
 

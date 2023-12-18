@@ -58,10 +58,15 @@ const config = {
           * to be available also under /fields/<field_name>
           * https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
           * */
-          const redirects_path='/fields/offer'
-          // We want to redirect from /docs/<offer_feed_field_name> to /docs/offer/<field_name>
-          if (existingPath.startsWith(redirects_path)) {
-            return existingPath.replace(redirects_path, '/fields');
+          const FIELDS_REDIRECTS_PATH='/fields/offer'
+          const EXAMPLES_REDIRECTS_PATH='/examples/offer'
+          // We want to redirect from /docs/fields/<offer_feed_field_name> to /docs/fields/offer/<field_name>
+          if (existingPath.startsWith(FIELDS_REDIRECTS_PATH)) {
+            return existingPath.replace(FIELDS_REDIRECTS_PATH, '/fields');
+          }
+          // We want to redirect from /docs/examples/<file> to /docs/examples/offer/<file>
+          if (existingPath.startsWith(EXAMPLES_REDIRECTS_PATH)) {
+            return existingPath.replace(EXAMPLES_REDIRECTS_PATH, '/examples');
           }
           return undefined; // No redirect
         },
