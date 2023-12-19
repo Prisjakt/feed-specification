@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:pj="https://schema.prisjakt.nu/ns/1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
+<rss xmlns:pj="https://schema.prisjakt.nu/ns/promotions-1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
   <channel>
-    <title>Prisjakt Minimal Example Feed</title>
-    <description>This is an example feed with the minimal values required</description>
+    <title>Prisjakt Minimal Promotions Feed</title>
+    <description>This is an promotions feed with the minimal values required</description>
     <link>https://schema.prisjakt.nu</link>
     <item>
       <g:promotion_id><![CDATA[tbby123_us]]></g:promotion_id>
