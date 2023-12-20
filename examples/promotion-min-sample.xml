@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:pj="https://schema.prisjakt.nu/ns/1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
+  <channel>
+    <title>Prisjakt Minimal Example Feed</title>
+    <description>This is an example feed with the minimal values required</description>
+    <link>https://schema.prisjakt.nu</link>
+    <item>
+      <g:promotion_id><![CDATA[tbby123_us]]></g:promotion_id>
+      <g:coupon_value_type>buy_m_get_n_money_off</g:coupon_value_type>
+      <g:long_title><![CDATA[Free mug with purchase]]></g:long_title>
+      <g:promotion_effective_dates>2023-12-20T00:00:00+00:00/2023-12-24T00:00:00+00:00</g:promotion_effective_dates>
+    </item>
+  </channel>
+</rss>
