@@ -15,18 +15,42 @@ There are some fields, we *simply cannot be without* such as a link to your offe
 
 The following fields are required for an offer to show, you can see an example of the minimal required fields in action [here](/examples/minimal)
 
-- [Availability](/fields/availability.md)
-- [Condition](/fields/condition.md)
-- [Id](/fields/id.md)
-- [Link](/fields/link.md)
-- [Price](/fields/price.md)
-- [Title](/fields/title.md)
+- [Availability](/fields/offer/availability.md)
+- [Condition](/fields/offer/condition.md)
+- [Id](/fields/offer/id.md)
+- [Link](/fields/offer/link.md)
+- [Price](/fields/offer/price.md)
+- [Title](/fields/offer/title.md)
 
 ## Optional Fields
 
 <OptionalField />
 
 Most fields in Prisjakt are optional, which means that you don´t have to supply them. Your offer will be indexed anyway. Please note that this *may limit the functionality* we can present for your offer. You should *always* strive towards supplying as much (and correct) information as possible.
+
+## Promotion Required Fields
+
+<RequiredField />
+
+There are some fields, we *simply cannot be without* such as a link to your offer, a price and an title. If any of these fields are missing, your **whole offer** will be omitted.
+
+The following fields are required for us to correctly index your promotion and assign it to offers.
+
+- [Promotion Id](/fields/promotion/promotion_id.md)
+- [Long title](/fields/promotion/long_title.md)
+- [Coupon value type](/fields/promotion/coupon_value_type.md)
+- [Promotion effective dates](/fields/promotion/promotion_effective_dates.md)
+
+
+## Promotion Optional Fields
+
+<OptionalField />
+
+Optional fields don't have to be supplied, but it's still good to have them.
+
+- [Description](/fields/promotion/description.md)
+- [Image link](/fields/promotion/image_link.md)
+- [Promotion page link](/fields/promotion/promotion_page_link.md)
 
 ## Changelog
 
@@ -36,6 +60,13 @@ Most fields in Prisjakt are optional, which means that you don´t have to supply
     date: new Date("2022-12-06"),
     added: [
         "Complete list of required fields"
+    ]
+  },
+  {
+    semanticVersion: "0.0.2",
+    date: new Date("2023-12-12"),
+    added: [
+        "List of Promotion Feed fields"
     ]
   }
 ]} dateOnly={true}/>

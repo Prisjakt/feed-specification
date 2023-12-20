@@ -25,3 +25,15 @@ We support reading feeds formatted according to Amazon Marketplace format but wi
 We support reading feeds formatted according to Amazon Deals format but with fewer data mapped than if you use our format.
 
 </details>
+
+<details>
+  <summary><strong>What is the offer feed?</strong></summary>
+    
+Offer feed contains information about your products. It is the most common feed type and is used to update prices and stock status on Prisjakt.
+</details>
+
+<details>
+  <summary><strong>What is the promotion feed?</strong></summary>
+    
+Promotions feed contains information about your promotions. It is used to update promotions on Prisjakt.
+</details>

@@ -47,6 +47,31 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          /*
+          * The way this plugin works is that it generates some additional pages (not visible to end user)
+          * required to do redirects. These pages have to be located under paths that were moved.
+          * That’s why this opposite statement is here -> we are duplicating /fields/offer/<field_name> (new structure)
+          * to be available also under /fields/<field_name>
+          * https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
+          * */
+          const FIELDS_REDIRECTS_PATH='/fields/offer'
+          const EXAMPLES_REDIRECTS_PATH='/examples/offer'
+          // We want to redirect from /docs/fields/<offer_feed_field_name> to /docs/fields/offer/<field_name>
+          if (existingPath.startsWith(FIELDS_REDIRECTS_PATH)) {
+            return existingPath.replace(FIELDS_REDIRECTS_PATH, '/fields');
+          }
+          // We want to redirect from /docs/examples/<file> to /docs/examples/offer/<file>
+          if (existingPath.startsWith(EXAMPLES_REDIRECTS_PATH)) {
+            return existingPath.replace(EXAMPLES_REDIRECTS_PATH, '/examples');
+          }
+          return undefined; // No redirect
+        },
+      },
+    ],
   ],
   markdown: {
     mermaid: true,

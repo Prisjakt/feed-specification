@@ -2,7 +2,7 @@
 
 [![What Is An Url?](@site/docs/assets/url.png)](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
 
-URLs are complex datatypes that carry a lot of information and can be a bit hard to handle sometimes. In this article we will try to explain how to deal with some tricky but not uncommon cases. All fields that are of type URL such as the [link](/fields/link) field have both [valid examples](/fields/link#example-values) and [invalid examples](/fields/link#error-codes) of URLs in their respective sections.
+URLs are complex datatypes that carry a lot of information and can be a bit hard to handle sometimes. In this article we will try to explain how to deal with some tricky but not uncommon cases. All fields that are of type URL such as the [link](/fields/offer/link) field have both [valid examples](/fields/offer/link#example-values) and [invalid examples](/fields/offer/link#error-codes) of URLs in their respective sections.
 
 The image above is borrowed from Mozilla MDN[^1].
 
