@@ -1,6 +1,6 @@
 # Integrations with Prisjakt
 
-This page offers a guide for integrating your e-commerce platform with Prisjakt. By using the Google Feed format, you can effectively showcase your products to a broader audience.
+This page offers a guide for integrating your e-commerce platform with Prisjakt. By using the Prisjakt feed or Google Feed format, you can effectively showcase your products to a broader audience.
 
 ## Understanding Prisjakt Integration
 
