@@ -41,5 +41,5 @@ We've listed popular and free (or freemium) plugins for generating Prisjakt comp
 ## Best Practices for Integration
 
 1. **Consistent Updates**: Regularly update your product feed to ensure accurate pricing and availability information.
-2. **Optimize Product Data**: Include detailed product titles, descriptions, and high-quality images to improve visibility and click-through rates.
-3. **Leverage Analytics**: Monitor the performance of your listings on Prisjakt to optimize pricing strategies and promotions.
+1. **Optimize Product Data**: Include detailed product titles, descriptions, and high-quality images to improve visibility and click-through rates.
+1. **Leverage Analytics**: Monitor the performance of your listings on Prisjakt to optimize pricing strategies and promotions.
