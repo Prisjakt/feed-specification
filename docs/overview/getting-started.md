@@ -20,10 +20,9 @@ If you have [Google Merchant Product Feed](https://support.google.com/merchants/
 
 ## Check 2: Use Third Party Vendors
 
-- [ ] Check our list of [third party vendors](/third-party) that might have solutions to create a feed for you
+- [ ] Check our list of [feed management services](/feed-management-services) that might have solutions to create a feed for you
 
 ## Check 3: Generate Your Own
 
 - [ ] Generate a [feed](/types-of-feeds/pull/feed.md) in [xml format](/docs/types-of-feeds/pull/file-formats/xml.md) using our [examples](/examples/all) and [field specifications](/fields)
 - [ ] Large volumes? Generate a [delta feed](/types-of-feeds/pull/delta-feeds.md)
-
