@@ -7,9 +7,9 @@ Below you will find a series of questions to investigate to get you started with
 
 ## Check 1: Existing support in Your E-Commerce Platform
 
-- [ ] Can your [e-Commerce platform](/integrations/) generate Prisjakt feeds directly by activating a setting?
-- [ ] Is there any plugins that can generate Prisjakt feeds for your [e-Commerce platform](/integrations/)?
-- [ ] Can your [e-Commerce platform](/integrations/) generate [Google Merchant Product Feeds](https://support.google.com/merchants/answer/7052112?hl=en)? They can be used with us!
+- [ ] Can your [e-Commerce platform](/docs/e-commerce-integrations.md) generate Prisjakt feeds directly by activating a setting?
+- [ ] Is there any plugins that can generate Prisjakt feeds for your [e-Commerce platform](/docs/e-commerce-integrations.md)?
+- [ ] Can your [e-Commerce platform](/docs/e-commerce-integrations.md) generate [Google Merchant Product Feeds](https://support.google.com/merchants/answer/7052112?hl=en)? They can be used with us!
 
 :::info Google Merchant Product Feeds Are Compatible
 
@@ -20,10 +20,9 @@ If you have [Google Merchant Product Feed](https://support.google.com/merchants/
 
 ## Check 2: Use Third Party Vendors
 
-- [ ] Check our list of [third party vendors](/third-party) that might have solutions to create a feed for you
+- [ ] Check our list of [Feed Management Services](/docs/feed-management-services.md) that might have solutions to create a feed for you, or alternatively consider using one of [Affiliate Networks](/docs/affiliate-networks.md).
 
 ## Check 3: Generate Your Own
 
 - [ ] Generate a [feed](/types-of-feeds/pull/feed.md) in [xml format](/docs/types-of-feeds/pull/file-formats/xml.md) using our [examples](/examples/all) and [field specifications](/fields)
 - [ ] Large volumes? Generate a [delta feed](/types-of-feeds/pull/delta-feeds.md)
-
