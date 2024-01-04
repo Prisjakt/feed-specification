@@ -1,10 +1,10 @@
-# Integrations with Prisjakt
+# E-commerce Integrations
 
-This page offers a guide for integrating your e-commerce platform with Prisjakt. By using the Prisjakt feed or Google Feed format, you can effectively showcase your products to a broader audience.
+This page offers a guide for integrating your web shop with Prisjakt. By using the Prisjakt feed or Google Feed format, you can effectively showcase your products to a broader audience.
 
 ## Understanding Prisjakt Integration
 
-Prisjakt, known for its extensive product listings and comparison features, allows customers to find the best deals across various online retailers. By integrating your product feed into Prisjakt, your can:
+Prisjakt, known for its extensive product listings, allows customers to find the best deals across various online retailers. By integrating your product feed into Prisjakt, your can:
 
 - **Increase Visibility**: Gain exposure to a wider customer base actively comparing prices.
 - **Competitive Analysis**: Get insights into popularity and price trends for popular products.

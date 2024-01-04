@@ -1,4 +1,4 @@
-# Affiliate Network Integration
+# Affiliate Networks
 
 This help page provides insights into affiliate networks supported by Prisjakt.
 
@@ -6,4 +6,4 @@ This help page provides insights into affiliate networks supported by Prisjakt.
 
 ### Awin
 - **URL**: [Awin - Prisjakt Integration](https://www.awin.com/)
-- **Description**: Prisjakt supports the Awin feed format out of the box, making inventory integration a seamless process.
+- **Description**: Prisjakt seamlessly integrates with Awin's product feed format, ensuring a smooth and efficient compatibility for users.
