@@ -12,20 +12,24 @@ This help page offers an overview of selected feed management services. These se
 ## Recommended Feed Management Services
 
 ### Channable
-   - **Integration with Prisjakt**: Simplify the integration process with Prisjakt using Channable.
-   - **URL**: [Channable - Prisjakt Integration](https://www.channable.com/integrations/pricespy)
+
+- **Integration with Prisjakt**: Simplify the integration process with Prisjakt using Channable.
+- **URL**: [Channable - Prisjakt Integration](https://www.channable.com/integrations/pricespy)
 
 ### Feedoptimise
-   - **Comprehensive Feed Management**: Streamline feed management for Prisjakt and other platforms.
-   - **URL**: [Feedoptimise Integrations](https://www.feedoptimise.com/integrations)
+
+- **Comprehensive Feed Management**: Streamline feed management for Prisjakt and other platforms.
+- **URL**: [Feedoptimise Integrations](https://www.feedoptimise.com/integrations)
 
 ### WakeupData
-   - **Optimize Prisjakt Feeds**: Create and optimize feeds specifically for Prisjakt.
-   - **URL**: [WakeupData - Prisjakt Feed](https://www.wakeupdata.com/prisjakt-product-feed)
+
+- **Optimize Prisjakt Feeds**: Create and optimize feeds specifically for Prisjakt.
+- **URL**: [WakeupData - Prisjakt Feed](https://www.wakeupdata.com/prisjakt-product-feed)
 
 ### DataFeedWatch
-   - **Multi-Platform Integration**: Efficiently manage feeds across multiple channels including Prisjakt.
-   - **URL**: [DataFeedWatch Integrations](https://www.datafeedwatch.com/integrations)
+
+- **Multi-Platform Integration**: Efficiently manage feeds across multiple channels including Prisjakt.
+- **URL**: [DataFeedWatch Integrations](https://www.datafeedwatch.com/integrations)
 
 ## Best Practices for Effective Feed Management
 

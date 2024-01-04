@@ -16,27 +16,31 @@ We've listed popular and free (or freemium) plugins for generating Prisjakt comp
 
 ### Shopify
 
-#### 1. **Google Shopping Feed XML/CSV**
-   - **URL**: [Google Shopping Feed XML/CSV](https://apps.shopify.com/simple-google-shopping-feed)
-   - **Features**: Easy feed generation, automatic updates, and customizable feed attributes.
+#### **Google Shopping Feed XML/CSV**
+
+- **URL**: [Google Shopping Feed XML/CSV](https://apps.shopify.com/simple-google-shopping-feed)
+- **Features**: Easy feed generation, automatic updates, and customizable feed attributes.
 
 ### WooCommerce
 
-#### 1. **Product Feed PRO for WooCommerce**
-   - **URL**: [Product Feed PRO](https://wordpress.org/plugins/woo-product-feed-pro/)
-   - **Features**: Supports multiple feed formats, advanced product filtering, and feed customization.
+#### **Product Feed PRO for WooCommerce**
+
+- **URL**: [Product Feed PRO](https://wordpress.org/plugins/woo-product-feed-pro/)
+- **Features**: Supports multiple feed formats, advanced product filtering, and feed customization.
 
 ### Magento
 
-#### 1. **Google Shopping Feed for Magento 2**
-   - **URL**: [Google Shopping Feed](https://amasty.com/google-shopping-feed-for-magento-2.html)
-   - **Features**: Automated feed generation, advanced filters, and performance tracking.
+#### **Google Shopping Feed for Magento 2**
+
+- **URL**: [Google Shopping Feed](https://amasty.com/google-shopping-feed-for-magento-2.html)
+- **Features**: Automated feed generation, advanced filters, and performance tracking.
 
 ### PrestaShop
 
-#### 1. **Google Merchant Center (Google-Shopping)**
-   - **URL**: [Google Shopping Feed in XML](https://addons.prestashop.com/en/price-comparison/1768-google-merchant-center-google-shopping.html)
-   - **Features**: Easy setup, custom feed templates, and multi-store support.
+#### **Google Merchant Center (Google-Shopping)**
+
+- **URL**: [Google Shopping Feed in XML](https://addons.prestashop.com/en/price-comparison/1768-google-merchant-center-google-shopping.html)
+- **Features**: Easy setup, custom feed templates, and multi-store support.
 
 ## Best Practices for Integration
 
