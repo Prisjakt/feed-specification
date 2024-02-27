@@ -6,10 +6,9 @@ import DocCardList from '@theme/DocCardList';
 <DocCardList />
 ```
 
-There are multiple ways to get your price offerings into Prisjakt and which one you should choose depends on the size of your shop, how frequent you wan´t to update and other properties.
+At Prisjakt we support different types of feeds, serving different purposes.
+Currently, we support the following feed types:
 
-In general these methods can be categorized as follows:
-
-- **Pull based** where we fetch offers from you on regular intervals or when changes are detected
-- **Push based** where you send offers to us when something changes
-- **Integrations** are pre-made integrations and plugins for different e-commerce systems that you can use to supply your inventory
+- **Offer** used to ingest offers to Prisjakt, addressed to shops
+- **Promotion** used to ingest promotions to Prisjakt, addressed to shops
+- **Product** used to ingest products to Prisjakt, addressed to manufacturers

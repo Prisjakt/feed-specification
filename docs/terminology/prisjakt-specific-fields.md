@@ -15,7 +15,7 @@ Currently, our Prisjakt specific fields are:
 - [member_price](/fields/offer/member_price.md)
 
 
-The fields are also defined in [our xml namespace](/types-of-feeds/pull/file-formats/xml.md#prisjakt-xml-namespace)
+The fields are also defined in [our xml namespace](/types-of-feeds/file-formats/xml.md#namespaces)
 
 
 ## Promotion feeds
@@ -27,4 +27,4 @@ Currently, our Prisjakt specific fields are:
 
 - [promotion_page_link](/fields/promotion/promotion_page_link.md)
 
-The fields are also defined in [our promotions feeds xml namespace](/types-of-feeds/pull/file-formats/promotions-xml.md#prisjakt-promotions-xml-namespace)
+The fields are also defined in [our promotions feeds xml namespace](/types-of-feeds/file-formats/xml.md#namespaces-1)

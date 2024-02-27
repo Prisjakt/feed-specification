@@ -7,15 +7,15 @@ sidebar_position: 3
 
 ### Small Feeds < 250 000 Offers
 
-For small and medium businesses we recommend using a [single file feed](/types-of-feeds/pull/feed.md) and adding it in our self-service portal [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
+For small and medium businesses we recommend using a single file feed and adding it in our self-service portal [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
 
 ### Large Feeds > 250 000 Offers
 
-For larger feeds and higher update frequencies please look into using a [delta feed](/types-of-feeds/pull/delta-feeds.md) setup. In some cases we're also able to prepare custom integrations for larger enterprise clients. For more information please contact our support at support@prisjakt.nu.
+For larger feeds and higher update frequencies please look into using a delta feed setup. In some cases we're also able to prepare custom integrations for larger enterprise clients. For more information please contact our support at support@prisjakt.nu.
 
 ## Format
 
-If possible, then use [XML](/types-of-feeds/pull/file-formats/xml.md) over CSV. This is because xml is:
+If possible, then use [XML](/types-of-feeds/file-formats/xml.md) over CSV. This is because xml is:
 
 - More well defined than csv
 - Have better tools to handle [escaping and encoding](/advanced) 
@@ -24,7 +24,7 @@ If possible, then use [XML](/types-of-feeds/pull/file-formats/xml.md) over CSV. 
 
 ## Data
 
-- Ensure that you [escape and encode](/advanced) your data correctly or use [CDATA](/types-of-feeds/pull/file-formats/xml.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
+- Ensure that you [escape and encode](/advanced) your data correctly or use [CDATA](/types-of-feeds/file-formats/xml.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
 - Check your datas health by looking at the validation reports in [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center) and try to fix all warnings in order to get the most out of our services
 - Ensure that all your urls are [properly formated and encoded](/advanced/encoding/url-encode.md)
 

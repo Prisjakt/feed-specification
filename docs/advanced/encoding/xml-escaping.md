@@ -1,6 +1,6 @@
 # Special Characters in XML
 
-It is possible to escape special characters in [XML](/types-of-feeds/pull/file-formats/xml.md) (see [this answer](https://stackoverflow.com/a/1091953) and [this answer](https://stackoverflow.com/a/46637835)) using number notations such as this example:
+It is possible to escape special characters in [XML](/types-of-feeds/file-formats/xml.md) (see [this answer](https://stackoverflow.com/a/1091953) and [this answer](https://stackoverflow.com/a/46637835)) using number notations such as this example:
 
 
 ```

@@ -60,6 +60,7 @@ const config = {
           * */
           const FIELDS_REDIRECTS_PATH='/fields/offer'
           const EXAMPLES_REDIRECTS_PATH='/examples/offer'
+          const FILE_FORMATS_REDIRECTS_PATH ='/types-of-feeds/file-formats'
           // We want to redirect from /docs/fields/<offer_feed_field_name> to /docs/fields/offer/<field_name>
           if (existingPath.startsWith(FIELDS_REDIRECTS_PATH)) {
             return existingPath.replace(FIELDS_REDIRECTS_PATH, '/fields');
@@ -68,6 +69,11 @@ const config = {
           if (existingPath.startsWith(EXAMPLES_REDIRECTS_PATH)) {
             return existingPath.replace(EXAMPLES_REDIRECTS_PATH, '/examples');
           }
+          // We want to redirect from /types-of-feeds/pull/file-formats/... to /types-of-feeds/file-formats/...
+          if (existingPath.startsWith(FILE_FORMATS_REDIRECTS_PATH)) {
+            return existingPath.replace(FILE_FORMATS_REDIRECTS_PATH, '/types-of-feeds/pull/file-formats');
+          }
+
           return undefined; // No redirect
         },
       },
