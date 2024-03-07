@@ -30,7 +30,7 @@ Identifier should be unique for every product and not be changed or re-used for 
 - Only **ascii** characters
 - Trailing whitespace characters are not allowed
 - Allowed characters: All ascii characters
-- Disallowed characters: "!, +, @, #, $, %, ^, &, *, &lt;, &lt;, ;, :"
+- Disallowed characters: "!, +, @, #, $, %, ^, &, *, &lt;, &rt;, ;, :"
 
 
 ## Best Practices
