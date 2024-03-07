@@ -42,6 +42,9 @@ shipping_label -- affects price and eligibility of  --- shipping
 
 
 
+## Validation Rules
+
+- A maximum of 10 labels is allowed
 
 
 ## Best Practices

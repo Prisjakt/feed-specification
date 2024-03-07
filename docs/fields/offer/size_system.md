@@ -137,6 +137,9 @@ size_system -- required if used  --- size
 </dl>
 
 
+## Validation Rules
+
+- Must be one of the allowed enum values
 
 
 ## Best Practices
