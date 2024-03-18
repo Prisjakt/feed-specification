@@ -143,7 +143,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:product_detail>
@@ -166,7 +166,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 product_detail(section_name)

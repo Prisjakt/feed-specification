@@ -190,22 +190,13 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
 
 ```xml
-<pj:member_price>1000</pj:member_price>
-```
-```xml
-<pj:member_price>5.00 dollars</pj:member_price>
-```
-```xml
-<pj:member_price>5.00</pj:member_price>
+<pj:member_price>100$</pj:member_price>
 ```
 
 :::
 
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
-```xml
-<pj:member_price>foo SEK</pj:member_price>
-```
 ```xml
 <pj:member_price>SEK</pj:member_price>
 ```
@@ -219,6 +210,9 @@ Below you will find possible error codes generated when validating this field al
 ```
 ```xml
 <pj:member_price>10.0.00.00 SEK</pj:member_price>
+```
+```xml
+<pj:member_price>foo SEK</pj:member_price>
 ```
 
 :::
@@ -239,9 +233,6 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <pj:member_price>$100</pj:member_price>
 ```
-```xml
-<pj:member_price>100$</pj:member_price>
-```
 
 :::
 
@@ -253,25 +244,13 @@ Below you will find possible error codes generated when validating this field al
 
 ```csv
 member_price
-1000
-```
-```csv
-member_price
-5.00 dollars
-```
-```csv
-member_price
-5.00
+100$
 ```
 
 :::
 
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
-```csv
-member_price
-foo SEK
-```
 ```csv
 member_price
 SEK
@@ -288,6 +267,10 @@ member_price
 ```csv
 member_price
 10.0.00.00 SEK
+```
+```csv
+member_price
+foo SEK
 ```
 
 :::
@@ -310,10 +293,6 @@ member_price
 ```csv
 member_price
 $100
-```
-```csv
-member_price
-100$
 ```
 
 :::

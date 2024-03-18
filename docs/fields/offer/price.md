@@ -192,22 +192,13 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
 
 ```xml
-<g:price>1000</g:price>
-```
-```xml
-<g:price>5.00 dollars</g:price>
-```
-```xml
-<g:price>5.00</g:price>
+<g:price>100$</g:price>
 ```
 
 :::
 
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
-```xml
-<g:price>foo SEK</g:price>
-```
 ```xml
 <g:price>SEK</g:price>
 ```
@@ -230,6 +221,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:price>10.0.00.00 SEK</g:price>
 ```
+```xml
+<g:price>foo SEK</g:price>
+```
 
 :::
 
@@ -249,9 +243,6 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:price>$100</g:price>
 ```
-```xml
-<g:price>100$</g:price>
-```
 
 :::
 
@@ -263,25 +254,13 @@ Below you will find possible error codes generated when validating this field al
 
 ```csv
 price
-1000
-```
-```csv
-price
-5.00 dollars
-```
-```csv
-price
-5.00
+100$
 ```
 
 :::
 
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
-```csv
-price
-foo SEK
-```
 ```csv
 price
 SEK
@@ -308,6 +287,10 @@ price
 price
 10.0.00.00 SEK
 ```
+```csv
+price
+foo SEK
+```
 
 :::
 
@@ -329,10 +312,6 @@ price
 ```csv
 price
 $100
-```
-```csv
-price
-100$
 ```
 
 :::
