@@ -209,7 +209,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```xml
 <g:is_bundle>unknown</g:is_bundle>
@@ -221,7 +221,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
 is_bundle

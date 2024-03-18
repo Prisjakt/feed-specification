@@ -151,9 +151,6 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_height>123cm</g:shipping_height>
 ```
-```xml
-<g:shipping_height> in</g:shipping_height>
-```
 
 :::
 
@@ -176,6 +173,14 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
+
+```xml
+<g:shipping_height> in</g:shipping_height>
+```
+
+:::
+
 
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
@@ -185,10 +190,6 @@ Below you will find possible error codes generated when validating this field al
 ```csv
 shipping_height
 123cm
-```
-```csv
-shipping_height
- in
 ```
 
 :::
@@ -211,6 +212,15 @@ unkn own
 ```csv
 shipping_height
 111.222.333 in
+```
+
+:::
+
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
+
+```csv
+shipping_height
+ in
 ```
 
 :::
