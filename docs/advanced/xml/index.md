@@ -16,7 +16,7 @@ import DocCardList from '@theme/DocCardList';
 [XML](https://en.wikipedia.org/wiki/XML) stands for e**X**tensinble **M**arkup **L**anguage. It is very similar to HTML except it doesn't have any predefined tags. It's a meta language that allows you to define your own markup language which then can be used to store and share data in a structured manner.
 
 ## Namespaces
-A Prisjakt offer feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/terminology/prisjakt-specific-fields#offer-feeds) defined by us.
+A Prisjakt offer feed should use two namespaces, the `g` namespace which most fields belong to that are defined by the Google Product Specification and then the `pj` namespace which contains some [additional Prisjakt specific fields](/feeds/offer/formats/prisjakt_xml/#prisjakt-specific-fields) defined by us.
 
 Offers: https://schema.prisjakt.nu/ns/1.0
 
@@ -43,7 +43,7 @@ If multiple fields with the same name but different namespaces exist, the field 
 
 ### Use UTF-8
 
-All XML feeds should start with the following header and the files should be properly [UTF-8 encoded](/advanced/encoding/file-encoding.md).
+All XML feeds should start with the following header and the files should be properly [UTF-8 encoded](/advanced/file-encoding.md).
 
 Do not use [control characters](https://en.wikipedia.org/wiki/Control_character) in feed file. We support some of them trying to follow [XML spec](https://en.wikipedia.org/wiki/Valid_characters_in_XML) but not guarantee to fully support it.
 
@@ -53,4 +53,4 @@ Do not use [control characters](https://en.wikipedia.org/wiki/Control_character)
 
 ### Use CDATA
 
-You should lower the risk of your data causing xml parsers to fail because of invalid data by encoding your data correctly. Take a look on our [CDATA](/advanced/encoding/cdata.md) article to achieve this.
+You should lower the risk of your data causing xml parsers to fail because of invalid data by encoding your data correctly. Take a look on our [CDATA](/advanced/xml/cdata.md) article to achieve this.

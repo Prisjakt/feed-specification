@@ -34,9 +34,9 @@ Specify the gender your product is designed for.
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 gender -- may improve info for  --- size
-  click size "/fields/offer/size" "size" _blank
+  click size "/feeds/offer/fields/size" "size" _blank
 
-  click gender "/fields/offer/gender" "gender" _blank
+  click gender "/feeds/offer/fields/gender" "gender" _blank
   style gender fill:#4cb3d4
 ```
 

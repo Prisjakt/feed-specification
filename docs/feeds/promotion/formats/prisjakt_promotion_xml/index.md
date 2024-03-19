@@ -16,9 +16,9 @@ In order to be able to provide you with extra functionality we sometimes add ext
 
 Currently, our Prisjakt specific fields are:
 
-- [promotion_page_link](/fields/promotion/promotion_page_link.md)
+- [promotion_page_link](/feeds/promotion/fields/promotion_page_link.md)
 
-The fields are also defined in [our promotions feeds xml namespace](/types-of-feeds/file-formats/xml.md#namespaces-1)
+The fields are also defined in [our promotions feeds xml namespace](/advanced/xml/index.md#namespaces-1)
 
 ## Promotion Required Fields
 
@@ -26,10 +26,10 @@ There are some fields, we *simply cannot be without* when ingestion your promoti
 
 The following fields are required for us to correctly index your promotion and assign it to offers.
 
-- [Promotion Id](/fields/promotion/promotion_id.md)
-- [Long title](/fields/promotion/long_title.md)
-- [Coupon value type](/fields/promotion/coupon_value_type.md)
-- [Promotion effective dates](/fields/promotion/promotion_effective_dates.md)
+- [Promotion Id](/feeds/promotion/fields/promotion_id.md)
+- [Long title](/feeds/promotion/fields/long_title.md)
+- [Coupon value type](/feeds/promotion/fields/coupon_value_type.md)
+- [Promotion effective dates](/feeds/promotion/fields/promotion_effective_dates.md)
 
 ## Example Files
 

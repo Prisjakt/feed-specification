@@ -44,7 +44,7 @@ The format of the feed does not match the supported format (eg. you cannot confi
 
 :::danger <Anchor id="invalid_encoding" title="invalid_encoding" />
 
-If the encoding of the file is anything else than our [supported encodings](/advanced/encoding/file-encoding#supported-file-encodings) this error is thrown. Please see our [encoding section](/advanced/encoding/file-encoding) for details.
+If the encoding of the file is anything else than our [supported encodings](/advanced/file-encoding.md#supported-file-encodings) this error is thrown. Please see our [encoding section](/advanced/file-encoding.md) for details.
 
 :::
 
@@ -64,7 +64,7 @@ When reading your feed we sample some initial bytes in order to detect file enco
 
 :::danger <Anchor id="invalid_csv_delimiter" title="invalid_csv_delimiter" />
 
-Please refer to our [section regarding CSV files](/types-of-feeds/file-formats/csv) and [escaping in CSV](/advanced/escaping/escape-csv) in order to properly construct your CSV files.
+Please refer to our [section regarding CSV files](/advanced/csv/index.md) and [escaping in CSV](/advanced/csv/escaping-data.md) in order to properly construct your CSV files.
 
 :::
 
@@ -88,7 +88,7 @@ If your feed contains only rejected offers, then it serves no purpose and this e
 
 :::danger <Anchor id="invalid_xml_structure" title="invalid_xml_structure" />
 
-We only accept valid XML syntasx, please see our [section about XML](/types-of-feeds/file-formats/xml) and ensure that you are seding a correctly formated XML file. You can use different tools to validate this.
+We only accept valid XML syntasx, please see our [section about XML](/advanced/xml/index.md) and ensure that you are seding a correctly formated XML file. You can use different tools to validate this.
 
 Possible things to investigate
 

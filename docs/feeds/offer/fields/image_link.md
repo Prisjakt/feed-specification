@@ -1,5 +1,5 @@
 ---
-description: Add it to improve search results and listing. If you have more then one image you can use the [`additional_image_link`](/fields/offer/additional_image_link.md) attribute to include more.
+description: Add it to improve search results and listing. If you have more then one image you can use the [`additional_image_link`](/feeds/offer/fields/additional_image_link.md) attribute to include more.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Add it to improve search results and listing. If you have more then one image you can use the [`additional_image_link`](/fields/offer/additional_image_link.md) attribute to include more.
+Add it to improve search results and listing. If you have more then one image you can use the [`additional_image_link`](/feeds/offer/fields/additional_image_link.md) attribute to include more.
 
 
 
@@ -35,9 +35,9 @@ Add it to improve search results and listing. If you have more then one image yo
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 image_link -- can be extended by  --- additional_image_link
-  click additional_image_link "/fields/offer/additional_image_link" "additional_image_link" _blank
+  click additional_image_link "/feeds/offer/fields/additional_image_link" "additional_image_link" _blank
 
-  click image_link "/fields/offer/image_link" "image_link" _blank
+  click image_link "/feeds/offer/fields/image_link" "image_link" _blank
   style image_link fill:#4cb3d4
 ```
 
@@ -51,7 +51,7 @@ image_link -- can be extended by  --- additional_image_link
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/url-encode)
 
 
 ## Best Practices

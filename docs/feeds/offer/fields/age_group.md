@@ -25,9 +25,9 @@ Sets the demographic age your product is designed for.
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 age_group -- may improve info for  --- size
-  click size "/fields/offer/size" "size" _blank
+  click size "/feeds/offer/fields/size" "size" _blank
 
-  click age_group "/fields/offer/age_group" "age_group" _blank
+  click age_group "/feeds/offer/fields/age_group" "age_group" _blank
   style age_group fill:#4cb3d4
 ```
 
@@ -94,7 +94,7 @@ age_group -- may improve info for  --- size
 ### Do
 
 - It is recommended to add this attribute for fashion products to improve results and listing
-- Use to indicate demographic, not an [`adult`](/fields/offer/adult.md) audience
+- Use to indicate demographic, not an [`adult`](/feeds/offer/fields/adult.md) audience
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Datetime range indicating when [`sale_price`](/fields/offer/sale_price.md) is active. If you don't submit this attribute [`sale_price`](/fields/offer/sale_price.md) always applies.
+description: Datetime range indicating when [`sale_price`](/feeds/offer/fields/sale_price.md) is active. If you don't submit this attribute [`sale_price`](/feeds/offer/fields/sale_price.md) always applies.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Datetime range indicating when [`sale_price`](/fields/offer/sale_price.md) is active. If you don't submit this attribute [`sale_price`](/fields/offer/sale_price.md) always applies.
+Datetime range indicating when [`sale_price`](/feeds/offer/fields/sale_price.md) is active. If you don't submit this attribute [`sale_price`](/feeds/offer/fields/sale_price.md) always applies.
 
 
 
@@ -34,9 +34,9 @@ Datetime range indicating when [`sale_price`](/fields/offer/sale_price.md) is ac
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 sale_price_effective_date -- used by  --- sale_price
-  click sale_price "/fields/offer/sale_price" "sale_price" _blank
+  click sale_price "/feeds/offer/fields/sale_price" "sale_price" _blank
 
-  click sale_price_effective_date "/fields/offer/sale_price_effective_date" "sale_price_effective_date" _blank
+  click sale_price_effective_date "/feeds/offer/fields/sale_price_effective_date" "sale_price_effective_date" _blank
   style sale_price_effective_date fill:#4cb3d4
 ```
 

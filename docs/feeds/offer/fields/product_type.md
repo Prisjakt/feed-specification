@@ -1,5 +1,5 @@
 ---
-description: It's strongly recommended to use this attribute if [`google_product_category`](/fields/offer/google_product_category.md) is not present.
+description: It's strongly recommended to use this attribute if [`google_product_category`](/feeds/offer/fields/google_product_category.md) is not present.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-It's strongly recommended to use this attribute if [`google_product_category`](/fields/offer/google_product_category.md) is not present.
+It's strongly recommended to use this attribute if [`google_product_category`](/feeds/offer/fields/google_product_category.md) is not present.
 
 
 
@@ -34,9 +34,9 @@ It's strongly recommended to use this attribute if [`google_product_category`](/
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 product_type -- can be used instead  --- google_product_category
-  click google_product_category "/fields/offer/google_product_category" "google_product_category" _blank
+  click google_product_category "/feeds/offer/fields/google_product_category" "google_product_category" _blank
 
-  click product_type "/fields/offer/product_type" "product_type" _blank
+  click product_type "/feeds/offer/fields/product_type" "product_type" _blank
   style product_type fill:#4cb3d4
 ```
 
@@ -184,7 +184,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 | Repeatable limit | **100** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Change length limit for product_type to 750 characters"], "date": "2023-08-21"}, {"added": ["Remove requirement on [`product_type`](/fields/offer/product_type.md) if [`google_product_category`](/fields/offer/google_product_category.md) is not present"], "date": "2023-02-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Change length limit for product_type to 750 characters"], "date": "2023-08-21"}, {"added": ["Remove requirement on [`product_type`](/feeds/offer/fields/product_type.md) if [`google_product_category`](/feeds/offer/fields/google_product_category.md) is not present"], "date": "2023-02-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324406)

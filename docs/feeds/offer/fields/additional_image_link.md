@@ -34,9 +34,9 @@ Used to add additional image links. The images may include different angles, col
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 additional_image_link -- extends  --- image_link
-  click image_link "/fields/offer/image_link" "image_link" _blank
+  click image_link "/feeds/offer/fields/image_link" "image_link" _blank
 
-  click additional_image_link "/fields/offer/additional_image_link" "additional_image_link" _blank
+  click additional_image_link "/feeds/offer/fields/additional_image_link" "additional_image_link" _blank
   style additional_image_link fill:#4cb3d4
 ```
 
@@ -49,7 +49,7 @@ additional_image_link -- extends  --- image_link
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/url-encode)
 
 
 ## Best Practices

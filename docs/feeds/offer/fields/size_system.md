@@ -25,9 +25,9 @@ Using this attribute is required if [`size`](size.md) is specified for a product
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 size_system -- required if used  --- size
-  click size "/fields/offer/size" "size" _blank
+  click size "/feeds/offer/fields/size" "size" _blank
 
-  click size_system "/fields/offer/size_system" "size_system" _blank
+  click size_system "/feeds/offer/fields/size_system" "size_system" _blank
   style size_system fill:#4cb3d4
 ```
 

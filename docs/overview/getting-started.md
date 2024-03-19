@@ -24,5 +24,5 @@ If you have [Google Merchant Product Feed](https://support.google.com/merchants/
 
 ## Check 3: Generate Your Own
 
-- [ ] Generate a feed in [xml format](/docs/types-of-feeds/file-formats/xml.md) using our [examples](/examples/offer/all) and [field specifications](/fields).
+- [ ] Generate a feed in [xml format](/docs/advanced/xml/index.md) using our [examples](/feeds/offer/formats/prisjakt_xml/#full) and [field specifications](/feeds/offer/fields/index.md).
 - [ ] Large volumes? Generate a delta feed.

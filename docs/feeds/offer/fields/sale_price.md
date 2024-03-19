@@ -25,13 +25,13 @@ It should be the same as the currently active sales price on your product page. 
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 sale_price -- overrides if exist  --- price
-  click price "/fields/offer/price" "price" _blank
+  click price "/feeds/offer/fields/price" "price" _blank
 sale_price -- overridden by if member  --- member_price
-  click member_price "/fields/offer/member_price" "member_price" _blank
+  click member_price "/feeds/offer/fields/member_price" "member_price" _blank
 sale_price -- can be enhanced by  --- sale_price_effective_date
-  click sale_price_effective_date "/fields/offer/sale_price_effective_date" "sale_price_effective_date" _blank
+  click sale_price_effective_date "/feeds/offer/fields/sale_price_effective_date" "sale_price_effective_date" _blank
 
-  click sale_price "/fields/offer/sale_price" "sale_price" _blank
+  click sale_price "/feeds/offer/fields/sale_price" "sale_price" _blank
   style sale_price fill:#4cb3d4
 ```
 

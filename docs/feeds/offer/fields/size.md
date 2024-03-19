@@ -34,13 +34,13 @@ Used to describe size in **fashion categories**. It is recommended to add this a
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 size -- required if size is used  --- size_system
-  click size_system "/fields/offer/size_system" "size_system" _blank
+  click size_system "/feeds/offer/fields/size_system" "size_system" _blank
 size -- used for conversion between size systems  --- age_group
-  click age_group "/fields/offer/age_group" "age_group" _blank
+  click age_group "/feeds/offer/fields/age_group" "age_group" _blank
 size -- used for conversion between size systems  --- gender
-  click gender "/fields/offer/gender" "gender" _blank
+  click gender "/feeds/offer/fields/gender" "gender" _blank
 
-  click size "/fields/offer/size" "size" _blank
+  click size "/feeds/offer/fields/size" "size" _blank
   style size fill:#4cb3d4
 ```
 

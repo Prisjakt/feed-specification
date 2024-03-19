@@ -34,9 +34,9 @@ Add this attribute if you're using affiliate platform tracking.
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 affiliate_link -- might reference back to  --- link
-  click link "/fields/offer/link" "link" _blank
+  click link "/feeds/offer/fields/link" "link" _blank
 
-  click affiliate_link "/fields/offer/affiliate_link" "affiliate_link" _blank
+  click affiliate_link "/feeds/offer/fields/affiliate_link" "affiliate_link" _blank
   style affiliate_link fill:#4cb3d4
 ```
 
@@ -49,7 +49,7 @@ affiliate_link -- might reference back to  --- link
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/url-encode)
 
 
 ## Example Values

@@ -25,11 +25,11 @@ This is product price that is active for users with active membership
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 member_price -- overrides if member  --- price
-  click price "/fields/offer/price" "price" _blank
+  click price "/feeds/offer/fields/price" "price" _blank
 member_price -- overrides if member  --- sale_price
   click sale_price "/fields//sale_price" "sale_price" _blank
 
-  click member_price "/fields/offer/member_price" "member_price" _blank
+  click member_price "/feeds/offer/fields/member_price" "member_price" _blank
   style member_price fill:#4cb3d4
 ```
 

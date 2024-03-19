@@ -34,9 +34,9 @@ Use the availability attribute to display your stock status.
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 availability -- requires for some values  --- availability_date
-  click availability_date "/fields/offer/availability_date" "availability_date" _blank
+  click availability_date "/feeds/offer/fields/availability_date" "availability_date" _blank
 
-  click availability "/fields/offer/availability" "availability" _blank
+  click availability "/feeds/offer/fields/availability" "availability" _blank
   style availability fill:#4cb3d4
 ```
 
@@ -89,7 +89,7 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      You're currently taking orders for this product, but it's not yet been released for sale. You're required to provide the availability date [`availability_date`](/fields/offer/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+      You're currently taking orders for this product, but it's not yet been released for sale. You're required to provide the availability date [`availability_date`](/feeds/offer/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
     </ReactMarkdown>
     </dd>
 <dt>
@@ -101,7 +101,7 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      The product is not available at the moment, but you're accepting orders and it'll be shipped as soon as it becomes available again. This status can be combined with the availability date [`availability_date`](/fields/offer/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+      The product is not available at the moment, but you're accepting orders and it'll be shipped as soon as it becomes available again. This status can be combined with the availability date [`availability_date`](/feeds/offer/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
     </ReactMarkdown>
     </dd>
 </dl>
@@ -283,7 +283,7 @@ availability
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"date": "2023-09-14", "deprecated": ["Enum value `backorder` does not require [`availability_date`](/fields/offer/availability_date.md) to be set anymore."]}, {"date": "2023-03-20", "deprecated": ["Enum value `download` is now deprecated and should not be used anymore. Download is a delivery option and should be specified using the [`shipping`](/fields/offer/shipping.md) field."]}, {"date": "2023-03-17", "deprecated": ["Enum value `pickup` has been removed and should not be used anymore. Using `pickup` value would result in validation error. Pickup is a delivery option and should be specified using the [`shipping`](/fields/offer/shipping.md) field."]}, {"changed": ["Offers with value `out_of_stock` are no longer orderable. See deprecation notice below."], "date": "2023-03-13", "deprecated": ["Value `not_available_for_purchase` should no longer be used, please use `out_of_stock` instead"]}, {"date": "2023-01-05", "deprecated": ["Enum value `pickup` is now deprecated and should not be used anymore. Pickup is a delivery option and should be specified using the [`shipping`](/fields/offer/shipping.md) field."]}, {"date": "2022-12-20", "deprecated": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stock but still orderable you should use `backorder` and set [`availability_date`](/fields/offer/availability_date.md)"]}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"date": "2023-09-14", "deprecated": ["Enum value `backorder` does not require [`availability_date`](/feeds/offer/fields/availability_date.md) to be set anymore."]}, {"date": "2023-03-20", "deprecated": ["Enum value `download` is now deprecated and should not be used anymore. Download is a delivery option and should be specified using the [`shipping`](/feeds/offer/fields/shipping.md) field."]}, {"date": "2023-03-17", "deprecated": ["Enum value `pickup` has been removed and should not be used anymore. Using `pickup` value would result in validation error. Pickup is a delivery option and should be specified using the [`shipping`](/feeds/offer/fields/shipping.md) field."]}, {"changed": ["Offers with value `out_of_stock` are no longer orderable. See deprecation notice below."], "date": "2023-03-13", "deprecated": ["Value `not_available_for_purchase` should no longer be used, please use `out_of_stock` instead"]}, {"date": "2023-01-05", "deprecated": ["Enum value `pickup` is now deprecated and should not be used anymore. Pickup is a delivery option and should be specified using the [`shipping`](/feeds/offer/fields/shipping.md) field."]}, {"date": "2022-12-20", "deprecated": ["Previously `out_of_stock` values were still orderable, from now on `out_of_stock` will not be orderable. If you want to represent a product that is not in stock but still orderable you should use `backorder` and set [`availability_date`](/feeds/offer/fields/availability_date.md)"]}, {"added": ["New enum value `backorder`, this value should be used for products that are orderable but currently not in stock."], "date": "2022-12-08"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324448)

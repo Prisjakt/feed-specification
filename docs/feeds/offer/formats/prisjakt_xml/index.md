@@ -18,21 +18,21 @@ These fields are all specified in the [Prisjakt namespace](/advanced/xml/#namesp
 
 Currently, our Prisjakt specific fields are:
 
-- [prisjakt_id](/fields/offer/prisjakt_id.md)
-- [member_price](/fields/offer/member_price.md)
+- [prisjakt_id](/feeds/offer/fields/prisjakt_id.md)
+- [member_price](/feeds/offer/fields/member_price.md)
 
 ## Required Fields
 
 There are some fields, we *simply cannot be without* such as a link to your offer, a price and an title. If any of these fields are missing, your **whole offer** will be omitted.
 
-The following fields are required for an offer to show, you can see an example of the minimal required fields in action [here](/examples/offer/minimal)
+The following fields are required for an offer to show, you can see an example of the minimal required fields in action [here](/feeds/offer/formats/prisjakt_xml/#minimal)
 
-- [Availability](/fields/offer/availability.md)
-- [Condition](/fields/offer/condition.md)
-- [Id](/fields/offer/id.md)
-- [Link](/fields/offer/link.md)
-- [Price](/fields/offer/price.md)
-- [Title](/fields/offer/title.md)
+- [Availability](/feeds/offer/fields/availability.md)
+- [Condition](/feeds/offer/fields/condition.md)
+- [Id](/feeds/offer/fields/id.md)
+- [Link](/feeds/offer/fields/link.md)
+- [Price](/feeds/offer/fields/price.md)
+- [Title](/feeds/offer/fields/title.md)
 
 ## Example Files
 

@@ -1,5 +1,5 @@
 ---
-description: This field is used together with [`availability`](/fields/offer/availability.md) for `preorder` or `backorder` values.
+description: This field is used together with [`availability`](/feeds/offer/fields/availability.md) for `preorder` or `backorder` values.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-This field is used together with [`availability`](/fields/offer/availability.md) for `preorder` or `backorder` values.
+This field is used together with [`availability`](/feeds/offer/fields/availability.md) for `preorder` or `backorder` values.
 
 
 
@@ -39,9 +39,9 @@ This field is used together with [`availability`](/fields/offer/availability.md)
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 availability_date -- used by  --- availability
-  click availability "/fields/offer/availability" "availability" _blank
+  click availability "/feeds/offer/fields/availability" "availability" _blank
 
-  click availability_date "/fields/offer/availability_date" "availability_date" _blank
+  click availability_date "/feeds/offer/fields/availability_date" "availability_date" _blank
   style availability_date fill:#4cb3d4
 ```
 

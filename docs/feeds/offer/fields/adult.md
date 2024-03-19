@@ -1,5 +1,5 @@
 ---
-description: Should be used for tagging products for an adult audience. Not used to describe [`age_group`](/fields/offer/age_group.md), but for specific product types, such as sex toys.
+description: Should be used for tagging products for an adult audience. Not used to describe [`age_group`](/feeds/offer/fields/age_group.md), but for specific product types, such as sex toys.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Should be used for tagging products for an adult audience. Not used to describe [`age_group`](/fields/offer/age_group.md), but for specific product types, such as sex toys.
+Should be used for tagging products for an adult audience. Not used to describe [`age_group`](/feeds/offer/fields/age_group.md), but for specific product types, such as sex toys.
 
 
 
@@ -34,7 +34,7 @@ Should be used for tagging products for an adult audience. Not used to describe 
 
 ### Don´t
 
-- Don't use adult to indicate [`age_group`](/fields/offer/age_group.md)
+- Don't use adult to indicate [`age_group`](/feeds/offer/fields/age_group.md)
 
 
 

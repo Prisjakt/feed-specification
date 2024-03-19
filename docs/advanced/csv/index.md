@@ -6,7 +6,7 @@ sidebar_position: 1
 
 :::caution Recommendation
 
-While CSV is lightweight and easy to use, [XML](xml.md) is more well defined and have better support for handling complex data encodings and strctures. We recommend using XML over CSV.
+While CSV is lightweight and easy to use, [XML](/advanced/xml/index.md) is more well defined and have better support for handling complex data encodings and strctures. We recommend using XML over CSV.
 
 :::
 
@@ -14,7 +14,7 @@ While CSV is lightweight and easy to use, [XML](xml.md) is more well defined and
 
 ## Format
 
-We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/examples/offer/all.mdx)
+We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/feeds/offer/formats/prisjakt_xml#full)
 
 - First row is a header row
 
@@ -42,7 +42,7 @@ We expect the following structure (following  [RFC4180](https://datatracker.ietf
 
 ## Escaping
 
-Escaping values in CSV can be tricky, see [our section about escaping](/advanced/escaping/escape-csv.md) for more details
+Escaping values in CSV can be tricky, see [our section about escaping](/advanced/csv/escaping-data.md) for more details
 
 ## Encoding sub-attributes and lists in CSV files
 While the XML format is well suited for sub-attributes (child elements) and lists (repeated elements), the CSV format is not so. 

@@ -25,9 +25,9 @@ We need links to be able to re-direct users to your product page. In the link at
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 link -- might be back referenced by  --- affiliate_link
-  click affiliate_link "/fields/offer/affiliate_link" "affiliate_link" _blank
+  click affiliate_link "/feeds/offer/fields/affiliate_link" "affiliate_link" _blank
 
-  click link "/fields/offer/link" "link" _blank
+  click link "/feeds/offer/fields/link" "link" _blank
   style link fill:#4cb3d4
 ```
 
@@ -40,7 +40,7 @@ link -- might be back referenced by  --- affiliate_link
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/url-encode)
 
 
 ## Best Practices
@@ -56,7 +56,7 @@ link -- might be back referenced by  --- affiliate_link
 
 ### Don´t
 
-- Don't add affiliate tracking in this field, we have a separate field [`affiliate_link`](/fields/offer/affiliate_link.md) for that
+- Don't add affiliate tracking in this field, we have a separate field [`affiliate_link`](/feeds/offer/fields/affiliate_link.md) for that
 
 
 

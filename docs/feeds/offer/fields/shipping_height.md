@@ -25,17 +25,17 @@ It is recommended to add this attribute if delivery costs based on dimensions.
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 shipping_height -- should be supplied together  --- shipping_length
-  click shipping_length "/fields/offer/shipping_length" "shipping_length" _blank
+  click shipping_length "/feeds/offer/fields/shipping_length" "shipping_length" _blank
 shipping_height -- should be supplied together  --- shipping_weight
-  click shipping_weight "/fields/offer/shipping_weight" "shipping_weight" _blank
+  click shipping_weight "/feeds/offer/fields/shipping_weight" "shipping_weight" _blank
 shipping_height -- should be supplied together  --- shipping_width
-  click shipping_width "/fields/offer/shipping_width" "shipping_width" _blank
+  click shipping_width "/feeds/offer/fields/shipping_width" "shipping_width" _blank
 shipping_height -- affects price and eligibility of  --- shipping
-  click shipping "/fields/offer/shipping" "shipping" _blank
+  click shipping "/feeds/offer/fields/shipping" "shipping" _blank
 shipping_height -- determines label of  --- shipping_label
-  click shipping_label "/fields/offer/shipping_label" "shipping_label" _blank
+  click shipping_label "/feeds/offer/fields/shipping_label" "shipping_label" _blank
 
-  click shipping_height "/fields/offer/shipping_height" "shipping_height" _blank
+  click shipping_height "/feeds/offer/fields/shipping_height" "shipping_height" _blank
   style shipping_height fill:#4cb3d4
 ```
 

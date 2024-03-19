@@ -6,7 +6,7 @@ sidebar_position: 2
 
 While we do our best to keep these specifications and behaviours as stable as possible one cannot ignore the fact that the world is constantly changing. We are are adding new features and sometimes we do need to change how we receive parameters.
 
-Whenever we do changes, we note these changes in the [changelog of each individual field](/fields/offer/availability.md#changelog), we follow the format of [keep a changelog](https://keepachangelog.com/en/1.0.0/) and the notation contains the following types of changes:
+Whenever we do changes, we note these changes in the [changelog of each individual field](/feeds/offer/fields/availability.md#changelog), we follow the format of [keep a changelog](https://keepachangelog.com/en/1.0.0/) and the notation contains the following types of changes:
 
 - <span class={`cl-pill cl-added`}>added</span> for new features.
 - <span class={`cl-pill cl-changed`}>changed</span> for changes in existing functionality.

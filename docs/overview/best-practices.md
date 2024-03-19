@@ -15,22 +15,22 @@ For larger feeds and higher update frequencies please look into using a delta fe
 
 ## Format
 
-If possible, then use [XML](/types-of-feeds/file-formats/xml.md) over CSV. This is because xml is:
+If possible, then use [XML](/advanced/xml/index.md) over CSV. This is because xml is:
 
 - More well defined than csv
 - Have better tools to handle [escaping and encoding](/advanced) 
-- Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/fields/offer/shipping.md)
+- Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/feeds/offer/fields/shipping.md)
 - CSVs have no end marker while an XML file have an end tag, it´s therefore harder to know if a CSV have been read to the end or aborted due to network problems
 
 ## Data
 
-- Ensure that you [escape and encode](/advanced) your data correctly or use [CDATA](/types-of-feeds/file-formats/xml.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
+- Ensure that you [escape and encode](/advanced) your data correctly or use [CDATA](/advanced/xml/index.md#use-cdata). Titles, descriptions and other fields with free text information can otherwise easily cause parsing issues
 - Check your datas health by looking at the validation reports in [Prisjakt Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center) and try to fix all warnings in order to get the most out of our services
-- Ensure that all your urls are [properly formated and encoded](/advanced/encoding/url-encode.md)
+- Ensure that all your urls are [properly formated and encoded](/advanced/url-encode.md)
 
 :::caution Do not enter invalid urls
 
-If you enter wrong or invalid urls, our agents will try to retrieve your feed but eventually they will give up. Your feed will then be [automatically disabled](/infrastructure/auto-disabled-feeds) and no further attempts will be made to retrieve it until you re-activate it in our [Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
+If you enter wrong or invalid urls, our agents will try to retrieve your feed but eventually they will give up. Your feed will then be [automatically disabled](/policies/auto-disabling-feeds.md) and no further attempts will be made to retrieve it until you re-activate it in our [Business Center](https://support.prisjakt.nu/sv/collections/3088260-prisjakt-business-center).
 
 :::
 
