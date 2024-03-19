@@ -122,7 +122,7 @@ dhl/free
 
 ## Error Codes
 
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the validation rules to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>

@@ -21,7 +21,7 @@ This is one of the simplest and quickest ways to get results from our feeds, but
    
    ![Import into Google SpreadSheet](@site/docs/assets/guides/quickstart/google-spreadsheet-import.png)
    
-3. Add your [offers](/reference/terminology#term_offer) on new rows
+3. Add your [offers](/reference/terminology.md#offer) on new rows
 
    ![Add offers](@site/docs/assets/guides/quickstart/google-spreadsheet-add-products.png)
 

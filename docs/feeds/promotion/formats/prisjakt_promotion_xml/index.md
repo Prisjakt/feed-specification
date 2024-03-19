@@ -18,7 +18,7 @@ Currently, our Prisjakt specific fields are:
 
 - [promotion_page_link](/feeds/promotion/fields/promotion_page_link.md)
 
-The fields are also defined in [our promotions feeds xml namespace](/advanced/xml/index.md#namespaces-1)
+The fields are also defined in [our promotions feeds xml namespace](/advanced/xml/index.md#namespaces)
 
 ## Promotion Required Fields
 

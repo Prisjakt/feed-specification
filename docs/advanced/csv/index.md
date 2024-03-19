@@ -14,7 +14,7 @@ While CSV is lightweight and easy to use, [XML](/advanced/xml/index.md) is more 
 
 ## Format
 
-We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/feeds/offer/formats/prisjakt_xml#full)
+We expect the following structure (following  [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180.html)) on CSV files, for a full example please see the [CSV tab on our full example](/feeds/offer/formats/prisjakt_xml/index.md#full)
 
 - First row is a header row
 

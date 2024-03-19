@@ -25,7 +25,7 @@ Should be used for tagging products for an adult audience. Not used to describe 
 
 ## Validation Rules
 
-- Should be one of the examples in [valid examples](#valid)
+- Should be one of the examples in [valid examples](#example-values)
 
 
 ## Best Practices
