@@ -10,37 +10,21 @@ Prisjakt, known for its extensive product listings, allows customers to find the
 - **Competitive Analysis**: Get insights into popularity and price trends for popular products.
 - **Direct Traffic**: Drive potential customers directly to your product pages.
 
-## E-commerce Platform Plugins
+## Feed Generation
 
-We've listed popular and free (or freemium) plugins for generating Prisjakt compatible product feeds in various e-commerce platforms.
+A lot of e-commerce platforms are capable of generating generating Prisjakt compatible product feeds (Google Product Feeds), either directly or through third party plugins.
 
-### Shopify
-
-#### **Google Shopping Feed XML/CSV**
-
-- **URL**: [Google Shopping Feed XML/CSV](https://apps.shopify.com/simple-google-shopping-feed)
-- **Features**: Easy feed generation, automatic updates, and customizable feed attributes.
-
-### WooCommerce
-
-#### **Product Feed PRO for WooCommerce**
-
-- **URL**: [Product Feed PRO](https://wordpress.org/plugins/woo-product-feed-pro/)
-- **Features**: Supports multiple feed formats, advanced product filtering, and feed customization.
-
-### Magento
-
-#### **Google Shopping Feed for Magento 2**
-
-- **URL**: [Google Shopping Feed](https://amasty.com/google-shopping-feed-for-magento-2.html)
-- **Features**: Automated feed generation, advanced filters, and performance tracking.
-
-### PrestaShop
-
-#### **Google Merchant Center (Google-Shopping)**
-
-- **URL**: [Google Shopping Feed in XML](https://addons.prestashop.com/en/price-comparison/1768-google-merchant-center-google-shopping.html)
-- **Features**: Easy setup, custom feed templates, and multi-store support.
+| Ecommerce System                                                                  | How To Create Compatible Feed                                                                                                                       |
+| :-------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Shopify](https://www.shopify.com/)                                               | [Documentation](https://apps.shopify.com/simple-google-shopping-feed)                                                                               |
+| [WooCommerce](https://woo.com/)                                                   | [Documentation](https://wordpress.org/plugins/woo-product-feed-pro/)                                                                                |
+| [Magento](https://business.adobe.com/products/magento/magento-commerce.html)      | [Documentation](https://amasty.com/google-shopping-feed-for-magento-2.html)                                                                         |
+| [PrestaShop](https://prestashop.com/)                                             | [Documentation](https://addons.prestashop.com/en/price-comparison/1768-google-merchant-center-google-shopping.html)                                 |
+| [Shopware](https://www.shopware.com/en/)                                          | [Documentation](https://docs.shopware.com/en/shopware-6-en/saas/google-shopping-export)                                                             |
+| [Salesforce Commerce Cloud](https://www.salesforce.com/products/commerce/)        | [Documentation](https://feedonomics.com/lp/salesforce-commerce-cloud-to-google-shopping/)                                                           |
+| [SAP Commerce Cloud](https://www.sap.com/sweden/products/crm/commerce-cloud.html) | [Documentation](https://help.sap.com/docs/SAP_UPSCALE_COMMERCE/52bd998e5c254d029975d3fad96c7889/f69cd3f112694179bf4e144c07b85486.html?locale=en-US) |
+| [BigCommerce](https://www.bigcommerce.com/)                                       | [Documentation](https://support.bigcommerce.com/s/article/Google-App?language=en_US)                                                                |
+| [nopCommerce](https://www.nopcommerce.com/en)                                     | [Documentation](https://www.nopcommerce.com/en/google-shopping-formerly-google-product-search)                                                      |
 
 ## Best Practices for Integration
 
