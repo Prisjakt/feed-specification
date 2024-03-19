@@ -1,0 +1,51 @@
+---
+sidebar_position: 1
+---
+import OptionalField from '../partials/_optional_field.md';
+import RequiredField from '../partials/_required_field.md';
+import ChangeLog from '@site/src/components/changelog';
+
+# Required vs Optional Fields
+
+:::success Supply Information
+
+You should *always* strive towards supplying as much (and correct) information as possible.
+
+:::
+
+## Required Fields
+
+<RequiredField />
+
+There are some fields, we *simply cannot be without* and this depends on which file format and entity (offer, promotion, product) you are working with. 
+
+You can find the required field for each respective fileformat and entity in the sidebar under the respective `<Entity> Feed / File Formats / <Format> / Required Fields`
+
+
+The following fields are required for an offer to show, you can see an example of the minimal required fields in action [here](/examples/offer/minimal)
+
+
+## Optional Fields
+
+<OptionalField />
+
+Most fields in Prisjakt are optional, which means that you don´t have to supply them. Your offer will be indexed anyway. Please note that this *may limit the functionality* we can present for your offer. You can find detailed information of each field in the sidebar under `<Entity> Feed / Fields / <Field>`
+
+## Changelog
+
+<ChangeLog versionHistory={[
+  {
+    semanticVersion: "0.0.1",
+    date: new Date("2022-12-06"),
+    added: [
+        "Complete list of required fields"
+    ]
+  },
+  {
+    semanticVersion: "0.0.2",
+    date: new Date("2023-12-12"),
+    added: [
+        "List of Promotion Feed fields"
+    ]
+  }
+]} dateOnly={true}/>

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Auto Disabled Feeds
+# Auto Disabling Of Feeds
 
 If a feed is unreachable (or empty) over an extended period of time (we retry multiple times) our system will automatically disable this feed from being ingested again. If the feed is automatically disabled **a notification of the problem will also be sent** to you as a shop owner.
 
