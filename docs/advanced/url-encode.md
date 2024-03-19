@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Url Encoding
 
 [![What Is An Url?](@site/docs/assets/url.png)](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL)
