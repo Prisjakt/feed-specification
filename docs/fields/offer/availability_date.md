@@ -138,7 +138,7 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```xml
 <g:availability_date>2021/12/22/12:23:00</g:availability_date>
@@ -146,11 +146,6 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:availability_date>today</g:availability_date>
 ```
-
-:::
-
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
 <g:availability>in_stock</g:availability>
@@ -170,7 +165,7 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```xml
 <g:availability_date></g:availability_date>
@@ -183,7 +178,7 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
+:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
 availability_date
@@ -193,11 +188,6 @@ availability_date
 availability_date
 today
 ```
-
-:::
-
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-
 ```csv
 availability_date,availability
 2021-03-21,in_stock
@@ -217,7 +207,7 @@ availability_date,availability
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 availability_date,availability

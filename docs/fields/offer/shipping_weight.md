@@ -163,6 +163,9 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_weight>unkn-own</g:shipping_weight>
 ```
+```xml
+<g:shipping_weight>11 </g:shipping_weight>
+```
 
 :::
 
@@ -185,14 +188,6 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```xml
-<g:shipping_weight>11 </g:shipping_weight>
-```
-
-:::
-
 
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
@@ -206,6 +201,10 @@ shipping_weight
 ```csv
 shipping_weight
 unkn-own
+```
+```csv
+shipping_weight
+11
 ```
 
 :::
@@ -228,15 +227,6 @@ shipping_weight
 ```csv
 shipping_weight
 11 kilo
-```
-
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```csv
-shipping_weight
-11
 ```
 
 :::
