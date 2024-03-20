@@ -51,7 +51,7 @@ image_link -- can be extended by  --- additional_image_link
 - Must have a protocol (eg. `https`)
 - Must have a path (eg. `.../my-product`)
 - Must be shorter than `2047` characters
-- Unicode characters must be [url encoded](/advanced/encoding/url-encode)
+- Unicode characters must be [url encoded](/advanced/url-encode)
 
 
 ## Best Practices

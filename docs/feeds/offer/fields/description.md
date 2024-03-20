@@ -34,7 +34,7 @@ Use it to add unstructured product information
 ### Do
 
 - Use professional and grammatically correct language
-- This is a free text field, ensure that special characters like commas and newlines handled correctly. See [escaping data in csv](/advanced/escaping/escape-csv.md) and [use cdata](/advanced/encoding/cdata)
+- This is a free text field, ensure that special characters like commas and newlines handled correctly. See [escaping data in csv](/advanced/csv/escaping-data.md) and [use cdata](/advanced/xml/cdata.md)
 
 
 
