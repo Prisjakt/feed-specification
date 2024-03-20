@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 ---
-import SampleMin from './_min_sample.mdx';
-import SampleFull from './_full_sample.mdx';
+import SampleMin from '../_xml_min.mdx';
+import SampleFull from '../_xml_full.mdx';
 
 # Prisjakt Promotion XML
 
@@ -35,10 +35,10 @@ The following fields are required for us to correctly index your promotion and a
 
 ### Minimal
 
-[Download XML File](pathname:///examples/offer/min-sample.xml)
+[Download XML File](pathname:///examples/promotion/min.xml)
 <SampleMin />
 
 ### Full
 
-[Download XML File](pathname:///examples/offer/sample.xml)
+[Download XML File](pathname:///examples/promotion/full.xml)
 <SampleFull />

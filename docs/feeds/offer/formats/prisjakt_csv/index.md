@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-import SampleMin from './_min_sample.mdx';
-import SampleFull from './_full_sample.mdx';
+import SampleMin from '../_csv_min.mdx';
+import SampleFull from '../_csv_full.mdx';
 
 # Prisjakt CSV
 
@@ -21,10 +21,10 @@ The CSV format is not recommended as it is poorly defined and have issues when i
 
 ### Minimal
 
-[Download CSV File](pathname:///examples/offer/min-sample.csv)
+[Download CSV File](pathname:///examples/offer/min.csv)
 <SampleMin />
 
 ### Full
 
-[Download CSV File](pathname:///examples/offer/sample.csv)
+[Download CSV File](pathname:///examples/offer/full.csv)
 <SampleFull />
