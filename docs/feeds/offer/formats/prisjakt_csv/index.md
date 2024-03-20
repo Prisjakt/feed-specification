@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Our own format as CSV, legacy support only
 ---
 import SampleMin from '../_csv_min.mdx';
 import SampleFull from '../_csv_full.mdx';

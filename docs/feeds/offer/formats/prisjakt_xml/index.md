@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Our own format, the recommended format to use
 ---
 import SampleMin from '../_xml_min.mdx';
 import SampleFull from '../_xml_full.mdx';

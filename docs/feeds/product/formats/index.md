@@ -1,4 +1,4 @@
-# Offer File Formats
+# Product File Formats
 
 :::info
 
