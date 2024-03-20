@@ -124,7 +124,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <g:item_group_id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)</g:item_group_id>

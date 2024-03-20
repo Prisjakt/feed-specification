@@ -223,7 +223,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
+:::danger[**<Anchor id="validation_missing_value" title="validation_missing_value" />**]
+
 
 ```xml
 <g:shipping>
@@ -246,7 +247,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" />
+:::danger[**<Anchor id="validation_shipping_time_missing_values" title="validation_shipping_time_missing_values" />**]
+
 
 ```xml
 <g:shipping>

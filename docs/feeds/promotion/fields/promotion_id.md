@@ -1,5 +1,5 @@
 ---
-description: Identifier should be unique for every promotion. Attribute is used to map promotion to a product. In the offer feed, [`promotion_id`](/feeds/offer/fields/promotion_id.md) field is used to map a promotion to a product.
+description: Identifier should be unique for every promotion. Attribute is used to map promotion to a product. In the offer feed, [`promotion_id`](/fields/offer/promotion_id.md) field is used to map a promotion to a product.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Identifier should be unique for every promotion. Attribute is used to map promotion to a product. In the offer feed, [`promotion_id`](/feeds/offer/fields/promotion_id.md) field is used to map a promotion to a product.
+Identifier should be unique for every promotion. Attribute is used to map promotion to a product. In the offer feed, [`promotion_id`](/fields/offer/promotion_id.md) field is used to map a promotion to a product.
 
 
 
@@ -41,7 +41,7 @@ Identifier should be unique for every promotion. Attribute is used to map promot
 
 ### Don´t
 
-- Don’t reuse or recycle the same ID for different promotions
+- Don't reuse or recycle the same ID for different promotions
 - Avoid whitespaces
 
 

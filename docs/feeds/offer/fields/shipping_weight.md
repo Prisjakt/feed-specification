@@ -155,7 +155,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
+:::danger[**<Anchor id="validation_invalid_format" title="validation_invalid_format" />**]
+
 
 ```xml
 <g:shipping_weight>11.,.,.,111</g:shipping_weight>
@@ -163,10 +164,14 @@ Below you will find possible error codes generated when validating this field al
 ```xml
 <g:shipping_weight>unkn-own</g:shipping_weight>
 ```
+```xml
+<g:shipping_weight>11 </g:shipping_weight>
+```
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
+:::danger[**<Anchor id="validation_invalid_value" title="validation_invalid_value" />**]
+
 
 ```xml
 <g:shipping_weight>empty value</g:shipping_weight>
@@ -177,18 +182,11 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_weight_unit" title="validation_invalid_weight_unit" />
+:::danger[**<Anchor id="validation_invalid_weight_unit" title="validation_invalid_weight_unit" />**]
+
 
 ```xml
 <g:shipping_weight>11 kilo</g:shipping_weight>
-```
-
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```xml
-<g:shipping_weight>11 </g:shipping_weight>
 ```
 
 :::
@@ -206,6 +204,10 @@ shipping_weight
 ```csv
 shipping_weight
 unkn-own
+```
+```csv
+shipping_weight
+11
 ```
 
 :::
@@ -228,15 +230,6 @@ shipping_weight
 ```csv
 shipping_weight
 11 kilo
-```
-
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```csv
-shipping_weight
-11
 ```
 
 :::

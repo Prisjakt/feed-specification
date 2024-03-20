@@ -42,6 +42,9 @@ shipping_label -- affects price and eligibility of  --- shipping
 
 
 
+## Validation Rules
+
+- A maximum of 10 labels is allowed
 
 
 ## Best Practices
@@ -122,12 +125,13 @@ dhl/free
 
 ## Error Codes
 
-Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the validation rules to understand the cause.
+Below you will find possible error codes generated when validating this field alongside with an example in XML and CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />
+:::danger[**<Anchor id="validation_too_many_repetitions" title="validation_too_many_repetitions" />**]
+
 
 ```xml
 <g:shipping_label>a/b/c/d/e/f/g/h/i/j/k</g:shipping_label>

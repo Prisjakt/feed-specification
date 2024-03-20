@@ -152,7 +152,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" />
+:::danger[**<Anchor id="validation_date_out_of_range" title="validation_date_out_of_range" />**]
+
 
 ```xml
 <g:sale_price_effective_date>2050-02-05/2050-02-05</g:sale_price_effective_date>
@@ -160,7 +161,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_format" title="validation_invalid_format" />
+:::danger[**<Anchor id="validation_invalid_format" title="validation_invalid_format" />**]
+
 
 ```xml
 <g:sale_price_effective_date>2018/2016-02-29</g:sale_price_effective_date>
@@ -169,7 +171,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
+:::danger[**<Anchor id="validation_missing_value" title="validation_missing_value" />**]
+
 
 ```xml
 <g:sale_price_effective_date>2016-02-29T15:30-0800</g:sale_price_effective_date>

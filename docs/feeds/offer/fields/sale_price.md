@@ -189,43 +189,41 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
+:::danger[**<Anchor id="validation_missing_currency" title="validation_missing_currency" />**]
+
 
 ```xml
-<g:sale_price>1000</g:sale_price>
-```
-```xml
-<g:sale_price>5.00 dollars</g:sale_price>
-```
-```xml
-<g:sale_price>5.00</g:sale_price>
+<g:sale_price>100$</g:sale_price>
 ```
 
 :::
 
-:::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
+:::danger[**<Anchor id="validation_missing_price_value" title="validation_missing_price_value" />**]
 
-```xml
-<g:sale_price>foo SEK</g:sale_price>
-```
+
 ```xml
 <g:sale_price>SEK</g:sale_price>
 ```
 
 :::
 
-:::danger <Anchor id="validation_not_number" title="validation_not_number" />
+:::danger[**<Anchor id="validation_not_number" title="validation_not_number" />**]
+
 
 ```xml
 <g:sale_price>10.0.00.00 SEK</g:sale_price>
 ```
 ```xml
 <g:sale_price>10.0.00.00 SEK</g:sale_price>
+```
+```xml
+<g:sale_price>foo SEK</g:sale_price>
 ```
 
 :::
 
-:::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" />
+:::danger[**<Anchor id="validation_not_positive_number" title="validation_not_positive_number" />**]
+
 
 ```xml
 <g:sale_price>-10 SEK</g:sale_price>
@@ -236,13 +234,11 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" />
+:::danger[**<Anchor id="validation_unknown_currency" title="validation_unknown_currency" />**]
+
 
 ```xml
 <g:sale_price>$100</g:sale_price>
-```
-```xml
-<g:sale_price>100$</g:sale_price>
 ```
 
 :::
@@ -255,25 +251,13 @@ Below you will find possible error codes generated when validating this field al
 
 ```csv
 sale_price
-1000
-```
-```csv
-sale_price
-5.00 dollars
-```
-```csv
-sale_price
-5.00
+100$
 ```
 
 :::
 
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
-```csv
-sale_price
-foo SEK
-```
 ```csv
 sale_price
 SEK
@@ -290,6 +274,10 @@ sale_price
 ```csv
 sale_price
 10.0.00.00 SEK
+```
+```csv
+sale_price
+foo SEK
 ```
 
 :::
@@ -312,10 +300,6 @@ sale_price
 ```csv
 sale_price
 $100
-```
-```csv
-sale_price
-100$
 ```
 
 :::

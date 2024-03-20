@@ -119,7 +119,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <pj:prisjakt_id>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)</pj:prisjakt_id>
@@ -127,7 +128,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_not_integer" title="validation_not_integer" />
+:::danger[**<Anchor id="validation_not_integer" title="validation_not_integer" />**]
+
 
 ```xml
 <pj:prisjakt_id>foo</pj:prisjakt_id>

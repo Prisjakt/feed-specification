@@ -39,7 +39,7 @@ The brand attribute is used to indicate a product's brand/manufacturer name.
 
 ### Don´t
 
-- Don´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
+- DonÂ´t set `N/A`, `generic`, `no name`, `unknown` and similar brand names as they are of no help when indexing your products/offers
 
 
 
@@ -115,7 +115,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <g:brand><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 70 characters value)]]></g:brand>

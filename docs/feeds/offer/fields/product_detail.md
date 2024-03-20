@@ -131,7 +131,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <g:product_detail>
@@ -143,7 +144,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger[**<Anchor id="validation_missing_value" title="validation_missing_value" />**]
+
 
 ```xml
 <g:product_detail>
@@ -166,7 +168,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 :::
 
-:::danger <Anchor id="validation_missing_field" title="validation_missing_field" />
+:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
 product_detail(section_name)

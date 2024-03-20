@@ -265,7 +265,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
+:::danger[**<Anchor id="validation_invalid_enum" title="validation_invalid_enum" />**]
+
 
 ```xml
 <g:energy_efficiency_class>unknown</g:energy_efficiency_class>

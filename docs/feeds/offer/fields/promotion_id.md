@@ -1,5 +1,5 @@
 ---
-description: The `promotion_id` field allows mapping your inventory to promotions.  Offer if mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
+description: The `promotion_id` field allows mapping your inventory to promotions.  Offer if mapped to promotion by [`promotion_id`](/fields/promotion/promotion_id.md) in promotion feed.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-The `promotion_id` field allows mapping your inventory to promotions.  Offer if mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
+The `promotion_id` field allows mapping your inventory to promotions.  Offer if mapped to promotion by [`promotion_id`](/fields/promotion/promotion_id.md) in promotion feed.
 
 
 
@@ -110,7 +110,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <g:promotion_id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 50 characters value)]]></g:promotion_id>

@@ -40,7 +40,7 @@ Full title of the promotion. Should describe the promotion completely and accura
 
 ### Don´t
 
-- Don’t use titles that may mislead customers.
+- Don't use titles that may mislead customers.
 
 
 
