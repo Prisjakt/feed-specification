@@ -50,28 +50,101 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+        redirects: [
+          {
+            /* These pages were removed so redirect to the most similar one*/
+            from: ['/types-of-feeds/pull/delta-feeds', '/types-of-feeds/pull/feed', '/types-of-feeds/pull/scraping', '/types-of-feeds/push/message', '/types-of-feeds/push/rest'],
+            to: '/feeds'
+          },          
+          {
+            from: '/examples/offer/minimal',
+            to: '/feeds/offers/formats/prisjakt_xml/#minimal'
+          },
+          {
+            from: '/examples/offer/all',
+            to: '/feeds/offers/formats/prisjakt_xml/#full'
+          },
+          {
+            from: '/examples/promotion/promotion-minimal',
+            to: '/feeds/promotions/formats/prisjakt_promotion_xml/#minimal'
+          },
+          {
+            from: '/examples/promotion/promotion-all',
+            to: '/feeds/promotions/formats/prisjakt_promotion_xml/#full'
+          },
+          {
+            from: '/terminology',
+            to: '/reference'
+          },
+          {
+            from: '/terminology/terms',
+            to: '/reference/terminology'
+          },
+          {
+            from: '/terminology/severity-levels',
+            to: '/reference/validation-severity-levels'
+          },
+          {
+            from: '/terminology/prisjakt-specific-fields',
+            to: '/feeds/offer/formats/prisjakt_xml/#prisjakt-specific-fields'
+          },
+          {
+            from: '/terminology/required-vs-optional',
+            to: '/policies/required-vs-optional'
+          },
+          {
+            from: '/general-exceptions',
+            to: '/reference/general-exceptions'
+          },
+          {
+            from: '/types-of-feeds/pull/file-formats/xml',
+            to: '/advanced/xml'
+          },
+          {
+            from: '/types-of-feeds/pull/file-formats/csv',
+            to: '/advanced/csv'
+          },       
+          {
+            from: '/infrastructure/auto-disabled-feeds',
+            to: '/policies/auto-disabling-feeds'
+          },
+          {
+            from: '/deprecation-policy',
+            to: '/policies/deprecation-policy'
+          },
+          {
+            from: '/advanced/encoding/file-encoding',
+            to: '/advanced/file-encoding'
+          },
+          {
+            from: '/advanced/encoding/url-encode',
+            to: '/advanced/url-encode'
+          },
+          {
+            from: '/advanced/encoding/cdata',
+            to: '/advanced/xml/cdata'
+          },
+          {
+            from: '/advanced/encoding/xml-escaping',
+            to: '/advanced/xml/xml-escaping'
+          },
+          {
+            from: '/advanced/escaping/escape-csv',
+            to: '/advanced/csv/escaping-data'
+          }
+        ],
         createRedirects(existingPath) {
           /*
           * The way this plugin works is that it generates some additional pages (not visible to end user)
           * required to do redirects. These pages have to be located under paths that were moved.
-          * That’s why this opposite statement is here -> we are duplicating /fields/offer/<field_name> (new structure)
+          * That’s why this opposite statement is here -> we are duplicating /feeds/offer/fields/<field_name> (new structure)
           * to be available also under /fields/<field_name>
           * https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
           * */
-          const FIELDS_REDIRECTS_PATH='/fields/offer'
-          const EXAMPLES_REDIRECTS_PATH='/examples/offer'
-          const FILE_FORMATS_REDIRECTS_PATH ='/types-of-feeds/file-formats'
-          // We want to redirect from /docs/fields/<offer_feed_field_name> to /docs/fields/offer/<field_name>
+          const FIELDS_REDIRECTS_PATH = '/feeds/offer/fields'
+          // We want to redirect from /docs/fields/<offer_feed_field_name> to /docs/feeds/offer/fields/<field_name>
           if (existingPath.startsWith(FIELDS_REDIRECTS_PATH)) {
             return existingPath.replace(FIELDS_REDIRECTS_PATH, '/fields');
-          }
-          // We want to redirect from /docs/examples/<file> to /docs/examples/offer/<file>
-          if (existingPath.startsWith(EXAMPLES_REDIRECTS_PATH)) {
-            return existingPath.replace(EXAMPLES_REDIRECTS_PATH, '/examples');
-          }
-          // We want to redirect from /types-of-feeds/pull/file-formats/... to /types-of-feeds/file-formats/...
-          if (existingPath.startsWith(FILE_FORMATS_REDIRECTS_PATH)) {
-            return existingPath.replace(FILE_FORMATS_REDIRECTS_PATH, '/types-of-feeds/pull/file-formats');
           }
 
           return undefined; // No redirect
