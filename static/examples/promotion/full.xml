@@ -2,7 +2,7 @@
 <rss xmlns:pj="https://schema.prisjakt.nu/ns/promotions-1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
   <channel>
     <title>Prisjakt Example Promotions Feed</title>
-    <description>This is an example promotions feed with the required and all accepted values</description>
+    <description>This is an example promotions feed all possible values</description>
     <link>https://schema.prisjakt.nu</link>
     <item>
       <g:promotion_id><![CDATA[tbby123_us]]></g:promotion_id>

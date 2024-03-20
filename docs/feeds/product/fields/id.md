@@ -140,7 +140,8 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />
+:::danger[**<Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />**]
+
 
 ```xml
 <g:id><![CDATA[!+@#$%^&*]]></g:id>
@@ -148,7 +149,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
+:::danger[**<Anchor id="validation_invalid_length" title="validation_invalid_length" />**]
+
 
 ```xml
 <g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
@@ -156,7 +158,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
+:::danger[**<Anchor id="validation_invalid_value" title="validation_invalid_value" />**]
+
 
 ```xml
 <g:id><![CDATA[ ]]></g:id>
@@ -164,7 +167,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
+:::danger[**<Anchor id="validation_missing_value" title="validation_missing_value" />**]
+
 
 ```xml
 <g:id></g:id>
@@ -172,7 +176,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />
+:::danger[**<Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />**]
+
 
 ```xml
 <g:id><![CDATA[ąśπœę©]]></g:id>
@@ -180,7 +185,8 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
-:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />
+:::danger[**<Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />**]
+
 
 ```xml
 <g:id><![CDATA[a ]]></g:id>
@@ -267,7 +273,7 @@ id
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"changed": ["Rule for id validation has been updated. Only ASCII characters (with some exceptions) are now allowed. There is also a list of disallowed characters. Please check documentaiton for more details."], "date": "2023-06-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2024-03-30"}]} dateOnly={true} />
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324405)
+- [Google Manufacturer Specification](https://support.google.com/manufacturers/answer/7495188)
