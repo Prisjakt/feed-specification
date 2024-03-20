@@ -58,19 +58,19 @@ const config = {
           },          
           {
             from: '/examples/offer/minimal',
-            to: '/feeds/offers/formats/prisjakt_xml/#minimal'
+            to: '/feeds/offer/formats/prisjakt_xml/#minimal'
           },
           {
             from: '/examples/offer/all',
-            to: '/feeds/offers/formats/prisjakt_xml/#full'
+            to: '/feeds/offer/formats/prisjakt_xml/#full'
           },
           {
             from: '/examples/promotion/promotion-minimal',
-            to: '/feeds/promotions/formats/prisjakt_promotion_xml/#minimal'
+            to: '/feeds/promotion/formats/prisjakt_promotion_xml/#minimal'
           },
           {
             from: '/examples/promotion/promotion-all',
-            to: '/feeds/promotions/formats/prisjakt_promotion_xml/#full'
+            to: '/feeds/promotion/formats/prisjakt_promotion_xml/#full'
           },
           {
             from: '/terminology',
