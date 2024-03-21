@@ -3,11 +3,18 @@ import TreeView from '@site/src/components/treeview';
 
 # Product Detail Builder
 
-## Selection
+<table>
+<tr>
+<th> Selection </th>
+<th> Output </th>
+</tr>
+<tr>
+<td>
 
 <TreeView />
 
-## Output
+</td>
+<td>
 
 ```xml
 <g:product_detail>
@@ -17,3 +24,7 @@ import TreeView from '@site/src/components/treeview';
 </g:product_detail>
 
 ```
+
+</td>
+</tr>
+</table>
