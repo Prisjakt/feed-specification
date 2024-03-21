@@ -68,7 +68,7 @@ image_link -- can be extended by  --- additional_image_link
 
 
 
-### Don´t
+### Don't
 
 - Supply URIs to other things than images
 - Don't put "stickers" in the images, eg. with "30% off" "new" or "SALE"

@@ -38,7 +38,7 @@ Use it to add unstructured product information
 
 
 
-### Don´t
+### Don't
 
 - Don't include information from other attributes
 - Don't use descriptions for promotion

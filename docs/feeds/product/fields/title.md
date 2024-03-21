@@ -40,7 +40,7 @@ Title is the **most important attribute** for Prisjakt to be able to index your 
 
 
 
-### Don´t
+### Don't
 
 - Avoid commas, tabs, extra spaces, newlines and other special characters (especially if you use CSV format)
 - Do not use HTML tags or any other codes

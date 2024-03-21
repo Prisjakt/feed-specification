@@ -42,7 +42,7 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 
 
-### Don´t
+### Don't
 
 - Re-use, if re-used, your product might end up indexed to the wrong Prisjakt product
 - Change over time, if changed, the product will need to be indexed again

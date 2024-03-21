@@ -46,7 +46,7 @@ This attribute is strongly recommended for fashion and beauty segment. It helps 
 
 
 
-### Don´t
+### Don't
 
 - Be extra careful and don't mix up `id` and `item_group_id`
 
