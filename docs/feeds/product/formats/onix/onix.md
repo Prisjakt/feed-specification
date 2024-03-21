@@ -11,92 +11,138 @@ If your products are books, we support the [Onix For Books](https://www.editeur.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<artikelregister>
-  <filinformation>
-    <avsandare>test</avsandare>
-    <avsandare_email>test@test.com</avsandare_email>
-    <mottagare>Generell</mottagare>
-    <typ>e_artdag</typ>
-  </filinformation>
-  <artikel>
-    <granskad>Ja</granskad>
-    <uppdaterad>20240307204622</uppdaterad>
-    <artikelnummer>9789174290882</artikelnummer>
-    <ean>9789174290882</ean>
-    <titel>Brott och straff</titel>
-    <arbetstitel>Brott och straff</arbetstitel>
-    <mediatyp>Bok</mediatyp>
-    <bandtyp>Pocket</bandtyp>
-    <forlag_id>4278</forlag_id>
-    <forlag>Bonnier Pocket</forlag>
-    <forlag_kortnamn>BONP</forlag_kortnamn>
-    <huvuddistributor_id>102</huvuddistributor_id>
-    <distributor>
-      <distributor_id>102</distributor_id>
-      <distributor_namn>Bonnierförlagen</distributor_namn>
-      <distributor_kortnamn>SAMD</distributor_kortnamn>
-      <lagerstatus>Finns i lager</lagerstatus>
-      <lagersaldo>999</lagersaldo>
-      <fpris>50,00</fpris>
-      <pristyp>05</pristyp>
-      <nollpris>0</nollpris>
-    </distributor>
-    <distributor>
-      <distributor_id>1581</distributor_id>
-      <distributor_namn>Stardist AB</distributor_namn>
-      <distributor_kortnamn>SDIST</distributor_kortnamn>
-      <distributor_gln>7300009034628</distributor_gln>
-      <lagerstatus>Spärrad</lagerstatus>
-      <lagersaldo>0</lagersaldo>
-      <fpris>38,00</fpris>
-      <pristyp>05</pristyp>
-      <nollpris>0</nollpris>
-    </distributor>
-    <distributor>
-      <distributor_id>3028</distributor_id>
-      <distributor_namn>Förlagssystem grossisten</distributor_namn>
-      <distributor_kortnamn>FSGR</distributor_kortnamn>
-      <distributor_gln>7381000023118</distributor_gln>
-      <lagerstatus>Finns i lager</lagerstatus>
-      <lagersaldo>9</lagersaldo>
-      <fpris>50,00</fpris>
-      <pristyp>05</pristyp>
-      <nollpris>0</nollpris>
-    </distributor>
-    <prisgrupp>M</prisgrupp>
-    <moms>6</moms>
-    <saljperiod>2010 Vår</saljperiod>
-    <utgivningsdatum>20100104</utgivningsdatum>
-    <recensionsdatum>20100104</recensionsdatum>
-    <upplagenummer>0</upplagenummer>
-    <omfang enhet="sidor">646</omfang>
-    <bredd>110</bredd>
-    <hojd>180</hojd>
-    <ryggbredd>39</ryggbredd>
-    <vikt>334</vikt>
-    <illustrerad>Nej</illustrerad>
-    <sprak>Svenska</sprak>
-    <sprak_kod>swe</sprak_kod>
-    <medarbetare typ="forfattare">Dostojevskij, Fjodor</medarbetare>
-    <medarbetare typ="oversattare">Björkegren, Hans</medarbetare>
-    <medarbetare typ="formgivare">Herrström Gemzell, Jenny</medarbetare>
-    <laromedel>Nej</laromedel>
-    <katalogsignum>Hce</katalogsignum>
-    <varugrupp>004 Utländska berättare</varugrupp>
-    <saga>&lt;p&gt;Brott och straff har kallats ”världens mest berömda roman” och är en av världens mest lästa böcker. Sedan den kom ut 1866 har hundratals miljoner läsare följt den fattige studenten och mördaren Raskolnikov på hans febervandring genom S:t Petersburg.&lt;/p&gt;</saga>
-    <link typ="omslagsbild">https://prodbfopusgeneral.blob.core.windows.net/asset-storage-public/bokbilder/g/9789174290882.jpg?timestamp=20240226182952
-</link>
-    <link typ="omslagsbild">https://prodbfopusgeneral.blob.core.windows.net/asset-storage-public/bokbilder3d/g/9789174290882.jpg?timestamp=20240305094611
-</link>
-    <link typ="omslagsbild">https://prodbfopusgeneral.blob.core.windows.net/asset-storage-public/bokbilder/tif/9789174290882.tif?timestamp=20240226182949
-</link>
-    <link typ="omslagsbild">https://media.bonnierforlagen.se/bokbilder3d/tif/9789174290882.jpg?timestamp=20090914163533</link>
-    <katalogtext>&lt;p&gt;Brott och straff har kallats ”världens mest berömda roman” och är en av världens mest lästa böcker. Sedan den kom ut 1866 har hundratals miljoner läsare följt den fattige studenten och mördaren Raskolnikov på hans febervandring genom S:t Petersburg.&lt;/p&gt;</katalogtext>
-    <original>Nej</original>
-    <miljomarkning>FSC</miljomarkning>
-    <dewey>891.733</dewey>
-    <thema>2ACSW</thema>
-    <forhandsinfo>Nej</forhandsinfo>
-  </artikel>
-</artikelregister>
+<ONIXMessage release="3.0" xmlns="http://ns.editeur.org/onix/3.0/reference">
+  <Header>
+    <Sender>
+      <SenderIdentifier>
+        <SenderIDType>01</SenderIDType>
+        <IDValue>BR101</IDValue>
+      </SenderIdentifier>
+      <EmailAddress>test@prisjakt.nu</EmailAddress>
+    </Sender>
+    <SentDateTime>20231015</SentDateTime>
+    <DefaultCurrencyCode>SEK</DefaultCurrencyCode>
+  </Header>
+  <Product>
+    <RecordReference>9780521614320</RecordReference>
+    <NotificationType>02</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9780521614320</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9780521614320</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>00</ProductForm>
+      <ProductFormDescription>CD-skiva</ProductFormDescription>
+      <Measure>
+        <MeasureType>01</MeasureType>
+        <Measurement>134</Measurement>
+        <MeasureUnitCode>mm</MeasureUnitCode>
+      </Measure>
+      <Measure>
+        <MeasureType>08</MeasureType>
+        <Measurement>102</Measurement>
+        <MeasureUnitCode>gr</MeasureUnitCode>
+      </Measure>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Messages 2 class cds</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <TitleDetail>
+        <TitleType>10</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Messages 2 class cds</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonNameInverted>Goodey, Noel</PersonNameInverted>
+        <NamesBeforeKey>Noel</NamesBeforeKey>
+        <KeyNames>Goodey</KeyNames>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Subject>
+        <SubjectSchemeIdentifier>47</SubjectSchemeIdentifier>
+        <SubjectCode>23</SubjectCode>
+        <SubjectHeadingText>Litteraturvetenskap</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>95</SubjectSchemeIdentifier>
+        <SubjectCode>2ACB</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail/>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherIdentifier>
+          <PublisherIDType>01</PublisherIDType>
+          <IDTypeName>BR-ID</IDTypeName>
+          <IDValue>1966</IDValue>
+        </PublisherIdentifier>
+        <PublisherIdentifier>
+          <PublisherIDType>01</PublisherIDType>
+          <IDTypeName>Forlag_kortnamn</IDTypeName>
+          <IDValue>CAMB</IDValue>
+        </PublisherIdentifier>
+        <PublisherName>Cambridge University Press</PublisherName>
+      </Publisher>
+      <Publisher>
+        <PublishingRole>04</PublishingRole>
+        <PublisherName>Cambridge university press</PublisherName>
+      </Publisher>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20050407</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>03</SupplierRole>
+          <SupplierIdentifier>
+            <SupplierIDType>01</SupplierIDType>
+            <IDTypeName>BR-ID</IDTypeName>
+            <IDValue>3279</IDValue>
+          </SupplierIdentifier>
+          <SupplierIdentifier>
+            <SupplierIDType>01</SupplierIDType>
+            <IDTypeName>Distributor_kortnamn</IDTypeName>
+            <IDValue>FSBI</IDValue>
+          </SupplierIdentifier>
+          <SupplierIdentifier>
+            <SupplierIDType>06</SupplierIDType>
+            <IDValue>7381000023118</IDValue>
+          </SupplierIdentifier>
+          <SupplierName>Förlagssystem bokimporten</SupplierName>
+        </Supplier>
+        <ProductAvailability>22</ProductAvailability>
+        <Price>
+          <PriceType>05</PriceType>
+          <PriceAmount>545.00</PriceAmount>
+          <Tax>
+            <TaxType>01</TaxType>
+            <TaxRatePercent>6</TaxRatePercent>
+          </Tax>
+          <PriceDate>
+            <PriceDateRole>14</PriceDateRole>
+            <Date>20200101</Date>
+          </PriceDate>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+</ONIXMessage>
 ```

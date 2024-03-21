@@ -15,12 +15,12 @@ For larger feeds and higher update frequencies please look into using a delta fe
 
 ## Format
 
-If possible, then use [XML](/advanced/xml/index.md) over CSV. This is because xml is:
+If possible, then use [XML](/advanced/xml/index.md) over CSV. This is because:
 
-- More well defined than csv
-- Have better tools to handle [escaping and encoding](/advanced) 
-- Is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/feeds/offer/fields/shipping.md)
-- CSVs have no end marker while an XML file have an end tag, it´s therefore harder to know if a CSV have been read to the end or aborted due to network problems
+- XML is more well defined than csv
+- XML have better tools to handle [escaping and encoding](/advanced) 
+- XML is easier to read and deal with, especially when it comes to more complex list fields like [shipping](/feeds/offer/fields/shipping)
+- CSVs have no end marker while an XML file have an end tag, it's therefore harder to know if a CSV have been read to the end or aborted due to network problems
 
 ## Data
 
