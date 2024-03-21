@@ -27,7 +27,7 @@ For optimal results it is preferable if you host your feeds with the support for
 
 #### Controlled Generation
 
-We recommend that you generate the files on your backend in a matter **you control**, either scheduled or upon changes to your data. Then host the resulting files (either [full feed](/types-of-feeds/pull/feed.md) or [delta files](/types-of-feeds/pull/delta-feeds.md)) via your server for us to fetch.
+We recommend that you generate the files on your backend in a matter **you control**, either scheduled or upon changes to your data. Then host the resulting files via your server for us to fetch.
 
 #### Atomic Updates
 
