@@ -3,4 +3,5 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="member_price" type="xs:string" />
     <xs:element name="prisjakt_id" type="xs:string" />
+    <xs:element name="delta_command" type="xs:string" />
 </xs:schema>
