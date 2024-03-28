@@ -1,42 +1,19 @@
 import React from 'react';
-import CodeBlock from '@theme/CodeBlock';
 import AttributeTreeView from '@site/src/components/AttributeTreeView';
-import Handlebars from "handlebars";
+import AttributeMapperPreview from '@site/src/components/AttributeMapperPreview';
 import attributeData from "./attribute-data.json";
+import { AttributeMapperContext } from "./AttributeMapperContext";
 
-Handlebars.registerPartial('detail', `<g:product_detail>
-  <g:section_name><![CDATA[{{section}}]]></g:section_name>
-  <g:attribute_name><![CDATA[{{name}}]]></g:attribute_name>
-  <g:attribute_value><![CDATA[ value goes here ]]></g:attribute_value>
-</g:product_detail>`);
+export default function AttributeMapper() {
+    const [selectedAttributes, setSelectedAttributes] = React.useState([]);
 
-const template = Handlebars.compile(`{{#each attributes}}
-{{>detail attribute=.}}
-{{/each}}`);
-  
-const preview = template(
-{
-    attributes: [
-        { section: "Cardigans", name: "Design" },
-        { section: "Cardigans", name: "Keyword" },
-        { section: "Cardigans", name: "Gender/age" },
-    ],
-});
-
-export default function AtrributeMapper() {
-    return (<>
+    return (<AttributeMapperContext.Provider value={{selectedAttributes, setSelectedAttributes}}>
         <div className="column left">
-
             <AttributeTreeView data={attributeData} />
-
         </div>
 
         <div className="column right">
-
-            <CodeBlock language="xml">
-                {preview}
-            </CodeBlock>
-
+            <AttributeMapperPreview />
         </div>
-    </>);
+    </AttributeMapperContext.Provider>);
 }

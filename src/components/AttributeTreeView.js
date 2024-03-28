@@ -13,22 +13,34 @@ import {
 	TreeLabelInteractable,
 	TreeLabel
 } from "baseui/tree-view";
-
+import { AttributeMapperContext } from "./AttributeMapperContext";
 const engine = new Styletron();
 
 const CustomTreeLabel = (props) => {
-	const [value, setValue] = React.useState(false)
 	const node = props.node;
+	const [value, setValue] = React.useState(false)
+	const {setSelectedAttributes } = React.useContext(AttributeMapperContext);
 	const isAttribute = node.id.toString().startsWith('a');
 
-	if (isAttribute) {		
+	const handleChange = (e) => {
+		setValue(e.target.checked);
+
+		/* TODO: Add only id, name and parent name */
+		if (e.target.checked) {
+			setSelectedAttributes((prevSelected) => [...prevSelected, node]);
+		} else {
+			setSelectedAttributes((prevSelected) => prevSelected.filter((x) => x.id !== node.id));
+		}
+	};
+
+	if (isAttribute) {
 		return (<TreeLabelInteractable>
-			<Checkbox checked={value} onChange={e => setValue(e.target.checked)}>
+			<Checkbox checked={value} onChange={handleChange}>
 				{node.name}
 			</Checkbox>
 		</TreeLabelInteractable>);
 	} else {
-		return (<TreeLabel {...props} label={node?.name}/>);
+		return (<TreeLabel {...props} label={node?.name} />);
 	}
 };
 
