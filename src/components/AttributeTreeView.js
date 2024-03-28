@@ -44,7 +44,7 @@ const CustomTreeLabel = (props) => {
 		const selectionNode = {
 			id: node.id,
 			name: node.name,
-			parent: findParentName(data, node.id),
+			parent: node.parent?.name
 		};
 
 		/* TODO: Add only id, name and parent name, not the children */

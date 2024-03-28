@@ -5,7 +5,6 @@ import { AttributeMapperContext } from "./AttributeMapperContext";
 
 Handlebars.registerPartial('detail', `<g:product_detail>
   <g:section_name><![CDATA[{{parent}}]]></g:section_name>
-  <!-- Attribute id: {{id}} -->
   <g:attribute_name><![CDATA[{{name}}]]></g:attribute_name>
   <g:attribute_value><![CDATA[ value goes here ]]></g:attribute_value>
 </g:product_detail>
@@ -16,10 +15,11 @@ const template = Handlebars.compile(`{{#each attributes}}
 {{/each}}`);
 
 export default function AttributeMapper() {
+    // Get selection from context
     const {selectedAttributes} = React.useContext(AttributeMapperContext);
-    // Render template
+    
+    // Render handlebar template
     const preview = template({ attributes: selectedAttributes });
-    console.log(selectedAttributes);
 
     return (<CodeBlock language="xml">
                 {preview}
