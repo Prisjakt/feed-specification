@@ -13,23 +13,45 @@ import {
 	TreeLabelInteractable,
 	TreeLabel
 } from "baseui/tree-view";
-import { AttributeMapperContext } from "./AttributeMapperContext";
+import { AttributeMapperContext, AttributeMapperDataContext } from "./AttributeMapperContext";
 const engine = new Styletron();
+
+const findParentName = (data, id) => {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].children) {
+            for (let j = 0; j < data[i].children.length; j++) {
+                if (data[i].children[j].id === id) {
+                    return data[i].name;
+                }
+                let found = findParentName(data[i].children, id);
+                if (found) return found;
+            }
+        }
+    }
+    return null;
+};
 
 const CustomTreeLabel = (props) => {
 	const node = props.node;
 	const [value, setValue] = React.useState(false)
 	const {setSelectedAttributes } = React.useContext(AttributeMapperContext);
+	const {data} = React.useContext(AttributeMapperDataContext);
 	const isAttribute = node.id.toString().startsWith('a');
 
 	const handleChange = (e) => {
 		setValue(e.target.checked);
 
-		/* TODO: Add only id, name and parent name */
+		const selectionNode = {
+			id: node.id,
+			name: node.name,
+			parent: findParentName(data, node.id),
+		};
+
+		/* TODO: Add only id, name and parent name, not the children */
 		if (e.target.checked) {
-			setSelectedAttributes((prevSelected) => [...prevSelected, node]);
+			setSelectedAttributes((prevSelected) => [...prevSelected, selectionNode]);
 		} else {
-			setSelectedAttributes((prevSelected) => prevSelected.filter((x) => x.id !== node.id));
+			setSelectedAttributes((prevSelected) => prevSelected.filter((x) => x.id !== selectionNode.id));
 		}
 	};
 

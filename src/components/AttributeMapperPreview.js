@@ -4,7 +4,8 @@ import Handlebars from "handlebars";
 import { AttributeMapperContext } from "./AttributeMapperContext";
 
 Handlebars.registerPartial('detail', `<g:product_detail>
-  <g:section_name><![CDATA[{{id}}]]></g:section_name>
+  <g:section_name><![CDATA[{{parent}}]]></g:section_name>
+  <!-- Attribute id: {{id}} -->
   <g:attribute_name><![CDATA[{{name}}]]></g:attribute_name>
   <g:attribute_value><![CDATA[ value goes here ]]></g:attribute_value>
 </g:product_detail>
