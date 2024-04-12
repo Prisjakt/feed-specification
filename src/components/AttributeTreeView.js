@@ -35,7 +35,6 @@ const CustomTreeLabel = (props) => {
 	const node = props.node;
 	const [value, setValue] = React.useState(false)
 	const {setSelectedAttributes } = React.useContext(AttributeMapperContext);
-	const {data} = React.useContext(AttributeMapperDataContext);
 	const isAttribute = node.id.toString().startsWith('a');
 
 	const handleChange = (e) => {
@@ -47,7 +46,7 @@ const CustomTreeLabel = (props) => {
 			parent: node.parent?.name
 		};
 
-		/* TODO: Add only id, name and parent name, not the children */
+		/* When selecting: Add only id, name and parent name to the selection state, not the children */
 		if (e.target.checked) {
 			setSelectedAttributes((prevSelected) => [...prevSelected, selectionNode]);
 		} else {
