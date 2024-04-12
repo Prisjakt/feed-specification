@@ -24,7 +24,7 @@
     "baseui": "^0.0.0-next-6fabc7134",
     "clsx": "^2.1.0",
     "docusaurus-lunr-search": "^3.3.2",
-    "eta": "^3.2.0",
+    "eta": "^3.4.0",
     "handlebars": "^4.7.8",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.1.1",
-    "@tsconfig/docusaurus": "^1.0.5",
-    "typescript": "^5.4.2"
+    "@tsconfig/docusaurus": "^2.0.3",
+    "typescript": "^5.4.3"
   },
   "browserslist": {
     "production": [
