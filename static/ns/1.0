@@ -4,4 +4,9 @@
     <xs:element name="member_price" type="xs:string" />
     <xs:element name="prisjakt_id" type="xs:string" />
     <xs:element name="delta_command" type="xs:string" />
+    <xs:complexType name="ShippingType">
+        <xs:attribute name="delivery_type" type="xs:string" />
+        <xs:attribute name="carrier" type="xs:string" />
+    </xs:complexType>
+    <xs:element name="shipping" type="tns:ShippingType" />
 </xs:schema>
