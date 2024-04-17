@@ -21,9 +21,10 @@ Currently, our Prisjakt specific fields are:
 
 - [prisjakt_id](/feeds/offer/fields/prisjakt_id.md)
 - [member_price](/feeds/offer/fields/member_price.md)
-- [delivery_type](/feeds/offer/fields/shipping.md)
-- [carrier](/feeds/offer/fields/shipping.md)
 - [affiliate_link](/feeds/offer/fields/affiliate_link.md)
+- shipping
+  - [delivery_type](/feeds/offer/fields/shipping.md)
+  - [carrier](/feeds/offer/fields/shipping.md)
 
 ## Required Fields
 
