@@ -14,7 +14,6 @@ import {
 	TreeLabel
 } from "baseui/tree-view";
 import { AttributeMapperContext, AttributeMapperDataContext } from "./AttributeMapperContext";
-const engine = new Styletron();
 
 const findParentName = (data, id) => {
     for (let i = 0; i < data.length; i++) {
@@ -66,6 +65,8 @@ const CustomTreeLabel = (props) => {
 };
 
 export default ({ data }) => {
+	const engine = new Styletron();
+
 	return (
 		<StyletronProvider value={engine}>
 			<BaseProvider theme={LightTheme}>
