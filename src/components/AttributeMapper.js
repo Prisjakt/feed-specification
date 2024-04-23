@@ -20,17 +20,17 @@ const setParent = (o) => {
 export default function AttributeMapper() {
     const [selectedAttributes, setSelectedAttributes] = React.useState([]);
     const [data, setData] = React.useState(setParent({ children: attributeData }).children);
-    return (
-        <BrowserOnly fallback={<div>Loading...</div>}>
-            <AttributeMapperDataContext.Provider value={{ data, setData }}>
-                <AttributeMapperContext.Provider value={{ selectedAttributes, setSelectedAttributes }}>
-                    <div className="column left">
-                        <AttributeTreeView data={data} />
-                    </div>
+    return <BrowserOnly fallback={<div>Loading...</div>}>{() =>
 
-                    <div className="column right">
-                        <AttributeMapperPreview />
-                    </div>
-                </AttributeMapperContext.Provider>
-            </AttributeMapperDataContext.Provider>  </BrowserOnly>);
+        <AttributeMapperDataContext.Provider value={{ data, setData }}>
+            <AttributeMapperContext.Provider value={{ selectedAttributes, setSelectedAttributes }}>
+                <div className="column left">
+                    <AttributeTreeView data={data} />
+                </div>
+
+                <div className="column right">
+                    <AttributeMapperPreview />
+                </div>
+            </AttributeMapperContext.Provider>
+        </AttributeMapperDataContext.Provider>}</BrowserOnly>;
 }
