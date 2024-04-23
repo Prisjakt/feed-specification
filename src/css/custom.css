@@ -78,3 +78,27 @@
   background-color: var(--ifm-color-success-lighter);
   color: white;
 }
+
+
+/* Attribute Mapper Tool */
+
+/* Full width page */
+.docs-doc-id-feeds\/product\/formats\/prisjakt_manufacturer_xml\/attribute_mapper .container {
+  max-width: 90%; 
+
+  /* Another useful attribute to control the content width: */
+  width: fit-content;
+}
+
+/* Two column layout */
+.column {
+  float: left;
+}
+
+.left {
+  width: 32%;
+}
+
+.right {
+  width: 68%;
+}
