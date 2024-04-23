@@ -57,7 +57,9 @@ shipping -- might be determined by  --- shipping_label
 - Handling time and transit time should be specified in days.
 - Overestimate if you can't provide accurate shipping cost
 - Submit shipping cost including VAT, use local currency
-- If you provide information about handling or transit time then min_handling_time should be lesser or equal to max_handling_time and min_transit_time should be lesser or equal to max_transit_time
+- If you provide information about handling or transit time then `min_handling_time` should be lesser or equal to `max_handling_time` and `min_transit_time` should be lesser or equal to `max_transit_time`
+- Attribute `carrier` can be any string value up to 50 characters, but only the following values will be represented with icons `airmee`, `best`, `bring`, `budbee`, `city`, `dachser`, `db`, `dhl`, `dooris`, `early`, `fedex`, `instabox`, `jetpak`, `postnord`, `ups`, `gls`
+- Attribute `delivery_type` can only take specific enum values. If the provided value is not in the allowed enum values or is not provided, the status is unset. Allowed values are `in_store_pickup`, `home`, `mailbox`, `package_locker`, `service_point`
 
 
 ## Best Practices
@@ -96,6 +98,8 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
   <g:max_handling_time>2</g:max_handling_time>
   <g:min_transit_time>1</g:min_transit_time>
   <g:max_transit_time>3</g:max_transit_time>
+  <g:delivery_type>home</g:delivery_type>
+  <g:carrier>PostNord</g:carrier>
 </g:shipping>
 ```
 
@@ -115,6 +119,8 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
   <g:max_handling_time>2</g:max_handling_time>
   <g:min_transit_time>1</g:min_transit_time>
   <g:max_transit_time>3</g:max_transit_time>
+  <g:delivery_type>home</g:delivery_type>
+  <g:carrier>PostNord</g:carrier>
 </g:shipping>
 ```
 
@@ -179,8 +185,8 @@ Here are examples of how a valid *shipping* value  should look like in XML and C
 :::tip Valid Value
 
 ```csv
-shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
-SE:Skåne:Express:25.00 SEK:1:2:1:3
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time:delivery_type:carrier)
+SE:Skåne:Express:25.00 SEK:1:2:1:3:home:PostNord
 ```
 
 :::
@@ -190,8 +196,8 @@ SE:Skåne:Express:25.00 SEK:1:2:1:3
   <div>
 
 ```csv
-shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time)
-SE:Skåne:Express:25.00 SEK:1:2:1:3
+shipping(country:region:service:price:min_handling_time:max_handling_time:min_transit_time:max_transit_time:delivery_type:carrier)
+SE:Skåne:Express:25.00 SEK:1:2:1:3:home:PostNord
 ```
 
 ```csv
@@ -332,7 +338,7 @@ SE:Skåne:Express:5.00 SEK:1:2:1
 | Repeatable limit | **100** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}, {"added": ["Added carrier and delivery_type support"], "date": "2024-04-16"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324484)
