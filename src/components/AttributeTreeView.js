@@ -41,9 +41,11 @@ const CustomTreeLabel = ({node, selectedAttributes, setSelectedAttributes, ...pr
 	if (isAttribute) {
 		return (
 			<TreeLabelInteractable>
-				<Checkbox checked={value} onChange={handleChange}>
-					{node.name}
-				</Checkbox>
+				<div className={'treeview-checkbox'}>
+					<Checkbox checked={value} onChange={handleChange}>
+						{node.name}
+					</Checkbox>
+				</div>
 			</TreeLabelInteractable>
 		);
 	}
