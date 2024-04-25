@@ -1,5 +1,5 @@
 ---
-description: The `promotion_id` field allows mapping your inventory to promotions.  Offer is mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
+description: The `promotion_id` field allows mapping your inventory to promotions. Offer is mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-The `promotion_id` field allows mapping your inventory to promotions.  Offer is mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
+The `promotion_id` field allows mapping your inventory to promotions. Offer is mapped to promotion by [`promotion_id`](/feeds/promotion/fields/promotion_id.md) in promotion feed.
 
 
 
