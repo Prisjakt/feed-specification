@@ -16,7 +16,7 @@ import {
 import attributeData from '@site/static/attribute-data.json';
 
 const CustomTreeLabel = ({node, selectedAttributes, setSelectedAttributes, ...props}) => {
-	const isAttribute = node?.isAttribute === true;
+	const isAttribute = node?.is_attribute === true;
 
 	const value = useMemo(
 		() => isAttribute && selectedAttributes.find((x) => x.id === node.id) !== undefined,
