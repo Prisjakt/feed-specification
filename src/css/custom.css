@@ -102,3 +102,8 @@
 .right {
   width: 68%;
 }
+
+.treeview-checkbox {
+  overflow: hidden;
+  height: 30px;
+}
