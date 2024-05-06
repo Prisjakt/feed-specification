@@ -134,7 +134,7 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 :::tip Valid Value
 
 ```xml
-<g:condition>new</g:condition>
+<g:condition>almost new</g:condition>
 ```
 
 :::
@@ -142,6 +142,18 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 <details>
   <summary>Click to show more valid XML examples</summary>
   <div>
+
+```xml
+<g:condition>almost new</g:condition>
+```
+
+```xml
+<g:condition>damaged packaging</g:condition>
+```
+
+```xml
+<g:condition>demo</g:condition>
+```
 
 ```xml
 <g:condition>new</g:condition>
@@ -155,18 +167,6 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 <g:condition>used</g:condition>
 ```
 
-```xml
-<g:condition>damaged packaging</g:condition>
-```
-
-```xml
-<g:condition>demo</g:condition>
-```
-
-```xml
-<g:condition>almost new</g:condition>
-```
-
 
   </div>
 </details>
@@ -178,7 +178,7 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 
 ```csv
 condition
-new
+almost new
 ```
 
 :::
@@ -189,17 +189,7 @@ new
 
 ```csv
 condition
-new
-```
-
-```csv
-condition
-refurbished
-```
-
-```csv
-condition
-used
+almost new
 ```
 
 ```csv
@@ -214,7 +204,17 @@ demo
 
 ```csv
 condition
-almost new
+new
+```
+
+```csv
+condition
+refurbished
+```
+
+```csv
+condition
+used
 ```
 
 

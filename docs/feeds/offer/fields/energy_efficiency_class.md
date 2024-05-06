@@ -132,7 +132,7 @@ Here are examples of how a valid *energy_efficiency_class* value  should look li
 :::tip Valid Value
 
 ```xml
-<g:energy_efficiency_class>a+++</g:energy_efficiency_class>
+<g:energy_efficiency_class>a</g:energy_efficiency_class>
 ```
 
 :::
@@ -142,11 +142,7 @@ Here are examples of how a valid *energy_efficiency_class* value  should look li
   <div>
 
 ```xml
-<g:energy_efficiency_class>a+++</g:energy_efficiency_class>
-```
-
-```xml
-<g:energy_efficiency_class>a++</g:energy_efficiency_class>
+<g:energy_efficiency_class>a</g:energy_efficiency_class>
 ```
 
 ```xml
@@ -154,7 +150,11 @@ Here are examples of how a valid *energy_efficiency_class* value  should look li
 ```
 
 ```xml
-<g:energy_efficiency_class>a</g:energy_efficiency_class>
+<g:energy_efficiency_class>a++</g:energy_efficiency_class>
+```
+
+```xml
+<g:energy_efficiency_class>a+++</g:energy_efficiency_class>
 ```
 
 ```xml
@@ -192,7 +192,7 @@ Here are examples of how a valid *energy_efficiency_class* value  should look li
 
 ```csv
 energy_efficiency_class
-a+++
+a
 ```
 
 :::
@@ -203,12 +203,7 @@ a+++
 
 ```csv
 energy_efficiency_class
-a+++
-```
-
-```csv
-energy_efficiency_class
-a++
+a
 ```
 
 ```csv
@@ -218,7 +213,12 @@ a+
 
 ```csv
 energy_efficiency_class
-a
+a++
+```
+
+```csv
+energy_efficiency_class
+a+++
 ```
 
 ```csv

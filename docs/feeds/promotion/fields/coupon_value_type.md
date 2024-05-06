@@ -168,6 +168,30 @@ Defines type of the promotion
       Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.
     </ReactMarkdown>
     </dd>
+<dt>
+      <pre>
+      <code>
+      cheapest_quantity_free
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      The promotion offers discounts based on volume.
+    </ReactMarkdown>
+    </dd>
+<dt>
+      <pre>
+      <code>
+      no_structured_data
+      </code>
+      </pre>
+    </dt>
+    <dd>
+    <ReactMarkdown>
+      Indicates you are not submitting any of the promotion benefit types listed below.
+    </ReactMarkdown>
+    </dd>
 </dl>
 
 
@@ -184,7 +208,7 @@ Here are examples of how a valid *coupon_value_type* value should look like in X
 :::tip Valid Value
 
 ```xml
-<g:coupon_value_type>money_off</g:coupon_value_type>
+<g:coupon_value_type>buy_m_get_money_off</g:coupon_value_type>
 ```
 
 :::
@@ -194,11 +218,7 @@ Here are examples of how a valid *coupon_value_type* value should look like in X
   <div>
 
 ```xml
-<g:coupon_value_type>money_off</g:coupon_value_type>
-```
-
-```xml
-<g:coupon_value_type>percent_off</g:coupon_value_type>
+<g:coupon_value_type>buy_m_get_money_off</g:coupon_value_type>
 ```
 
 ```xml
@@ -210,7 +230,7 @@ Here are examples of how a valid *coupon_value_type* value should look like in X
 ```
 
 ```xml
-<g:coupon_value_type>buy_m_get_money_off</g:coupon_value_type>
+<g:coupon_value_type>cheapest_quantity_free</g:coupon_value_type>
 ```
 
 ```xml
@@ -218,19 +238,19 @@ Here are examples of how a valid *coupon_value_type* value should look like in X
 ```
 
 ```xml
-<g:coupon_value_type>free_gift_with_value</g:coupon_value_type>
-```
-
-```xml
 <g:coupon_value_type>free_gift_with_item_id</g:coupon_value_type>
 ```
 
 ```xml
-<g:coupon_value_type>free_shipping_standard</g:coupon_value_type>
+<g:coupon_value_type>free_gift_with_value</g:coupon_value_type>
 ```
 
 ```xml
 <g:coupon_value_type>free_shipping_overnight</g:coupon_value_type>
+```
+
+```xml
+<g:coupon_value_type>free_shipping_standard</g:coupon_value_type>
 ```
 
 ```xml
@@ -239,6 +259,18 @@ Here are examples of how a valid *coupon_value_type* value should look like in X
 
 ```xml
 <g:coupon_value_type>free_shipping_with_shipping_config</g:coupon_value_type>
+```
+
+```xml
+<g:coupon_value_type>money_off</g:coupon_value_type>
+```
+
+```xml
+<g:coupon_value_type>no_structured_data</g:coupon_value_type>
+```
+
+```xml
+<g:coupon_value_type>percent_off</g:coupon_value_type>
 ```
 
 

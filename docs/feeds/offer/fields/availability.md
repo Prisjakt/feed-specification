@@ -140,7 +140,7 @@ Here are examples of how a valid *availability* value  should look like in XML a
 :::tip Valid Value
 
 ```xml
-<g:availability>in_stock</g:availability>
+<g:availability>download</g:availability>
 ```
 
 :::
@@ -150,15 +150,15 @@ Here are examples of how a valid *availability* value  should look like in XML a
   <div>
 
 ```xml
+<g:availability>download</g:availability>
+```
+
+```xml
 <g:availability>in_stock</g:availability>
 ```
 
 ```xml
 <g:availability>out_of_stock</g:availability>
-```
-
-```xml
-<g:availability>download</g:availability>
 ```
 
 ```xml
@@ -182,7 +182,7 @@ Here are examples of how a valid *availability* value  should look like in XML a
 
 ```csv
 availability
-in_stock
+download
 ```
 
 :::
@@ -193,17 +193,17 @@ in_stock
 
 ```csv
 availability
+download
+```
+
+```csv
+availability
 in_stock
 ```
 
 ```csv
 availability
 out_of_stock
-```
-
-```csv
-availability
-download
 ```
 
 ```csv
