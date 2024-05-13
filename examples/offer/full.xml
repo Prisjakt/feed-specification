@@ -77,8 +77,8 @@
       <g:shipping_length>15.2 in</g:shipping_length>
       <g:shipping_weight>11 lb</g:shipping_weight>
       <g:shipping_width>15.2 in</g:shipping_width>
-      <g:size>XXXL</g:size>
-      <g:size_system>us</g:size_system>
+      <g:size>XS</g:size>
+      <g:size_system>eu</g:size_system>
     </item>
   </channel>
 </rss>
