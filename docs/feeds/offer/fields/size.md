@@ -74,6 +74,7 @@ Here are examples of how a valid *size* value  should look like in XML and CSV (
 
 ```xml
 <g:size>XS</g:size>
+<g:size_system>EU</g:size_system>
 ```
 
 :::
@@ -84,10 +85,12 @@ Here are examples of how a valid *size* value  should look like in XML and CSV (
 
 ```xml
 <g:size>XS</g:size>
+<g:size_system>EU</g:size_system>
 ```
 
 ```xml
 <g:size>XXXL</g:size>
+<g:size_system>EU</g:size_system>
 ```
 
 
@@ -100,8 +103,8 @@ Here are examples of how a valid *size* value  should look like in XML and CSV (
 :::tip Valid Value
 
 ```csv
-size
-XS
+size,size_system
+XS,EU
 ```
 
 :::
@@ -111,13 +114,13 @@ XS
   <div>
 
 ```csv
-size
-XS
+size,size_system
+XS,EU
 ```
 
 ```csv
-size
-XXXL
+size,size_system
+XXXL,EU
 ```
 
 
@@ -139,6 +142,16 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:size>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)</g:size>
+<g:size_system>EU</g:size_system>
+```
+
+:::
+
+:::danger[**<Anchor id="validation_size_without_size_system" title="validation_size_without_size_system" />**]
+
+
+```xml
+<g:size>XXXL</g:size>
 ```
 
 :::
@@ -150,8 +163,17 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
+size,size_system
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value),EU
+```
+
+:::
+
+:::danger <Anchor id="validation_size_without_size_system" title="validation_size_without_size_system" />
+
+```csv
 size
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 100 characters value)
+XXXL
 ```
 
 :::

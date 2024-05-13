@@ -165,6 +165,7 @@ Here are examples of how a valid *size_system* value  should look like in XML an
 
 ```xml
 <g:size_system>au</g:size_system>
+<g:size>XS</g:size>
 ```
 
 :::
@@ -175,46 +176,62 @@ Here are examples of how a valid *size_system* value  should look like in XML an
 
 ```xml
 <g:size_system>au</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>br</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>cn</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>de</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>eu</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>fr</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>it</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>jp</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>mex</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>uk</g:size_system>
+<g:size>XS</g:size>
 ```
 
 ```xml
 <g:size_system>us</g:size_system>
+<g:size>XS</g:size>
+```
+
+```xml
+<g:size_system>eu</g:size_system>
+<g:size>XS</g:size>
 ```
 
 
@@ -227,8 +244,8 @@ Here are examples of how a valid *size_system* value  should look like in XML an
 :::tip Valid Value
 
 ```csv
-size_system
-au
+size_system,size
+au,XS
 ```
 
 :::
@@ -238,58 +255,63 @@ au
   <div>
 
 ```csv
-size_system
-au
+size_system,size
+au,XS
 ```
 
 ```csv
-size_system
-br
+size_system,size
+br,XS
 ```
 
 ```csv
-size_system
-cn
+size_system,size
+cn,XS
 ```
 
 ```csv
-size_system
-de
+size_system,size
+de,XS
 ```
 
 ```csv
-size_system
-eu
+size_system,size
+eu,XS
 ```
 
 ```csv
-size_system
-fr
+size_system,size
+fr,XS
 ```
 
 ```csv
-size_system
-it
+size_system,size
+it,XS
 ```
 
 ```csv
-size_system
-jp
+size_system,size
+jp,XS
 ```
 
 ```csv
-size_system
-mex
+size_system,size
+mex,XS
 ```
 
 ```csv
-size_system
-uk
+size_system,size
+uk,XS
 ```
 
 ```csv
-size_system
-us
+size_system,size
+us,XS
+```
+
+```csv
+size_system,size
+eu,XS
 ```
 
 
@@ -311,6 +333,16 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:size_system>unknown</g:size_system>
+<g:size>XS</g:size>
+```
+
+:::
+
+:::danger[**<Anchor id="validation_size_system_without_size" title="validation_size_system_without_size" />**]
+
+
+```xml
+<g:size_system>uk</g:size_system>
 ```
 
 :::
@@ -322,8 +354,17 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
+size_system,size
+unknown,XS
+```
+
+:::
+
+:::danger <Anchor id="validation_size_system_without_size" title="validation_size_system_without_size" />
+
+```csv
 size_system
-unknown
+uk
 ```
 
 :::
