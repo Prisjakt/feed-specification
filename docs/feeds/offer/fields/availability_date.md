@@ -157,10 +157,6 @@ Below you will find possible error codes generated when validating this field al
 ```
 ```xml
 <g:availability_date>2021-03-21</g:availability_date>
-<g:availability>not_available_for_purchase</g:availability>
-```
-```xml
-<g:availability_date>2021-03-21</g:availability_date>
 <g:availability>out_of_stock</g:availability>
 ```
 
@@ -197,10 +193,6 @@ availability_date,availability
 ```csv
 availability_date,availability
 2021-03-21,in_stock
-```
-```csv
-availability_date,availability
-2021-03-21,not_available_for_purchase
 ```
 ```csv
 availability_date,availability
