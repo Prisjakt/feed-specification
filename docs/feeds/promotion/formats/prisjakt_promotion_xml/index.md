@@ -31,6 +31,12 @@ The following fields are required for us to correctly index your promotion and a
 - [Coupon value type](/feeds/promotion/fields/coupon_value_type.md)
 - [Promotion effective dates](/feeds/promotion/fields/promotion_effective_dates.md)
 
+## Promotion Optional Fields
+- [Description](/feeds/promotion/fields/description.md)
+- [Item id](/feeds/promotion/fields/item_id.md)
+- [Image link](/feeds/promotion/fields/image_link.md)
+- [Promotion page link](/feeds/promotion/fields/promotion_page_link.md)
+
 ## Example Files
 
 ### Minimal
