@@ -23,8 +23,8 @@ Offer Id that specific promotion is attached.
     It must be same as the `id` in offer feed for same item.
 :::
 
-- See [offer_id](./offer_id.md) for more information.
-- See [offer_feed](../../feeds/offer_feed.md) for more information.
+- See [offer_id](../../offer/fields/id.md) for more information.
+- See [offer_feed](../../offer/index.md) for more information.
 ## Validation Rules
 
 - Must be a string
