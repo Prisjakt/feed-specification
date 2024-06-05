@@ -10,6 +10,14 @@ import SampleFull from '../_xml_full.mdx';
 
 Most fields in use in our feed are also part of the [Google Promotions Feed Specification](https://support.google.com/merchants/answer/2906014?hl=en), and as such these fields will be usable for other systems that support Google Product feeds.
 
+:::info
+The promotion feed is designed primarily for system integrations, enabling automated processes to handle promotions efficiently. 
+For tasks that require manual intervention, we recommend using the [BC UI](https://app.business.prisjakt.nu/), 
+which is specifically invented for human interaction and it's easy of use. 
+Mixing the promotion feed with manual processes in the [BC UI](https://app.business.prisjakt.nu/) can lead to confusion and misconfiguration, 
+so it's best to keep their usage separate to maintain clarity and streamline operations.
+:::
+
 ## Prisjakt Specific Feeds
 
 In order to be able to provide you with extra functionality we sometimes add extra fields that can be used for an even better experience at Prisjakt for your customers.
