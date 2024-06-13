@@ -116,3 +116,9 @@ If this error ever happens, please report it to support as this means we have a 
 An internal error code have been thrown, you do not need to do anything. We see this and we are investigating the case.
 
 :::
+
+:::danger <Anchor id="empty_feed" title="empty_feed" />
+
+If your feed is an empty file, then this error is thrown.
+
+:::
