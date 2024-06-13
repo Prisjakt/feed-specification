@@ -12,10 +12,6 @@
       <g:long_title><![CDATA[Free mug with purchase]]></g:long_title>
       <g:promotion_effective_dates>2023-12-20T00:00:00+00:00/2023-12-24T00:00:00+00:00</g:promotion_effective_dates>
       <pj:promotion_page_link>https://mysite.com/promotion-campaign-2023</pj:promotion_page_link>
-      <pj:item_id><![CDATA[shop_offer_id_1]]></pj:item_id>
-      <pj:item_id><![CDATA[shop_offer_id_2]]></pj:item_id>
-      <pj:item_id><![CDATA[shop_offer_id_3]]></pj:item_id>
-      <pj:item_id><![CDATA[shop_offer_id_4]]></pj:item_id>
     </item>
   </channel>
 </rss>
