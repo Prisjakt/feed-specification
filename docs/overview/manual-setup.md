@@ -15,7 +15,7 @@ This is one of the simplest and quickest ways to get results from our feeds, but
 :::
 ## Steps
 
-1. Right click  [this link](pathname:///examples/min-sample.csv) and choose **Save Link As** to get the minimal CSV file example
+1. Right click  [this link](pathname:///examples/offer/min.csv) and choose **Save Link As** to get the minimal CSV file example
 
 2. [Import](https://support.google.com/docs/answer/40608?hl=en&co=GENIE.Platform%3DDesktop) into a Google Spreadsheet by uploading the CSV file you just downloaded
    
