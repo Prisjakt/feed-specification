@@ -44,7 +44,7 @@ sale_price -- can be enhanced by  --- sale_price_effective_date
 - Number *may* have **two decimals**, separated by a `.` (dot)
 - Currency must be three upper case characters and a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency
 - Zero prices are **not** allowed
-- It should be lower than the [`price`](price.md) value.
+- It should be lower than [`price`](price.md) value.
 
 
 ## Best Practices
