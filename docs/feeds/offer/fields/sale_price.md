@@ -44,6 +44,7 @@ sale_price -- can be enhanced by  --- sale_price_effective_date
 - Number *may* have **two decimals**, separated by a `.` (dot)
 - Currency must be three upper case characters and a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency
 - Zero prices are **not** allowed
+- It should be lower than the [`price`](price.md) value.
 
 
 ## Best Practices
@@ -243,6 +244,16 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
+:::danger[**<Anchor id="validation_sale_price_is_not_lower_then_price" title="validation_sale_price_is_not_lower_then_price" />**]
+
+
+```xml
+<g:price>$50</g:price>
+<g:sale_price>$100</g:sale_price>
+```
+
+:::
+
 
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
@@ -300,6 +311,15 @@ sale_price
 ```csv
 sale_price
 $100
+```
+
+:::
+
+:::danger <Anchor id="validation_sale_price_is_not_lower_then_price" title="validation_sale_price_is_not_lower_then_price" />
+
+```csv
+sale_price,price
+$100,$50
 ```
 
 :::
