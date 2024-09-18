@@ -44,6 +44,7 @@ sale_price -- can be enhanced by  --- sale_price_effective_date
 - Number *may* have **two decimals**, separated by a `.` (dot)
 - Currency must be three upper case characters and a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency
 - Zero prices are **not** allowed
+- Must be lower than [`price`](/feeds/offer/fields/price.md)
 
 
 ## Best Practices
@@ -75,6 +76,7 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 
 ```xml
 <g:sale_price>99.99 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 :::
@@ -85,34 +87,42 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 
 ```xml
 <g:sale_price>99.99 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>100 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>SEK 100</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>99,99 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>10,000.00 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>10 000.00 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>10.000 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 ```xml
 <g:sale_price>1.144.000 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 
@@ -125,8 +135,8 @@ Here are examples of how a valid *sale_price* value  should look like in XML and
 :::tip Valid Value
 
 ```csv
-sale_price
-99.99 SEK
+sale_price,price
+99.99 SEK,3200000 SEK
 ```
 
 :::
@@ -136,43 +146,43 @@ sale_price
   <div>
 
 ```csv
-sale_price
-99.99 SEK
+sale_price,price
+99.99 SEK,3200000 SEK
 ```
 
 ```csv
-sale_price
-100 SEK
+sale_price,price
+100 SEK,3200000 SEK
 ```
 
 ```csv
-sale_price
-SEK 100
+sale_price,price
+SEK 100,3200000 SEK
 ```
 
 ```csv
-sale_price
-"99,99 SEK"
+sale_price,price
+"99,99 SEK",3200000 SEK
 ```
 
 ```csv
-sale_price
-"10,000.00 SEK"
+sale_price,price
+"10,000.00 SEK",3200000 SEK
 ```
 
 ```csv
-sale_price
-10 000.00 SEK
+sale_price,price
+10 000.00 SEK,3200000 SEK
 ```
 
 ```csv
-sale_price
-10.000 SEK
+sale_price,price
+10.000 SEK,3200000 SEK
 ```
 
 ```csv
-sale_price
-1.144.000 SEK
+sale_price,price
+1.144.000 SEK,3200000 SEK
 ```
 
 
@@ -194,6 +204,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>100$</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 :::
@@ -203,6 +214,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 :::
@@ -212,12 +224,15 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>10.0.00.00 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 ```xml
 <g:sale_price>10.0.00.00 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 ```xml
 <g:sale_price>foo SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 :::
@@ -227,9 +242,25 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>-10 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 ```xml
 <g:sale_price>0 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
+```
+
+:::
+
+:::danger[**<Anchor id="validation_sale_price_is_not_lower_then_price" title="validation_sale_price_is_not_lower_then_price" />**]
+
+
+```xml
+<g:sale_price>100 SEK</g:sale_price>
+<g:price>100 SEK</g:price>
+```
+```xml
+<g:sale_price>100 SEK</g:sale_price>
+<g:price>50 SEK</g:price>
 ```
 
 :::
@@ -239,6 +270,7 @@ Below you will find possible error codes generated when validating this field al
 
 ```xml
 <g:sale_price>$100</g:sale_price>
+<g:price>3200000 SEK</g:price>
 ```
 
 :::
@@ -250,8 +282,8 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_missing_currency" title="validation_missing_currency" />
 
 ```csv
-sale_price
-100$
+sale_price,price
+100$,3200000 SEK
 ```
 
 :::
@@ -259,8 +291,8 @@ sale_price
 :::danger <Anchor id="validation_missing_price_value" title="validation_missing_price_value" />
 
 ```csv
-sale_price
-SEK
+sale_price,price
+SEK,3200000 SEK
 ```
 
 :::
@@ -268,16 +300,16 @@ SEK
 :::danger <Anchor id="validation_not_number" title="validation_not_number" />
 
 ```csv
-sale_price
-10.0.00.00 SEK
+sale_price,price
+10.0.00.00 SEK,3200000 SEK
 ```
 ```csv
-sale_price
-10.0.00.00 SEK
+sale_price,price
+10.0.00.00 SEK,3200000 SEK
 ```
 ```csv
-sale_price
-foo SEK
+sale_price,price
+foo SEK,3200000 SEK
 ```
 
 :::
@@ -285,12 +317,25 @@ foo SEK
 :::danger <Anchor id="validation_not_positive_number" title="validation_not_positive_number" />
 
 ```csv
-sale_price
--10 SEK
+sale_price,price
+-10 SEK,3200000 SEK
 ```
 ```csv
-sale_price
-0 SEK
+sale_price,price
+0 SEK,3200000 SEK
+```
+
+:::
+
+:::danger <Anchor id="validation_sale_price_is_not_lower_then_price" title="validation_sale_price_is_not_lower_then_price" />
+
+```csv
+sale_price,price
+100 SEK,100 SEK
+```
+```csv
+sale_price,price
+100 SEK,50 SEK
 ```
 
 :::
@@ -298,8 +343,8 @@ sale_price
 :::danger <Anchor id="validation_unknown_currency" title="validation_unknown_currency" />
 
 ```csv
-sale_price
-$100
+sale_price,price
+$100,3200000 SEK
 ```
 
 :::
