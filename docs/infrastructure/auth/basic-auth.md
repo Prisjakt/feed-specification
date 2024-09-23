@@ -1,6 +1,6 @@
 # HTTP Basic Authentication
 
-We support that you put your feeds protected behind [HTTP basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), please contact us at support@prisjakt.nu in order to provide us with credentials for your feed.
+We support that you put your feeds protected behind [HTTP basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Credentials can be set in [Business Center](https://business.prisjakt.nu).
 
 :::info Use https
 
