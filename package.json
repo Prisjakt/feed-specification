@@ -15,15 +15,15 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.1.1",
-    "@docusaurus/plugin-client-redirects": "^3.1.1",
-    "@docusaurus/plugin-google-gtag": "^3.1.1",
-    "@docusaurus/preset-classic": "^3.1.1",
-    "@docusaurus/theme-mermaid": "^3.1.1",
+    "@docusaurus/core": "^3.5.2",
+    "@docusaurus/plugin-client-redirects": "^3.5.2",
+    "@docusaurus/plugin-google-gtag": "^3.5.2",
+    "@docusaurus/preset-classic": "^3.5.2",
+    "@docusaurus/theme-mermaid": "^3.5.2",
     "@mdx-js/react": "^3.0.1",
     "baseui": "^0.0.0-next-6fabc7134",
     "clsx": "^2.1.0",
-    "docusaurus-lunr-search": "^3.3.2",
+    "docusaurus-lunr-search": "^3.5.0",
     "eta": "^3.4.0",
     "handlebars": "^4.7.8",
     "prism-react-renderer": "^2.3.1",
@@ -34,7 +34,7 @@
     "styletron-react": "^6.1.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.1.1",
+    "@docusaurus/module-type-aliases": "^3.5.2",
     "@tsconfig/docusaurus": "^2.0.3",
     "typescript": "^5.4.3"
   },
