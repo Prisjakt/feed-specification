@@ -251,6 +251,16 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
+:::danger[**<Anchor id="validation_price_out_of_range" title="validation_price_out_of_range" />**]
+
+
+```xml
+<g:sale_price>1000000000 SEK</g:sale_price>
+<g:price>3200000 SEK</g:price>
+```
+
+:::
+
 :::danger[**<Anchor id="validation_sale_price_is_not_lower_then_price" title="validation_sale_price_is_not_lower_then_price" />**]
 
 
@@ -323,6 +333,15 @@ sale_price,price
 ```csv
 sale_price,price
 0 SEK,3200000 SEK
+```
+
+:::
+
+:::danger <Anchor id="validation_price_out_of_range" title="validation_price_out_of_range" />
+
+```csv
+sale_price,price
+1000000000 SEK,3200000 SEK
 ```
 
 :::

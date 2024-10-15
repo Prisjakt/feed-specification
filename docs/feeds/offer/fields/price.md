@@ -243,6 +243,15 @@ Below you will find possible error codes generated when validating this field al
 
 :::
 
+:::danger[**<Anchor id="validation_price_out_of_range" title="validation_price_out_of_range" />**]
+
+
+```xml
+<g:price>1000000000 SEK</g:price>
+```
+
+:::
+
 :::danger[**<Anchor id="validation_unknown_currency" title="validation_unknown_currency" />**]
 
 
@@ -309,6 +318,15 @@ price
 ```csv
 price
 0 SEK
+```
+
+:::
+
+:::danger <Anchor id="validation_price_out_of_range" title="validation_price_out_of_range" />
+
+```csv
+price
+1000000000 SEK
 ```
 
 :::
