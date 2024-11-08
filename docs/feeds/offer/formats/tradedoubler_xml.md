@@ -8,6 +8,17 @@ description: Tradedoubler affiliate feed format
 ## Description
 [Tradedoubler](https://dev.tradedoubler.com/products/publisher/#XML_response) is partially supported for shops using the Tradadoubler affiliate network for quick onboarding to Prisjakt. But to fully utilize all features we recommend our [Prisjakt XML](./prisjakt_xml/index.md) format.
 
+## Important Information
+
+### Condition Field
+
+- If `condition` field is not included in your feed, then it will be automatically set it to `new`. However, it is highly recommended to include this field in your feed for better accuracy and completeness.
+
+- Including the `condition` field helps ensure that the product information is up-to-date and provides a better experience for users. It allows for more precise categorization and improves the overall quality of the data.
+
+- By setting the `condition` field to `new` when it is not provided, you can maintain a consistent standard, but including the actual condition of the product is always the best practice.
+
+
 ## Mappings
 
 | Tradedoubler Field                       | Prisjakt Field                  |
@@ -16,6 +27,7 @@ description: Tradedoubler affiliate feed format
 | name                                     | title                           |
 | offers:offer:availability                | availability                    |
 | offers:offer:condition                   | condition                       |
+| fields:field:condition                   | condition                       |
 | fields:field:google_product_category     | google_product_category         |
 | offers:offer:sourceProductUrl            | link                            |
 | offers:offer:priceHistory:price          | price                           |
