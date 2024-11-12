@@ -13,8 +13,8 @@ description: Rakuten affiliate feed format
 
 ```md
  Important Info:
- For every rakuten offer we have 3 different prefixes [ new, refurbished, used ]. Further this prefix will be used to create mapping
- and will be shown as {prefix} in the table below.
+ For every rakuten offer we have 3 different prefixes. Further this prefix will be used to create mapping
+ and will be shown as `{prefix}` in the table below.
 ```
 
 | Rakuten Field         | Prisjakt Field                  |
@@ -22,13 +22,13 @@ description: Rakuten affiliate feed format
 | productid             | id                              |
 | designation           | title                           |
 | availability          | availability                    |
-| {prefix}              | condition                       |
+| `{prefix}`              | condition                       |
 | *MISSING*             | google_product_category         |
-| url_{prefix}          | link                            |
-| {prefix}bestprice     | price                           |
+| url_`{prefix}`          | link                            |
+| `{prefix}`bestprice     | price                           |
 | *MISSING*             | additional_image_link           |
 | *MISSING*             | adult                           |
-| url_{prefix}          | affiliate_link                  |
+| url_`{prefix}`          | affiliate_link                  |
 | *MISSING*             | age_group                       |
 | *MISSING*             | availability_date               |
 | manufacturer          | brand                           |
@@ -53,7 +53,7 @@ description: Rakuten affiliate feed format
 | *MISSING*             | sale_price_effective_date       |
 | *MISSING*             | delta_command                   |
 | *MISSING*             | shipping:country,               |
-| shippingcost_{prefix} | shipping:price,                 |
+| shippingcost_`{prefix}` | shipping:price,                 |
 | *MISSING*             | shipping:service,               |
 | *MISSING*             | shipping:region,                |
 | *MISSING*             | shipping:min_transit_time,      |
