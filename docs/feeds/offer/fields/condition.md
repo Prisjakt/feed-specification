@@ -42,7 +42,8 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product is new but the packaging is damaged or missing. May be due to the packaging being damaged in transport.
+        {`Product is new but the packaging is damaged or missing. May be due to the packaging being damaged in
+        transport.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -54,7 +55,8 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product has been used as an exhibition sample and is therefore not in intact packaging, or the product is completely without packaging.
+        {`Product has been used as an exhibition sample and is therefore not in intact packaging, or the product is
+        completely without packaging.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -66,7 +68,7 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product is new.
+        {`Product is new.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -78,7 +80,7 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product is reconditioned/renovated.
+        {`Product is reconditioned/renovated.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -90,7 +92,7 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product has been previously used.
+        {`Product has been previously used.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -102,7 +104,8 @@ State the condition of the product you are selling for your customers.
     </dt>
     <dd>
     <ReactMarkdown>
-      Product is both technically and visually almost like new, condition has been verified by the company and has at least a 1-year warranty.
+        {`Product is both technically and visually almost like new, condition has been verified by the company and has at
+        least a 1-year warranty.`}
     </ReactMarkdown>
     </dd>
 </dl>

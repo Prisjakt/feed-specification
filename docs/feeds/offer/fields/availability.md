@@ -53,7 +53,7 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      When the product is made digitally available, eg. game or software downloads
+        {`When the product is made digitally available, eg. game or software downloads`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -65,7 +65,7 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      You're currently accepting orders for this product and can fulfill the purchase request directly.
+        {`You're currently accepting orders for this product and can fulfill the purchase request directly.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -77,7 +77,7 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      You're not currently accepting orders for this product.
+        {`You're not currently accepting orders for this product.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -89,7 +89,9 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      You're currently taking orders for this product, but it's not yet been released for sale. You're required to provide the availability date [`availability_date`](/feeds/offer/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+        {`You're currently taking orders for this product, but it's not yet been released for sale. You're required to
+        provide the availability date [availability_date](/feeds/offer/fields/availability_date.md) attribute to
+        indicate the day that the product becomes available for delivery.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -101,7 +103,10 @@ availability -- requires for some values  --- availability_date
     </dt>
     <dd>
     <ReactMarkdown>
-      The product is not available at the moment, but you're accepting orders and it'll be shipped as soon as it becomes available again. This status can be combined with the availability date [`availability_date`](/feeds/offer/fields/availability_date.md) attribute to indicate the day that the product becomes available for delivery.
+        {`The product is not available at the moment, but you're accepting orders and it'll be shipped as soon as it
+        becomes available again. This status can be combined with the availability date
+        [availability_date](/feeds/offer/fields/availability_date.md) attribute to indicate the day that the product
+        becomes available for delivery.`}
     </ReactMarkdown>
     </dd>
 </dl>
