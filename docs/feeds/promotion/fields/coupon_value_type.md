@@ -33,7 +33,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a money discount.
+      {`The promotion offers a money discount.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -45,7 +45,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a percent discount.
+      {`The promotion offers a percent discount.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -57,7 +57,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a money discount when you buy a certain number of items.
+      {`The promotion offers a money discount when you buy a certain number of items.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -69,7 +69,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a percent discount when you buy a certain number of items.
+      {`The promotion offers a percent discount when you buy a certain number of items.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -81,7 +81,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a money discount when you buy a certain number of items.
+      {`The promotion offers a money discount when you buy a certain number of items.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -93,7 +93,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a free gift.
+      {`The promotion offers a free gift.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -105,7 +105,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a free gift with a given value.
+      {`The promotion offers a free gift with a given value.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -117,7 +117,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers a free gift if certain item is purchased.
+      {`The promotion offers a free gift if certain item is purchased.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -129,7 +129,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.
+      {`Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -141,7 +141,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.
+      {`Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -153,7 +153,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.
+      {`Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -165,7 +165,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.
+      {`Part of google promotion standard, currently not supported by Prisjakt. Will be mapped to other promotion type, use the description field for details to your customers.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -177,7 +177,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      The promotion offers discounts based on volume.
+      {`The promotion offers discounts based on volume.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -189,7 +189,7 @@ Defines type of the promotion
     </dt>
     <dd>
     <ReactMarkdown>
-      Indicates you are not submitting any of the promotion benefit types listed below.
+      {`Indicates you are not submitting any of the promotion benefit types listed below.`}
     </ReactMarkdown>
     </dd>
 </dl>
