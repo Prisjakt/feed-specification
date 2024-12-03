@@ -10,7 +10,7 @@
       <g:price>99.99 SEK</g:price>
       <g:link>http://example.com/link</g:link>
       <g:availability>download</g:availability>
-      <g:condition>almost new</g:condition>
+      <g:condition>new</g:condition>
     </item>
   </channel>
 </rss>
