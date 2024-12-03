@@ -1,5 +1,5 @@
 ---
-description: State the condition of the product you are selling for your customers.
+description: Use this attribute to provide a grade for the condition of the product.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,24 +8,15 @@ import Anchor from "@site/src/components/anchor"
 import Field from '@site/docs/partials/_field.mdx';
 import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
+import OptionalField from '@site/docs/partials/_optional_field.md';
 
-# condition
+# condition_grade
 
-<RequiredField/>
+<OptionalField/>
 
 ## Description
 
-State the condition of the product you are selling for your customers.
-
-
-
-### Effects When Used
-
-- Will improve filtering capabilities for customers
-
-
-
+Use this attribute to provide a grade for the condition of the product.
 
 
 
@@ -36,73 +27,73 @@ State the condition of the product you are selling for your customers.
 <dt>
       <pre>
       <code>
-      damaged packaging
+      a
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product is new but the packaging is damaged or missing. May be due to the packaging being damaged in transport.`}
+      {`Product is in excellent condition, no visible scratches or marks`}
     </ReactMarkdown>
     </dd>
 <dt>
       <pre>
       <code>
-      demo
+      b
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product has been used as an exhibition sample and is therefore not in intact packaging, or the product is completely without packaging.`}
+      {`Product is in good condition, minor scratches or marks`}
     </ReactMarkdown>
     </dd>
 <dt>
       <pre>
       <code>
-      new
+      c
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product is new.`}
+      {`Product is in fair condition, visible scratches or marks`}
     </ReactMarkdown>
     </dd>
 <dt>
       <pre>
       <code>
-      refurbished
+      d
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product is reconditioned/renovated.`}
+      {`Product is in fair condition, visible scratches or marks`}
     </ReactMarkdown>
     </dd>
 <dt>
       <pre>
       <code>
-      used
+      e
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product has been previously used.`}
+      {`Product is in poor condition, heavy scratches or marks`}
     </ReactMarkdown>
     </dd>
 <dt>
       <pre>
       <code>
-      almost new
+      f
       </code>
       </pre>
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Product is both technically and visually almost like new, condition has been verified by the company and has at least a 1-year warranty.`}
+      {`Product is in poor condition, heavy scratches or marks`}
     </ReactMarkdown>
     </dd>
 </dl>
@@ -110,7 +101,7 @@ State the condition of the product you are selling for your customers.
 
 ## Validation Rules
 
-- Value must be one of the allowed enum values
+- One of enums listed below.
 
 
 ## Best Practices
@@ -118,15 +109,20 @@ State the condition of the product you are selling for your customers.
 
 ### Do
 
-- Make sure the attributes reflects actual product condition
+- Make sure the attributes reflects actual product condition grading
 
+
+
+### Don´t
+
+- Don't use any other values than the ones listed
 
 
 
 
 ## Example Values
 
-Here are examples of how a valid *condition* value  should look like in XML and CSV (with header) respectively.
+Here are examples of how a valid *condition_grade* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
@@ -134,7 +130,8 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 :::tip Valid Value
 
 ```xml
-<g:condition>new</g:condition>
+<pj:condition_grade>a</pj:condition_grade>
+<g:condition>used</g:condition>
 ```
 
 :::
@@ -144,15 +141,28 @@ Here are examples of how a valid *condition* value  should look like in XML and 
   <div>
 
 ```xml
-<g:condition>new</g:condition>
-```
-
-```xml
+<pj:condition_grade>a</pj:condition_grade>
 <g:condition>used</g:condition>
 ```
 
 ```xml
-<g:condition>refurbished</g:condition>
+<pj:condition_grade>c</pj:condition_grade>
+<g:condition>used</g:condition>
+```
+
+```xml
+<pj:condition_grade>d</pj:condition_grade>
+<g:condition>used</g:condition>
+```
+
+```xml
+<pj:condition_grade>e</pj:condition_grade>
+<g:condition>used</g:condition>
+```
+
+```xml
+<pj:condition_grade>f</pj:condition_grade>
+<g:condition>used</g:condition>
 ```
 
 
@@ -165,8 +175,8 @@ Here are examples of how a valid *condition* value  should look like in XML and 
 :::tip Valid Value
 
 ```csv
-condition
-new
+condition_grade,condition
+a,used
 ```
 
 :::
@@ -176,18 +186,28 @@ new
   <div>
 
 ```csv
-condition
-new
+condition_grade,condition
+a,used
 ```
 
 ```csv
-condition
-used
+condition_grade,condition
+c,used
 ```
 
 ```csv
-condition
-refurbished
+condition_grade,condition
+d,used
+```
+
+```csv
+condition_grade,condition
+e,used
+```
+
+```csv
+condition_grade,condition
+f,used
 ```
 
 
@@ -204,35 +224,12 @@ Below you will find possible error codes generated when validating this field al
 <Tabs>
   <TabItem value="invalid_xml" label="XML" default>
 
-:::danger[**<Anchor id="validation_condition_deprecated" title="validation_condition_deprecated" />**]
-
-
-```xml
-<g:condition>demo</g:condition>
-```
-```xml
-<g:condition>damaged packaging</g:condition>
-```
-```xml
-<g:condition>almost new</g:condition>
-```
-
-:::
-
 :::danger[**<Anchor id="validation_invalid_enum" title="validation_invalid_enum" />**]
 
 
 ```xml
-<g:condition>unknown</g:condition>
-```
-
-:::
-
-:::danger[**<Anchor id="validation_missing_value" title="validation_missing_value" />**]
-
-
-```xml
-<g:condition></g:condition>
+<pj:condition_grade>x</pj:condition_grade>
+<g:condition>used</g:condition>
 ```
 
 :::
@@ -241,37 +238,11 @@ Below you will find possible error codes generated when validating this field al
  </TabItem>
   <TabItem value="invalid_csv" label="CSV">
 
-:::danger <Anchor id="validation_condition_deprecated" title="validation_condition_deprecated" />
-
-```csv
-condition
-demo
-```
-```csv
-condition
-damaged packaging
-```
-```csv
-condition
-almost new
-```
-
-:::
-
 :::danger <Anchor id="validation_invalid_enum" title="validation_invalid_enum" />
 
 ```csv
-condition
-unknown
-```
-
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```csv
-condition
-""
+condition_grade,condition
+x,used
 ```
 
 :::
@@ -291,7 +262,5 @@ condition
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["New enum value `new_used`"], "date": "2023-09-20"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2024-11-25"}]} dateOnly={true} />
 
-## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324469)
