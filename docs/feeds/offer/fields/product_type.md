@@ -53,15 +53,14 @@ product_type -- can be used instead  --- google_product_category
 
 ### Do
 
-- Include the complete category hierarchy, such as `Home & Garden > Furniture > Living Room`.
-- To list multiple product_type entries, separate them with a comma. For instance: `Home & Garden > Furniture > Living Room, Home & Garden > Popular Living Room Furniture`.
+- Include the complete category hierarchy, such as `Home & Garden > Furniture > Living Room`. Categories should be separated by `>`, `|` or `/`.
+- Product should only exist in one category. If the product fits in multiple categories, choose the most relevant one.
 
 
 
 ### Don´t
 
 - Refrain from including categories such as "Apple," "Sale," or "Black Friday 2023."
-- If using a CSV file, do not use comma `,` within a single product_type entry. They will split the entry. For instance, `Home, Garden > Furniture > Living Room` will become two separate entries: `Home` and `Garden > Furniture > Living Room`.
 - When using XML, always use a distinct &lt;product_type&gt; tag for each category instead of combining them within one tag.
 
 
