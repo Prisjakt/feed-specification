@@ -42,6 +42,7 @@ description: Tradedoubler affiliate feed format
 | *MISSING*                                | energy_efficiency_class         |
 | *MISSING*                                | gender                          |
 | fields:field:gtin                        | gtin                            |
+| ean                                      | gtin                            |
 | productImage                             | image_link                      |
 | *MISSING*                                | is_bundle                       |
 | *MISSING*                                | item_group_id                   |
