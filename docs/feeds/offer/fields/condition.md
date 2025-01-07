@@ -36,30 +36,6 @@ State the condition of the product you are selling for your customers.
 <dt>
       <pre>
       <code>
-      damaged packaging
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    <ReactMarkdown>
-      {`Product is new but the packaging is damaged or missing. May be due to the packaging being damaged in transport.`}
-    </ReactMarkdown>
-    </dd>
-<dt>
-      <pre>
-      <code>
-      demo
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    <ReactMarkdown>
-      {`Product has been used as an exhibition sample and is therefore not in intact packaging, or the product is completely without packaging.`}
-    </ReactMarkdown>
-    </dd>
-<dt>
-      <pre>
-      <code>
       new
       </code>
       </pre>
@@ -91,18 +67,6 @@ State the condition of the product you are selling for your customers.
     <dd>
     <ReactMarkdown>
       {`Product has been previously used.`}
-    </ReactMarkdown>
-    </dd>
-<dt>
-      <pre>
-      <code>
-      almost new
-      </code>
-      </pre>
-    </dt>
-    <dd>
-    <ReactMarkdown>
-      {`Product is both technically and visually almost like new, condition has been verified by the company and has at least a 1-year warranty.`}
     </ReactMarkdown>
     </dd>
 </dl>
@@ -291,7 +255,7 @@ condition
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["New enum value `new_used`"], "date": "2023-09-20"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Deprecate and remove values `damaged packaging`, `demo` and `almost new`"], "date": "2024-12-18"}, {"added": ["New enum value `new_used`"], "date": "2023-09-20"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
 
 ## References
 - [Google Merchant Specification](https://support.google.com/merchants/answer/6324469)
