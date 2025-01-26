@@ -32,10 +32,10 @@ The following fields are required for an product to ingest successfully:
 
 ### Minimal
 
-[Download XML File](pathname:///examples/offer/min.xml)
+[Download XML File](pathname:///examples/product/min.xml)
 <SampleMin />
 
 ### Full
 
-[Download XML File](pathname:///examples/offer/full.xml)
+[Download XML File](pathname:///examples/product/full.xml)
 <SampleFull />
