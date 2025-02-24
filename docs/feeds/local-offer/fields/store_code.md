@@ -1,5 +1,5 @@
 ---
-description: Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
+description: Identifier to specify which local store this local offer belongs to.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,13 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
-# id
+# store_code
 
 <RequiredField/>
 
 ## Description
 
-Identifier should be unique for every product and not be changed or re-used for other products, a good practice is to use SKUs as ids since they are unique.
+Identifier to specify which local store this local offer belongs to.
 
 
 
@@ -25,35 +25,15 @@ Identifier should be unique for every product and not be changed or re-used for 
 
 ## Validation Rules
 
-- Length must be between `1-36`
+- Length must be between `1-64`
 - Must be unique
-- Only **ascii** characters
-- Trailing whitespace characters are not allowed
-- Disallowed characters are `!` `+` `@` `#` `$` `%` `^` `&` `*` `<` `>` `;` `:`
-
-
-## Best Practices
-
-
-### Do
-
-- Use SKUs as ids
-- You can follow Google format but in some rare cases we might reject some offers due to stricter validation.
-
-
-
-### Don´t
-
-- Re-use, if re-used, your product might end up indexed to the wrong Prisjakt product
-- Change over time, if changed, the product will need to be indexed again
-- Don't add whitespace characters (" ", "\n", "t") at the beginning or the end of the id field
-
-
+- Must match the [`shop_code`](/feeds/local-store/fields/shop_code.md) you have specified in your [`local store`](/feeds/local-store/index.md) feed.
+- Case sensitive
 
 
 ## Example Values
 
-Here are examples of how a valid *id* value  should look like in XML and CSV (with header) respectively.
+Here are examples of how a valid *store_code* value  should look like in XML and CSV (with header) respectively.
 
 <Tabs>
   <TabItem value="valid_xml" label="XML" default>
@@ -61,7 +41,7 @@ Here are examples of how a valid *id* value  should look like in XML and CSV (wi
 :::tip Valid Value
 
 ```xml
-<g:id><![CDATA[213888]]></g:id>
+<g:store_code>StoreAngelholm</g:store_code>
 ```
 
 :::
@@ -71,19 +51,15 @@ Here are examples of how a valid *id* value  should look like in XML and CSV (wi
   <div>
 
 ```xml
-<g:id><![CDATA[213888]]></g:id>
+<g:store_code>StoreAngelholm</g:store_code>
 ```
 
 ```xml
-<g:id><![CDATA[aBCd1123]]></g:id>
+<g:store_code>aBCd1123</g:store_code>
 ```
 
 ```xml
-<g:id><![CDATA[09az]]></g:id>
-```
-
-```xml
-<g:id><![CDATA[a b./)(]]></g:id>
+<g:store_code>09az</g:store_code>
 ```
 
 
@@ -96,8 +72,8 @@ Here are examples of how a valid *id* value  should look like in XML and CSV (wi
 :::tip Valid Value
 
 ```csv
-id
-213888
+store_code
+StoreAngelholm
 ```
 
 :::
@@ -107,23 +83,18 @@ id
   <div>
 
 ```csv
-id
-213888
+store_code
+StoreAngelholm
 ```
 
 ```csv
-id
+store_code
 aBCd1123
 ```
 
 ```csv
-id
+store_code
 09az
-```
-
-```csv
-id
-a b./)(
 ```
 
 
@@ -144,7 +115,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id><![CDATA[!+@#$%^&*]]></g:id>
+<g:store_code><![CDATA[!+@#$%^&*]]></g:store_code>
 ```
 
 :::
@@ -153,7 +124,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id><![CDATA[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]]></g:id>
+<g:store_code>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</g:store_code>
 ```
 
 :::
@@ -162,7 +133,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id><![CDATA[ ]]></g:id>
+<g:store_code> </g:store_code>
 ```
 
 :::
@@ -171,7 +142,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id></g:id>
+<g:store_code></g:store_code>
 ```
 
 :::
@@ -180,7 +151,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id><![CDATA[ąśπœę©]]></g:id>
+<g:store_code>ąśπœę©</g:store_code>
 ```
 
 :::
@@ -189,10 +160,10 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:id><![CDATA[a ]]></g:id>
+<g:store_code>a </g:store_code>
 ```
 ```xml
-<g:id><![CDATA[ a]]></g:id>
+<g:store_code> a</g:store_code>
 ```
 
 :::
@@ -204,7 +175,7 @@ Below you will find possible error codes generated when validating this field al
 :::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />
 
 ```csv
-id
+store_code
 !+@#$%^&*
 ```
 
@@ -213,8 +184,8 @@ id
 :::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
-id
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+store_code
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 :::
@@ -222,7 +193,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 :::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
 
 ```csv
-id
+store_code
 ```
 
 :::
@@ -230,7 +201,7 @@ id
 :::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
 
 ```csv
-id
+store_code
 ""
 ```
 
@@ -239,7 +210,7 @@ id
 :::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />
 
 ```csv
-id
+store_code
 ąśπœę©
 ```
 
@@ -248,11 +219,11 @@ id
 :::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />
 
 ```csv
-id
+store_code
 a
 ```
 ```csv
-id
+store_code
  a
 ```
 
@@ -273,8 +244,8 @@ id
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"changed": ["Rule for id validation has been updated. Only ASCII characters (with some exceptions) are now allowed. There is also a list of disallowed characters. Please check documentaiton for more details."], "date": "2023-06-07"}, {"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2025-02-24"}]} dateOnly={true} />
 
 ## References
-- [Google Local Inventory Data Specification For This Field](https://support.google.com/merchants/answer/6324405?sjid=12668122117297241362-EU)
+- [Google Local Inventory Data Specification For This Field](https://support.google.com/merchants/answer/13869896?sjid=12668122117297241362-EU)
 - [Google Local Inventory Data Specification](https://support.google.com/merchants/answer/14819809?hl=en)
