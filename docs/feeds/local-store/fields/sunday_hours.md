@@ -1,5 +1,5 @@
 ---
-description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field **special_hours**.
+description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field **special_hours**.
+Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
 
 
 
@@ -25,7 +25,7 @@ Describes opening hours for a given day, can be multiple sets or indicate closed
 
 ## Validation Rules
 
-- Use 24-hour format: HH:MM-HH:MM
+- Use 24-hour format: `HH:MM-HH:MM`
 
 
 ## Best Practices
@@ -33,8 +33,8 @@ Describes opening hours for a given day, can be multiple sets or indicate closed
 
 ### Do
 
-- Use an X to indicate **closed all day**
-- For multiple sets per day, use a comma to separate 11:30-14:00, 17:00-22:00
+- Use an `X` to indicate **closed all day**
+- For multiple sets per day, use a comma to separate `11:30-14:00, 17:00-22:00`
 
 
 

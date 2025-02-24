@@ -1,5 +1,5 @@
 ---
-description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`shipping`](/feeds/local-store/fields/special_hours.md).
+description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`shipping`](/feeds/local-store/fields/special_hours.md).
+Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
 
 
 
