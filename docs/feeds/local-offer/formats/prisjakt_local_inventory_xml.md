@@ -21,10 +21,10 @@ We require full offer information and do not accept local offer updates on singl
 
 ### Minimal
 
-[Download XML File](pathname:///examples/local-inventory/min.xml)
+[Download XML File](pathname:///examples/local-offer/min.xml)
 <SampleMin />
 
 ### Full
 
-[Download XML File](pathname:///examples/local-inventory/full.xml)
+[Download XML File](pathname:///examples/local-offer/full.xml)
 <SampleFull />

@@ -21,10 +21,10 @@ We require full offer information and do not accept local offer updates on singl
 
 ### Minimal
 
-[Download CSV File](pathname:///examples/local-inventory/min.csv)
+[Download CSV File](pathname:///examples/local-offer/min.csv)
 <SampleMin />
 
 ### Full
 
-[Download CSV File](pathname:///examples/local-inventory/full.csv)
+[Download CSV File](pathname:///examples/local-offer/full.csv)
 <SampleFull />
