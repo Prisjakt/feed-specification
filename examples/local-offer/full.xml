@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:pj="https://schema.prisjakt.nu/ns/local-offer-1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
+  <channel>
+    <title>Prisjakt Example Local Inventory Offer Feed</title>
+    <description>This is a local offer inventory feed with all possible values</description>
+    <link>https://schema.prisjakt.nu</link>
+    <item>
+      <g:availability>backorder</g:availability>
+      <g:availability_date>2021-03-21</g:availability_date>
+      <g:id><![CDATA[aBCd1123]]></g:id>
+      <g:local_shipping_label>Sameday</g:local_shipping_label>
+      <g:pickup_method>buy</g:pickup_method>
+      <g:pickup_sla>multi-week</g:pickup_sla>
+      <g:price>3200000 SEK</g:price>
+      <g:quantity>100</g:quantity>
+      <g:sale_price>11.50 SEK</g:sale_price>
+      <g:sale_price_effective_date>2016-02-24/2016-02-26</g:sale_price_effective_date>
+      <g:store_code>09az</g:store_code>
+    </item>
+  </channel>
+</rss>

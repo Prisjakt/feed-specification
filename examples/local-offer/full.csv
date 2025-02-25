@@ -1,0 +1,2 @@
+availability,availability_date,id,local_shipping_label,pickup_method,pickup_sla,price,quantity,sale_price,sale_price_effective_date,store_code
+backorder,2021-03-21,aBCd1123,Sameday,buy,multi-week,3200000 SEK,100,11.50 SEK,2016-02-24/2016-02-26,09az

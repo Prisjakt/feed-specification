@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:pj="https://schema.prisjakt.nu/ns/local-offer-1.0" xmlns:g="http://base.google.com/ns/1.0" version="3.0">
+  <channel>
+    <title>Prisjakt Minimal Local Inventory Offer Feed</title>
+    <description>This is a local offer inventory feed with the minimal values required</description>
+    <link>https://schema.prisjakt.nu</link>
+    <item>
+      <g:availability>backorder</g:availability>
+      <g:availability_date>2021-03-21</g:availability_date>
+      <g:id><![CDATA[213888]]></g:id>
+      <g:store_code>StoreAngelholm</g:store_code>
+    </item>
+  </channel>
+</rss>
