@@ -1,5 +1,5 @@
 ---
-description: It should be the same as the currently active sales price on your product page. If the sales is inactive it should be empty or [`sale_price_effective_date`](sale_price_effective_date.md) attribute should be used.
+description: Your product's sale price
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-It should be the same as the currently active sales price on your product page. If the sales is inactive it should be empty or [`sale_price_effective_date`](sale_price_effective_date.md) attribute should be used.
+Your product's sale price
 
 
 ## Related Fields
@@ -25,13 +25,11 @@ It should be the same as the currently active sales price on your product page. 
 %%{init: {'theme':'neutral'}}%%
 flowchart LR
 sale_price -- overrides if exist  --- price
-  click price "/feeds/offer/fields/price" "price" _blank
-sale_price -- overridden by if member  --- member_price
-  click member_price "/feeds/offer/fields/member_price" "member_price" _blank
+  click price "/feeds/local-offer/fields/price" "price" _blank
 sale_price -- can be enhanced by  --- sale_price_effective_date
-  click sale_price_effective_date "/feeds/offer/fields/sale_price_effective_date" "sale_price_effective_date" _blank
+  click sale_price_effective_date "/feeds/local-offer/fields/sale_price_effective_date" "sale_price_effective_date" _blank
 
-  click sale_price "/feeds/offer/fields/sale_price" "sale_price" _blank
+  click sale_price "/feeds/local-offer/fields/sale_price" "sale_price" _blank
   style sale_price fill:#4cb3d4
 ```
 
@@ -47,17 +45,10 @@ sale_price -- can be enhanced by  --- sale_price_effective_date
 ## Best Practices
 
 
-### Do
-
-- Price sent in feed should be the same as the price value on your product page
-- Currency sent in feed should match currency on your product page
-
-
 
 ### Don´t
 
-- Do **not** include extra charges in the cost (such as shipping cost)
-- Do **not** use thousand separators or similar in the value (while we may handle some of these cases we recommend you to just send plain numbers like `10000.50 SEK`)
+- When you have a sale, submit **both** __price__ and __sale_price__ do **not** put the lower price into the price field
 
 
 
@@ -375,13 +366,13 @@ $100,3200000 SEK
 |-----------------:|:--------------------------:|:-------------------------------------------------------------|
 |        Data Type |    **price**     | Closest data type in code                                    |
 |           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
+|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 
 ## Changelog
-<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2022-12-07"}]} dateOnly={true} />
+<ChangeLog versionHistory={[{"added": ["Initial definition"], "date": "2025-02-24"}]} dateOnly={true} />
 
 ## References
-- [Google Merchant Specification](https://support.google.com/merchants/answer/6324471)
-- [Wikipedia on ISO 4217 Currency codes](https://en.wikipedia.org/wiki/ISO_4217)
+- [Google Local Inventory Data Specification For This Field](https://support.google.com/merchants/answer/6324471?sjid=12668122117297241362-EU&visit_id=638760023831624244-3736320015&rd=1)
+- [Google Local Inventory Data Specification](https://support.google.com/merchants/answer/14819809?hl=en)
