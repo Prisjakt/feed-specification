@@ -40,8 +40,11 @@ sale_price -- can be enhanced by  --- sale_price_effective_date
 
 ## Validation Rules
 
-- Meet the same formatting requirements as [`price`](/feeds/local-offer/fields/price.md)
-- Must be lower than [`price`](/feeds/local-offer/fields/price.md)
+- Must be a number (value) followed by a space and a currency (unit)
+- Number *may* have **two decimals**, separated by a `.` (dot)
+- Currency must be three upper case characters and a valid [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency
+- Zero prices are **not** allowed
+- Must be lower than [`price`](/feeds/offer/fields/price.md)
 
 
 ## Best Practices
