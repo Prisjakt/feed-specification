@@ -168,23 +168,23 @@ Here are examples of how a valid *pickup_sla* value  should look like in XML and
 ```
 
 ```xml
-<g:pickup_sla>two-days</g:pickup_sla>
+<g:pickup_sla>2-day</g:pickup_sla>
 ```
 
 ```xml
-<g:pickup_sla>three-days</g:pickup_sla>
+<g:pickup_sla>3-day</g:pickup_sla>
 ```
 
 ```xml
-<g:pickup_sla>four-days</g:pickup_sla>
+<g:pickup_sla>4-day</g:pickup_sla>
 ```
 
 ```xml
-<g:pickup_sla>five-days</g:pickup_sla>
+<g:pickup_sla>5-day</g:pickup_sla>
 ```
 
 ```xml
-<g:pickup_sla>six-days</g:pickup_sla>
+<g:pickup_sla>6-day</g:pickup_sla>
 ```
 
 ```xml
@@ -223,27 +223,27 @@ next day
 
 ```csv
 pickup_sla
-two-days
+2-day
 ```
 
 ```csv
 pickup_sla
-three-days
+3-day
 ```
 
 ```csv
 pickup_sla
-four-days
+4-day
 ```
 
 ```csv
 pickup_sla
-five-days
+5-day
 ```
 
 ```csv
 pickup_sla
-six-days
+6-day
 ```
 
 ```csv

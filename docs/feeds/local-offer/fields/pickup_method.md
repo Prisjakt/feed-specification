@@ -101,7 +101,7 @@ Here are examples of how a valid *pickup_method* value  should look like in XML 
 :::tip Valid Value
 
 ```xml
-<g:pickup_method>buy</g:pickup_method>
+<g:pickup_method>reserve</g:pickup_method>
 ```
 
 :::
@@ -111,19 +111,19 @@ Here are examples of how a valid *pickup_method* value  should look like in XML 
   <div>
 
 ```xml
-<g:pickup_method>buy</g:pickup_method>
-```
-
-```xml
 <g:pickup_method>reserve</g:pickup_method>
 ```
 
 ```xml
-<g:pickup_method>ship_to_store</g:pickup_method>
+<g:pickup_method>ship to store</g:pickup_method>
 ```
 
 ```xml
-<g:pickup_method>not_supported</g:pickup_method>
+<g:pickup_method>not supported</g:pickup_method>
+```
+
+```xml
+<g:pickup_method>buy</g:pickup_method>
 ```
 
 
@@ -137,7 +137,7 @@ Here are examples of how a valid *pickup_method* value  should look like in XML 
 
 ```csv
 pickup_method
-buy
+reserve
 ```
 
 :::
@@ -148,22 +148,22 @@ buy
 
 ```csv
 pickup_method
-buy
-```
-
-```csv
-pickup_method
 reserve
 ```
 
 ```csv
 pickup_method
-ship_to_store
+ship to store
 ```
 
 ```csv
 pickup_method
-not_supported
+not supported
+```
+
+```csv
+pickup_method
+buy
 ```
 
 
