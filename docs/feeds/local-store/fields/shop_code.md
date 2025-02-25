@@ -1,5 +1,5 @@
 ---
-description: A unique code identifying the store. Use this code to attache local offers to your  store when uploading local offer inventory.
+description: A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-A unique code identifying the store. Use this code to attache local offers to your  store when uploading local offer inventory.
+A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
 
 
 

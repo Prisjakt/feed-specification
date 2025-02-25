@@ -78,14 +78,6 @@ Here are examples of how a valid *id* value  should look like in XML and CSV (wi
 <g:id><![CDATA[aBCd1123]]></g:id>
 ```
 
-```xml
-<g:id><![CDATA[09az]]></g:id>
-```
-
-```xml
-<g:id><![CDATA[a b./)(]]></g:id>
-```
-
 
   </div>
 </details>
@@ -114,16 +106,6 @@ id
 ```csv
 id
 aBCd1123
-```
-
-```csv
-id
-09az
-```
-
-```csv
-id
-a b./)(
 ```
 
 
