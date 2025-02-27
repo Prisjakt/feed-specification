@@ -1,4 +1,4 @@
-# Local Inventory Offer Feeds
+# Local Offer Feeds
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
