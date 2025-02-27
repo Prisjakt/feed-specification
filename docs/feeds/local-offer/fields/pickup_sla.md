@@ -68,7 +68,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in 2 days.`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in 2 days.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -80,7 +80,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in 3 days.`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in 3 days.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -92,7 +92,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in 4 days`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in 4 days`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -104,7 +104,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in 5 days.`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in 5 days.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -116,7 +116,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in 6 days.`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in 6 days.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -128,7 +128,7 @@ pickup_sla -- relates to  --- pickup_method
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Indicates that the product will be shipped to a store for a customer to pick up in one week or more.`}
+      {`Indicates that the product will be shipped to a shop for a customer to pick up in one week or more.`}
     </ReactMarkdown>
     </dd>
 </dl>
@@ -136,7 +136,7 @@ pickup_sla -- relates to  --- pickup_method
 
 ## Validation Rules
 
-- Required to enable store pickup
+- Required to enable shop pickup
 - Value must be one of the allowed enum values
 
 

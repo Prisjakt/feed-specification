@@ -1,5 +1,5 @@
 ---
-description: A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
+description: A unique code identifying the shop. Use this code to attache local offers to your store when uploading local offer inventory. **NOTE** Google uses the terminology of __store__ and the field is named accordingly due to compatibility reasons, but Prisjakt uses the terminology of **shop** for all other uses.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
+A unique code identifying the shop. Use this code to attache local offers to your store when uploading local offer inventory. **NOTE** Google uses the terminology of __store__ and the field is named accordingly due to compatibility reasons, but Prisjakt uses the terminology of **shop** for all other uses.
 
 
 
@@ -38,7 +38,7 @@ A unique code identifying the store. Use this code to attache local offers to yo
 ### Do
 
 - Create memorable codes (eg. `ShopHbg`, `ShopAngelholm`, `ShopStockholm`)
-- If a store move to a new location, create a new code for it
+- If a shop move to a new location, create a new code for it
 
 
 

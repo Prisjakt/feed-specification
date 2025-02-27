@@ -1,5 +1,5 @@
 ---
-description: Your products price in the specific store referenced by store code.
+description: Your products price in the specific shop referenced by [`store_code`](/fields/feeds/local-offer/store_code.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Your products price in the specific store referenced by store code.
+Your products price in the specific shop referenced by [`store_code`](/fields/feeds/local-offer/store_code.md).
 
 
 ## Related Fields
@@ -49,10 +49,10 @@ price -- determines if overridden  --- sale_price_effective_date
 
 ### Do
 
-- Submit price if your item has a different price per store
-- The inventory data price will override the price in the product data feed for the associated store.
-- Accurately submit the product's price and currency, and match with the price from your stores
-- Ensure that the product can be purchased in-store for the submitted price.
+- Submit price if your item has a different price per shop
+- The inventory data price will override the price in the product data feed for the associated shop.
+- Accurately submit the product's price and currency, and match with the price from your shops
+- Ensure that the product can be purchased in-shop for the submitted price.
 - For products sold in bulk quantities, bundles, or multipacks: Submit the total price of the minimum purchasable quantity, bundle, or multipack.
 - For the US and Canada: Don't include tax in the price.
 - For all other countries:Include value added tax (VAT) or Goods and Services Tax (GST) in the price.

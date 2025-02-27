@@ -1,5 +1,5 @@
 ---
-description: The city/town or place where your store resides.
+description: The city/town or place where your shop resides.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-The city/town or place where your store resides.
+The city/town or place where your shop resides.
 
 
 

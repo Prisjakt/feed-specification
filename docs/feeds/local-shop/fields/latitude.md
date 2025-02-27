@@ -1,5 +1,5 @@
 ---
-description: Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+description: Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 
 
 

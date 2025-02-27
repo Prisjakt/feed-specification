@@ -1,5 +1,5 @@
 ---
-description: The number of items in stock for the store
+description: The number of items in stock for the shop
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-The number of items in stock for the store
+The number of items in stock for the shop
 
 
 ## Related Fields
