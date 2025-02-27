@@ -1,5 +1,5 @@
 ---
-description: Your products price in the specific shop referenced by [`store_code`](/feeds/fields/local-offer/store_code.md).
+description: Your products price in the specific shop referenced by [`store_code`](/feeds/local-offer/fields/store_code.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Your products price in the specific shop referenced by [`store_code`](/feeds/fields/local-offer/store_code.md).
+Your products price in the specific shop referenced by [`store_code`](/feeds/local-offer/fields/store_code.md).
 
 
 ## Related Fields
