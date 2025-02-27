@@ -27,7 +27,7 @@ Identifier to specify which local store this local offer belongs to.
 
 - Length must be between `1-64`
 - Must be unique
-- Must match the [`shop_code`](/feeds/local-store/fields/shop_code.md) you have specified in your [`local store`](/feeds/local-store/) feed.
+- Must match the [`shop_code`](/feeds/local-shop/fields/shop_code.md) you have specified in your [`local store`](/feeds/local-shop/) feed.
 - Case sensitive
 
 

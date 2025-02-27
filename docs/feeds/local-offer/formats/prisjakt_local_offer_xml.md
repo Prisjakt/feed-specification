@@ -5,7 +5,7 @@ description: XML For local Product Data Specification
 import SampleMin from './_xml_min.mdx';
 import SampleFull from './_xml_full.mdx';
 
-# Prisjakt Local Inventory XML
+# Prisjakt Local Offer XML
 
 ## Description
 

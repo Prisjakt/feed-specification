@@ -5,7 +5,7 @@ description: CSV For local Product Data Specification
 import SampleMin from './_csv_min.mdx';
 import SampleFull from './_csv_full.mdx';
 
-# Prisjakt Local Inventory CSV
+# Prisjakt Local Offer CSV
 
 ## Description
 

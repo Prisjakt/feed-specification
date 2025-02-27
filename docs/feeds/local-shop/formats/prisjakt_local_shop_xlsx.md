@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Prisjakt Local Store XLSX
+# Prisjakt Local Shop XLSX
 
 ## Description
 
@@ -12,8 +12,8 @@ sidebar_position: 2
 
 ### Minimal
 
-[Download XLSX File](pathname:///examples/local-store/min.xlsx)
+[Download XLSX File](pathname:///examples/local-shop/min.xlsx)
 
 ### Full
 
-[Download XLSX File](pathname:///examples/local-store/full.xlsx)
+[Download XLSX File](pathname:///examples/local-shop/full.xlsx)
