@@ -1,5 +1,5 @@
 ---
-description: A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
+description: The city/town or place where your shop resides.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,13 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
-# shop_code
+# locality
 
 <RequiredField/>
 
 ## Description
 
-A unique code identifying the store. Use this code to attache local offers to your store when uploading local offer inventory.
+The city/town or place where your shop resides.
 
 
 
@@ -25,34 +25,18 @@ A unique code identifying the store. Use this code to attache local offers to yo
 
 ## Validation Rules
 
-- Must be unique
-- Length must be between `1-64`
-- Only **ascii** characters
-- Trailing whitespace characters are not allowed
-- Disallowed characters are `!` `+` `@` `#` `$` `%` `^` `&` `*` `<` `>` `;` `:`
-
-
-## Best Practices
-
-
-### Do
-
-- Create memorable codes (eg. `ShopHbg`, `ShopAngelholm`, `ShopStockholm`)
-- If a store move to a new location, create a new code for it
-
-
-
+- Length must be between `1-50`
 
 
 ## Example Values
 
-Here are examples of how a valid *shop_code* value  should look like in CSV (with header).
+Here are examples of how a valid *locality* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-shop_code
-StoreAngelholm
+locality
+Ängelholm
 ```
 
 :::
@@ -62,18 +46,13 @@ StoreAngelholm
   <div>
 
 ```csv
-shop_code
-StoreAngelholm
+locality
+Ängelholm
 ```
 
 ```csv
-shop_code
-aBCd1123
-```
-
-```csv
-shop_code
-09az
+locality
+Helsingborg
 ```
 
 
@@ -84,59 +63,11 @@ shop_code
 
 Below you will find possible error codes generated when validating this field alongside with an example in CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
-:::danger <Anchor id="validation_id_blacklisted_ascii_character" title="validation_id_blacklisted_ascii_character" />
-
-```csv
-shop_code
-!+@#$%^&*
-```
-
-:::
-
 :::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
 
 ```csv
-shop_code
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-```
-
-:::
-
-:::danger <Anchor id="validation_invalid_value" title="validation_invalid_value" />
-
-```csv
-shop_code
-```
-
-:::
-
-:::danger <Anchor id="validation_missing_value" title="validation_missing_value" />
-
-```csv
-shop_code
-""
-```
-
-:::
-
-:::danger <Anchor id="validation_non_ascii_character" title="validation_non_ascii_character" />
-
-```csv
-shop_code
-ąśπœę©
-```
-
-:::
-
-:::danger <Anchor id="validation_trailing_whitespace" title="validation_trailing_whitespace" />
-
-```csv
-shop_code
-a
-```
-```csv
-shop_code
- a
+locality
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 :::

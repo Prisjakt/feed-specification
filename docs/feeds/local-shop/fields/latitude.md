@@ -1,5 +1,5 @@
 ---
-description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
+description: Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,15 +8,15 @@ import Anchor from "@site/src/components/anchor"
 import Field from '@site/docs/partials/_field.mdx';
 import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
-import RequiredField from '@site/docs/partials/_required_field.md';
+import OptionalField from '@site/docs/partials/_optional_field.md';
 
-# monday_hours
+# latitude
 
-<RequiredField/>
+<OptionalField/>
 
 ## Description
 
-Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
+Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 
 
 
@@ -25,30 +25,19 @@ Describes opening hours for a given day, can be multiple sets or indicate closed
 
 ## Validation Rules
 
-- Use 24-hour format: `HH:MM-HH:MM`
-
-
-## Best Practices
-
-
-### Do
-
-- Use an `X` to indicate **closed all day**
-- For multiple sets per day, use a comma to separate `11:30-14:00, 17:00-22:00`
-
-
-
+- Between -90 and 90
+- At least 6 digits after the decimal point
 
 
 ## Example Values
 
-Here are examples of how a valid *monday_hours* value  should look like in CSV (with header).
+Here are examples of how a valid *latitude* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-monday_hours
-09:00-17:00
+latitude
+56.2457097
 ```
 
 :::
@@ -58,33 +47,13 @@ monday_hours
   <div>
 
 ```csv
-monday_hours
-09:00-17:00
+latitude
+56.2457097
 ```
 
 ```csv
-monday_hours
-"11:30-14:00, 17:00-22:00"
-```
-
-```csv
-monday_hours
-18:00-02:00
-```
-
-```csv
-monday_hours
-X
-```
-
-```csv
-monday_hours
-""
-```
-
-```csv
-monday_hours
-00:00-24:00
+latitude
+56.0627273
 ```
 
 

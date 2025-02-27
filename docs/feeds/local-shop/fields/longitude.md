@@ -1,5 +1,5 @@
 ---
-description: Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+description: Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,13 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import OptionalField from '@site/docs/partials/_optional_field.md';
 
-# latitude
+# longitude
 
 <OptionalField/>
 
 ## Description
 
-Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+Longitude and latitude is used to locate your shop in the cases if we cannot lookup your address.
 
 
 
@@ -25,19 +25,19 @@ Longitude and latitude is used to locate your store in the cases if we cannot lo
 
 ## Validation Rules
 
-- Between -90 and 90
+- Between -180 and 180
 - At least 6 digits after the decimal point
 
 
 ## Example Values
 
-Here are examples of how a valid *latitude* value  should look like in CSV (with header).
+Here are examples of how a valid *longitude* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-latitude
-56.2457097
+longitude
+12.862385
 ```
 
 :::
@@ -47,13 +47,13 @@ latitude
   <div>
 
 ```csv
-latitude
-56.2457097
+longitude
+12.862385
 ```
 
 ```csv
-latitude
-56.0627273
+longitude
+12.7527635
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-description: Identifier to specify which local store this local offer belongs to.
+description: Identifier to specify which local shop this local offer belongs to. **NOTE** Google uses the terminology of __store__ and the field in the offer feed but uses the terminology **shop** in the store feed. Prisjakt uses the terminology of **shop** everywhere but must follow googles example in the files here for compatability reasons.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Identifier to specify which local store this local offer belongs to.
+Identifier to specify which local shop this local offer belongs to. **NOTE** Google uses the terminology of __store__ and the field in the offer feed but uses the terminology **shop** in the store feed. Prisjakt uses the terminology of **shop** everywhere but must follow googles example in the files here for compatability reasons.
 
 
 
@@ -27,7 +27,7 @@ Identifier to specify which local store this local offer belongs to.
 
 - Length must be between `1-64`
 - Must be unique
-- Must match the [`shop_code`](/feeds/local-store/fields/shop_code.md) you have specified in your [`local store`](/feeds/local-store/) feed.
+- Must match the [`shop_code`](/feeds/local-shop/fields/shop_code.md) you have specified in your [`local shop`](/feeds/local-shop/) feed.
 - Case sensitive
 
 

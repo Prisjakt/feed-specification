@@ -1,7 +1,7 @@
 
 # Delivery
 
-Local  store feeds can be delivered to us in a the ways described below.
+Local shop feeds can be delivered to us in a the ways described below.
 
 ## Via Upload
 

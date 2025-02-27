@@ -1,5 +1,5 @@
 ---
-description: The city/town or place where your store resides.
+description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,13 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
-# locality
+# sunday_hours
 
 <RequiredField/>
 
 ## Description
 
-The city/town or place where your store resides.
+Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 
 
 
@@ -25,18 +25,30 @@ The city/town or place where your store resides.
 
 ## Validation Rules
 
-- Length must be between `1-50`
+- Use 24-hour format: `HH:MM-HH:MM`
+
+
+## Best Practices
+
+
+### Do
+
+- Use an `X` to indicate **closed all day**
+- For multiple sets per day, use a comma to separate `11:30-14:00, 17:00-22:00`
+
+
+
 
 
 ## Example Values
 
-Here are examples of how a valid *locality* value  should look like in CSV (with header).
+Here are examples of how a valid *sunday_hours* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-locality
-Ängelholm
+sunday_hours
+09:00-17:00
 ```
 
 :::
@@ -46,13 +58,33 @@ locality
   <div>
 
 ```csv
-locality
-Ängelholm
+sunday_hours
+09:00-17:00
 ```
 
 ```csv
-locality
-Helsingborg
+sunday_hours
+"11:30-14:00, 17:00-22:00"
+```
+
+```csv
+sunday_hours
+18:00-02:00
+```
+
+```csv
+sunday_hours
+X
+```
+
+```csv
+sunday_hours
+""
+```
+
+```csv
+sunday_hours
+00:00-24:00
 ```
 
 
@@ -63,15 +95,6 @@ Helsingborg
 
 Below you will find possible error codes generated when validating this field alongside with an example in CSV that would trigger the code. Please refer to the [validation rules](#validation-rules) to understand the cause.
 
-:::danger <Anchor id="validation_invalid_length" title="validation_invalid_length" />
-
-```csv
-locality
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-```
-
-:::
-
 
 
 ## Properties
@@ -80,7 +103,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 |-----------------:|:--------------------------:|:-------------------------------------------------------------|
 |        Data Type |    **string**     | Closest data type in code                                    |
 |           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
-|   Case Sensitive |  **True**  | If small or large letters matter for this field              |
+|   Case Sensitive |  **False**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
 | Repeatable limit | **0** | If a list, this specifices the max number of items           |
 

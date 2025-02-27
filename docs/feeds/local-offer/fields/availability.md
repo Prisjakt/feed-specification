@@ -1,5 +1,5 @@
 ---
-description: Use the availability attribute to display your stock status. Please note that the values of this field (which is for the local store offer) differs from [`availability`](/feeds/offer/fields/availability.md) on the high level offer.
+description: Use the availability attribute to display your stock status. Please note that the values of this field (which is for the local shop offer) differs from [`availability`](/feeds/offer/fields/availability.md) on the high level offer.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import RequiredField from '@site/docs/partials/_required_field.md';
 
 ## Description
 
-Use the availability attribute to display your stock status. Please note that the values of this field (which is for the local store offer) differs from [`availability`](/feeds/offer/fields/availability.md) on the high level offer.
+Use the availability attribute to display your stock status. Please note that the values of this field (which is for the local shop offer) differs from [`availability`](/feeds/offer/fields/availability.md) on the high level offer.
 
 
 
@@ -78,7 +78,7 @@ Use the availability attribute to display your stock status. Please note that th
     </dt>
     <dd>
     <ReactMarkdown>
-      {`Items that are displayed in-store, but not immediately available for purchase: Such as large furniture items, or different sizes and colors of a display model.`}
+      {`Items that are displayed in-shop, but not immediately available for purchase: Such as large furniture items, or different sizes and colors of a display model.`}
     </ReactMarkdown>
     </dd>
 </dl>

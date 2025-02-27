@@ -1,5 +1,5 @@
 ---
-description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
+description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,13 +10,13 @@ import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
 import RequiredField from '@site/docs/partials/_required_field.md';
 
-# tuesday_hours
+# friday_hours
 
 <RequiredField/>
 
 ## Description
 
-Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-store/fields/special_hours.md).
+Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 
 
 
@@ -42,12 +42,12 @@ Describes opening hours for a given day, can be multiple sets or indicate closed
 
 ## Example Values
 
-Here are examples of how a valid *tuesday_hours* value  should look like in CSV (with header).
+Here are examples of how a valid *friday_hours* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-tuesday_hours
+friday_hours
 09:00-17:00
 ```
 
@@ -58,32 +58,32 @@ tuesday_hours
   <div>
 
 ```csv
-tuesday_hours
+friday_hours
 09:00-17:00
 ```
 
 ```csv
-tuesday_hours
+friday_hours
 "11:30-14:00, 17:00-22:00"
 ```
 
 ```csv
-tuesday_hours
+friday_hours
 18:00-02:00
 ```
 
 ```csv
-tuesday_hours
+friday_hours
 X
 ```
 
 ```csv
-tuesday_hours
+friday_hours
 ""
 ```
 
 ```csv
-tuesday_hours
+friday_hours
 00:00-24:00
 ```
 

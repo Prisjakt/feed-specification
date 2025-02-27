@@ -1,5 +1,5 @@
 ---
-description: Specifies what available pickup options exists for your store.
+description: Specifies what available pickup options exists for your shop.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import OptionalField from '@site/docs/partials/_optional_field.md';
 
 ## Description
 
-Specifies what available pickup options exists for your store.
+Specifies what available pickup options exists for your shop.
 
 
 ## Related Fields
@@ -56,7 +56,7 @@ pickup_method -- relates to  --- pickup_sla
     </dt>
     <dd>
     <ReactMarkdown>
-      {`The item is reserved online and the transaction occurs in-store.`}
+      {`The item is reserved online and the transaction occurs in-shop.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -68,7 +68,7 @@ pickup_method -- relates to  --- pickup_sla
     </dt>
     <dd>
     <ReactMarkdown>
-      {`The item is purchased online and shipped to a local store for the customer to pick up.`}
+      {`The item is purchased online and shipped to a local shop for the customer to pick up.`}
     </ReactMarkdown>
     </dd>
 <dt>
@@ -80,7 +80,7 @@ pickup_method -- relates to  --- pickup_sla
     </dt>
     <dd>
     <ReactMarkdown>
-      {`The item is not available for store pickup.`}
+      {`The item is not available for shop pickup.`}
     </ReactMarkdown>
     </dd>
 </dl>

@@ -33,7 +33,7 @@ The postal code of the business.
 
 ### Do
 
-- Follow the country-specific format of where your store is located
+- Follow the country-specific format of where your shop is located
 
 
 

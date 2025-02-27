@@ -1,5 +1,5 @@
 ---
-description: Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+description: Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,15 +8,15 @@ import Anchor from "@site/src/components/anchor"
 import Field from '@site/docs/partials/_field.mdx';
 import ReactMarkdown from 'react-markdown';
 import ChangeLog from '@site/src/components/changelog';
-import OptionalField from '@site/docs/partials/_optional_field.md';
+import RequiredField from '@site/docs/partials/_required_field.md';
 
-# longitude
+# thursday_hours
 
-<OptionalField/>
+<RequiredField/>
 
 ## Description
 
-Longitude and latitude is used to locate your store in the cases if we cannot lookup your address.
+Describes opening hours for a given day, can be multiple sets or indicate closed. When you have different hours for a short period use the field [`special_hours`](/feeds/local-shop/fields/special_hours.md).
 
 
 
@@ -25,19 +25,30 @@ Longitude and latitude is used to locate your store in the cases if we cannot lo
 
 ## Validation Rules
 
-- Between -180 and 180
-- At least 6 digits after the decimal point
+- Use 24-hour format: `HH:MM-HH:MM`
+
+
+## Best Practices
+
+
+### Do
+
+- Use an `X` to indicate **closed all day**
+- For multiple sets per day, use a comma to separate `11:30-14:00, 17:00-22:00`
+
+
+
 
 
 ## Example Values
 
-Here are examples of how a valid *longitude* value  should look like in CSV (with header).
+Here are examples of how a valid *thursday_hours* value  should look like in CSV (with header).
 
 :::tip Valid CSV Value
 
 ```csv
-longitude
-12.862385
+thursday_hours
+09:00-17:00
 ```
 
 :::
@@ -47,13 +58,33 @@ longitude
   <div>
 
 ```csv
-longitude
-12.862385
+thursday_hours
+09:00-17:00
 ```
 
 ```csv
-longitude
-12.7527635
+thursday_hours
+"11:30-14:00, 17:00-22:00"
+```
+
+```csv
+thursday_hours
+18:00-02:00
+```
+
+```csv
+thursday_hours
+X
+```
+
+```csv
+thursday_hours
+""
+```
+
+```csv
+thursday_hours
+00:00-24:00
 ```
 
 
