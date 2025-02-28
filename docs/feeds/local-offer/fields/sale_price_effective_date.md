@@ -220,7 +220,7 @@ sale_price_effective_date,sale_price
 
 |     **Property** |         **Value**          | **Description**                                              |
 |-----------------:|:--------------------------:|:-------------------------------------------------------------|
-|        Data Type |    **string**     | Closest data type in code                                    |
+|        Data Type |    **date**     | Closest data type in code                                    |
 |           Nested |      **False**      | Defines if this field consists of one or more sub-fields     |
 |   Case Sensitive |  **True**  | If small or large letters matter for this field              |
 |       Repeatable |    **False**    | If you can supply multiple items of this field (it´s a list) |
