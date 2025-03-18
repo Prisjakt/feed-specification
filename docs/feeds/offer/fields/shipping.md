@@ -58,6 +58,7 @@ shipping -- might be determined by  --- shipping_label
 - Overestimate if you can't provide accurate shipping cost
 - Submit shipping cost including VAT, use local currency
 - If you provide information about handling or transit time then `min_handling_time` should be lesser or equal to `max_handling_time` and `min_transit_time` should be lesser or equal to `max_transit_time`
+- Attributes `carrier` and `delivery_type` are specific to **Prisjakt** and are not available in the Google Specification. They are used to provide a richer UI to end users on our page
 - Attribute `carrier` can be any string value up to 50 characters, but only the following values will be represented with icons `airmee`, `best`, `bring`, `budbee`, `city`, `dachser`, `db`, `dhl`, `dooris`, `early`, `fedex`, `instabox`, `jetpak`, `postnord`, `ups`, `gls`
 - Attribute `delivery_type` can only take specific enum values. If the provided value is not in the allowed enum values or is not provided, the status is unset. Allowed values are `in_store_pickup`, `home`, `mailbox`, `package_locker`, `service_point`
 
