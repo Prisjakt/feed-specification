@@ -25,7 +25,7 @@ Using this API you can integrate your inventory updates with us in the fastest p
 
 ### Credentials
 
-In order to obtain access to this API please send an email to ingestion@prisjakt.nu with the name of your company. We will respond with a bearer token and your shop identifier.
+In order to obtain access to this API please send an email to ingestion@prisjakt.nu with the name of your company. We will respond with credentials and your shop identifier.
 
 ### Rate Limits
 
@@ -52,16 +52,17 @@ curl -X 'POST' \
   'https://api.prisjakt.nu/ingest/shops/:shop_id/offers' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer YOUR_TOKEN_HERE' \
+  -H 'client_id: YOUR_ID_HERE' \
+  -H 'client_secret: YOUR_SECRET_HERE' \
   -d '{
   "name": "Vanish Sole White flytande tvättmedel 2,88L",
   "channel": "not-used-by-prisjakt",
-  "offerId": "3950215",
+  "offerId": "12345",
   "contentLanguage": "en",
   "feedLabel": "not-used-by-prisjakt",
   "attributes": {
     "title": "Vanish Sole White flytande tvättmedel 2,88L",
-    "link": "https://www.power.se/vitvaror/tvatt-och-torkning/tillbehor-till-tvatt-och-tork/tvattmedel/vanish-sole-white-flytande-tvattmedel-288l/p-3950215/?utm_source=prisjakt&utm_medium=cpc",
+    "link": "https://yourdomain.se/vitvaror/vanish-sole-white-flytande-tvattmedel-288l",
     "price": {
       "amountMicros": 189000000,
       "currency": "SEK"
@@ -82,7 +83,7 @@ curl -X 'POST' \
     "gtin": [
       "5714970008281"
     ],
-    "imageLink": "https://media.power-cdn.net/images/h-17b3a4daedaf60170e2ac036cf43b5be/products/3950215/3950215_3_600x600_w_g.jpg",
+    "imageLink": "https://yourdomain.se/vanish_600x600_w_g.jpg",
     "isBundle": false,
     "itemGroupId": null,
     "marketplaceRetailer": "not-used-by-prisjakt",
@@ -147,7 +148,8 @@ curl -X 'POST' \
 ```shell
 curl -X 'DELETE' \
   'https://api.prisjakt.nu/ingest/shops/:shop_id/offers/:offer_id' \
-  -H 'Authorization: Bearer YOUR_TOKEN_HERE'
+  -H 'client_id: YOUR_ID_HERE' \
+  -H 'client_secret: YOUR_SECRET_HERE'
 ```
 
 ## References
