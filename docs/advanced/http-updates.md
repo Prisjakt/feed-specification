@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## Description
 
-If you want to send updates on individual offers as fast as possible you can send us HTTP requests as soon as changes occur. Updates to our system will be newar real-time (within seconds) in the normal case. The end user will se changes in about ~15 minutes after our frontend caches expires.
+If you want to send updates on individual offers as fast as possible you can send us HTTP requests as soon as changes occur. Updates to our system will be near real-time (within seconds) in the normal case. The end user will see changes in about ~15 minutes after our frontend caches expires.
 
 :::info Create Integrations
 
