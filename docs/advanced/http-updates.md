@@ -29,7 +29,7 @@ In order to obtain access to this API please send an email to ingestion@prisjakt
 
 ### Rate Limits
 
-- 10 calls/s
+- 10 requests/s (contact us if more is needed)
 
 ### Data Model 
 
