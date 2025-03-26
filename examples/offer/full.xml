@@ -12,7 +12,7 @@
       <g:additional_image_link>https://example.com/image1.jpg</g:additional_image_link>
       <g:additional_image_link>https://example.com/image2.jpg</g:additional_image_link>
       <g:adult>fAlSE</g:adult>
-      <g:affiliate_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</g:affiliate_link>
+      <pj:affiliate_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</pj:affiliate_link>
       <g:age_group>toddler</g:age_group>
       <g:availability>preorder</g:availability>
       <g:availability_date>2021-03-21</g:availability_date>
