@@ -62,7 +62,7 @@ Here are examples of how a valid *affiliate_link* value  should look like in XML
 :::tip Valid Value
 
 ```xml
-<g:affiliate_link>http://example.com/link</g:affiliate_link>
+<pj:affiliate_link>http://example.com/link</pj:affiliate_link>
 ```
 
 :::
@@ -72,31 +72,31 @@ Here are examples of how a valid *affiliate_link* value  should look like in XML
   <div>
 
 ```xml
-<g:affiliate_link>http://example.com/link</g:affiliate_link>
+<pj:affiliate_link>http://example.com/link</pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link>https://example.com/link</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link</pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link>https://example.com/link(black)_(large)</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link(black)_(large)</pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link>https://example.com/link#foo</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link#foo</pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link><![CDATA[https://example.com/link?utm_source=1&utm_medium=2]]></g:affiliate_link>
+<pj:affiliate_link><![CDATA[https://example.com/link?utm_source=1&utm_medium=2]]></pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</g:affiliate_link>
+<pj:affiliate_link>http://example.com/link-%E2%84%A2-mu-20%C2%B5m</pj:affiliate_link>
 ```
 
 ```xml
-<g:affiliate_link></g:affiliate_link>
+<pj:affiliate_link></pj:affiliate_link>
 ```
 
 
@@ -172,7 +172,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>https://example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 2047 characters value)</g:affiliate_link>
+<pj:affiliate_link>https://example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (more than 2047 characters value)</pj:affiliate_link>
 ```
 
 :::
@@ -181,7 +181,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>http://bar</g:affiliate_link>
+<pj:affiliate_link>http://bar</pj:affiliate_link>
 ```
 
 :::
@@ -190,7 +190,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>https://example.com/link##</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link##</pj:affiliate_link>
 ```
 
 :::
@@ -199,7 +199,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>http://example%.com/link</g:affiliate_link>
+<pj:affiliate_link>http://example%.com/link</pj:affiliate_link>
 ```
 
 :::
@@ -208,7 +208,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>https://example.com/link[12-34]</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link[12-34]</pj:affiliate_link>
 ```
 
 :::
@@ -217,7 +217,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>http://example.com:foo/link</g:affiliate_link>
+<pj:affiliate_link>http://example.com:foo/link</pj:affiliate_link>
 ```
 
 :::
@@ -226,7 +226,7 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>https://example.com/link?param=value^up-arrow</g:affiliate_link>
+<pj:affiliate_link>https://example.com/link?param=value^up-arrow</pj:affiliate_link>
 ```
 
 :::
@@ -235,16 +235,16 @@ Below you will find possible error codes generated when validating this field al
 
 
 ```xml
-<g:affiliate_link>foo://example.com/link</g:affiliate_link>
+<pj:affiliate_link>foo://example.com/link</pj:affiliate_link>
 ```
 ```xml
-<g:affiliate_link>ftp://example.com/link</g:affiliate_link>
+<pj:affiliate_link>ftp://example.com/link</pj:affiliate_link>
 ```
 ```xml
-<g:affiliate_link>ftps://example.com/link</g:affiliate_link>
+<pj:affiliate_link>ftps://example.com/link</pj:affiliate_link>
 ```
 ```xml
-<g:affiliate_link>sftp://example.com/link</g:affiliate_link>
+<pj:affiliate_link>sftp://example.com/link</pj:affiliate_link>
 ```
 
 :::
