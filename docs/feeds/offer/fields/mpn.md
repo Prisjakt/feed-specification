@@ -34,7 +34,7 @@ Add valid MPN, manufacturer part number for the specific product. MPN is a uniqu
 
 ## Validation Rules
 
-- Length must be between `1-70` characters
+- Length must be between `4-70` characters
 
 
 ## Best Practices
