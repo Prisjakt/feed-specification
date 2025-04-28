@@ -20,8 +20,9 @@ Using this API you can integrate your inventory updates with us in the fastest p
 
 ### Endpoints
 
-- `POST https://api.prisjakt.nu/ingest/shops/:shop_id/offers/`
-- `DELETE https://api.prisjakt.nu/ingest/shops/:shop_id/offers/:offer_id`
+- `POST https://auth.pj.nu/oauth2/token`
+- `POST https://api.pj.nu/ingest/v1/shops/:shop_id/offers`
+- `DELETE https://api.pj.nu/ingest/v1/shops/:shop_id/offers/:offer_id`
 
 ### Credentials
 
